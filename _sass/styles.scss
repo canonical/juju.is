@@ -1,0 +1,47 @@
+// Import scss settings
+@import 'settings';
+
+// Import Vanilla
+@import 'vanilla-framework/scss/build';
+
+// import additional styles
+@import "sidebar";
+@import "blockquote";
+@import "docs";
+
+@include docs;
+
+// Custom styles
+.p-navigation__banner {
+  background-color: $ubuntu-orange;
+}
+
+.p-navigation__logo {
+  font-weight: 400;
+  margin-right: $sph-inner--large;
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    margin-bottom: -12px;
+    margin-top: 12px;
+    max-height: 3rem;
+  }
+}
+
+.p-navigation__toggle {
+  &--open,
+  &--close {
+    font-weight: 400;
+  }
+}
+
+.u-hide--x-small {
+  @media only screen and (max-width: $breakpoint-x-small) {
+    display: none;
+  }
+}
+
+.p-matrix__item:last-of-type {
+  @media only screen and (max-width: $breakpoint-x-small) {
+    padding-bottom: 0;
+  }
+}
