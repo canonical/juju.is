@@ -16,18 +16,19 @@ layout: base
       </div>
       <div class="col-2 col-start-large-10 u-vertically-center">
         <img
-          src="https://assets.ubuntu.com/v1/60bd6cf1-picto-juju.svg"
-          alt=""
+        src="https://assets.ubuntu.com/v1/60bd6cf1-picto-juju.svg"
+        alt=""
         />
       </div>
     </div>
   </section>
+
   <nav class="p-tabs p-sticky-nav">
     <div class="u-fixed-width">
       <ul class="p-tabs__list" role="tablist">
         <li class="p-tabs__item" role="presentation">
           <a class="p-tabs__link js-sticky-tab" href="#what-is-juju"
-            >What is Juju?</a
+          >What is Juju?</a
           >
         </li>
         <li class="p-tabs__item" role="presentation">
@@ -35,7 +36,7 @@ layout: base
         </li>
         <li class="p-tabs__item" role="presentation">
           <a class="p-tabs__link js-sticky-tab" href="#get-started"
-            >Getting started</a
+          >Getting started</a
           >
         </li>
         <li class="p-tabs__item" role="presentation">
@@ -46,7 +47,7 @@ layout: base
         </li>
         <li class="p-tabs__item" role="presentation">
           <a class="p-tabs__link js-sticky-tab" href="#learn-more"
-            >Learn more</a
+          >Learn more</a
           >
         </li>
       </ul>
@@ -72,4 +73,337 @@ layout: base
       </div>
     </div>
   </section>
+
+  <section class="p-strip--light" id="install">
+    <div class="row">
+      <div class="col-8">
+        <h2 style="font-weight: 100">Install Multipass</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" alt="Windows logo">
+        <p>An installer is available for Windows</p>
+        <p><a href="https://github.com/juju/juju/releases" class="p-button--neutral">
+          <span class="p-link--external">Download Juju for Windows</span>
+        </a></p>
+        <p><i>or</i> Windows 10 Home/Pro/Enterprise with Virtualbox</p>
+      </div>
+      <div class="col-4">
+        <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" alt="macOS logo">
+        <p>Install Juju on macOS via Homebrew</p>
+        <div class="p-code-copyable">
+          <input class="p-code-copyable__input" value="brew install juju" readonly="readonly">
+          <button class="p-code-copyable__action">Copy to clipboard</button>
+        </div>
+      </div>
+      <div class="col-4">
+        <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" alt="Linux logo" style="margin: 27px 0;height: 90px;">
+        <p>Install Juju on Linux via a Snap</p>
+        <div class="p-code-copyable">
+          <input class="p-code-copyable__input" value="sudo snap install juju" readonly="readonly">
+          <button class="p-code-copyable__action">Copy to clipboard</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip" id="get-started">
+    <div class="row" id="get-started">
+      <div class="col-8">
+        <h2>Getting started</h2>
+        <p>The first part of the getting started section introduces you to Juju by first experimenting with a local deployment on an Ubuntu VM. The second part outlines the process for deploying to a public cloud.</p>
+        <div class="p-accordion" role="tablist" aria-multiselect="true">
+          <ul class="p-accordion__list">
+            <li class="p-accordion__group">
+              <button type="button" class="p-accordion__tab" id="tab1" role="tab" aria-controls="#tab1-section" aria-expanded="false">Get started with Juju and an Ubuntu VM on your Mac or Windows workstation</button>
+              <section class="p-accordion__panel" id="tab1-section" role="tabpanel" aria-hidden="true" aria-labelledby="tab1-section">
+                <div class="u-sv3">
+                  <p>Launch an instance (by default you get the current Ubuntu LTS)</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass launch --name foo" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>Run commands in that instance, try running bash (logout or ctrl-d to quit)</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass exec foo -- lsb_release -a" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>Pass a cloud-init metadata file to an instance on launch see <a href="https://blog.ubuntu.com/2018/04/02/using-cloud-init-with-multipass">using cloud-init with multipass</a> for more details</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass launch -n bar --cloud-init cloud-config.yaml" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>See your instances</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass list" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>Stop and start instances</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass stop foo bar" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass start foo" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>Clean up what you don’t need</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass delete bar" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass purge" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>Find alternate images to launch with multipass</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass find" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>Get help</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass help" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass help <command>" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>Now don’t forget you still have ‘foo’ running :)</p>
+                </div>
+              </section>
+            </li>
+            <li class="p-accordion__group">
+              <button type="button" class="p-accordion__tab" id="tab2" role="tab" aria-controls="#tab2-section" aria-expanded="false">Get started with Juju and deploying a simple web application to a public cloud</button>
+              <section class="p-accordion__panel" id="tab2-section" role="tabpanel" aria-hidden="true" aria-labelledby="tab2-section">
+                <div class="u-sv3">
+                  <p>Launch an instance (by default you get the current Ubuntu LTS)</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass launch --name foo" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>Run commands in that instance, try running bash (logout or ctrl-d to quit)</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass exec foo -- lsb_release -a" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>Pass a cloud-init metadata file to an instance on launch see <a href="https://blog.ubuntu.com/2018/04/02/using-cloud-init-with-multipass">using cloud-init with multipass</a> for more details</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass launch -n bar --cloud-init cloud-config.yaml" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>See your instances</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass list" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>Stop and start instances</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass stop foo bar" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass start foo" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>Clean up what you don’t need</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass delete bar" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass purge" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>Find alternate images to launch with multipass</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass find" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>Get help</p>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass help" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                  <div class="p-code-copyable">
+                    <input class="p-code-copyable__input" value="multipass help <command>" readonly="readonly">
+                    <button class="p-code-copyable__action">Copy to clipboard</button>
+                  </div>
+                </div>
+                <div class="u-sv3">
+                  <p>Now don’t forget you still have ‘foo’ running :)</p>
+                </div>
+              </section>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light" id="tutorials">
+    <div class="row">
+      <div class="col-8">
+        <h2>Tutorials</h2>
+        <p>Check out the following in depth tutorials exploring the deployment of different types of workloads to understand where Juju can fit into your workflow.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--accent u-equal-height" id="jaas">
+    <div class="row">
+      <div class="col-3 u-align--center u-vertically-center">
+          <img
+          src="https://assets.ubuntu.com/v1/60bd6cf1-picto-juju.svg"
+          alt=""
+          width="200"
+          />
+      </div>
+      <div class="col-8">
+        <h4>JAAS is Juju as a service.</h4>
+        <p>Hosted by Canonical, the makers of Ubuntu, JAAS provides managed Juju infrastructure to operate your applications. It’s the fastest way to operate your workloads on supported clouds with the fewest instances required.</p>
+        <p>Build, configure, manage and deploy your applications to the public cloud directly from your browser or the command line.</p>
+        <p><a href="https://jaas.ai" class="p-link--external p-link--inverted">Learn more</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light">
+    <div class="row">
+      <div class="col-8">
+        <blockquote class="p-pull-quote">
+          <p class="p-pull-quote__quote">Using the modelling ethos brought by Juju allows me to quickly run big data applications in a multitude of places. Be it locally on my laptop, on bare metal or in the Cloud, Juju lets me reuse the same models and code without changing any aspects of my deployment</p>
+          <cite class="p-pull-quote__citation">Tom Barber, Spicule</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="p-muted-heading">THE LATEST JUJU NEWS</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <p><a href="">Declarative vs Imperative: DevOps done right</a></p>
+        <p>6 August 19</p>
+      </div>
+      <div class="col-4">
+        <p><a href="">BT turns to Canonical Ubuntu to enable next generation 5G Cloud Core</a></p>
+        <p>24 July 19</p>
+      </div>
+      <div class="col-4">
+        <p><a href="">How to harness big data for maximum business value</a></p>
+        <p>6 December 18</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light" id="learn-more">
+    <div class="row">
+      <div class="col-12">
+        <h2>Learn more</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <h4>Documentation</h4>
+        <ul class="p-list">
+          <li class="p-list__item"><a href="" class="p-link--external">Concepts</a></li>
+          <li class="p-list__item"><a href="" class="p-link--external">Tutorials</a></li>
+          <li class="p-list__item"><a href="" class="p-link--external">Docs</a></li>
+        </ul>
+      </div>
+      <div class="col-4">
+          <h4>Tutorials</h4>
+          <ul class="p-list">
+            <li class="p-list__item"><a href="" class="p-link--external">Basic client usage</a></li>
+            <li class="p-list__item"><a href="" class="p-link--external">Using Juju with MicroK8s</a></li>
+            <li class="p-list__item"><a href="" class="p-link--external">Understanding Kubernetes charms</a></li>
+            <li class="p-list__item"><a href="" class="p-link--external">Managing credentials</a></li>
+          </ul>
+      </div>
+      <div class="col-4">
+          <h4>Participate</h4>
+          <ul class="p-list">
+            <li class="p-list__item"><a href="" class="p-link--external">Juju on GitHub</a></li>
+            <li class="p-list__item"><a href="" class="p-link--external">Juju on Discourse</a></li>
+          </ul>
+      </div>
+    </div>
+  </section>
 </main>
+
+<script>
+  /**
+    Attaches event listeners for the accordion open and close click events.
+    @param {String} accordionContainerSelector The selector of the accordion container.
+  */
+  function setupAccordionListener(accordionContainerSelector) {
+    /**
+      Toggles the necessary values on the accordion panels and handles to show or
+      hide depending on the supplied values.
+      @param {HTMLElement} element The tab that acts as the handles for the
+        accordion panes.
+      @param {Boolean} show Whether to show or hide the accordion panel.
+    */
+    const toggle = (element, show) => {
+      element.setAttribute('aria-expanded', show);
+      document
+        .querySelector(element.getAttribute('aria-controls'))
+        .setAttribute('aria-hidden', !show);
+    }
+    // Set up an event listener on the container so that panels can be added
+    // and removed and events do not need to be managed separately.
+    document
+      .querySelector(accordionContainerSelector)
+      .addEventListener('click', e => {
+        const target = e.target;
+        const isTargetOpen = target.getAttribute('aria-expanded') === 'true';
+        // Find any open panels within the container and close them.
+        if (target.classList.contains('p-accordion__tab')) {
+          e.currentTarget
+            .querySelectorAll('[aria-expanded=true]')
+            .forEach(element => toggle(element, false));
+          // Toggle the target.
+          toggle(target, !isTargetOpen);
+        }
+      });
+  }
+
+  setupAccordionListener('.p-accordion__list');
+</script>
