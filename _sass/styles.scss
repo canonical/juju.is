@@ -4,13 +4,6 @@
 // Import Vanilla
 @import 'vanilla-framework/scss/build';
 
-// import additional styles
-@import "sidebar";
-@import "blockquote";
-@import "docs";
-
-@include docs;
-
 // Custom styles
 .p-navigation__banner {
   background-color: $ubuntu-orange;
@@ -44,4 +37,16 @@
   @media only screen and (max-width: $breakpoint-x-small) {
     padding-bottom: 0;
   }
+}
+
+.p-sticky-nav {
+  background-color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.p-tabs__link.is-selected {
+  @include vf-highlight-bar($color-brand, bottom, true);
 }

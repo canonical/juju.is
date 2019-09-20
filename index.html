@@ -7,7 +7,7 @@ layout: base
     <div class="row u-equal-height">
       <div class="col-8">
         <h1>
-          <strong>Juju is</strong> simple, secure and stable develops tooling
+          <strong>Juju is</strong> simple, secure and stable devops tooling
         </h1>
         <p>
           The easiest way to model, deploy and maintain complex applications in
@@ -24,8 +24,8 @@ layout: base
   </section>
 
   <nav class="p-tabs p-sticky-nav">
-    <div class="u-fixed-width">
-      <ul class="p-tabs__list" role="tablist">
+    <ul class="p-tabs__list u-no-margin--bottom" role="tablist">
+      <div class="u-fixed-width">
         <li class="p-tabs__item" role="presentation">
           <a class="p-tabs__link js-sticky-tab" href="#what-is-juju"
           >What is Juju?</a
@@ -50,8 +50,8 @@ layout: base
           >Learn more</a
           >
         </li>
-      </ul>
-    </div>
+      </div>
+    </ul>
   </nav>
   <section class="p-strip" id="what-is-juju">
     <div class="row">
@@ -367,6 +367,49 @@ layout: base
     </div>
   </section>
 </main>
+
+<script>
+  var stickyNav = document.querySelector('.p-sticky-nav');
+  var stickyTabs = stickyNav.querySelectorAll('.js-sticky-tab');
+  var didScroll = true;
+
+  function isTabActive(tab) {
+    var sectionId = tab.href.split('#')[1];
+    var section = document.getElementById(sectionId);
+    var rect = section.getBoundingClientRect();
+    return (rect.top < stickyNav.clientHeight);
+  }
+
+  function render() {
+    stickyTabs.forEach(function(tab) {
+      if (isTabActive(tab)) {
+        unsetActiveTabs();
+        tab.classList.add('is-selected');
+      }
+    });
+  }
+
+  function unsetActiveTabs() {
+    stickyTabs.forEach(function(tab) {
+      tab.classList.remove('is-selected');
+    });
+  }
+
+  function tick() {
+    if (didScroll) {
+      render();
+      didScroll = false;
+    }
+    requestAnimationFrame(tick);
+  }
+
+  requestAnimationFrame(tick);
+
+  window.addEventListener('scroll', function() {
+    didScroll = true;
+  });
+
+</script>
 
 <script>
   /**
