@@ -1,5 +1,5 @@
 from canonicalwebteam.flask_base.app import FlaskBase
-from flask import render_template 
+from flask import render_template
 
 # Rename your project below
 app = FlaskBase(
