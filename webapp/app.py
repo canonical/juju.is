@@ -4,7 +4,7 @@ from flask import render_template
 # Rename your project below
 app = FlaskBase(
     __name__,
-    "project-name.com",
+    "juju.is",
     template_folder="../templates",
     static_folder="../static",
     template_404="404.html",
