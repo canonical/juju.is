@@ -1,7 +1,6 @@
----
-layout: base
----
+{% extends 'base.html' %}
 
+{% block content %}
 <main id="main-content">
   <section class="p-strip--light">
     <div class="row u-equal-height">
@@ -450,3 +449,5 @@ layout: base
 
   setupAccordionListener('.p-accordion__list');
 </script>
+
+{% endblock %}
