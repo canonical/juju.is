@@ -4,8 +4,8 @@
 // Import Vanilla
 @import 'vanilla-framework/scss/build';
 
-@import 'custom/patterns_docs';
-@import 'custom/hljs';
+@import 'patterns_docs';
+@import 'hljs';
 
 @include juju-docs;
 
