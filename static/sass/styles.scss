@@ -4,6 +4,11 @@
 // Import Vanilla
 @import 'vanilla-framework/scss/build';
 
+@import 'custom/patterns_docs';
+@import 'custom/hljs';
+
+@include juju-docs;
+
 // Custom styles
 .p-navigation__banner {
   background-color: $ubuntu-orange;
