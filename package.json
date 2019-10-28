@@ -3,7 +3,7 @@
   "license": "LGPL v3",
   "scripts": {
     "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle",
-    "watch": "watch -p 'static/sass/*.scss' -c 'yarn run build'",
+    "watch": "watch -p 'static/sass/**/*.scss' -c 'yarn run build'",
     "build": "node-sass --include-path node_modules static/sass --source-map true --output-style compressed --output static/css && postcss --map false --use autoprefixer --replace 'static/css/**/*.css' && yarn run build-js",
     "format-python": "black --line-length 79 webapp",
     "build-js": "mkdir -p static/js/build/global-nav && cp node_modules/@canonical/global-nav/dist/global-nav.js static/js/build/global-nav",
