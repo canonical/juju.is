@@ -1,18 +1,18 @@
 FROM ubuntu:bionic
 
-RUN apt-get update && apt-get install --yes nginx
+# System dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends python3 python3-setuptools python3-pip
 
 # Set git commit ID
-ARG REVISION_ID
-RUN test -n "${REVISION_ID}"
+ARG COMMIT_ID
+RUN test -n "${COMMIT_ID}"
+ENV COMMIT_ID "${COMMIT_ID}"
+ENV TALISKER_REVISION_ID "${COMMIT_ID}"
 
-# Copy over files
-WORKDIR /srv
-ADD _site .
-ADD nginx.conf /etc/nginx/sites-enabled/default
-RUN sed -i "s/~REVISION_ID~/${REVISION_ID}/" /etc/nginx/sites-enabled/default
+# Import code, install code dependencies
+COPY . .
+RUN python3 -m pip install --no-cache-dir -r requirements.txt
 
-STOPSIGNAL SIGTERM
-
-CMD ["nginx", "-g", "daemon off;"]
-
+# Setup commands to run server
+ENTRYPOINT ["./entrypoint"]
+CMD ["0.0.0.0:80"]
