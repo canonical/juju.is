@@ -8,6 +8,10 @@
 @import 'hljs';
 
 @include juju-docs;
+// Local patterns
+@import 'pattern_cards';
+@include juju-cards;
+
 
 // Custom styles
 .p-navigation__banner {
