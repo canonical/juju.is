@@ -1,24 +1,115 @@
 {% extends 'base.html' %} {% block content %}
 <main id="main-content">
-  <section class="p-strip--light">
-    <div class="row u-equal-height">
-      <div class="col-8">
-        <h1>
-          <strong>Juju is</strong> simple, secure and stable devops tooling
-        </h1>
-        <p>
-          The easiest way to model, deploy and maintain complex applications in
-          the cloud.
-        </p>
+  <section class="p-strip--suru-bottom has-accent is-dark" style="background-size: auto 100%, cover; background-position: right center; background-image: url('https://assets.ubuntu.com/v1/a9dab044-suru-right.svg'), linear-gradient(266deg, #044f66, #022935)">
+    <div id="panel-juju-as-a-service" role="tabpanel" aria-labelledby="juju-as-a-service" class="p-hero-panel u-animate--reveal">
+      <div class="row">
+        <div class="col-6">
+          <h1>Juju is</h1>
+          <p>The simplest way to deploy and maintain applications in the cloud. Juju uses humans-first syntax. More importantly, it helps your team to build and maintain an understandable mental model of every deployment.</p>
+          <p><a href="/docs" class="p-button--positive">Get started with Juju</a></p>
+        </div>
+        <div class="col-6 u-vertically-center u-align--center u-hide--small">
+          {{
+            image(
+              url="https://assets.ubuntu.com/v1/60bd6cf1-picto-juju.svg",
+              alt="",
+              width="300",
+              height="374",
+              hi_def=True,
+              loading="eager",
+            ) | safe
+          }}
+        </div>
       </div>
-      <div class="col-2 col-start-large-10 u-vertically-center">
-        <img
-          src="https://assets.ubuntu.com/v1/60bd6cf1-picto-juju.svg"
-          alt=""
-        />
+    </div>
+
+    <div id="panel-juju-expert-partners" role="tabpanel" aria-labelledby="juju-expert-partners"  class="p-hero-panel">
+      <div class="row">
+        <div class="col-6">
+          <h1>Juju is</h1>
+          <p>Open source done right. The project has hundreds of individuals providing code, bug reports, documentation and support. Backed by Canonical, the company behind Ubuntu, Juju powers the infrastructure behind startups, enterprises, researchers and governments.</p>
+          <p><a href="/docs" class="p-button--positive">Get started with Juju</a></p>
+        </div>
+        <div class="col-6 u-vertically-center u-align--center u-hide--small">
+          {{
+            image(
+              url="https://assets.ubuntu.com/v1/60bd6cf1-picto-juju.svg",
+              alt="",
+              width="300",
+              height="374",
+              hi_def=True,
+            ) | safe
+          }}
+        </div>
+      </div>
+    </div>
+
+    <div id="panel-openstack-solutions" role="tabpanel" aria-labelledby="openstack-solutions"  class="p-hero-panel">
+      <div class="row">
+        <div class="col-6">
+          <h1>Juju is</h1>
+          <p>Juju makes it easy to deploy OpenStack at scale. Quickly and reliably build an enterprise-scale cloud run on Ubuntu &ndash; the most popular operating system for OpenStack.</p>
+          <p><a href="/docs" class="p-button--positive">Get started with Juju</a></p>
+        </div>
+        <div class="col-6 u-vertically-center u-align--center u-hide--small">
+          {{
+            image(
+              url="https://assets.ubuntu.com/v1/60bd6cf1-picto-juju.svg",
+              alt="",
+              width="300",
+              height="374",
+              hi_def=True,
+            ) | safe
+          }}
+        </div>
+      </div>
+    </div>
+
+
+    <div id="panel-big-data-solutions" role="tabpanel" aria-labelledby="big-data-solutions"  class="p-hero-panel">
+      <div class="row">
+        <div class="col-6">
+          <h1>Juju is</h1>
+          <p>The setup and configuration of big data tools can be very complex and daunting &ndash; Juju frees you to explore, test and evaluate big data solutions to choose the one that works best for you.</p>
+          <p><a href="/docs" class="p-button--positive">Get started with Juju</a></p>
+        </div>
+        <div class="col-6 u-vertically-center u-align--center u-hide--small">
+          {{
+            image(
+              url="https://assets.ubuntu.com/v1/60bd6cf1-picto-juju.svg",
+              alt="",
+              width="300",
+              height="374",
+              hi_def=True,
+            ) | safe
+          }}
+        </div>
+      </div>
+    </div>
+
+    <div class="row p-hero-tab">
+      <div role="tablist" aria-label="Discover Juju services and solutons" class="p-hero-tab__list">
+        <button role="tab" aria-selected="true" aria-controls="panel-juju-as-a-service" id="juju-as-a-service" class="p-hero-tab__item">
+          <i class="before"></i>
+          <p class="p-hero-tab__title">Juju is simple</p>
+        </button>
+        <button role="tab" aria-selected="false" aria-controls="panel-juju-expert-partners" id="juju-expert-partners" class="p-hero-tab__item">
+          <i class="before"></i>
+          <p class="p-hero-tab__title">Juju is open source</p>
+        </button>
+        <button role="tab" aria-selected="false" aria-controls="panel-openstack-solutions" id="openstack-solutions" class="p-hero-tab__item">
+          <i class="before"></i>
+          <p class="p-hero-tab__title">Juju is automation</p>
+        </button>
+        <button role="tab" aria-selected="false" aria-controls="panel-big-data-solutions" id="big-data-solutions" class="p-hero-tab__item">
+          <i class="before"></i>
+          <p class="p-hero-tab__title">Juju is application modeling</p>
+        </button>
       </div>
     </div>
   </section>
+
+  <script src="{{ static_url('js/tabpanel.js') }}"></script>
 
   <section class="p-strip" id="what-is-juju">
     <div class="row">

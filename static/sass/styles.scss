@@ -12,6 +12,11 @@
 @import 'pattern_cards';
 @include juju-cards;
 
+@import 'patterns_hero-tab';
+@include juju-hero-tab;
+
+@import 'patterns_strips';
+@include juju-p-strips;
 
 // Custom styles
 .p-navigation__banner {
@@ -58,4 +63,20 @@
 
 .p-tabs__link.is-selected {
   @include vf-highlight-bar($color-brand, bottom, true);
+}
+
+// Hide images that fail to lazy load due to JS failing or other
+.lazyload {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+  width: 0;
+}
+
+// Fades in content when class is added
+.u-animate--reveal {
+  height: auto !important;
+  opacity: 1 !important;
+  transition: opacity 0.5s ease-in;
 }
