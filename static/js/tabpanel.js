@@ -19,8 +19,8 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function changeTabs(target) {
-  const tabs = document.querySelectorAll('[role="tab"]');
-  const panels = document.querySelectorAll('[role="tabpanel"]');
+  const tabs = document.querySelectorAll('.p-hero-tab__item');
+  const panels = document.querySelectorAll('.p-hero-panel');
   clearInterval(timer);
 
   // Remove all current selected tabs
@@ -44,12 +44,12 @@ function changeTabs(target) {
 }
 
 function playTab(tab) {
-  let start = Date.now();
-  let duration = 10000;
-  let tabIndicator = tab.querySelector('.before');
+  const start = Date.now();
+  const duration = 10000;
+  const tabIndicator = tab.querySelector('.before');
   if (tabIndicator) {
     timer = setInterval(function() {
-      let timePassed = Date.now() - start;
+      const timePassed = Date.now() - start;
       if (timePassed >= duration) {
         clearInterval(timer);
         triggerNextTab(tab);

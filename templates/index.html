@@ -159,15 +159,21 @@
     <div class="row">
       <div class="col-8">
         <h2>Getting started</h2>
+        <p>Choose your platform and get started</p>
       </div>
     </div>
     <div class="row">
       <div class="col-3">
-        <img
-          src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg"
-          alt="Linux logo"
-          style="margin: 27px 0;height: 90px;"
-        />
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg",
+            alt="Linux logo",
+            width="76",
+            height="90",
+            hi_def=True,
+            attrs={"style": "margin: 27px 0;height: 90px;"},
+          ) | safe
+        }}
         <p>Install on Linux via a Snap</p>
         <div class="p-code-copyable">
           <input
@@ -180,10 +186,15 @@
         <a href="/docs/installing#heading--ubuntu">Documentation for Linux&nbsp;&rsaquo;</a>
       </div>
       <div class="col-3">
-        <img
-          src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg"
-          alt="Windows logo"
-        />
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg",
+            alt="Windows logo",
+            width="145",
+            height="145",
+            hi_def=True,
+          ) | safe
+        }}
         <p>An installer for Windows</p>
         <div class="u-sv2">
           <a
@@ -196,10 +207,15 @@
         <a href="/docs/installing#heading--windows">Documentation for Windows&nbsp;&rsaquo;</a>
       </div>
       <div class="col-3">
-        <img
-          src="https://assets.ubuntu.com/v1/236f314d-macos.svg"
-          alt="macOS logo"
-        />
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/236f314d-macos.svg",
+            alt="macOS logo",
+            width="145",
+            height="145",
+            hi_def=True,
+          ) | safe
+        }}
         <p>Install on macOS via Homebrew</p>
         <div class="p-code-copyable">
           <input
@@ -212,7 +228,16 @@
         <a href="/docs/installing#heading--macos">Documentation for macOS&nbsp;&rsaquo;</a>
       </div>
       <div class="col-3">
-        <svg style="margin:25px 0;height:90px;width:200px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 543 104"><style>.st1{fill:#111}</style><g id="Layer_1_1_"><circle cy="51.3" cx="51.5" r="51.1" fill="#e95420"/><path d="M82.3 55.6c-.6 0-1.2.1-1.9.2l-8.6-17.1c3.3-2.7 3.8-7.7 1.1-11s-7.7-3.8-11-1.1c-3.3 2.7-3.8 7.7-1.1 11 .3.4.6.7 1 1l-8.6 17.1c-1.2-.3-2.4-.3-3.6 0l-8.5-17c3.3-2.7 3.8-7.7 1.1-11s-7.7-3.8-11-1.1-3.8 7.7-1.1 11c.3.4.7.7 1.1 1.1l-8.7 17.1c-.7-.2-1.3-.3-2-.3-4.3 0-7.9 3.5-7.9 7.8s3.5 7.9 7.8 7.9 7.9-3.5 7.9-7.8c0-2.3-1-4.5-2.8-6l8.7-17.2c.6.1 1.2.2 1.9.2.6 0 1.2-.1 1.8-.2l8.5 17c-3.3 2.7-3.8 7.7-1.1 11s7.7 3.8 11 1.1 3.8-7.7 1.1-11c-.3-.4-.7-.8-1.1-1.1l8.6-17.1c.6.2 1.3.2 1.9.2s1.2-.1 1.8-.2l8.6 17c-3.3 2.8-3.8 7.7-1 11s7.7 3.8 11 1 3.8-7.7 1-11c-1.4-1.5-3.6-2.5-5.9-2.5z" fill="#fff"/></g><g id="Layer_2_1_"><path class="st1" d="M128 32.7c2-.6 4.6-1.2 7.9-1.9 4.1-.8 8.3-1.1 12.5-1 6.8 0 11.7 2 14.8 5.9.4-.3 1-.7 2-1.4 1.2-.8 2.5-1.4 3.8-2 3.8-1.7 8-2.5 12.2-2.5 3.4-.1 6.8.5 9.9 1.8 2.4 1.1 4.4 2.9 5.9 5.1 1.5 2.4 2.4 5.1 2.8 7.9.5 3.3.7 6.7.7 10v30h-6.8V56.7c0-3.1-.1-6.1-.5-9.1-.2-2.2-.8-4.4-1.9-6.4-.9-1.7-2.3-3-4-3.9-2.1-.9-4.4-1.4-6.8-1.3-1.9 0-3.8.2-5.7.6-1.5.3-3 .8-4.4 1.4-1.1.5-2.1 1-3.1 1.7-.8.6-1.4 1-1.7 1.2.7 2 1.1 4 1.4 6.1.3 2.4.5 4.7.5 7.1v30.5h-6.8V56.7c0-3.1-.1-6.1-.5-9.2-.2-2.3-.9-4.4-1.9-6.4-.9-1.7-2.4-3-4.1-3.9-2.2-.9-4.6-1.4-7-1.3-2.8 0-5.5.1-8.3.5-1.5.2-2.9.5-4.3.9v47.2H128V32.7zM257 82.7c-2 .6-4.7 1.2-8.1 1.9-4.1.7-8.3 1.1-12.5 1-3.4.1-6.9-.5-10.1-1.8-2.6-1.1-4.8-2.8-6.5-5-1.7-2.3-3-5-3.6-7.8-.8-3.3-1.1-6.7-1.1-10.1V30.8h6.8v28c-.1 3.2.2 6.5.8 9.7.4 2.3 1.3 4.5 2.7 6.4 1.2 1.6 2.9 2.9 4.8 3.5 2.3.8 4.8 1.1 7.2 1.1 2.8 0 5.6-.1 8.3-.5 1.5-.2 3-.5 4.5-.9V30.8h6.8v51.9zM285.5 85.5c-2 0-4-.3-6-.9-1.6-.5-3.1-1.3-4.3-2.4-1.2-1.2-2.1-2.6-2.6-4.2-.6-2.1-.9-4.2-.9-6.4V5.1l6.8-1.2v67.6c0 1.3.1 2.7.5 4 .3.9.7 1.7 1.4 2.4.7.6 1.5 1.1 2.5 1.3 1.2.3 2.4.6 3.6.7l-1 5.6zM302.7 30.8h21.4v5.7h-21.4v28.6c-.1 2.5.2 5 .8 7.4.4 1.6 1.1 3.1 2.2 4.4.9 1 2.2 1.8 3.5 2.1 1.5.4 3 .5 4.6.5 2.3.1 4.7-.3 6.9-1 1.4-.5 2.7-1.1 4-1.8l1.7 5.6c-1.6.9-3.3 1.6-5.1 2.1-2.6.8-5.2 1.2-7.9 1.2-2.8.1-5.7-.4-8.4-1.3-2.1-.8-4-2.2-5.4-4-1.4-2-2.4-4.2-2.9-6.6-.6-3.1-.9-6.2-.8-9.4V15l6.8-1.2v17zM345.9 14.5c.1 1.4-.5 2.8-1.5 3.8-2 1.9-5.1 1.9-7.1 0a5.78 5.78 0 010-7.6c2-1.9 5.1-1.9 7.1 0 1 1 1.6 2.4 1.5 3.8zm-1.6 70h-6.8V30.8h6.8v53.7zM363.9 103.8h-6.8V32.7c6.3-2.1 12.9-3.1 19.5-2.9 3.7 0 7.3.6 10.8 1.9 3.1 1.2 6 3.1 8.3 5.6 2.4 2.5 4.2 5.6 5.4 8.8 1.3 3.8 2 7.8 1.9 11.8 0 3.8-.5 7.6-1.6 11.3-1 3.2-2.6 6.2-4.7 8.8-2.1 2.5-4.7 4.4-7.6 5.8-3.3 1.4-6.8 2.1-10.4 2.1-3.1.1-6.3-.4-9.2-1.5-2-.7-3.9-1.7-5.7-2.9l.1 22.3zm0-28.9c.7.6 1.5 1.1 2.3 1.6 1 .6 2.1 1.1 3.3 1.6 1.3.5 2.7.9 4.1 1.2 1.5.3 3 .5 4.6.5 2.9.1 5.8-.5 8.4-1.7 2.2-1.1 4.1-2.7 5.5-4.7 1.4-2.1 2.5-4.5 3-7 .6-2.8 1-5.6.9-8.5 0-7.1-1.8-12.5-5.3-16.3s-8.2-5.7-14-5.7c-2.7 0-5.4.1-8.1.5-1.6.2-3.1.5-4.6 1l-.1 37.5zM432.1 29.5c3.1-.1 6.1.4 9 1.5 2.3.9 4.4 2.3 6 4.2 1.6 1.8 2.7 4 3.3 6.3.7 2.6 1 5.2 1 7.9v33.9c-.7.2-1.7.4-3 .7s-2.8.5-4.6.8-3.7.5-5.8.7-4.3.3-6.5.3c-2.6 0-5.3-.3-7.8-.9-2.3-.6-4.4-1.6-6.2-3s-3.2-3.2-4.2-5.2c-1.1-2.4-1.6-5.1-1.5-7.8-.1-2.6.5-5.2 1.7-7.5 1.1-2.1 2.7-3.8 4.7-5.1 2.2-1.4 4.6-2.5 7.2-3 3-.6 6-1 9-.9 1 0 2 .1 3.1.2s2.1.2 3.1.4 1.9.3 2.6.5c.5.1 1 .3 1.5.5v-3.2c0-1.8-.1-3.7-.4-5.5-.3-1.7-.9-3.3-1.8-4.8-1-1.5-2.4-2.7-4-3.4-2.1-1-4.4-1.4-6.7-1.3-3-.1-5.9.2-8.8.8-2 .6-3.4 1-4.3 1.4l-.9-5.9c1.8-.7 3.6-1.3 5.5-1.6 2.8-.8 5.8-1 8.8-1zm.6 50.2c2.6 0 4.9-.1 6.9-.3 1.7-.1 3.3-.4 5-.7V59.8c-1.2-.5-2.4-.8-3.6-1.1-2.3-.4-4.6-.6-6.9-.6-1.7 0-3.5.1-5.2.4-1.7.2-3.4.8-5 1.6-1.5.8-2.8 1.9-3.8 3.3-1 1.6-1.5 3.6-1.5 5.5 0 1.8.3 3.5 1 5.1.6 1.3 1.6 2.5 2.8 3.3 1.3.9 2.8 1.5 4.4 1.8 2 .4 4 .6 5.9.6zM478.7 79.8c3.3.1 6.6-.5 9.6-1.9 2.5-1.2 4-3.8 3.8-6.5 0-1.3-.2-2.6-.7-3.8-.5-1.1-1.3-2.1-2.2-2.8-1.3-1-2.6-1.8-4.1-2.4-1.7-.8-3.8-1.7-6.3-2.7-2-.8-3.9-1.7-5.7-2.5-1.7-.8-3.3-1.8-4.8-3-1.4-1.1-2.5-2.5-3.3-4.1-.9-1.8-1.3-3.8-1.2-5.8-.1-4.1 1.7-8 4.9-10.6 3.3-2.7 7.8-4 13.6-4.1 3.1-.1 6.1.2 9.1.9 1.7.4 3.4 1 5 1.7l-1.6 6c-1.4-.6-2.8-1.2-4.2-1.7-2.8-.8-5.8-1.1-8.7-1-1.5 0-2.9.1-4.3.5-1.3.3-2.5.8-3.6 1.5-1 .6-1.9 1.5-2.5 2.5-.6 1.1-1 2.4-.9 3.7 0 1.3.2 2.6.8 3.8.6 1.1 1.4 2 2.4 2.8 1.2.9 2.6 1.6 4 2.2 1.6.7 3.3 1.4 5.4 2.3 2.1.8 4.1 1.7 6 2.5 1.8.8 3.5 1.9 5 3.1s2.7 2.7 3.5 4.4c1 2 1.4 4.2 1.3 6.4 0 4.9-1.8 8.5-5.5 11s-8.6 3.7-14.9 3.7c-3.6.1-7.3-.3-10.8-1.2-1.7-.5-3.4-1.1-5-1.8l1.8-6.1c.4.3.9.5 1.3.7.9.4 1.9.7 2.8 1 1.4.4 2.8.8 4.2 1 2 .1 3.9.3 5.8.3zM522.2 79.8c3.3.1 6.6-.5 9.6-1.9 2.5-1.2 4-3.8 3.8-6.5 0-1.3-.2-2.6-.7-3.8-.5-1.1-1.3-2.1-2.2-2.8-1.3-1-2.6-1.8-4.1-2.4-1.7-.8-3.8-1.7-6.3-2.7-2-.8-3.9-1.7-5.7-2.5-1.7-.8-3.3-1.8-4.8-3-1.4-1.1-2.5-2.5-3.3-4.1-.9-1.8-1.3-3.8-1.2-5.8-.1-4.1 1.7-8 4.9-10.6 3.3-2.7 7.8-4 13.6-4.1 3.1-.1 6.1.2 9.1.9 1.7.4 3.4 1 5 1.7l-1.6 6c-1.4-.6-2.8-1.2-4.2-1.7-2.8-.8-5.8-1.1-8.7-1-1.5 0-2.9.1-4.3.5-1.3.3-2.5.8-3.6 1.5-1 .6-1.9 1.5-2.5 2.5-.6 1.1-1 2.4-.9 3.7 0 1.3.2 2.6.8 3.8.6 1.1 1.4 2 2.4 2.8 1.2.9 2.6 1.6 4 2.2 1.6.7 3.3 1.4 5.3 2.3 2.1.8 4.1 1.7 6 2.5 1.8.8 3.5 1.9 5 3.1s2.7 2.7 3.5 4.4c1 2 1.4 4.2 1.3 6.4 0 4.9-1.8 8.5-5.5 11s-8.6 3.7-14.9 3.7c-3.6.1-7.3-.3-10.8-1.2-1.7-.5-3.4-1.1-5-1.8l1.8-6.1c.4.3.9.5 1.3.7.9.4 1.9.7 2.8 1 1.4.4 2.8.8 4.2 1 2 .1 3.9.3 5.9.3z"/></g></svg>
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/70415763-multipass-logo.svg",
+            alt="multipass logo",
+            width="200",
+            height="90",
+            hi_def=True,
+            attrs={"style": "margin-bottom: 55px;height: 90px;"},
+          ) | safe
+        }}
         <p>Install on multipass</p>
         <div class="u-sv2">
           <a href="https://multipass.run" class="p-button--neutral u-no-margin--bottom">
@@ -238,23 +263,6 @@
 
   <section class="p-strip--light u-equal-height" id="jaas">
     <div class="row">
-      <div class="col-7">
-        <h4>The app store for Juju.</h4>
-        <p>
-          There are Charms for hundreds of popular cloud-oriented applications
-          such as Kubernetes, Apache Hadoop, Big Data solutions and OpenStack.
-          CharmHub is the quickest way to find them.
-        </p>
-        <p>
-          It’s also the easiest way for publishers to manage and distribute
-          their open source solutions to the entire Juju community.
-        </p>
-        <p>
-          <a href="https://jaas.ai/store" class="p-link--external"
-            >Browse solutions on the JAAS store</a
-          >
-        </p>
-      </div>
       <div class="col-5 u-align--center u-vertically-center">
         {{
           image(
@@ -265,6 +273,12 @@
             hi_def=True,
           ) | safe
         }}
+      </div>
+      <div class="col-6 col-start-large-7">
+        <h4>JAAS is Juju as a service.</h4>
+        <p>Hosted by Canonical, the makers of Ubuntu, JAAS provides managed Juju infrastructure to operate your applications. It’s the fastest way to operate your workloads on supported clouds with the fewest instances required.</p>
+        <p>Build, configure, manage and deploy your applications to the public cloud directly from your browser or the command line.</p>
+        <p><a href="https://jaas.ai" class="p-link--external">Try JAAS</a></p>
       </div>
     </div>
   </section>
