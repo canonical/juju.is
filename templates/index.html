@@ -1,63 +1,139 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <main id="main-content">
-  <section class="p-strip--light">
-    <div class="row u-equal-height">
-      <div class="col-8">
-        <h1>
-          <strong>Juju is</strong> simple, secure and stable devops tooling
-        </h1>
-        <p>
-          The easiest way to model, deploy and maintain complex applications in
-          the cloud.
-        </p>
+  <section class="p-strip--suru-bottom has-accent is-dark" style="background-size: auto 100%, cover; background-position: right center; background-image: url('https://assets.ubuntu.com/v1/a9dab044-suru-right.svg'), linear-gradient(266deg, #044f66, #022935)">
+    <div id="panel-juju-as-a-service" role="tabpanel" aria-labelledby="juju-as-a-service" class="p-hero-panel u-animate--reveal">
+      <div class="row">
+        <div class="col-6">
+          <h1>Juju is</h1>
+          <p>The simplest way to deploy and maintain applications in the cloud. Juju uses humans-first syntax. More importantly, it helps your team to build and maintain an understandable mental model of every deployment.</p>
+          <p><a href="/docs" class="p-button--positive">Get started with Juju</a></p>
+          <div>
+            <a class="github-button" data-size="large" href="https://github.com/juju/juju" aria-label="Follow @juju on GitHub"></a>
+            <a class="github-button" data-size="large" href="https://github.com/juju/juju" data-icon="octicon-star" data-show-count="true" aria-label="Star juju/juju on GitHub"></a>
+            <a class="github-button" data-size="large" href="https://github.com/juju/juju/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork juju/juju on GitHub"></a>
+          </div>
+        </div>
+        <div class="col-6 u-vertically-center u-align--center u-hide--small">
+          {{
+            image(
+              url="https://assets.ubuntu.com/v1/60bd6cf1-picto-juju.svg",
+              alt="",
+              width="300",
+              height="374",
+              hi_def=True,
+              loading="eager",
+            ) | safe
+          }}
+        </div>
       </div>
-      <div class="col-2 col-start-large-10 u-vertically-center">
-        <img
-        src="https://assets.ubuntu.com/v1/60bd6cf1-picto-juju.svg"
-        alt=""
-        />
+    </div>
+
+    <div id="panel-juju-expert-partners" role="tabpanel" aria-labelledby="juju-expert-partners"  class="p-hero-panel">
+      <div class="row">
+        <div class="col-6">
+          <h1>Juju is</h1>
+          <p>Open source done right. The project has hundreds of individuals providing code, bug reports, documentation and support. Backed by Canonical, the company behind Ubuntu, Juju powers the infrastructure behind startups, enterprises, researchers and governments.</p>
+          <p><a href="/docs" class="p-button--positive">Get started with Juju</a></p>
+          <div>
+            <a class="github-button" data-size="large" href="https://github.com/juju/juju" aria-label="Follow @juju on GitHub"></a>
+            <a class="github-button" data-size="large" href="https://github.com/juju/juju" data-icon="octicon-star" data-show-count="true" aria-label="Star juju/juju on GitHub"></a>
+            <a class="github-button" data-size="large" href="https://github.com/juju/juju/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork juju/juju on GitHub"></a>
+          </div>
+        </div>
+        <div class="col-6 u-vertically-center u-align--center u-hide--small">
+          {{
+            image(
+              url="https://assets.ubuntu.com/v1/60bd6cf1-picto-juju.svg",
+              alt="",
+              width="300",
+              height="374",
+              hi_def=True,
+            ) | safe
+          }}
+        </div>
+      </div>
+    </div>
+
+    <div id="panel-openstack-solutions" role="tabpanel" aria-labelledby="openstack-solutions"  class="p-hero-panel">
+      <div class="row">
+        <div class="col-6">
+          <h1>Juju is</h1>
+          <p>Dependable, efficient and understandable. You describe how your deployment should be and Juju makes it so. Your intent will be carried out at any scale on every cloud. Juju allows applications to auto-configure their optimal settings, preventing secrets to leak and typos to create cascading failure. </p>
+          <p><a href="/docs" class="p-button--positive">Get started with Juju</a></p>
+          <div>
+            <a class="github-button" data-size="large" href="https://github.com/juju/juju" aria-label="Follow @juju on GitHub"></a>
+            <a class="github-button" data-size="large" href="https://github.com/juju/juju" data-icon="octicon-star" data-show-count="true" aria-label="Star juju/juju on GitHub"></a>
+            <a class="github-button" data-size="large" href="https://github.com/juju/juju/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork juju/juju on GitHub"></a>
+          </div>
+        </div>
+        <div class="col-6 u-vertically-center u-align--center u-hide--small">
+          {{
+            image(
+              url="https://assets.ubuntu.com/v1/60bd6cf1-picto-juju.svg",
+              alt="",
+              width="300",
+              height="374",
+              hi_def=True,
+            ) | safe
+          }}
+        </div>
+      </div>
+    </div>
+
+
+    <div id="panel-big-data-solutions" role="tabpanel" aria-labelledby="big-data-solutions"  class="p-hero-panel">
+      <div class="row">
+        <div class="col-6">
+          <h1>Juju is</h1>
+          <p>The only devops tool that understands that post-deployment operations are its responsibility too. Juju creates an application model for every deployment, keeping everyone’s operational awareness at the level needed to size up and manage any eventuality.</p>
+          <p><a href="/docs" class="p-button--positive">Get started with Juju</a></p>
+          <div>
+            <a class="github-button" data-size="large" href="https://github.com/juju/juju" aria-label="Follow @juju on GitHub"></a>
+            <a class="github-button" data-size="large" href="https://github.com/juju/juju" data-icon="octicon-star" data-show-count="true" aria-label="Star juju/juju on GitHub"></a>
+            <a class="github-button" data-size="large" href="https://github.com/juju/juju/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork juju/juju on GitHub"></a>
+          </div>
+        </div>
+        <div class="col-6 u-vertically-center u-align--center u-hide--small">
+          {{
+            image(
+              url="https://assets.ubuntu.com/v1/60bd6cf1-picto-juju.svg",
+              alt="",
+              width="300",
+              height="374",
+              hi_def=True,
+            ) | safe
+          }}
+        </div>
+      </div>
+    </div>
+
+    <div class="row p-hero-tab">
+      <div role="tablist" aria-label="Discover Juju services and solutons" class="p-hero-tab__list">
+        <button role="tab" aria-selected="true" aria-controls="panel-juju-as-a-service" id="juju-as-a-service" class="p-hero-tab__item">
+          <i class="before"></i>
+          <p class="p-hero-tab__title">Juju is simple</p>
+        </button>
+        <button role="tab" aria-selected="false" aria-controls="panel-juju-expert-partners" id="juju-expert-partners" class="p-hero-tab__item">
+          <i class="before"></i>
+          <p class="p-hero-tab__title">Juju is open source</p>
+        </button>
+        <button role="tab" aria-selected="false" aria-controls="panel-openstack-solutions" id="openstack-solutions" class="p-hero-tab__item">
+          <i class="before"></i>
+          <p class="p-hero-tab__title">Juju is automation</p>
+        </button>
+        <button role="tab" aria-selected="false" aria-controls="panel-big-data-solutions" id="big-data-solutions" class="p-hero-tab__item">
+          <i class="before"></i>
+          <p class="p-hero-tab__title">Juju is application modeling</p>
+        </button>
       </div>
     </div>
   </section>
 
-  <nav class="p-tabs p-sticky-nav">
-    <ul class="p-tabs__list u-no-margin--bottom" role="tablist">
-      <div class="u-fixed-width">
-        <li class="p-tabs__item" role="presentation">
-          <a class="p-tabs__link js-sticky-tab" href="#what-is-juju"
-          >What is Juju?</a
-          >
-        </li>
-        <li class="p-tabs__item" role="presentation">
-          <a class="p-tabs__link js-sticky-tab" href="#install">Install</a>
-        </li>
-        <li class="p-tabs__item" role="presentation">
-          <a class="p-tabs__link js-sticky-tab" href="#get-started"
-          >Getting started</a
-          >
-        </li>
-        <li class="p-tabs__item" role="presentation">
-          <a class="p-tabs__link js-sticky-tab" href="#tutorials">Tutorials</a>
-        </li>
-        <li class="p-tabs__item" role="presentation">
-          <a class="p-tabs__link js-sticky-tab" href="#jaas">JAAS</a>
-        </li>
-        <li class="p-tabs__item" role="presentation">
-          <a class="p-tabs__link js-sticky-tab" href="#learn-more"
-          >Learn more</a
-          >
-        </li>
-      </div>
-    </ul>
-  </nav>
+  <script src="{{ static_url('js/tabpanel.js') }}"></script>
+
   <section class="p-strip" id="what-is-juju">
     <div class="row">
-      <div class="col-5">
-        <img src="https://assets.ubuntu.com/v1/9f0ed0db-video-bg.png" alt="" />
-      </div>
-      <div class="col-6 col-start-large-7">
+      <div class="col-6">
         <h2>What is Juju?</h2>
         <p>
           Built to manage complex software architectures wherever they’re run,
@@ -65,10 +141,16 @@
           updates and configuration management.
         </p>
         <p>
-          Use it to manage applications and services on Kubernetes, VMs, bare
-          metal or any hybrid cloud configuration.
+          Use Juju to manage applications and services on public clouds such as
+          Amazon AWS, Google GCE and Microsoft Azure, on bare metal, or any
+          hybrid cloud configuration.
         </p>
-        <p>Get started with Juju</p>
+      </div>
+      <div class="col-5 col-start-large-7 u-align--center">
+        <img
+          src="https://assets.ubuntu.com/v1/78c1ad70-deploy-logos-2x.png"
+          alt=""
+        />
       </div>
     </div>
   </section>
@@ -76,258 +158,143 @@
   <section class="p-strip--light" id="install">
     <div class="row">
       <div class="col-8">
-        <h2 style="font-weight: 100">Install Multipass</h2>
+        <h2>Getting started</h2>
+        <p>Choose your platform and get started</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-4">
-        <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" alt="Windows logo">
-        <p>An installer is available for Windows</p>
-        <p><a href="https://github.com/juju/juju/releases" class="p-button--neutral">
-          <span class="p-link--external">Download Juju for Windows</span>
-        </a></p>
-        <p><i>or</i> Windows 10 Home/Pro/Enterprise with Virtualbox</p>
-      </div>
-      <div class="col-4">
-        <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" alt="macOS logo">
-        <p>Install Juju on macOS via Homebrew</p>
+      <div class="col-3">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg",
+            alt="Linux logo",
+            width="76",
+            height="90",
+            hi_def=True,
+            attrs={"style": "margin: 27px 0;height: 90px;"},
+          ) | safe
+        }}
+        <p>Install on Linux via a Snap</p>
         <div class="p-code-copyable">
-          <input class="p-code-copyable__input" value="brew install juju" readonly="readonly">
+          <input
+            class="p-code-copyable__input"
+            value="sudo snap install juju"
+            readonly="readonly"
+          />
           <button class="p-code-copyable__action">Copy to clipboard</button>
         </div>
+        <a href="/docs/installing#heading--ubuntu">Documentation for Linux&nbsp;&rsaquo;</a>
       </div>
-      <div class="col-4">
-        <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" alt="Linux logo" style="margin: 27px 0;height: 90px;">
-        <p>Install Juju on Linux via a Snap</p>
+      <div class="col-3">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg",
+            alt="Windows logo",
+            width="145",
+            height="145",
+            hi_def=True,
+          ) | safe
+        }}
+        <p>An installer for Windows</p>
+        <div class="u-sv2">
+          <a
+            href="https://github.com/juju/juju/releases"
+            class="p-button--neutral u-no-margin--bottom"
+          >
+            <span class="p-link--external">Download Juju for Windows</span>
+          </a>
+        </div>
+        <a href="/docs/installing#heading--windows">Documentation for Windows&nbsp;&rsaquo;</a>
+      </div>
+      <div class="col-3">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/236f314d-macos.svg",
+            alt="macOS logo",
+            width="145",
+            height="145",
+            hi_def=True,
+          ) | safe
+        }}
+        <p>Install on macOS via Homebrew</p>
         <div class="p-code-copyable">
-          <input class="p-code-copyable__input" value="sudo snap install juju" readonly="readonly">
+          <input
+            class="p-code-copyable__input"
+            value="brew install juju"
+            readonly="readonly"
+          />
           <button class="p-code-copyable__action">Copy to clipboard</button>
         </div>
+        <a href="/docs/installing#heading--macos">Documentation for macOS&nbsp;&rsaquo;</a>
+      </div>
+      <div class="col-3">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/70415763-multipass-logo.svg",
+            alt="multipass logo",
+            width="200",
+            height="90",
+            hi_def=True,
+            attrs={"style": "margin-bottom: 55px;height: 90px;"},
+          ) | safe
+        }}
+        <p>Install on multipass</p>
+        <div class="u-sv2">
+          <a href="https://multipass.run" class="p-button--neutral u-no-margin--bottom">
+            <span class="p-link--external">Install on multipass</span>
+          </a>
+        </div>
+        <a href="https://multipass.run" class="p-link--external">Learn about multipass</a>
       </div>
     </div>
   </section>
 
-  <section class="p-strip" id="get-started">
-    <div class="row" id="get-started">
-      <div class="col-8">
-        <h2>Getting started</h2>
-        <p>The first part of the getting started section introduces you to Juju by first experimenting with a local deployment on an Ubuntu VM. The second part outlines the process for deploying to a public cloud.</p>
-        <div class="p-accordion" role="tablist" aria-multiselect="true">
-          <ul class="p-accordion__list">
-            <li class="p-accordion__group">
-              <button type="button" class="p-accordion__tab" id="tab1" role="tab" aria-controls="#tab1-section" aria-expanded="false">Get started with Juju and an Ubuntu VM on your Mac or Windows workstation</button>
-              <section class="p-accordion__panel" id="tab1-section" role="tabpanel" aria-hidden="true" aria-labelledby="tab1-section">
-                <div class="u-sv3">
-                  <p>Launch an instance (by default you get the current Ubuntu LTS)</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass launch --name foo" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>Run commands in that instance, try running bash (logout or ctrl-d to quit)</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass exec foo -- lsb_release -a" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>Pass a cloud-init metadata file to an instance on launch see <a href="https://blog.ubuntu.com/2018/04/02/using-cloud-init-with-multipass">using cloud-init with multipass</a> for more details</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass launch -n bar --cloud-init cloud-config.yaml" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>See your instances</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass list" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>Stop and start instances</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass stop foo bar" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass start foo" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>Clean up what you don’t need</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass delete bar" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass purge" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>Find alternate images to launch with multipass</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass find" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>Get help</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass help" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass help <command>" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>Now don’t forget you still have ‘foo’ running :)</p>
-                </div>
-              </section>
-            </li>
-            <li class="p-accordion__group">
-              <button type="button" class="p-accordion__tab" id="tab2" role="tab" aria-controls="#tab2-section" aria-expanded="false">Get started with Juju and deploying a simple web application to a public cloud</button>
-              <section class="p-accordion__panel" id="tab2-section" role="tabpanel" aria-hidden="true" aria-labelledby="tab2-section">
-                <div class="u-sv3">
-                  <p>Launch an instance (by default you get the current Ubuntu LTS)</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass launch --name foo" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>Run commands in that instance, try running bash (logout or ctrl-d to quit)</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass exec foo -- lsb_release -a" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>Pass a cloud-init metadata file to an instance on launch see <a href="https://blog.ubuntu.com/2018/04/02/using-cloud-init-with-multipass">using cloud-init with multipass</a> for more details</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass launch -n bar --cloud-init cloud-config.yaml" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>See your instances</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass list" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>Stop and start instances</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass stop foo bar" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass start foo" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>Clean up what you don’t need</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass delete bar" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass purge" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>Find alternate images to launch with multipass</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass find" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>Get help</p>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass help" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                  <div class="p-code-copyable">
-                    <input class="p-code-copyable__input" value="multipass help <command>" readonly="readonly">
-                    <button class="p-code-copyable__action">Copy to clipboard</button>
-                  </div>
-                </div>
-                <div class="u-sv3">
-                  <p>Now don’t forget you still have ‘foo’ running :)</p>
-                </div>
-              </section>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="p-strip--light" id="tutorials">
+  <section class="p-strip" id="tutorials">
     <div class="row">
       <div class="col-8">
         <h2>Tutorials</h2>
-        <p>Check out the following in depth tutorials exploring the deployment of different types of workloads to understand where Juju can fit into your workflow.</p>
+        <p>
+          Check out the following in depth tutorials exploring the deployment of more advanced workloads to understand where Juju can fit into your workflow.
+        </p>
+        <p><a href="/tutorials" class="p-button u-no-margin--bottom">Browse tutorials</a></p>
       </div>
     </div>
   </section>
 
-  <section class="p-strip--accent u-equal-height" id="jaas">
+  <section class="p-strip--light u-equal-height" id="jaas">
     <div class="row">
-      <div class="col-3 u-align--center u-vertically-center">
-          <img
-          src="https://assets.ubuntu.com/v1/60bd6cf1-picto-juju.svg"
-          alt=""
-          width="200"
-          />
+      <div class="col-5 u-align--center u-vertically-center">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/162002c2-charms_juju.svg",
+            alt="",
+            width="563",
+            height="232",
+            hi_def=True,
+          ) | safe
+        }}
       </div>
-      <div class="col-8">
+      <div class="col-6 col-start-large-7">
         <h4>JAAS is Juju as a service.</h4>
         <p>Hosted by Canonical, the makers of Ubuntu, JAAS provides managed Juju infrastructure to operate your applications. It’s the fastest way to operate your workloads on supported clouds with the fewest instances required.</p>
         <p>Build, configure, manage and deploy your applications to the public cloud directly from your browser or the command line.</p>
-        <p><a href="https://jaas.ai" class="p-link--external p-link--inverted">Learn more</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="p-strip--light">
-    <div class="row">
-      <div class="col-8">
-        <blockquote class="p-pull-quote">
-          <p class="p-pull-quote__quote">Using the modelling ethos brought by Juju allows me to quickly run big data applications in a multitude of places. Be it locally on my laptop, on bare metal or in the Cloud, Juju lets me reuse the same models and code without changing any aspects of my deployment</p>
-          <cite class="p-pull-quote__citation">Tom Barber, Spicule</cite>
-        </blockquote>
+        <p><a href="https://jaas.ai" class="p-link--external">Try JAAS</a></p>
       </div>
     </div>
   </section>
 
   <section class="p-strip">
     <div class="row">
-      <div class="col-12">
-        <h4 class="p-muted-heading">THE LATEST JUJU NEWS</h4>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-4">
-        <p><a href="">Declarative vs Imperative: DevOps done right</a></p>
-        <p>6 August 19</p>
-      </div>
-      <div class="col-4">
-        <p><a href="">BT turns to Canonical Ubuntu to enable next generation 5G Cloud Core</a></p>
-        <p>24 July 19</p>
-      </div>
-      <div class="col-4">
-        <p><a href="">How to harness big data for maximum business value</a></p>
-        <p>6 December 18</p>
+      <div class="col-8">
+        <blockquote class="p-pull-quote u-no-margin--bottom">
+          <p class="p-pull-quote__quote u-no-margin--bottom">
+            Using the modelling ethos brought by Juju allows me to quickly run
+            big data applications in a multitude of places. Be it locally on my
+            laptop, on bare metal or in the Cloud, Juju lets me reuse the same
+            models and code without changing any aspects of my deployment
+          </p>
+          <cite class="p-pull-quote__citation">Tom Barber, Spicule</cite>
+        </blockquote>
       </div>
     </div>
   </section>
@@ -342,112 +309,67 @@
       <div class="col-4">
         <h4>Documentation</h4>
         <ul class="p-list">
-          <li class="p-list__item"><a href="" class="p-link--external">Concepts</a></li>
-          <li class="p-list__item"><a href="" class="p-link--external">Tutorials</a></li>
-          <li class="p-list__item"><a href="" class="p-link--external">Docs</a></li>
+          <li class="p-list__item">
+            <a href="/docs/concepts" class="p-link--external">Concepts</a>
+          </li>
+          <li class="p-list__item">
+            <a href="/tutorials" class="p-link--external">Tutorials</a>
+          </li>
+          <li class="p-list__item">
+            <a href="/docs" class="p-link--external">Docs</a>
+          </li>
         </ul>
       </div>
       <div class="col-4">
-          <h4>Tutorials</h4>
-          <ul class="p-list">
-            <li class="p-list__item"><a href="" class="p-link--external">Basic client usage</a></li>
-            <li class="p-list__item"><a href="" class="p-link--external">Using Juju with MicroK8s</a></li>
-            <li class="p-list__item"><a href="" class="p-link--external">Understanding Kubernetes charms</a></li>
-            <li class="p-list__item"><a href="" class="p-link--external">Managing credentials</a></li>
-          </ul>
+        <h4>Tutorials</h4>
+        <ul class="p-list">
+          <li class="p-list__item">
+            <a
+              href="https://jaas.ai/docs/client-usage-tutorial"
+              class="p-link--external"
+              >Basic client usage</a
+            >
+          </li>
+          <li class="p-list__item">
+            <a
+              href="https://jaas.ai/docs/microk8s-cloud"
+              class="p-link--external"
+              >Using Juju with MicroK8s</a
+            >
+          </li>
+          <li class="p-list__item">
+            <a
+              href="https://jaas.ai/docs/k8s-charms-tutorial"
+              class="p-link--external"
+              >Understanding Kubernetes charms</a
+            >
+          </li>
+          <li class="p-list__item">
+            <a
+              href="https://jaas.ai/docs/t/tutorial-managing-credentials/1289"
+              class="p-link--external"
+              >Managing credentials</a
+            >
+          </li>
+        </ul>
       </div>
       <div class="col-4">
-          <h4>Participate</h4>
-          <ul class="p-list">
-            <li class="p-list__item"><a href="" class="p-link--external">Juju on GitHub</a></li>
-            <li class="p-list__item"><a href="" class="p-link--external">Juju on Discourse</a></li>
-          </ul>
+        <h4>Participate</h4>
+        <ul class="p-list">
+          <li class="p-list__item">
+            <a href="https://github.com/juju/juju" class="p-link--external"
+              >Juju on GitHub</a
+            >
+          </li>
+          <li class="p-list__item">
+            <a href="https://discourse.jujucharms.com/" class="p-link--external"
+              >Juju on Discourse</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 </main>
-
-<script>
-  var stickyNav = document.querySelector('.p-sticky-nav');
-  var stickyTabs = stickyNav.querySelectorAll('.js-sticky-tab');
-  var didScroll = true;
-
-  function isTabActive(tab) {
-    var sectionId = tab.href.split('#')[1];
-    var section = document.getElementById(sectionId);
-    var rect = section.getBoundingClientRect();
-    return (rect.top < stickyNav.clientHeight);
-  }
-
-  function render() {
-    stickyTabs.forEach(function(tab) {
-      if (isTabActive(tab)) {
-        unsetActiveTabs();
-        tab.classList.add('is-selected');
-      }
-    });
-  }
-
-  function unsetActiveTabs() {
-    stickyTabs.forEach(function(tab) {
-      tab.classList.remove('is-selected');
-    });
-  }
-
-  function tick() {
-    if (didScroll) {
-      render();
-      didScroll = false;
-    }
-    requestAnimationFrame(tick);
-  }
-
-  requestAnimationFrame(tick);
-
-  window.addEventListener('scroll', function() {
-    didScroll = true;
-  });
-
-</script>
-
-<script>
-  /**
-    Attaches event listeners for the accordion open and close click events.
-    @param {String} accordionContainerSelector The selector of the accordion container.
-  */
-  function setupAccordionListener(accordionContainerSelector) {
-    /**
-      Toggles the necessary values on the accordion panels and handles to show or
-      hide depending on the supplied values.
-      @param {HTMLElement} element The tab that acts as the handles for the
-        accordion panes.
-      @param {Boolean} show Whether to show or hide the accordion panel.
-    */
-    const toggle = (element, show) => {
-      element.setAttribute('aria-expanded', show);
-      document
-        .querySelector(element.getAttribute('aria-controls'))
-        .setAttribute('aria-hidden', !show);
-    }
-    // Set up an event listener on the container so that panels can be added
-    // and removed and events do not need to be managed separately.
-    document
-      .querySelector(accordionContainerSelector)
-      .addEventListener('click', e => {
-        const target = e.target;
-        const isTargetOpen = target.getAttribute('aria-expanded') === 'true';
-        // Find any open panels within the container and close them.
-        if (target.classList.contains('p-accordion__tab')) {
-          e.currentTarget
-            .querySelectorAll('[aria-expanded=true]')
-            .forEach(element => toggle(element, false));
-          // Toggle the target.
-          toggle(target, !isTargetOpen);
-        }
-      });
-  }
-
-  setupAccordionListener('.p-accordion__list');
-</script>
 
 {% endblock %}

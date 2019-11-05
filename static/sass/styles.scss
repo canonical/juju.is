@@ -12,21 +12,15 @@
 @import 'pattern_cards';
 @include juju-cards;
 
+@import 'patterns_hero-tab';
+@include juju-hero-tab;
 
-// Custom styles
-.p-navigation__banner {
-  background-color: $ubuntu-orange;
-}
+@import 'patterns_strips';
+@include juju-p-strips;
+
 
 .p-navigation__logo {
-  font-weight: 400;
-  margin-right: $sph-inner--large;
-
-  @media only screen and (max-width: $breakpoint-medium) {
-    margin-bottom: -12px;
-    margin-top: 12px;
-    max-height: 3rem;
-  }
+  margin: .1rem 1rem 0 1.5rem;
 }
 
 .p-navigation__toggle {
@@ -58,4 +52,20 @@
 
 .p-tabs__link.is-selected {
   @include vf-highlight-bar($color-brand, bottom, true);
+}
+
+// Hide images that fail to lazy load due to JS failing or other
+.lazyload {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+  width: 0;
+}
+
+// Fades in content when class is added
+.u-animate--reveal {
+  height: auto !important;
+  opacity: 1 !important;
+  transition: opacity 0.5s ease-in;
 }
