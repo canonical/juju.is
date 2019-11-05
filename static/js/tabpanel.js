@@ -1,12 +1,12 @@
 let timer;
 
 window.addEventListener('DOMContentLoaded', () => {
-  const tabs = document.querySelectorAll('[role="tab"]');
+  const tabs = document.querySelectorAll('.p-hero-tab__item');
 
   // Add a click event handler to each tab
   tabs.forEach(tab => {
     tab.addEventListener('click', function(e) {
-      const target = e.target.closest('[role="tab"]');
+      const target = e.target.closest('.p-hero-tab__item');
       changeTabs(target);
     });
   });
