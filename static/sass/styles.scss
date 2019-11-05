@@ -18,19 +18,9 @@
 @import 'patterns_strips';
 @include juju-p-strips;
 
-// Custom styles
-.p-navigation__banner {
-  background-color: $ubuntu-orange;
-}
 
 .p-navigation__logo {
-  font-weight: 400;
-  margin-right: $sph-inner--large;
-
-  @media only screen and (max-width: $breakpoint-medium) {
-    margin-bottom: -12px;
-    max-height: 3rem;
-  }
+  margin: .1rem 1rem 0 1.5rem;
 }
 
 .p-navigation__toggle {
