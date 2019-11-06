@@ -1,5 +1,3 @@
-from flask import render_template
-
 from canonicalwebteam.flask_base.app import FlaskBase
 from canonicalwebteam.templatefinder import TemplateFinder
 from canonicalwebteam import image_template
