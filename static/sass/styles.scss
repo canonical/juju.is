@@ -71,18 +71,18 @@
 }
 
 .p-code-numbered {
-  background-color: $color-x-light;
   border: 0;
 
   &__line {
-  padding: 0.5rem 1rem 0 2rem;
+  padding: .5rem 1rem 0 1rem;
 
     &::before {
       background-color: transparent;
       border: 0;
       color: $color-mid-dark;
       content: "$";
-      width: 1rem;
+      padding-left: 0;
+      width: 0;
     }
   }
 }
