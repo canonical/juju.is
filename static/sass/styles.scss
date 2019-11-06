@@ -69,3 +69,12 @@
   opacity: 1 !important;
   transition: opacity 0.5s ease-in;
 }
+
+.p-code-numbered__line {
+  padding: 0.5rem 1rem 0 3.5rem;
+
+  &::before {
+    content: "$";
+    width: 2.5rem;
+  }
+}
