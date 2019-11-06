@@ -42,7 +42,27 @@ jobs:
       - run:
           name: Lint sass
           command: yarn lint-scss
-
+  test-python:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Yarn install
+          command: yarn install
+      - run:
+          name: Yarn build
+          command: yarn build
+      - run:
+          name: Install requirements
+          command: pip3 install -r requirements.txt
+      - run:
+          name: Install dependencies
+          command: pip3 install coverage
+      - run:
+          name: Run tests with coverage
+          command: |
+            coverage run  --source=. -m unittest discover tests
+            bash <(curl -s https://codecov.io/bash) -cF python
 workflows:
   version: 2
   build:
@@ -50,3 +70,4 @@ workflows:
       - test-site
       - lint-nginx
       - lint-scss
+      - test-python
