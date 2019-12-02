@@ -254,43 +254,35 @@
     </div>
   </section>
 
-  <!-- Randomize testimonials -->
-  {% set random_testimonial = range(1, 3) | random %}
-  {% if random_testimonial == 1 %}
-    <section class="p-strip">
-      <div class="row">
-        <div class="col-8">
-          <blockquote class="p-pull-quote u-no-margin--bottom">
-            <p class="p-pull-quote__quote u-no-margin--bottom">
-              For me, speed and simplicity are paramount. It may sound silly, but
-              a lot of the stuff I do in my lab with Juju is out of pure laziness.
-              Juju frees my brain to focus on other things. While Juju itself is
-              really intuitive and easy to use, I was pleasantly surprised by how
-              welcoming and humble the Juju community is. The community is a big
-              reason why I’ve stuck with it.
-            </p>
-            <cite class="p-pull-quote__citation">Sean Shüping, <a class="p-link--external" href="https://devzero.co.za/">/dev/zero</a></cite>
-          </blockquote>
-        </div>
+  <section class="p-strip">
+    <div class="row">
+      <div class="col-6">
+        <blockquote class="p-pull-quote u-no-margin--bottom">
+          <p class="p-pull-quote__quote u-no-margin--bottom">
+            For me, speed and simplicity are paramount. It may sound silly, but
+            a lot of the stuff I do in my lab with Juju is out of pure laziness.
+            Juju frees my brain to focus on other things. While Juju itself is
+            really intuitive and easy to use, I was pleasantly surprised by how
+            welcoming and humble the Juju community is. The community is a big
+            reason why I’ve stuck with it.
+          </p>
+          <cite class="p-pull-quote__citation">Sean Shüping, <a class="p-link--external" href="https://devzero.co.za/">/dev/zero</a></cite>
+        </blockquote>
       </div>
-    </section>
-  {% elif random_testimonial == 2 %}
-      <section class="p-strip">
-        <div class="row">
-          <div class="col-8">
-            <blockquote class="p-pull-quote u-no-margin--bottom">
-              <p class="p-pull-quote__quote u-no-margin--bottom">
-                Using the modelling ethos brought by Juju allows me to quickly run
-                big data applications in a multitude of places. Be it locally on my
-                laptop, on bare metal or in the Cloud, Juju lets me reuse the same
-                models and code without changing any aspects of my deployment
-              </p>
-              <cite class="p-pull-quote__citation">Tom Barber, Spicule</cite>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-  {% endif %}
+      <div class="col-6">
+        <blockquote class="p-pull-quote u-no-margin--bottom">
+          <p class="p-pull-quote__quote u-no-margin--bottom">
+            Using the modelling ethos brought by Juju allows me to quickly run
+            big data applications in a multitude of places. Be it locally on my
+            laptop, on bare metal or in the Cloud, Juju lets me reuse the same
+            models and code without changing any aspects of my deployment
+          </p>
+          <cite class="p-pull-quote__citation">Tom Barber, Spicule</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
 
   <section class="p-strip--light" id="learn-more">
     <div class="row">
