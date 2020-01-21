@@ -1,26 +1,25 @@
 // Import scss settings
-@import 'settings';
+@import "settings";
 
 // Import Vanilla
 @import 'vanilla-framework/scss/build';
 
-@import 'patterns_docs';
-@import 'hljs';
+@import "patterns_docs";
+@import "hljs";
 
 @include juju-docs;
 // Local patterns
-@import 'pattern_cards';
+@import "pattern_cards";
 @include juju-cards;
 
-@import 'patterns_hero-tab';
+@import "patterns_hero-tab";
 @include juju-hero-tab;
 
-@import 'patterns_strips';
+@import "patterns_strips";
 @include juju-p-strips;
 
-
 .p-navigation__logo {
-  margin: .1rem 1rem 0 1.5rem;
+  margin: 0.1rem 1rem 0 1.5rem;
 }
 
 .p-navigation__toggle {
@@ -74,7 +73,7 @@
   border: 0;
 
   &__line {
-  padding: .5rem 1rem 0 1rem;
+    padding: 0.5rem 1rem 0 1rem;
 
     &::before {
       background-color: transparent;
