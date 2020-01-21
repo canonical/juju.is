@@ -2,7 +2,9 @@
 @import "settings";
 
 // Import Vanilla
-@import 'vanilla-framework/scss/build';
+$color-accent: #f0f5f7;
+@import "vanilla-framework/scss/vanilla";
+@include vanilla;
 
 @import "patterns_docs";
 @import "hljs";
