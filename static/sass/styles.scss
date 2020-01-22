@@ -87,3 +87,14 @@ $color-accent: #f0f5f7;
     }
   }
 }
+
+// Homepage footer overide
+.p-strip--suru-top.is-homepage::before {
+  background: linear-gradient(
+    to bottom right,
+    $color-accent 0%,
+    $color-accent 49%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}

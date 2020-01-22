@@ -176,7 +176,7 @@
 
     {% block content %}{% endblock %}
 
-    <footer class="p-strip--suru-top has-accent is-dark"
+    <footer class="p-strip--suru-top has-accent is-dark {% if request.path == '/' %}is-homepage{% endif %}"
       style="background-size: auto 100%, cover; background-image: url('https://assets.ubuntu.com/v1/8951dc67-suru-left.svg'), linear-gradient(266deg, #044f66, #022935)">
       <div class="row">
         <div class="col-8">
