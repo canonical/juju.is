@@ -112,7 +112,7 @@
       <div class="p-navigation__row">
         <div class="p-navigation__banner">
           <div class="p-navigation__logo" style="margin-left: 0">
-            <a class="p-navigation__link" href="#">
+            <a class="p-navigation__link" href="/">
               <img
                 src="https://assets.ubuntu.com/v1/9afc1e35-juju_white-orange_hex.svg"
                 class="p-navigation__image"
@@ -176,30 +176,53 @@
 
     {% block content %}{% endblock %}
 
-    <footer class="p-strip">
+    <footer class="p-strip--suru-top has-accent is-dark {% if request.path == '/' %}is-homepage{% endif %}"
+      style="background-size: auto 100%, cover; background-image: url('https://assets.ubuntu.com/v1/8951dc67-suru-left.svg'), linear-gradient(266deg, #044f66, #022935)">
       <div class="row">
-        <div>
-          <p class="u-no-max-width">
-            © {{ current_year }} Canonical Ltd. Ubuntu and Canonical are
-            registered trademarks of Canonical&nbsp;Ltd.
+        <div class="col-8">
+          <p class="u-no-max-width">© 2020 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.
           </p>
+          <ul class="p-inline-list--middot">
+            <li class="p-inline-list__item">
+              <a class="p-link--inverted p-link--external" href="https://www.ubuntu.com/legal">Legal Information</a>
+            </li>
+            <li class="p-inline-list__item">
+              <a class="p-link--inverted" href="https://github.com/canonical-web-and-design/juju.is/issues/new">Report a bug on
+                this site</a>
+            </li>
+          </ul>
           <nav>
             <ul class="p-inline-list--middot">
               <li class="p-inline-list__item">
-                <a href="https://www.ubuntu.com/legal">Legal information</a>
+                <a class="p-link--inverted" href="/docs">Docs</a>
               </li>
               <li class="p-inline-list__item">
-                <a
-                  class="p-footer__link"
-                  href="https://github.com/canonical-websites/juju.is/issues/new"
-                  >Report a bug on this site</a
-                >
+                <a class="p-link--inverted" href="/tutorials">Tutorials</a>
+              </li>
+              <li class="p-inline-list__item">
+                <a class="p-link--inverted p-link--external" href="https://discourse.jujucharms.com/">Discourse</a>
+              </li>
+              <li class="p-inline-list__item">
+                <a class="p-link--inverted" href="/docs/installing">Install Juju</a>
               </li>
             </ul>
             <span class="u-off-screen">
               <a href="#">Go to the top of the page</a>
             </span>
           </nav>
+        </div>
+        <div class="col-4 u-align--right">
+          <ul class="p-inline-list">
+            <li class="p-inline-list__item">
+              <a href="http://www.facebook.com/ubuntucloud" class="p-icon--facebook"></a>
+            </li>
+            <li class="p-inline-list__item">
+              <a href="http://www.twitter.com/juju_devops" class="p-icon--twitter"></a>
+            </li>
+            <li class="p-inline-list__item">
+              <a href="http://youtube.com/jujucharms" class="p-icon--youtube"></a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

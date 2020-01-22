@@ -1,26 +1,27 @@
 // Import scss settings
-@import 'settings';
+@import "settings";
 
 // Import Vanilla
-@import 'vanilla-framework/scss/build';
+$color-accent: #f0f5f7;
+@import "vanilla-framework/scss/vanilla";
+@include vanilla;
 
-@import 'patterns_docs';
-@import 'hljs';
+@import "patterns_docs";
+@import "hljs";
 
 @include juju-docs;
 // Local patterns
-@import 'pattern_cards';
+@import "pattern_cards";
 @include juju-cards;
 
-@import 'patterns_hero-tab';
+@import "patterns_hero-tab";
 @include juju-hero-tab;
 
-@import 'patterns_strips';
+@import "patterns_strips";
 @include juju-p-strips;
 
-
 .p-navigation__logo {
-  margin: .1rem 1rem 0 1.5rem;
+  margin: 0.1rem 1rem 0 1.5rem;
 }
 
 .p-navigation__toggle {
@@ -74,7 +75,7 @@
   border: 0;
 
   &__line {
-  padding: .5rem 1rem 0 1rem;
+    padding: 0.5rem 1rem 0 1rem;
 
     &::before {
       background-color: transparent;
@@ -85,4 +86,15 @@
       width: 0;
     }
   }
+}
+
+// Homepage footer overide
+.p-strip--suru-top.is-homepage::before {
+  background: linear-gradient(
+    to bottom right,
+    $color-accent 0%,
+    $color-accent 49%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
