@@ -1,3 +1,5 @@
+import datetime
+
 from canonicalwebteam.flask_base.app import FlaskBase
 from canonicalwebteam.templatefinder import TemplateFinder
 from canonicalwebteam import image_template
@@ -34,3 +36,8 @@ def inject_utilities():
         "current_url_with_query": current_url_with_query,
         "static_url": static_url,
     }
+
+
+@app.context_processor
+def inject_today_date():
+    return {"current_year": datetime.date.today().year}
