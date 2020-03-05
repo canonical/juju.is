@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+
+{% block content %}
 <main id="main-content">
   <section class="p-strip--suru-bottom has-accent is-dark" style="background-size: auto 100%, cover; background-position: right center; background-image: url('https://assets.ubuntu.com/v1/a9dab044-suru-right.svg'), linear-gradient(266deg, #044f66, #022935)">
     <div id="panel-juju-as-a-service" role="tabpanel" aria-labelledby="juju-as-a-service" class="p-hero-panel u-animate--reveal">
@@ -16,12 +18,12 @@
         <div class="col-6 u-vertically-center u-align--center u-hide--small">
           {{
             image(
-              url="https://assets.ubuntu.com/v1/26415d45-slide-simple.svg",
-              alt="",
-              width="300",
-              height="374",
-              hi_def=True,
-              loading="eager",
+            url="https://assets.ubuntu.com/v1/26415d45-slide-simple.svg",
+            alt="",
+            width="300",
+            height="374",
+            hi_def=True,
+            loading="eager",
             ) | safe
           }}
         </div>
@@ -43,11 +45,11 @@
         <div class="col-6 u-vertically-center u-align--center u-hide--small">
           {{
             image(
-              url="https://assets.ubuntu.com/v1/f2e4e9fb-slide-opensource.svg",
-              alt="",
-              width="300",
-              height="374",
-              hi_def=True,
+            url="https://assets.ubuntu.com/v1/f2e4e9fb-slide-opensource.svg",
+            alt="",
+            width="300",
+            height="374",
+            hi_def=True,
             ) | safe
           }}
         </div>
@@ -69,17 +71,16 @@
         <div class="col-6 u-vertically-center u-align--center u-hide--small">
           {{
             image(
-              url="https://assets.ubuntu.com/v1/3c6d2c1e-slide-automation.svg",
-              alt="",
-              width="300",
-              height="374",
-              hi_def=True,
+            url="https://assets.ubuntu.com/v1/3c6d2c1e-slide-automation.svg",
+            alt="",
+            width="300",
+            height="374",
+            hi_def=True,
             ) | safe
           }}
         </div>
       </div>
     </div>
-
 
     <div id="panel-big-data-solutions" role="tabpanel" aria-labelledby="big-data-solutions"  class="p-hero-panel">
       <div class="row">
@@ -96,11 +97,11 @@
         <div class="col-6 u-vertically-center u-align--center u-hide--small">
           {{
             image(
-              url="https://assets.ubuntu.com/v1/06d371ed-slide-appmodeling.svg",
-              alt="",
-              width="300",
-              height="374",
-              hi_def=True,
+            url="https://assets.ubuntu.com/v1/06d371ed-slide-appmodeling.svg",
+            alt="",
+            width="300",
+            height="374",
+            hi_def=True,
             ) | safe
           }}
         </div>
@@ -141,39 +142,39 @@
         <h4>Choose your platform and get started</h4>
       </div>
       <div class="row">
-      <div class="col-3">
-        {{
-          image(
+        <div class="col-3">
+          {{
+            image(
             url="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg",
             alt="Linux logo",
             width="76",
             height="90",
             hi_def=True,
             attrs={"style": "margin: 27px 0;height: 90px;"},
-          ) | safe
-        }}
-        <p>Install on Linux via a Snap</p>
-        <div class="u-sv2">
-          <pre class="p-code-numbered u-no-margin--bottom"><code><span class="p-code-numbered__line">sudo snap install juju</span></code></pre>
+            ) | safe
+          }}
+          <p>Install on Linux via a Snap</p>
+          <div class="u-sv2">
+            <pre class="p-code-numbered u-no-margin--bottom"><code><span class="p-code-numbered__line">sudo snap install juju</span></code></pre>
+          </div>
+          <a href="/docs/installing#heading--ubuntu">Documentation for Linux&nbsp;&rsaquo;</a>
         </div>
-        <a href="/docs/installing#heading--ubuntu">Documentation for Linux&nbsp;&rsaquo;</a>
-      </div>
-      <div class="col-3">
-        {{
-          image(
+        <div class="col-3">
+          {{
+            image(
             url="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg",
             alt="Windows logo",
             width="145",
             height="145",
             hi_def=True,
-          ) | safe
-        }}
-        <p>An installer for Windows</p>
-        <div class="u-sv2">
-          <a
+            ) | safe
+          }}
+          <p>An installer for Windows</p>
+          <div class="u-sv2">
+            <a
             href="https://github.com/juju/juju/releases"
             class="p-button--neutral u-no-margin--bottom"
-          >
+            >
             <span class="p-link--external">Download for Windows</span>
           </a>
         </div>
@@ -182,11 +183,11 @@
       <div class="col-3">
         {{
           image(
-            url="https://assets.ubuntu.com/v1/236f314d-macos.svg",
-            alt="macOS logo",
-            width="145",
-            height="145",
-            hi_def=True,
+          url="https://assets.ubuntu.com/v1/236f314d-macos.svg",
+          alt="macOS logo",
+          width="145",
+          height="145",
+          hi_def=True,
           ) | safe
         }}
         <p>Install on macOS via Homebrew</p>
@@ -198,18 +199,18 @@
       <div class="col-3">
         {{
           image(
-            url="https://assets.ubuntu.com/v1/b96a2a65-Multipass+logo_rgb.svg",
-            alt="Multipass",
-            width="145",
-            height="145",
-            hi_def=True,
+          url="https://assets.ubuntu.com/v1/b96a2a65-Multipass+logo_rgb.svg",
+          alt="Multipass",
+          width="145",
+          height="145",
+          hi_def=True,
           ) | safe
         }}
         <p>Install anywhere via Multipass</p>
         <div class="u-sv2">
           <a href="https://multipass.run/" class="p-button--neutral u-no-margin--bottom">
             <span class="p-link--external">Install Multipass</span>
-          </a>        
+          </a>
         </div>
         <a href="/docs/installing#heading--ubuntu">Documentation for Multipass&nbsp;&rsaquo;</a>
       </div>
@@ -217,7 +218,7 @@
   </section>
 
   <section class="p-strip--light" id="infrastructure">
-    <div class="row">   
+    <div class="row">
       <div class="col-12">
         <h2>Infrastructure as code with Juju</h2>
         <p>By providing a declarative approach to application deployment and operations, Juju enables an infrastructure as code (IaC) approach allowing full automation and DevOps agility:</p>
@@ -287,8 +288,8 @@
       </div>
     </div>
   </section>
-  
-   <section class="p-strip--light" id="simplicity">
+
+  <section class="p-strip--light" id="simplicity">
     <div class="row">
       <div class="col-8">
         <h2>The simplicity comes from charms</h2>
@@ -298,33 +299,33 @@
       </div>
     </div>
   </section>
-  
+
   <section class="p-strip" id="jaas">
-     <div class="row">
-       <div class="col-6">
-          <h2>The app store for Juju</h2>
-           <p>Charm Store is a place with hundreds of popular charmed applications including Kubernetes, OpenStack, Apache Hadoop, Big Data solutions, LMA and more. Use Charm Store to quickly access them and deploy with Juju.</p>
-           <p><a href="https://jaas.ai/store" class="p-link--external">Browse charms in the Charm Store</a></p>
-        </div>
-        <div class="col-5 u-align--center u-vertically-center"> 
-          <div class=" lazyloaded" data-noscript="">
+    <div class="row">
+      <div class="col-6">
+        <h2>The app store for Juju</h2>
+        <p>Charm Store is a place with hundreds of popular charmed applications including Kubernetes, OpenStack, Apache Hadoop, Big Data solutions, LMA and more. Use Charm Store to quickly access them and deploy with Juju.</p>
+        <p><a href="https://jaas.ai/store" class="p-link--external">Browse charms in the Charm Store</a></p>
+      </div>
+      <div class="col-5 u-align--center u-vertically-center">
+        <div class=" lazyloaded" data-noscript="">
           <img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_563,h_232/https://assets.ubuntu.com/v1/162002c2-charms_juju.svg" srcset="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_1126,h_464/https://assets.ubuntu.com/v1/162002c2-charms_juju.svg 2x" alt="" width="563" height="232" loading="lazy">
-          </div>
         </div>
+      </div>
     </div>
   </section>
   <section class="p-strip">
     <div class="row">
-      <div class="col-5 u-align--center u-vertically-center"> 
+      <div class="col-5 u-align--center u-vertically-center">
         <div class="lazyloaded" data-noscript="">
           <img src="https://assets.ubuntu.com/v1/5a2091ba-image+%281%29.svg" srcset="https://assets.ubuntu.com/v1/5a2091ba-image+%281%29.svg" alt="" width="350" height="144" loading="lazy">
         </div>
       </div>
       <div class="col-6">
         <h2>JAAS - Juju As A Service</h2>
-          <p>Hosted by Canonical, JAAS provides managed Juju infrastructure to maintain your applications. It is the fastest way to get started with Juju on supported public clouds with the fewest instances required.</p>
-          <p>Model, configure, deploy and maintain your applications to public clouds directly from your browser or the command line.</p>
-          <p><a href="https://jaas.ai" class="p-link--external">Try JAAS</a></p>
+        <p>Hosted by Canonical, JAAS provides managed Juju infrastructure to maintain your applications. It is the fastest way to get started with Juju on supported public clouds with the fewest instances required.</p>
+        <p>Model, configure, deploy and maintain your applications to public clouds directly from your browser or the command line.</p>
+        <p><a href="https://jaas.ai" class="p-link--external">Try JAAS</a></p>
       </div>
     </div>
   </section>
@@ -335,7 +336,7 @@
       <div class="col-4">
         <blockquote class="p-pull-quote--small u-no-margin--bottom">
           <p class="p-pull-quote__quote u-no-margin--bottom">
-           Using the modelling ethos brought by Juju allows me to quickly run big data applications in a multitude of places. Be it locally on my laptop, on bare metal or in the Cloud, Juju lets me reuse the same models and code without changing any aspects of my deployment.
+            Using the modelling ethos brought by Juju allows me to quickly run big data applications in a multitude of places. Be it locally on my laptop, on bare metal or in the Cloud, Juju lets me reuse the same models and code without changing any aspects of my deployment.
           </p>
           <cite class="p-pull-quote__citation">Tom Barber, Spicule</cite>
         </blockquote>
