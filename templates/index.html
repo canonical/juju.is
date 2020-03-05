@@ -133,7 +133,7 @@
 
   <section class="p-strip" id="what-is-juju">
     <div class="row">
-      <div class="col-4">
+      <div class="col-8">
         <h2>Why Juju?</h2>
         <p>
           Built to manage complex software architectures and microservices wherever they run, Juju simplifies deployment and post-installation operations by enabling an infrastructure as code approach and providing lifecycle management capabilities from Day-1 to Day-N. Use Juju to manage applications on your workstation, on bare-metal or in a multi-cloud environment.
@@ -143,7 +143,7 @@
         </p>
       </div>
       <div class="row">
-      <div class="col-4">
+      <div class="col-3">
         {{
           image(
             url="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg",
@@ -200,8 +200,8 @@
       <div class="col-4">
         {{
           image(
-            url="https://assets.ubuntu.com/v1/236f314d-macos.svg",
-            alt="macOS logo",
+            url="https://assets.ubuntu.com/v1/b96a2a65-Multipass+logo_rgb.svg",
+            alt="Multipass",
             width="145",
             height="145",
             hi_def=True,
@@ -209,9 +209,14 @@
         }}
         <p>Install anywhere via Multipass</p>
         <div class="u-sv2">
-          <pre class="p-code-numbered u-no-margin--bottom"><code><span class="p-code-numbered__line">brew install juju</span></code></pre>
+          <a
+            href="https://multipass.run/"
+            class="p-button--neutral u-no-margin--bottom"
+          >
+            <span class="p-link--external">Install Multipass</span>
+          </a>        
         </div>
-        <a href="/docs/installing#heading--macos">Documentation for macOS&nbsp;&rsaquo;</a>
+        <a href="/docs/installing#heading--ubuntu">Documentation for Multipass</a>
       </div>
     </div>
   </section>
@@ -343,29 +348,29 @@
   </section>
 
   <section class="p-strip">
-    <div class="row">
-      <div class="col-6">
+    <h3>Empowering production environments</h3>
+      <div class="row">
+      <div class="col-4">
         <blockquote class="p-pull-quote u-no-margin--bottom">
           <p class="p-pull-quote__quote u-no-margin--bottom">
-            For me, speed and simplicity are paramount. It may sound silly, but
-            a lot of the stuff I do in my lab with Juju is out of pure laziness.
-            Juju frees my brain to focus on other things. While Juju itself is
-            really intuitive and easy to use, I was pleasantly surprised by how
-            welcoming and humble the Juju community is. The community is a big
-            reason why I’ve stuck with it.
-          </p>
-          <cite class="p-pull-quote__citation">Sean Shüping, <a class="p-link--external" href="https://devzero.co.za/">/dev/zero</a></cite>
-        </blockquote>
-      </div>
-      <div class="col-6">
-        <blockquote class="p-pull-quote u-no-margin--bottom">
-          <p class="p-pull-quote__quote u-no-margin--bottom">
-            Using the modelling ethos brought by Juju allows me to quickly run
-            big data applications in a multitude of places. Be it locally on my
-            laptop, on bare metal or in the Cloud, Juju lets me reuse the same
-            models and code without changing any aspects of my deployment
+           Using the modelling ethos brought by Juju allows me to quickly run big data applications in a multitude of places. Be it locally on my laptop, on bare metal or in the Cloud, Juju lets me reuse the same models and code without changing any aspects of my deployment.
           </p>
           <cite class="p-pull-quote__citation">Tom Barber, Spicule</cite>
+        </blockquote>
+      </div>
+      <div class="col-4">
+        <blockquote class="p-pull-quote u-no-margin--bottom">
+          <p class="p-pull-quote__quote u-no-margin--bottom">
+            Juju enables you to encapsulate each different part of your infrastructure and lets everything talk to each other. So if you have a web server that's managed by Chef and a database that's deployed by a Docker container, you can have the web server talk to the database and the relations between these two very easily.
+          </p>
+          <cite class="p-pull-quote__citation">Merlijn Sebrechts, Ghent University</cite>
+        </blockquote>
+      </div>
+      <div class="col-4">
+        <blockquote class="p-pull-quote u-no-margin--bottom">
+          <p class="p-pull-quote__quote u-no-margin--bottom">
+            Juju acts as a thin layer on top of your infrastructure that allows all your operational code to talk to each other. And because of this communication layer, a lot of the problems that conventional configuration management systems have just don't exist anymore.          </p>
+          <cite class="p-pull-quote__citation">Konstantin Boudnik, EPAM Systems</cite>
         </blockquote>
       </div>
     </div>
@@ -377,7 +382,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-4">
+      <div class="col-3">
         <h4>Documentation</h4>
         <ul class="p-list">
           <li class="p-list__item">
@@ -391,7 +396,7 @@
           </li>
         </ul>
       </div>
-      <div class="col-4">
+      <div class="col-3">
         <h4>Tutorials</h4>
         <ul class="p-list">
           <li class="p-list__item">
@@ -424,7 +429,17 @@
           </li>
         </ul>
       </div>
-      <div class="col-4">
+      <div class="col-3">
+        <h4>Whitepapers</h4>
+        <ul class="p-list">
+          <li class="p-list__item">
+            <a href="https://ubuntu.com/engage/evolving-software" class="p-link--external"
+              >Keep up with evolving software</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-3">
         <h4>Participate</h4>
         <ul class="p-list">
           <li class="p-list__item">
