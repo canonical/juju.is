@@ -45,7 +45,7 @@ function changeTabs(target) {
 
 function playTab(tab) {
   const start = Date.now();
-  const duration = 10000;
+  const duration = 20000;
   const tabIndicator = tab.querySelector('.before');
   if (tabIndicator) {
     timer = setInterval(function() {
