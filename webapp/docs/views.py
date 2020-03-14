@@ -57,6 +57,6 @@ def init_docs(app, url_prefix):
         "/docs/search",
         "docs-search",
         build_search_view(
-            site="docs.jujucharms.com", template_path="docs/search.html"
+            site="juju.is/docs", template_path="docs/search.html"
         ),
     )
