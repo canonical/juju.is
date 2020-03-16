@@ -12,11 +12,13 @@
     "lint-scss": "sass-lint static/**/*.scss --verbose --no-exit",
     "test-python": "python3 -m unittest discover tests",
     "serve": "./entrypoint 0.0.0.0:${PORT}",
+    "start": "yarn run build && concurrently --raw 'yarn run watch' 'yarn run serve'",
     "test": "yarn run lint-scss && yarn run lint-python && yarn run test-python"
   },
   "dependencies": {
     "@canonical/global-nav": "2.4.0",
     "autoprefixer": "9.7.4",
+    "concurrently": "5.1.0",
     "node-sass": "4.13.1",
     "postcss-cli": "7.1.0",
     "sass-lint": "1.13.1",
