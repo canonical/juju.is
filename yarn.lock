@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@canonical/global-nav@2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@canonical/global-nav/-/global-nav-2.4.0.tgz#8c86dab1bdd7e767575df34c766bece620df5ecd"
-  integrity sha512-ymyw0N3NX+1NptaRMGi9q31fgNQ0sRizukdqEIBi5fJGnIHGJ7qviYsfmob4EIHnSuVl9slIXyY1kVO1A+2vEA==
+"@canonical/global-nav@2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@canonical/global-nav/-/global-nav-2.4.1.tgz#c30c2c8e6e1b81a037ee9ff566f5ef7c07803435"
+  integrity sha512-NLtlv8ODbPrGK14FaBoFj2Hmr9EKfwnvcwu6kHatel+osDs1IIL6TwhEwqWeufEGdfPQdCAFhS7oX24gdBGVwA==
   dependencies:
-    vanilla-framework "2.5.0"
+    vanilla-framework "2.8.0"
 
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
@@ -2421,15 +2421,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vanilla-framework@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-2.5.0.tgz#b7f689d7583f4a215cde39b726091ffc2ec4f62a"
-  integrity sha512-8dY70fTDo2v/Lw96nMRyhi5e74KUk1krcEHEd1qt/hzMzAfy2NYddENS1bZahEg7hoAY1TZc8mQJr+bVu4qW7w==
-
-vanilla-framework@2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-2.6.0.tgz#67077333993824c2aec3578d44269b37ff862923"
-  integrity sha512-2vx8fe2hsEQYtEiUklqjBO+JL4cLDJVsE/t3b6fcfIRPJsmVq/kVrUSXDSq6LW/4wHhPfMAqeoMQFNdzCUwexA==
+vanilla-framework@2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-2.8.0.tgz#ec20ed3bf4fc2f1ce2d42075edb7a58c26f56982"
+  integrity sha512-fIxO7/BtCmj7aMAFCxxk19fqRB9HVZBv1typ7YL4AEiJhq8Za3qDCLuxjiSP0tFvKzXUtrI7y4KGHYMrFIevKg==
 
 verbalize@^0.1.2:
   version "0.1.2"
