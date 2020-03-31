@@ -25,17 +25,6 @@
   // Set up highlightjs
   hljs.initHighlightingOnLoad();
 
-  document.addEventListener("DOMContentLoaded", function(event) {
-    // Toggle mobile sidebar nav
-    var toggle = document.querySelector('.p-sidenav__toggle');
-    var sidebarContent = document.querySelector('.p-sidenav__body');
-    toggle.addEventListener('click', function(e) {
-      toggle.classList.toggle('p-icon--menu');
-      toggle.classList.toggle('p-icon--close');
-      sidebarContent.classList.toggle('u-hide--small');
-    });
-  });
-
   // Add active links to active nav item and scroll to section
   var sidebar = document.querySelector(".l-docs-sidebar");
   document.querySelectorAll('.p-sidenav__body ul a').forEach(function(anchor) {
