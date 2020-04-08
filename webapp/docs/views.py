@@ -41,18 +41,6 @@ def init_docs(app, url_prefix):
             "docs/homepage.html", navigation=discourse_parser.navigation
         )
 
-    @app.route(url_prefix + "/commands")
-    def commands():
-        """
-        Show the static commands page
-        """
-
-        discourse_parser.parse()
-
-        return flask.render_template(
-            "docs/commands.html", navigation=discourse_parser.navigation
-        )
-
     app.add_url_rule(
         "/docs/search",
         "docs-search",
