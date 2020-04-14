@@ -6,6 +6,7 @@ from canonicalwebteam import image_template
 
 from webapp.docs.views import init_docs
 from webapp.template_utils import current_url_with_query, static_url
+from webapp.tutorials.views import init_tutorials
 
 # Rename your project below
 app = FlaskBase(
@@ -23,6 +24,7 @@ app.add_url_rule("/", view_func=template_finder_view)
 app.add_url_rule("/<path:subpath>", view_func=template_finder_view)
 
 init_docs(app, "/docs")
+init_tutorials(app, "/tutorials")
 
 
 @app.context_processor
