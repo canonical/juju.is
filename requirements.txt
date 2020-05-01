@@ -2,5 +2,5 @@ canonicalwebteam.flask-base==0.6.0
 canonicalwebteam.yaml-responses==1.1.1
 canonicalwebteam.discourse-docs==0.11.1
 canonicalwebteam.search==0.2.1
-canonicalwebteam.templatefinder==0.2.4
-canonicalwebteam.image-template==1.0.0
+canonicalwebteam.templatefinder==0.2.5
+canonicalwebteam.image-template==1.1.0
