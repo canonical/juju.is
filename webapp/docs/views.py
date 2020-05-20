@@ -1,5 +1,3 @@
-import flask
-
 from canonicalwebteam.discourse_docs import (
     DiscourseAPI,
     DiscourseDocs,
