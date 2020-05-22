@@ -17,7 +17,7 @@ And click on the server link that appears in the server logs.
 
 ### Run locally with search functionality
 
-If you wish to run the site locally with search enabled, you'll need to pass a key. This key can be obtained by contacting #webteam on IRC.
+If you wish to run the site locally with search enabled, you'll need to pass a key. This key can be obtained [from the Google Cloud Platform console](https://console.cloud.google.com/apis/credentials?project=ubuntu-search-1530889417216&pli=1), or by contacting #webteam on IRC if you don't have access.
 
 ```bash
 dotrun --env SEARCH_API_KEY={your_key_here}
