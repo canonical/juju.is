@@ -69,5 +69,18 @@ function triggerNextTab(tab) {
   if (!nextTab) {
     nextTab = document.querySelectorAll('.p-hero-tab__item')[0];
   }
+  recordEvent('carousel', 'autoplay', nextTab.id);
   changeTabs(nextTab);
+}
+
+function recordEvent(category, action, label) {
+  if (dataLayer) {
+    dataLayer.push({
+      event: 'GAEvent',
+      eventCategory: category,
+      eventAction: action,
+      eventLabel: label,
+      eventValue: undefined,
+    });
+  }
 }
