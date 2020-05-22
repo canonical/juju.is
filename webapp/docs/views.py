@@ -1,5 +1,3 @@
-import flask
-
 from canonicalwebteam.discourse_docs import (
     DiscourseAPI,
     DiscourseDocs,
@@ -24,22 +22,6 @@ def init_docs(app, url_prefix):
     )
 
     discourse_docs.init_app(app)
-
-    # Remove homepage route so we can redefine it
-    for url in app.url_map._rules:
-        if url.rule == url_prefix + "/":
-            app.url_map._rules.remove(url)
-
-    @app.route(url_prefix)
-    def homepage():
-        """
-        Show the custom homepage
-        """
-        discourse_parser.parse()
-
-        return flask.render_template(
-            "docs/homepage.html", navigation=discourse_parser.navigation
-        )
 
     app.add_url_rule(
         "/docs/search",
