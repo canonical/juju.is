@@ -22,3 +22,6 @@ If you wish to run the site locally with search enabled, you'll need to pass a k
 ```bash
 dotrun --env SEARCH_API_KEY={your_key_here}
 ```
+
+# Deploy
+You can find the deployment config in the deploy folder.
