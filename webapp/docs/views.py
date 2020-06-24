@@ -13,7 +13,10 @@ def init_docs(app, url_prefix):
 
     discourse_api = DiscourseAPI(base_url="https://discourse.juju.is/")
     discourse_parser = DocParser(
-        discourse_api, category_id, discourse_index_id, url_prefix
+        api=discourse_api,
+        index_topic_id=discourse_index_id,
+        category_id=category_id,
+        url_prefix=url_prefix,
     )
     discourse_docs = DiscourseDocs(
         parser=discourse_parser,
