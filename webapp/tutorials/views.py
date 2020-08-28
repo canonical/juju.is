@@ -1,5 +1,6 @@
 import flask
 import math
+import talisker.requests
 
 from canonicalwebteam.discourse_docs import (
     DiscourseAPI,
@@ -9,8 +10,11 @@ from canonicalwebteam.discourse_docs import (
 
 
 def init_tutorials(app, url_prefix):
+    session = talisker.requests.get_session()
     discourse_parser = DocParser(
-        api=DiscourseAPI(base_url="https://discourse.juju.is/"),
+        api=DiscourseAPI(
+            base_url="https://discourse.juju.is/", session=session
+        ),
         index_topic_id=2628,
         category_id=34,
         url_prefix=url_prefix,
