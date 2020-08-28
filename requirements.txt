@@ -4,3 +4,5 @@ canonicalwebteam.discourse-docs==1.0.1
 canonicalwebteam.search==0.2.1
 canonicalwebteam.templatefinder==1.0.0
 canonicalwebteam.image-template==1.2.0
+black==20.8b1
+flake8==3.8.3
