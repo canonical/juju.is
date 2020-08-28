@@ -14,7 +14,9 @@ def init_docs(app, url_prefix):
     category_id = 22
 
     session = talisker.requests.get_session()
-    discourse_api = DiscourseAPI(base_url="https://discourse.juju.is/", session=session)
+    discourse_api = DiscourseAPI(
+        base_url="https://discourse.juju.is/", session=session
+    )
     discourse_parser = DocParser(
         api=discourse_api,
         index_topic_id=discourse_index_id,
