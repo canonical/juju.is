@@ -23,6 +23,9 @@ $color-accent: #f0f5f7;
 @import "patterns_tutorials";
 @include juju-tutorials;
 
+@import "pattern_navigation";
+@include local-p-navigation;
+
 .p-navigation__logo {
   margin: 0.1rem 1rem 0 1.5rem;
 }
