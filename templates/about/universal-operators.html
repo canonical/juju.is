@@ -1,0 +1,86 @@
+{% extends 'about/base.html' %}
+
+{% block title %}Operators for infrastructure, traditional, and legacy applications{% endblock title %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1vdT7mA2GlXxad12VbuIx12QtNktbKkjWnkcZd7LJo4A/edit#{% endblock meta_copydoc %}
+
+{% block meta_description %}The Juju Operator Lifecycle Manager (OLM) brings the Kubernetes operator pattern to legacy estate, enabling operators to drive apps in traditional machine environments. The operator pattern has proven benefits in reuse, security, compliance and efficiency, which the Juju OLM  extends to legacy applications too.{% endblock %}
+
+{% block about_content %}
+<h1>Universal Operator Pattern</h1>
+<p>Generalise the Kubernetes operator pattern to traditional applications on bare metal, virtualisation and cloud instances</p>
+<p>The Juju Operator Lifecycle Manager (OLM) brings the Kubernetes operator pattern to legacy estate, enabling operators to drive apps in traditional machine environments. The operator pattern has proven benefits in reuse, security, compliance and efficiency, which the Juju OLM  extends to legacy applications too.</p>
+<h2>What is the Kubernetes operator pattern?</h2>
+<p>The operator pattern is a form of automation that is gaining particular awareness in the Kubernetes domain. A special container, the operator, is allowed to drive the operations of other containers. Shifting the burden of lifecycle management from configuration files and manual steps to a separate container simplifies some container operations. In Kubernetes, traditional configuration management does not work, so the operator pattern has grown in popularity as a way to address lifecycle and configuration management on K8s.</p>
+<p>The idea itself, using one piece of software to drive other pieces of software, is simple enough. Telecommunication equipment providers have sold ‘element managers’ for decades. Control theory has long provided a structural framework for the analysis of such automation. The operator pattern has simply been popularized now because Kubernetes has prevented forward porting of legacy automation into the new container space.</p>
+<h2>What is a universal operator lifecycle manager?</h2>
+<p>An operator lifecycle manager (OLM) provides services to operators. For example, it can deploy operators, upgrade them, deliver configuration updates and other services.</p>
+<p>Many operator lifecycle management implementations are tied to specific substrates. For example, lifecycle management may be limited to Kubernetes and implement only the Kubernetes operator pattern.</p>
+<p>The Juju OLM is designed to be universal and substrate-neutral. It works on Kubernetes as well as traditional machines. A <em>universal</em> operator lifecycle manager supports operators for legacy applications that run on servers and virtualisation platforms, as well as first-generation public cloud estate, and the newer containerized applications too.</p>
+<p>Traditional or legacy applications on both Windows and Linux can be driven with operators, and integrated with newer applications on Kubernetes. The ability to evolve an application from the machine world to the Kubernetes containerized world presents a smooth path to containerization of legacy estate, without “flag day” cutovers.</p>
+<p>Juju provides OLM on bare metal, VMware, OpenStack, and public cloud instances, as well as all conformant K8s clusters.</p>
+<h2>Bringing operators to infrastructure-as-code</h2>
+<p>The Juju  OLM can be used to bring the operator pattern to infrastructure-as-code. Unlike configuration management systems such as Chef, Puppet, Ansible and Salt, a full operator lifecycle manager with bare metal support enables large-scale physical infrastructure to be operator-driven, with significant benefits in operating costs, security and agility.</p>
+<p>Complex bare metal solutions like big data lakes, OpenStack, and software-defined storage arrays become easier to own and operate with the benefit of this automation. The costs of integration, automation and security are largely shared in open source communities like the Open Operator Collection. The agility of bare metal infrastructure operators is transformational for those responsible for significant physical estates.</p>
+<h2>Bringing operators to legacy applications</h2>
+<p>The legacy application estate is an enormous cost burden for large organisations. Much of the annual IT budget is consumed with maintenance, largely driven by obsolete operations and integration code accumulated over decades. Companies have explored newer technologies such as PAAS to eliminate this maintenance burden, but have never successfully managed to migrate any meaningful portion of their legacy estate to the newer software architectures mandated by OpenShift or similar PAAS offerings.</p>
+<p>Universal operators represent a compelling new approach to legacy estate application management that do not involve replatforming the workload onto Kubernetes, nor a new set of constraints such as PAAS. Instead, we develop operators for the legacy workloads which continue to instantiate those workloads in their traditional machine environment. Simplistically, a machine substrate operator is driving the workload exactly the way the workload was always driven, rather than rearchitecting it for new substrates.</p>
+<h2>Operator services</h2>
+<p>A typical operator lifecycle manager provides services that simplify the development of operators and their use in production: operator deployment, operator upgrade, operator and configuration.</p>
+<p>The enterprise-focused Juju OLM provides scale-out, leader election and persistent operator storage, reflecting its use for sophisticated high-availability and mission-critical applications and infrastructure.</p>
+<p>Juju also provides integration services &mdash; enabling the declarative integration of operators from different vendors, both within the same model on the same substrate, and across models, potentially across clouds. Integrating Kubernetes and legacy applications becomes straightforward thanks to cross-model relations and the ability to drive all classes of software with the Juju OLM.</p>
+<h2>Kubernetes operators</h2>
+<p>The Juju OLM fully supports the Kubernetes operator pattern for containerised applications.</p>
+<h3>Pod placement of operators</h3>
+<p>Kubernetes operators can be placed on the cluster completely independent of the workload, running in their own pod. This is the traditional framing of the Kubernetes operator pattern, with the operator as an entirely different workload driving the workload containers from a distance via the Kubernetes API.</p>
+<p>With pod placement, there is a single operator for all the ‘units’ of the application. This is easier to understand but presents some challenges for complex distributed systems, especially those which have been ported to Kubernetes rather than being designed from the ground up for cloud-native operations. It is not possible for an operator in its own pod to interact directly with workload processes, since these may in fact be running on entirely different machines.</p>
+<p>Operator pods represent a first-generation approach to the operator pattern on Kubernetes. It may be ideal for certain workloads, and is a good place to start with any new operator development, but it will present limitations if the goal is to achieve complete control of the application at a low level in the operator.</p>
+<h3>Sidecar placement of operators</h3>
+<p>With the Juju OLM, it is also possible to create operators that have much more fine-grained control of their workload, by placing the operator code in a sidecar of the application workload pods.</p>
+<p>Sidecar operators can be thought of as running in ‘an adjacent chroot’ with the workload processes. They are guaranteed to be on the same machine as the workload container, and in fact they can share volumes directly since the same directory can be mounted into both the application container and the sidecar container in the pod. This enables richer interaction between the operator and the workload. For example, the operator might monitor status files, logs, or transaction logs in a very natural way.</p>
+<p>Inter-process communication between the operator and the workload becomes possible with sidecar operators, too, although the fact that the operator is in a separate container requires some adjusting. One can think of the operator as ‘running in a chroot’ on the same machine as the application; while this means they share a kernel, it also means that actual file or inter-process communication between the software in the workload and the software in the operator requires deliberate measures.</p>
+<h2>Operators for traditional machine-based applications</h2>
+<p>The lifecycle of traditional and legacy applications involves installation on one of the standard enterprise platforms &mdash; Ubuntu, CentOS, Windows and RHEL are all supported.</p>
+<p>Metadata in the operator package &mdash; the charm &mdash; declares the particular versions of the OS which are supported by that operator, for example, CentOS 6 and 7, or Ubuntu 18.04 LTS and 20.04 LTS, or Windows 10. When an operator is placed on a machine in a Juju OLM model, the Juju agent on that machine will fetch that operator from the controller and install it on that machine.</p>
+<p>Lifecycle events for this unit of the application are then delivered to the operator. Initial installation and configuration are driven by the first set of lifecycle events, followed by integration with related applications in the model. Upgrades of the application are driven through operator lifecycle events.</p>
+<h3>Operators for Linux applications</h3>
+<p>Linux machines have the Juju agent installed under /var/lib/juju/tools/ and the charms are installed under /var/lib/juju/agents/&lt;unit-app-number>/charm/. There can be multiple charms because multiple applications can have units co-located on the same machine, just as in traditional estate you can install as many apps on a machine as you want with your configuration management system. Subordinate application units will also follow their primary applications to every machine.</p>
+<p>And example directory tree for a machine in a Hadoop model looks like this:</p>
+
+<pre><code>
+  /var/lib/juju
+             ├── agents
+                 ├── machine-4
+                 ├── unit-client-0      <--- this is the Hadoop client
+                 │   ├── charm          <--- the operator code is here
+                 │   └── state          <--- persistent state for this operator
+                 ├── unit-ganglia-0     <--- a second operator
+                 │   ├── charm
+                 │   └── state
+                 ├── unit-plugin-0       <--- a third operator
+                 │   ├── charm
+                 │   ├── resources       <--- resources for this operator
+                 │   └── state
+                 └── unit-rsyslog-0
+                     ├── charm
+                     └── state
+</code></pre>
+
+<p>The different applications are clearly visible. For each unit located on the machine, there is a directory (“unit-<em>app</em>-number”) containing the charm itself, with the operator code, and any persistent state that the operator uses.</p>
+<p>Note the resources directory for the unit of the “plugin“ application, which is where the OLM will deliver any requested resources for that unit.</p>
+<h3>Operating system upgrades</h3>
+<p>In long-lived traditional estate it is also occasionally necessary to upgrade the operating system underneath the application. The life of an application is often extended by carrying it forward onto newer versions of the OS.</p>
+<p>Such OS upgrades are handled explicitly by the Juju OLM. Events signal the imminent OS upgrade to the operator which has the opportunity to prepare for any disruption that is inevitable given the OS changes and reboots that will be taking place. Then, operator lifecycle event delivery is paused while the OS upgrade proceeds under independent management control. Finally, the operator is given the opportunity to reconfigure the application for the new OS version, after which the application unit is reinstated and receives operator lifecycle events.</p>
+<h2>Operators for SAAS</h2>
+<p>Many clouds offer on-demand SAAS for common application services. MySQL, Kafka, AMQP and other services can be activated, configured and consumed on these clouds without ever installing any software. Simply use API calls on the cloud to instantiate, configure, or terminate the SAAS.</p>
+<p>Our own applications need to integrate with this SAAS. If we are deploying a content management system that will use Amazon RDS, we need to configure RDS to allow our content management system to connect to it, and we need to configure the content management system to connect to RDS.</p>
+<p>The Juju OLM typically has a credential for the cloud, in order to turn on new machines for scale-out applications, or additional applications in the model. That same credential can be used to activate SAAS. An operator can be designated as trusted, at which point it will be given the credential and can make API calls using it.</p>
+<p>So, an Amazon RDS operator can be trusted with an AWS credential. Deploying the RDS operator into a model on AWS provides an “RDS” application in the graph which other applications can integrate with. Integrating with RDS is exactly the same as integrating with MySQL, in fact, the other operators in the system have no idea that they are talking to a stand-in, they think they are talking to MySQL.</p>
+<p>We call such operators “proxy charms”. They do not proxy the network traffic of the connection, to be clear. They simply act as placeholders in the graph, and exchange information with the other operators in the graph. Behind the scenes, instead of launching containers or installing applications like a normal operator, they make the API calls that instantiate, configure or terminate the SAAS.</p>
+<h2>Operators for physical appliances</h2>
+<p>Many organisations have physical appliances which can be configured and monitored remotely. This is particularly true of the telco sector, where network-managed appliances were the standard equipment for decades.</p>
+<p>Any operator can interact with networked appliances as long as it has the address and credential needed to do so. So it is possible to create an operator which represents the network appliance in the application graph, offers integration points for each of the ways the appliance can be integrated, and enables other applications to integrate with the appliance as if it were pure software.</p>
+<p>The appliance may be static, providing a single service, or it may be able to provide services to multiple applications. It is important to deal with capacity limitations in the physical appliance (in pure software-defined services it is always possible to deploy more of the software).</p>
+<h2>Operators for “uncharmed” software</h2>
+<p>In some cases organisations have software that is deployed, cannot be redeployed, but would be useful to integrate using charms. In this case, a proxy charm can be created which represents the pre-existing software. The charm really only serves to provide access details and credentials to other applications related to it, but it serves nonetheless as a mechanism for integration of charmed components with the static software element.</p>
+{% endblock %}
