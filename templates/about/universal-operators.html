@@ -47,23 +47,22 @@
 <p>Linux machines have the Juju agent installed under /var/lib/juju/tools/ and the charms are installed under /var/lib/juju/agents/&lt;unit-app-number>/charm/. There can be multiple charms because multiple applications can have units co-located on the same machine, just as in traditional estate you can install as many apps on a machine as you want with your configuration management system. Subordinate application units will also follow their primary applications to every machine.</p>
 <p>And example directory tree for a machine in a Hadoop model looks like this:</p>
 
-<pre><code>
-  /var/lib/juju
-             ├── agents
-                 ├── machine-4
-                 ├── unit-client-0      <--- this is the Hadoop client
-                 │   ├── charm          <--- the operator code is here
-                 │   └── state          <--- persistent state for this operator
-                 ├── unit-ganglia-0     <--- a second operator
-                 │   ├── charm
-                 │   └── state
-                 ├── unit-plugin-0       <--- a third operator
-                 │   ├── charm
-                 │   ├── resources       <--- resources for this operator
-                 │   └── state
-                 └── unit-rsyslog-0
-                     ├── charm
-                     └── state
+<pre><code>/var/lib/juju
+    ├── agents
+        ├── machine-4
+        ├── unit-client-0      <--- this is the Hadoop client
+        │   ├── charm          <--- the operator code is here
+        │   └── state          <--- persistent state for this operator
+        ├── unit-ganglia-0     <--- a second operator
+        │   ├── charm
+        │   └── state
+        ├── unit-plugin-0       <--- a third operator
+        │   ├── charm
+        │   ├── resources       <--- resources for this operator
+        │   └── state
+        └── unit-rsyslog-0
+            ├── charm
+            └── state
 </code></pre>
 
 <p>The different applications are clearly visible. For each unit located on the machine, there is a directory (“unit-<em>app</em>-number”) containing the charm itself, with the operator code, and any persistent state that the operator uses.</p>
