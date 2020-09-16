@@ -33,8 +33,7 @@
 <p>In a distributed or scale-out application there will be several units, or instances, of the application in a cluster. Changes to the application propagate to individual units, which may process them at slightly different times. It is important to remember then that the status of the application as a whole is an aggregation of the statuses of the individual units that comprise it.</p>
 <p>Juju tracks a status flag for each distinct unit in the application. An operator (speaking for a particular unit) is able to update the flag to describe its current status. Juju will aggregate these unit status flags into an overall status for the application.</p>
 <p>Here is an example of a Hadoop model with applications coming up:</p>
-<pre></code>
-App                   Version  Status   Scale  Charm                   Store       Rev  OS      Notes
+<pre></code>App                   Version  Status   Scale  Charm                   Store       Rev  OS      Notes
 client                         waiting      1  hadoop-client           jujucharms   12  ubuntu
 ganglia               3.6.0    active       1  ganglia                 jujucharms   12  ubuntu
 ganglia-node          3.6.0    active       5  ganglia-node            jujucharms    7  ubuntu
