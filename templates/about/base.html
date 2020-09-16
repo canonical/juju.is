@@ -3,7 +3,7 @@
 {% block content %}
 <section class="p-strip is-shallow">
   <div class="row">
-    <div class="col-2">
+    <div class="col-3">
       <div class="p-side-navigation" id="drawer">
         <a href="#drawer" class="p-side-navigation__toggle js-drawer-toggle" aria-controls="drawer">
           Toggle side navigation
@@ -24,6 +24,12 @@
             </li>
             <li class="p-side-navigation__item">
               <a class="p-side-navigation__link{% if request.path == '/about/model-driven-operations' %} is-active{% endif %}" href="/about/model-driven-operations">Model-driven operations</a>
+            </li>
+            <li class="p-side-navigation__item">
+              <a class="p-side-navigation__link{% if request.path == '/about/hosted-olm' %} is-active{% endif %}" href="/about/hosted-olm">Hosted OLM</a>
+            </li>
+            <li class="p-side-navigation__item">
+              <a class="p-side-navigation__link{% if request.path == '/about/multi-cloud-operations' %} is-active{% endif %}" href="/about/multi-cloud-operations">Multi-cloud operations</a>
             </li>
           </ul>
 
