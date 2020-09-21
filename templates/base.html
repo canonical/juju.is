@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="description"
-      content="Juju is an open source application modelling tool that allows you to deploy, configure, scale and operate cloud infrastructures quickly and efficiently on public clouds such as AWS, GCE, and Azure along with private ones such as MAAS, OpenStack, and VSphere."
+      content="{% block page_description %}Juju is an open source application modelling tool that allows you to deploy, configure, scale and operate cloud infrastructures quickly and efficiently on public clouds such as AWS, GCE, and Azure along with private ones such as MAAS, OpenStack, and VSphere.{% endblock %}"
     />
     <link rel="stylesheet" href="/static/css/styles.css" />
     <link
@@ -24,9 +24,10 @@
       type="image/x-icon"
     />
     <title>
-      {% block title %}Juju - The simplest way to deploy and maintain
+      {% block page_title %}Juju - The simplest way to deploy and maintain
       applications in the cloud{% endblock %}
     </title>
+    <meta name="copydoc" content="{% block meta_copydoc %}https://drive.google.com/drive/u/0/folders/1-3OoeHxK5U7W_ktFY8rvwRzmjzCKte9a{% endblock %}">
 
     <script
       src="https://assets.ubuntu.com/v1/703e23c9-lazysizes+noscript+native-loading.5.1.2.min.js"

@@ -74,23 +74,6 @@ $color-accent: #f0f5f7;
   transition: opacity 0.5s ease-in;
 }
 
-.p-code-numbered {
-  border: 0;
-
-  &__line {
-    padding: 0.5rem 1rem 0 1rem;
-
-    &::before {
-      background-color: transparent;
-      border: 0;
-      color: $color-mid-dark;
-      content: "$";
-      padding-left: 0;
-      width: 0;
-    }
-  }
-}
-
 // Homepage footer overide
 .p-strip--suru-top.is-homepage::before {
   background: linear-gradient(
@@ -100,4 +83,18 @@ $color-accent: #f0f5f7;
     rgba(255, 255, 255, 0) 50%,
     rgba(255, 255, 255, 0) 100%
   );
+}
+
+.p-code-numbered__line {
+  padding: 0.3rem 1rem 0 4rem;
+
+  &:last-of-type::before {
+    padding-bottom: 0.2rem;
+    padding-top: 0.3rem;
+  }
+
+  &::before {
+    content: "$";
+    width: 3rem;
+  }
 }
