@@ -74,15 +74,11 @@ There is no requirement for globally unique names, however. So, if two operators
 <p>
 Use the ‘relate’ command to integrate two operators.
 </p>
-<pre><code>
-juju relate mysql wordpress
-</code></pre>
+<pre><code>juju relate mysql wordpress</code></pre>
 <p>
 In the simple case, if there is only one pair of matching integration points for those two operator charms, then this command will work. If there are multiple possible ways to relate the two operators, with multiple pairs of matching integration points, then you will need to name the points explicitly.
 </p>
-<pre><code>
-juju relate mysql wordpress:db
-</code></pre>
+<pre><code>juju relate mysql wordpress:db</code></pre>
 </p>
 <p>
 We call the integration line a <em>relation</em> and it may be joined or broken at any time &mdash; in other words, operators can be integrated and then the integration can be undone.

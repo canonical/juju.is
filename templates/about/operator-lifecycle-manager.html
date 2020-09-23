@@ -8,7 +8,7 @@
 
 {% block about_content %}
 <h1>What is an Operator Lifecycle Manager?</h1>
-<p>Juju manages the install, update, configuration and integration of operators on Kubernetes or traditional machines
+<p class="p-heading--four">Juju manages the install, update, configuration and integration of operators on Kubernetes or traditional machines
 </p>
 <p>
 An operator is software which drives an application. The operator lifecycle manager (OLM) is a service which installs operators, updates them, configures them, and in the case of the Juju OLM, helps it to integrate with other operators.
@@ -18,7 +18,7 @@ An operator is software which drives an application. The operator lifecycle mana
 One key differentiator of the Juju OLM is the way it organises a large number of operators, potentially across many different clouds or clusters. Operators are in a sense extra pieces of software to manage, so having a structure and catalog of that software immediately provides a level of enterprise awareness and control of the operator estate.
 </p>
 <p>
-The Juju OLM provides <a href="https://juju.is/model-driven-operations">model-driven operations</a>. Sets of operators are organised into models, each model having the same set of access permissions and living on the same Kubernetes cluster or machine compute substrate such as a public cloud in the case of traditional applications. The ability to organise multi-cloud operations in these models, and to manage models globally, across many regions of many clouds and private infrastructure, through a single scale-out OLM, is a strength of Juju.
+The Juju OLM provides <a href="/model-driven-operations">model-driven operations</a>. Sets of operators are organised into models, each model having the same set of access permissions and living on the same Kubernetes cluster or machine compute substrate such as a public cloud in the case of traditional applications. The ability to organise multi-cloud operations in these models, and to manage models globally, across many regions of many clouds and private infrastructure, through a single scale-out OLM, is a strength of Juju.
 </p>
 <p>
 Model-driven operations simplify integration between diverse operators, and reduce repetition and redundancy because they describe both sides of every integration with a single element. They also capture business intention, the decision to allocate resources to particular sets of applications. Business decisions become explicit with model-driven operations.

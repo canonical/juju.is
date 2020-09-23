@@ -80,6 +80,11 @@ def multi_cloud_operations():
     return render_template("about/multi-cloud-operations.html")
 
 
+@app.route("/beyond-configuration-management")
+def beyond_configuration_management():
+    return render_template("about/beyond-configuration-management.html")
+
+
 template_finder_view = TemplateFinder.as_view("template_finder")
 app.add_url_rule("/", view_func=template_finder_view)
 app.add_url_rule("/<path:subpath>", view_func=template_finder_view)
