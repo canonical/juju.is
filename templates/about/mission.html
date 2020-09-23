@@ -10,7 +10,7 @@
 <h1>Redefining Application Management</h1>
 <p class="p-heading--four">Enterprise software ops are costly and messy.<br>Let’s fix that with a universal operator pattern.
 </p>
-<h2>Mission statement</h2>
+<h2 id="mission">Mission statement</h2>
 <p>
 Our mission is to <strong>transform the quality, cost and speed of software operations</strong> by creating a community of operations practitioners, open source leaders and vendors that delivers:
 </p>
@@ -28,7 +28,7 @@ It’s also important to emphasize that <strong>our goal is perfect reuse</stron
 <p>
 When we deliver the ops code for a piece of software, our mission is to deliver it with the right design, architecture, and implementation that it works for every user in every environment they operate.
 </p>
-<h2>Why this matters</h2>
+<h2 id="rational">Why this matters</h2>
 <p>
 <strong>Maintenance is very expensive</strong> in a large enterprise estate. It is a drain on resources better spent on innovation, differentiation and evolution.
 </p>
@@ -50,7 +50,7 @@ Legacy integration and operations code makes it <strong>difficult to drive chang
 <p>
 Our community exists to change this.
 </p>
-<h2>Reuse is the key to ops code quality</h2>
+<h2 id="reusability">Reuse is the key to ops code quality</h2>
 <p>
 The root cause of the problem is the inability to share ops code across many organisations. When teams and organisations can <strong>share operations code perfectly</strong>, they also share the insights underneath that code, and the fixes to problems in that code. If operations code were shared perfectly, then <strong>updates could also be shared perfectly</strong>, and we would gain the same pace of innovation and acceleration in operations that we have witnessed in applications over the past decades.
 </p>
@@ -60,14 +60,14 @@ Even better, if this <strong>operations code is open source</strong>, then impro
 <p>
 This represents a <strong>profound new vision of operations code</strong>, transforming it from a home-grown artefact into a global class of software that evolves and improves in exactly the same way that applications do. True reuse of operations code is a leap forward in the operations profession. In this vision, operations code becomes a package which is distributed globally, with a stream of updates, upgrades and security fixes, just like a deb.
 </p>
-<h2>Beyond config management</h2>
+<h2 id="config-management">Beyond config management</h2>
 <p>
 For the past two decades, people have tried to solve this problem with configuration management. We have seen waves of ‘language wars’ as practitioners embraced Puppet, Chef, Ansible, Salt and more. There is not much difference between them, conceptually. They all ensure that the contents of specific files are the way the organisation decided they should be.
 </p>
 <p>
 Unfortunately, <strong>configuration management attacks the wrong part of the problem</strong>. By focusing on the desired state of a configuration file, they trap organisations in the idea that the organisation itself should know every detail of every configuration file. The great totem pole of institutional config management should ‘specify the precise contents of every configuration file in the building’. This, of course, makes that totem pole unique to the organisation, and requires low-level configuration knowledge in the ops team for every single application operated by the organisation.
 </p>
-<h2>SAAS experience, on prem</h2>
+<h2 id="saas">SAAS experience, on prem</h2>
 <p>
 No wonder CIOs are moving to SAAS as fast as possible. Adopting SAAS means that the organisation does not need low-level configuration management knowledge internally, in order to benefit from an application. Getting config files right is the SAAS provider’s problem &mdash; the business just enjoys the service.
 </p>
@@ -77,21 +77,21 @@ Our goal is to deliver the <strong>SAAS experience for on-premise applications t
 <p>
 Configuration files should not be the way we express our desired state. Configuration files should be the output of something much smarter. A business wants to make high-level, strategic decisions, just as they do with SAAS, and they want to have all of the underlying details handled by someone else, or something else. The Juju operator lifecycle manager, and the Open Operator Collection, deliver on that vision.
 </p>
-<h2>Application management</h2>
+<h2 id="application-management">Application management</h2>
 <p>
 Think of a particular application in your business. It is probably many pieces of software, integrated together, in a scenario. There are probably development, staging, test, and production scenarios that are similar but not exactly the same.
 </p>
 <p>
 The business decisions that are important are:
 </p>
-<ul><li>Where should the application run?
+<ul>
+  <li>Where should the application run?</li>
 
-<li>Which software components should be included in the scenario?
+<li>Which software components should be included in the scenario?</li>
 
-<li>What resources should be allocated to the scenario?
+<li>What resources should be allocated to the scenario?</li>
 
-<li>How should that scenario be integrated into the wider estate?
-</li>
+<li>How should that scenario be integrated into the wider estate?</li>
 </ul>
 <p>
 These questions are about <strong>application management, not configuration management</strong>. The answers to these questions are the <strong>business intent</strong> of the scenarios, and far more important than the details of a particular configuration file.
@@ -105,7 +105,7 @@ But configuration management is a very poor place to express business intent. Co
 <p>
 Instead, in the Juju OLM we <strong>make business intention the focus of the system</strong> and we use technology to take care of all the details that flow from that intention. When using operators with the Juju operator lifecycle manager, <strong>your entire experience is the scenario</strong> that you are composing out of applications. You decide where those scenarios will run, which applications are integrated in the scenario, the nature and amount of compute and storage allocated to the scenario, and any external systems integration such as centralised logging, monitoring and alerting.
 </p>
-<h2>Model-driven operations capture business intent</h2>
+<h2 id="model-driven">Model-driven operations capture business intent</h2>
 <p>
 Juju is different to other operator lifecycle managers because it captures business intention in a model of applications and resources, which drives the behaviour of those operators. This <strong>high level application modelling</strong> makes operators easier to use at scale in an enterprise.
 </p>
@@ -121,7 +121,7 @@ The scenario captures all four aspects of business intention &mdash; which appli
 <p>
 Crucially, Juju operators do not make business decisions, such as resource allocation, they follow business decisions which are expressed in their model. Separation of technical and commercial concerns means the operator is reusable in very different business settings. Reuse enhances the community value of the operator and increases software quality.
 </p>
-<h2>Beyond lifecycle, to everyday maintenance</h2>
+<h2 id="maintenance">Beyond lifecycle, to everyday maintenance</h2>
 <p>
 Maintenance, such as backups, restores, health checks, compliance checks, resets and application-specific event handling are expensive aspects of estate management in the enterprise.
 </p>
@@ -137,7 +137,7 @@ Distilling this knowledge into a reusable, repeatable, shared artefact is pricel
 <p>
 Just as millions of people benefit from the knowledge that has been encapsulated in the Linux kernel, without ever having to understand how it works, so Juju allows institutions to benefit from deep and varied operational experience without ever having to study that subject themselves.
 </p>
-<h2>Beyond Kubernetes</h2>
+<h2 id="beyond">Beyond Kubernetes</h2>
 <p>
 Kubernetes is only the latest in a long list of transformations which promised to simplify application management and operations.
 </p>
@@ -150,7 +150,7 @@ Clearly, Kubernetes is a critical new class of infrastructure, and we can expect
 <p>
 But we can also expect a large portion of the application estate never to run on Kubernetes, so in order to fix enterprise application management, we cannot limit our thinking or our tools to those which depend on Kubernetes. In fact, just as prior waves of infrastructure innovation created sprawling new estates which needed to be integrated into the existing estate, we expect Kubernetes to do the same.
 </p>
-<h2>Universal approach across all classes of software</h2>
+<h2 id="universal">Universal approach across all classes of software</h2>
 <p>
 The operator pattern has been popularized in Kubernetes, but the idea itself is much bigger than Kubernetes. Software which encodes knowledge and controls elements of a complex integration is a profound and universal idea, equally relevant in legacy estate as it is in the new Kubernetes world.
 </p>
@@ -181,7 +181,7 @@ Everyday operations &mdash; backup, restore and maintenance activities &mdash; a
 <p>
 The result is simply the best way to run the application. No direct access to machines or containers is needed because maintenance can be performed remotely, through the operator.
 </p>
-<h2>Integration as a first class design element</h2>
+<h2 id="integration">Integration as a first class design element</h2>
 <p>
 The second part of our mission is to facilitate rich integration between operators.
 </p>
@@ -197,7 +197,7 @@ Integration code is packaged in the operator, shared and reused in multiple diff
 <p>
 The design of the Juju OLM is careful to reflect the need for evolution over time. No initial implementation will be perfect, and it is necessary to allow new operator versions to co-exist with older versions in running scenarios, as they improve over time. The protocols used by operators in their integration communications are deliberately designed to allow loose coupling, substitution and evolution on either side of an integration relationship.
 </p>
-<h2>Operator design, quality assurance and testing</h2>
+<h2 id="qa">Operator design, quality assurance and testing</h2>
 <p>
 It should be clear that operators are serious software.
 </p>
@@ -222,7 +222,7 @@ Mechanisms for testing are essential for high quality code. The Python Operator 
 <p>
 As a community, continuous integration and testing of operators across a range of substrates and scenarios ensures a high standard of quality in the portfolio. We drive automated tests of operators across the entire ecosystem as a shared project, to raise the quality of operators for all users.
 </p>
-<h2>Community driven operators</h2>
+<h2 id="community">Community driven operators</h2>
 <p>
 Operators reflect real-world experience from people responsible for applications in a wide range of situations. An open community process and a preference for open source operators results in faster improvement, richer functionality, wiser operator behaviour and better integration than individual vendor efforts. We are of course open to vendor participation and even vendor leadership of operators, but we are committed to broad based participation because it delivers the highest quality total experience.
 </p>
@@ -238,7 +238,7 @@ The fourth practical element of our mission is that we build a shared community 
 <p>
 This community includes common code, conventions, design discussions, code release best practices, security standards and a code of conduct. There will be many operators for a given workload, we believe that operators which come from a well-run, open and collaborative community will deliver the best total value because they draw on that diverse base of perspectives.
 </p>
-<h2>Distribution and updates from CharmHub</h2>
+<h2 id="charmhub">Distribution and updates from CharmHub</h2>
 <p>
 Operators as a concept can be implemented in many different ways. In the Kubernetes operator pattern, an operator is a container. The Juju OLM supports operators on Kubernetes and on machine substrates like IAAS, VMware and bare metal, with an appropriate delivery mechanism for the operator in each case. On Kubernetes, a container hosts the operator. On machines, the operator is installed as an application.
 </p>
@@ -254,7 +254,7 @@ In the CharmHub, operators are published in semantic channels, allowing for stab
 <p>
 So the fifth element of our mission is the maintenance and management of the Open Operator Collection, as the world’s largest repository of distilled software and application operations experience. Spanning the entire gamut of application and infrastructure software, the CharmHub brings together everything the community knows about deploying, integrating and operating applications at every layer of the stack, across every cloud, on all major architectures, and at a wide variety of scales.
 </p>
-<h2>Juju is…</h2>
+<h2 id="olm">Juju is…</h2>
 <p>
 Transforming operations code into shared and reusable packages requires a new way of thinking about the operations problem. It requires us to separate the business decisions &mdash; choice of applications and versions, where they run, how much CPU and disk they may consume, and how they are integrated into the estate &mdash; from the technical decisions of how best to achieve those goals.
 </p>

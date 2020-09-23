@@ -13,7 +13,7 @@
 <p>
 An operator is software which drives an application. The operator lifecycle manager (OLM) is a service which installs operators, updates them, configures them, and in the case of the Juju OLM, helps it to integrate with other operators.
 </p>
-<h2>Model-driven operations</h2>
+<h2 id="model-driven">Model-driven operations</h2>
 <p>
 One key differentiator of the Juju OLM is the way it organises a large number of operators, potentially across many different clouds or clusters. Operators are in a sense extra pieces of software to manage, so having a structure and catalog of that software immediately provides a level of enterprise awareness and control of the operator estate.
 </p>
@@ -26,7 +26,7 @@ Model-driven operations simplify integration between diverse operators, and redu
 <p>
 The concept of ‘desired state’ is popular in Kubernetes. Model-driven operations elevate the notion of desired state, allowing administrators to describe their integration and resource allocation policies, and using shared operations code to achieve that intention rather than application-specific expertise.
 </p>
-<h2>Integration</h2>
+<h2 id="integration">Integration</h2>
 <p>
 While the focus of an operator lifecycle manager is usually the simple life cycle of a particular application, the model-driven nature of the Juju OLM provides an opportunity to manage the application graph in its entirety, reflecting patterns of integration between multiple applications.
 </p>
@@ -36,7 +36,7 @@ With the Juju OLM, applications can be integrated declaratively in the model. A 
 <p>
 Integration can be made, and undone, dynamically. The Juju OLM delivers updates in the application graph to operators as a stream of events, and operators can use this mechanism to inform one another of changes in their status which might affect related applications in the graph.
 </p>
-<h2>Storage for operators</h2>
+<h2 id="storage">Storage for operators</h2>
 <p>
 Many applications require storage to be allocated and managed carefully. The operator lifecycle manager coordinates this allocation based on the model, matching resources allocated to the model with application-specific requirements and configuration.
 </p>
@@ -49,7 +49,7 @@ The OLM adapts to and coordinates with the substrate. In the case of Kubernetes 
 <p>
 The ability to provide consistent model-driven storage for both legacy applications and Kubernetes applications greatly simplifies administration across the enterprise.
 </p>
-<h2>Networking for operators</h2>
+<h2 id="networking">Networking for operators</h2>
 <p>
 Applications provide services to each other and to end-users on the network. Security practices usually dictate that network services are separated on different networks for different applications, and in some cases, for different functions of the same application.
 </p>
@@ -62,7 +62,7 @@ The OLM is in a position to define and enforce network security policies.
 <p>
 The Juju OLM models networks in traditional machine environments. Application endpoints can be bound to particular networks in the model, enabling the operators to comply with enterprise network policy in any particular deployment. Networks can be provided at both L2 and L3, enabling low-level telecommunications services to be provided through operators just as cleanly as typical IT services.
 </p>
-<h2>Installing operators</h2>
+<h2 id="installing">Installing operators</h2>
 <p>
 Since an operator is just a package, it can be provided locally. For example, you may be developing the operator yourself, and iterating locally, so you can provide the operator to the OLM manually. You may also have an operator with confidential code or data, and prefer not to store that in a public service.
 </p>
@@ -81,7 +81,7 @@ If the operator is being used on Kubernetes then it will be run in a container i
 <p>
 The operator lifecycle manager will then invoke the operator to handle events associated with the lifecycle of the operator.
 </p>
-<h2>Updating operators</h2>
+<h2 id="updating">Updating operators</h2>
 <p>
 Since operators take responsibility for mission-critical systems, they are themselves critical systems, and need to be kept up to date to ensure that bugs and security issues are fully addressed.
 </p>
@@ -97,7 +97,7 @@ Updating an operator might well, however, update the configuration of the applic
 <p>
 With the Juju OLM it is possible to publish operators in channels, and consume them from channels, which allows particular models to use riskier or faster-moving versions of the operator. It is good practice to have some deployments using pre-stable versions of operators in order to assess incoming changes.
 </p>
-<h2>Removing operators</h2>
+<h2 id="removing">Removing operators</h2>
 <p>
 The process of decoupling integrated software for removal must be done carefully. In development and test environments it is straightforward to tear down and rebuild an entire environment, but in a long-lived production environment it will occasionally be necessary to retire one component while adding new components to the running services.
 </p>
@@ -107,7 +107,7 @@ The OLM can orchestrate the clean removal of operators from a system. In Juju th
 <p>
 Policy, settings and the command-line options will govern the consequences for storage associated with the removed application &mdash; it may be archived or it may be destroyed as well.
 </p>
-<h2>Configuration</h2>
+<h2 id="configuration">Configuration</h2>
 <p>
 Another benefit of an OLM is consistent configuration of operators from a wide range of vendors and communities.
 </p>
@@ -117,7 +117,7 @@ The Juju OLM offers configuration schemas and structured YAML config, defined by
 <p>
 The OLM also offers mechanisms to roll configuration changes out across a distributed system. For large, scale-out environments, it is valuable to avoid shotgun changes which cause ripples to turn into waves. Where a single change will expand across many systems, it is possible to steer the change deliberately and manage the impact precisely at all times.
 </p>
-<h2>Scaling</h2>
+<h2 id="scaling">Scaling</h2>
 <p>
 Scale is a critical ingredient in enterprise software, both for resilience and for capacity. Coordinating multiple integrated applications at dynamic scale is challenging. An OLM that provides a desired-state view of scale, as well as tracking current scale, enables more sophisticated operator design and implementation.
 </p>
@@ -127,7 +127,7 @@ Dynamic scale requires careful coordination between applications that integrate 
 <p>
 The Juju OLM explicitly models application scale, and provides mechanisms for integrated applications to be aware of changes in their own and related application scale.
 </p>
-<h2>Everyday operations actions</h2>
+<h2 id="operations">Everyday operations actions</h2>
 <p>
 Any long-lived workload requires maintenance or administrative activities. Backup, restore, reset, checkpoint, benchmarking, and application-specific operations occur both on a schedule and as interrupts for the administrator.
 </p>
