@@ -24,7 +24,7 @@
       type="image/x-icon"
     />
     <title>
-      {% block page_title %}Juju - The simplest way to deploy and maintain
+      Juju | {% block page_title %}The simplest way to deploy and maintain
       applications in the cloud{% endblock %}
     </title>
     <meta name="copydoc" content="{% block meta_copydoc %}https://drive.google.com/drive/u/0/folders/1-3OoeHxK5U7W_ktFY8rvwRzmjzCKte9a{% endblock %}">
@@ -163,6 +163,12 @@
                 href="https://discourse.juju.is"
                 >Community</a
               >
+            </li>
+            <li
+              class="p-navigation__link{% if request.path.startswith('/contact-us') %} is-selected"
+              aria-current="page{% endif %}"
+              role="menuitem">
+              <a href="/contact-us">Contact us</a>
             </li>
             </li>
           </ul>
