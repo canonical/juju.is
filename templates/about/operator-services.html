@@ -16,7 +16,7 @@ It is easy to write a simplistic operator. Launch a container, fetch a new conta
 <p>
 The Juju OLM provides enterprise-class operator lifecycle management and it offers services to operators which make it easier for them, in turn, to be enterprise-class components. Operators for critical services may well need to be highly available, and so they become distributed systems in their own right.
 </p>
-<h2>Event delivery and serialization</h2>
+<h2 id="events">Event delivery and serialization</h2>
 <p>
 Any distributed system is in a state of constant simultaneous change. Applications and operators on multiple machines are working at the same time. A single conceptual administrative change might turn into multiple actual changes that cascade around the application graph, and these changes might easily arrive at a particular operator simultaneously.
 </p>
@@ -41,14 +41,14 @@ The Juju OLM carefully serializes event delivery, not just to a single operator,
 <p>
 In much the same way that Golang rethinks concurrent execution in applications, the Juju OLM rethinks concurrent command and control of distributed applications, in a way which does not depend on underlying substrate semantics. The benefits of this approach accrue to operators everywhere, not just those on Kubernetes.
 </p>
-<h2>Leader election</h2>
+<h2 id="leader-election">Leader election</h2>
 <p>
 In a distributed system where individual nodes may fail in unpredictable ways, it is a well known challenge to provide consistency of data and services. One of the tricky problems in this situation is leader election - out of several units, which one should we trust to answer questions for the whole group? There are several algorithms for this, all of which are considered subtle, and implementing leader election correctly is non-trivial.
 </p>
 <p>
 Instead of asking each operator to implement leader election separately, the Juju operator lifecycle manager provides leader-election as a service to all operators. This greatly simplifies the problem of knowing which operator can determine the aggregate state of a scale-out service, or handle events which should only be considered once in the context of the entire application as opposed to being considered for every unit individually.
 </p>
-<h2>Persistent state</h2>
+<h2 id="persistent-state">Persistent state</h2>
 <p>
 Every operator needs to keep track of state. For fine-grained control, that state may need to be specific to a particular unit of the application, such as a Kubernetes pod, or an instance of the app on one of several machines in a cluster.
 </p>
@@ -58,7 +58,7 @@ Juju provides a consistent and reliable storage mechanism that avoids the use of
 <p>
 The Python Operator Framework abstracts this persistent state capability to provide a local data store to the operator which is entirely managed by the framework and the operator lifecycle manager.
 </p>
-<h2>Application and unit status</h2>
+<h2 id="status">Application and unit status</h2>
 <p>
 In an integrated system, applications may depend on each other for services. A change in the status of an application is material for any applications integrated with it. For example, if a database is made read-only for an upgrade, then applications associated with that database should be made aware.
 </p>
@@ -103,7 +103,7 @@ In the case of Blocked, the application has determined that the current applicat
 <p>
 An application that is in the Waiting state has determined that its requirements can be fulfilled in the application graph, but that the necessary applications are themselves not yet in the Active state. In the prior example, if the application saw in the application graph that it did have a database to integrate with, but that database was not yet Active, then the application would put itself in the Waiting state. An application in Waiting state is expected to become Active once its own dependencies become Active.
 </p>
-<h2>Application messages</h2>
+<h2 id="messages">Application messages</h2>
 <p>
 The operator pattern is a new level of sophistication in automation, greatly reducing the need for application-specific domain knowledge. Nevertheless, human administrators are responsible for the end result, and it is helpful to keep them informed about application status.
 </p>
@@ -113,7 +113,7 @@ The Juju OLM allows operators to provide human-friendly messages that reflect th
 <p>
 Only a single message per application is presented at any time, but updates to the application message are logged and may be reviewed as part of an audit or incident analysis.
 </p>
-<h2>Integration data</h2>
+<h2 id="data">Integration data</h2>
 <p>
 Integration requires that operators have the necessary information about one another to adapt their own configuration to reflect the integration. In a simple example, Wordpress needs to know where to connect to the database, along with things like a username, password, database name, and server certificate, and MySQL needs to know which IP addresses to allow to connect, with the matching details.
 </p>

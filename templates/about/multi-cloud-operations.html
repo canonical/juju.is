@@ -9,7 +9,7 @@
 {% block about_content %}
 <h1>Multi-cloud operations</h1>
 <p>Companies want to operate across multiple different public and private clouds. It should be possible to deploy and operate any standard application or component on any cloud in exactly the same way, with exactly the same declarative descriptions. It should also be straightforward to integrate software deployed across diverse clouds, and integrate cloud SAAS with local applications.</p>
-<h2>What are multi-cloud operations?</h2>
+<h2 id="definition">What are multi-cloud operations?</h2>
 <p>Many organisations have invested in relationships with multiple separate public clouds. Since all of the major cloud providers offer the raw materials of compute, network, and storage, it makes sense to be able to deploy onto those clouds in a standardized, repeatable and portable way.</p>
 <h3>Case Study: Volkswagen Group multi-cloud operations</h3>
 <p>Watch Scania present at Ubuntu Masters in 2020.</p>
@@ -17,7 +17,7 @@
   <iframe title="Title of the media object" class="u-embedded-media__element" src="https://www.youtube.com/embed/SGrRqCuiT90" allowfullscreen="" frameborder="0"></iframe>
 </p>
 <p>From bare metal high performance computing to on-premise VMware clusters and multiple diverse public cloud regions, Scania have created a seamless operations regime which puts the right workload in the right place and preserves the ability to move overnight.</p>
-<h2>Charms are portable operations code</h2>
+<h2 id="portable">Charms are portable operations code</h2>
 <p>With the Juju operator lifecycle manager, we ensure that it is easy to:</p>
 <ul>
   <li>Deploy legacy apps on any public cloud</li>
@@ -28,7 +28,7 @@
   <li>Integrate cross-cloud applications</li>
 </ul>
 <p>The Charmhub hosts the Open Operator Collection, a portfolio of operators for many applications that work across all public and private clouds as well as bare metal.</p>
-<h2>The business case for multi-cloud operations</h2>
+<h2 id="business-case">The business case for multi-cloud operations</h2>
 
 
 <p>
@@ -43,7 +43,7 @@ So fragmentation of an estate comes at a price, which is why Juju is so useful. 
 <p>
 There are other benefits to having multiple cloud providers. Competition between providers is fierce and keeps costs lower. In a regulatory or physical disaster scenario, redundancy of relationships may be very valuable to the buyer, enabling rapid movement from one platform to another, as long as those workloads are encapsulated and portable as Juju operators.
 </p>
-<h2>Technical methodology and advantages</h2>
+<h2 id="methodology">Technical methodology and advantages</h2>
 
 
 <p>
@@ -55,7 +55,7 @@ Juju generalises the operator pattern, taking it beyond containers. With the Juj
 <p>
 Much of the software that companies wish to operate in a multi-cloud way is not yet containerized, and it may never be containerized, so a universal operator mechanism is important to the multi-cloud goal.
 </p>
-<h3>Provisioning is a lifecycle manager function</h3>
+<h3 id="provisioning">Provisioning is a lifecycle manager function</h3>
 
 
 <p>
@@ -76,7 +76,7 @@ The Juju approach greatly simplifies the human element of software operations. Y
 <p>
 Unlike other operator lifecycle managers, the Juju OLM can manage operators on multiple different substrates at the same time. You can have a Juju controller (operator lifecycle manager) running on Kubernetes that manages operators for a model on bare metal, or the other way around.
 </p>
-<h3>Substrate-agnostic operators</h3>
+<h3 id="cloud-agnostic">Substrate-agnostic operators</h3>
 
 
 <p>
@@ -91,7 +91,7 @@ Exactly the same operator code can handle both ‘machine’ substrates and ‘c
 <p>
 To restate, you can have a single codebase for both container and machine flavours of your operator, but generally people don’t, they have common code for two flavours and they build, test and release the different flavours independently.
 </p>
-<h3>Cross-cloud integration</h3>
+<h3 id="cross-cloud">Cross-cloud integration</h3>
 
 
 <p>
@@ -112,7 +112,7 @@ The extra step of ‘offer’ and ‘consume’ reflects the fact that such an i
 <p>
 A given model has to be on a single substrate. But cross-model integration can connect two models in two completely different clouds. So, for example, a model on VMware could integrate with the S3 service on AWS for backups. Or a set of applications on Azure Kubernetes could integrate with a Google SAAS for real time search trend data.
 </p>
-<h3>Cloud-specific application features</h3>
+<h3 id="cloud-features">Cloud-specific application features</h3>
 
 
 <p>
@@ -127,7 +127,7 @@ How those features are enabled or disabled is configuration for the operator pub
 <p>
 In the Open Operator Collection, we celebrate operators that take advantage of substrate-specific capabilities while working consistently across the widest range of substrates.
 </p>
-<h3>Cloud-specific SAAS</h3>
+<h3 id="saas">Cloud-specific SAAS</h3>
 
 
 <p>

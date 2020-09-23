@@ -8,7 +8,7 @@
 
 {% block about_content %}
 <h1>Model-driven operations</h1>
-<p class="p-heading--four">Application management is about business decisions</p>
+<p class="p-heading--four" id="application-management">Application management is about business decisions</p>
 <p>
 In a large organisation, it is important to separate out business intention from technical implementation. For example, if we are going to set up a service, we might run it in a staging environment, and we might set up test environments, as well as running it in production.
 </p>
@@ -27,7 +27,7 @@ This is <strong>application management, not configuration management</strong>. M
 <p>
 It is almost as if a traditional operations engineer ‘compiles business intentions’ into configuration management code, while Juju preserves the source code of the business intention, translating it at runtime to the particular environment where the scenario is playing out. Juju works at a higher level, which makes the resulting artifact much easier to understand and share.
 </p>
-<h2>Scenarios, models and substrates</h2>
+<h2 id="concepts">Scenarios, models and substrates</h2>
 <p>
 We’ll use the terms ‘substrate’, ‘scenario’ and ‘model’ a lot. We need all of those terms because large services are often built up of many components spread across several different places.
 </p>
@@ -55,35 +55,35 @@ Kubernetes is a container substrate. You won’t get machines there, you run Doc
 <p>
 So, applications sit in models, models sit on substrates, and scenarios are made up of one or more models so that they can span multiple substrates.
 </p>
-<h2>Model-driven operations capture business intent</h2>
+<h2 id="business-intent">Model-driven operations capture business intent</h2>
 <p>
 The model doesn’t just represent a substrate conceptually. It captures actual resource allocations too. For example, a model on a public cloud keeps track of the number and type of virtual machine instances allocated to the model. Networks are declared in a model too, as are classes of storage. This allows us to place an application in the model, bind aspects of it to particular networks, and have it consume a certain amount of a particular class of storage.
 </p>
 <p>
 Unlike a traditional management system, model-driven operations understand why these resources were allocated and how they’re being used. A future administrator looking at a model understands more clearly the intention of the people setting it up. The model reflects application management decisions directly.
 </p>
-<h3>Where we run the applications</h3>
+<h3 id="substrate">Where we run the applications</h3>
 <p>
 The first business decision is the substrate for the model. It can be any public or private cloud IAAS, including bare metal machines, or it can be on any Kubernetes cluster. The model starts as a blank canvas. Applications will be placed on the canvas. By creating the canvas on a particular substrate, we are deciding where the applications will run.
 </p>
 <p>
 A single scenario might in fact involve several models on different substrates, because it involves applications that must run in multiple different clouds. I might have some components on my mainframe, some on a public cloud, some on a different cloud Kubernetes cluster, and some on servers. Each of those compute substrates would get a model, and applications placed in each model will run on that substrate.
 </p>
-<h3>Who will be responsible for each application</h3>
+<h3 id="teams">Who will be responsible for each application</h3>
 <p>
 Models also allow different groups of administrators to be responsible for particular subsets of the applications in the scenario. Since permissions are allocated by model, it is convenient to represent organisational boundaries in models as well. One team that has responsibility for the data lake could have permissions to administer a model with those components, another team that is responsible for machine learning could have permission to administer a second model.
 </p>
 <p>
 When we have separate teams responsible for subsets of the applications, we create a scenario with two models on the same substrate to segregate responsibilities. Since applications can be integrated across model boundaries, multiple models do not complicate the overall scenario design. So the second business decision is who has permission to administer each model.
 </p>
-<h3>Which applications we compose in the scenario</h3>
+<h3 id="scenario">Which applications we compose in the scenario</h3>
 <p>
 The third business decision is which applications will be needed in that scenario. Operators are placed into models using the Juju operator lifecycle manager. The operators are integrated through matching integration points. Each line of integration represents a particular way in which those two operators are composed. Operators can be composed in many ways, if two operators have multiple pairs of matching integration points then there can be multiple lines of integration between them. The net effect is a rich application graph on the canvas.
 </p>
 <p>
 This graph is an abstraction. The same graph could describe a small deployment, on Raspberry Pi hosts, or a large deployment, on dual-socket x86 servers. The graph describes the logical relationships between the applications. We can reuse this graph on different substrates to build multiple copies of the same idea, for example development, staging and production.
 </p>
-<h3>How much we spend</h3>
+<h3 id="hardware">How much we spend</h3>
 <p>
 To make this abstract model real, we need to provide some compute capacity, some storage, and possibly some networks on which those applications will be run. This is the fourth business decision that we must take &mdash; how much we want to spend on this particular application.
 </p>
@@ -96,7 +96,7 @@ The same is true of storage &mdash; by deciding which kinds of storage to provid
 <p>
 Storage is described as a set of storage classes, typically mapped to substrate-specific storage types. On AWS, one can construct a storage class for the model out of EBS. Different storage classes would have different performance, durability, reliability and costs. Again, the model records these business decisions explicitly. Dev, staging and production scenarios might each use exactly the same application configuration and integration, but use different storage classes, tuned for speed, reliability, or cost.
 </p>
-<h3>How we integrate with the wider estate</h3>
+<h3 id="integration">How we integrate with the wider estate</h3>
 <p>
 The fifth and final business decision is wider integration. What other systems, outside this particular scenario, are important to integrate?
 </p>
@@ -109,7 +109,7 @@ We can draw lines of integration across models. We use this both to integrate ap
 <p>
 If we have a set of models with large databases in them, operated securely by our DBA team, then we might use a cross-model integration to those for the data in our production scenario. But dev and test scenarios might not use those central databases, instead using a local copy of the database provided by that database operator, or a SAAS database like Amazon RDS.
 </p>
-<h2>Permissions</h2>
+<h2 id="permissions">Permissions</h2>
 <p>
 The model serves as a useful boundary for permissions. User and group permissions are set at the model level with role-based access controls (RBAC).
 </p>
@@ -122,7 +122,7 @@ Cross-model integration requires both models to agree, so both teams need to agr
 <p>
 Permissions can be granted and revoked quickly, so it is common to see teams granting short-term permissions to a person or team in order to collaborate, after which the permissions are dropped to revert to the more independent operating norm.
 </p>
-<h2>Applications, workloads and operators</h2>
+<h2 id="applications">Applications, workloads and operators</h2>
 <p>
 It is easy to talk about operators and applications as though they are the same thing, but they are not.
 </p>
@@ -144,7 +144,7 @@ It is possible to deploy the same operator multiple times in the same model, und
 <p>
 So ‘application’ is the name in the application graph in the model, an application in the model is defined by its operator and configuration, an operator can be used multiple times in a model under different names. The workload is the actual processes driven by the operator when it is running.
 </p>
-<h2>Subordinate applications</h2>
+<h2 id="subordinate">Subordinate applications</h2>
 <p>
 There are certain software components which play a supporting role. They are essential, but they are not the reason for the model to exist. In business terms, they are not the drivers of resource allocation.
 </p>
@@ -157,7 +157,7 @@ The Juju OLM introduces the notion of <em>subordinate applications</em> which ar
 <p>
 In the example, the heartbeat monitor is a subordinate application to the database application. If we scale out the database, we will exactly follow with the heartbeat monitor, ensuring that the heartbeat monitor can play its supporting role everywhere it is needed.
 </p>
-<h2>Units represent application scale</h2>
+<h2 id="units">Units represent application scale</h2>
 <p>
 Many applications can deploy parallel instances for resilience, throughput or both. Mission-critical enterprise applications often work in a failover mode for high availability, or designate some instances as read-only for scale. With newer cloud-native software, where ‘scale- out’ and consensus algorithms such as RAFT and PAXOS have become popular approaches to capacity and availability, parallel instances typically offer robust resilience with automatic cutover, or the ability to scale and process large amounts of data in parallel through sharding.
 </p>
@@ -197,14 +197,14 @@ This rather simplistic approach is common in Kubernetes implementations of the o
 <p>
 A further consideration is subordinate applications. The scale of a subordinate application follows its primary application. If we deploy a database and a subordinate heartbeat monitor, the scale of both is determined by the scale of the database. If we add three units to the database, we will automatically add three more units to the heartbeat monitor, on exactly the same machines.
 </p>
-<h2>Resources</h2>
+<h2 id="resources">Resources</h2>
 <p>
 It is common for an operator to require some large pieces of content. For example, the operator may need assets for a game, or it may need a CD image from which the application installation proceeds, or it may need a neural network model to be provided.
 </p>
 <p>
 With the Juju OLM, resources can be declared in the operator package (“charm”) metadata. Such resources can be retrieved by the operator on demand, and updated independently of the operator code itself. This allows new versions of the resource to be propagated to deployments without having to ship new versions of the application or the operator itself.
 </p>
-<h2>Integration points and the application graph</h2>
+<h2 id="application-graph">Integration points and the application graph</h2>
 <p>
 A key feature of the Juju OLM is its support for <a href="/integration/">declarative integration between operators</a>. We can deploy two operators with the lifecycle manager, then we can request that they integrate, and automatically have the applications reconfigure themselves to work with one another. We do not need to write any custom integration code in order to integrate two operators that use the Juju OLM, because integration is a first-class design goal of Juju.
 </p>
@@ -223,7 +223,7 @@ As we integrate multiple operators, the model turns into an application graph. U
 <p>
 This ability to <strong>compose operators into a bigger picture</strong> allows the individual operators to be cleaner, simpler and more reusable. They do one thing well, which is a key philosophy in effective systems design.
 </p>
-<h2>Sharing and reusing scenario definition bundles</h2>
+<h2 id="sharing">Sharing and reusing scenario definition bundles</h2>
 <p>
 A model is a very valuable summary of business intention. It describes very succinctly, which apps, on which substrates, with which administrators, with what high level configuration and integration, and at what scale over which resources. It neatly captures everything you need to deliver that business intention repeatedly: just redeploy exactly the same model, and you get exactly the same service.
 </p>
