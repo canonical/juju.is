@@ -10,20 +10,10 @@
   .p-navigation__banner {
     background-color: $color-ubuntu-orange;
     padding-inline-start: 1rem;
-
-    @media screen and (min-width: 876px) {
-      margin-inline-start: 0.5rem;
-    }
   }
 
-  @media screen and (min-width: $breakpoint-navigation-threshold) {
-    .p-navigation .p-navigation__item.is-selected {
-      background-color: $color-x-light;
-    }
-
-    .p-navigation .p-navigation__item.is-selected > .p-navigation__link {
-      color: $color-dark;
-      opacity: 1;
-    }
+  .p-side-navigation {
+    position: sticky;
+    top: 3rem;
   }
 }

@@ -8,15 +8,25 @@
 <main id="main-content">
 	<section class="p-strip--image is-dark" style="background-size: auto 100%, cover; background-position: right center; background-image: url('https://assets.ubuntu.com/v1/a9dab044-suru-right.svg'), linear-gradient(266deg, #044f66, #022935)">
 		<div class="row u-equal-height">
-			<div class="col-6">
+			<div class="col-5">
 				<h1>Universal Operator Lifecycle Manager</h1>
 				<p class="p-heading--four">Better operators for enterprise apps with a full application graph and declarative integration for both Kubernetes and legacy estate.</p>
 				<p>
 					<a href="/tutorials" class="p-button--positive">Get started</a>
 				</p>
 			</div>
-			<div class="col-6 u-align--center u-vertically-center">
-				<img src="https://assets.ubuntu.com/v1/9b2f65f0-juju.is-logos-banner.svg" alt="" />
+			<div class="col-7 u-align--center u-vertically-center">
+				<ul class="p-inline-images u-no-margin--bottom">
+					<li class="p-inline-images__item">
+						<a href="#install"><img class="p-inline-images__logo" src="https://assets.ubuntu.com/v1/1b61815f-ubuntu_logo_white_orange.svg" alt="Ubuntu" width="293" height="78"></a>
+					</li>
+					<li class="p-inline-images__item">
+						<a href="#install"><img class="p-inline-images__logo" src="https://assets.ubuntu.com/v1/82c19e2e-macos-logo-white.svg" alt="macOS"></a>
+					</li>
+					<li class="p-inline-images__item">
+						<a href="#install"><img class="p-inline-images__logo" src="https://assets.ubuntu.com/v1/bfc851de-windows-logo-white.svg" alt="Windows"></a>
+					</li>
+				</ul>
 			</div>
 		</section>
 
@@ -389,7 +399,7 @@
 			<div class="row">
 				<hr style="margin: 2rem 0" />
 			</div>
-			<div class="row">
+			<div class="row" id="install">
 				<div class="col-4">
 					<img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" alt="Linux" style="margin: 27px 0; height: 90px;" />
 					<pre class="p-code-numbered"><code><span class="p-code-numbered__line">sudo snap install juju</span></code></pre>
