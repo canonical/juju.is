@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section class="p-strip is-shallow">
+<section class="p-strip--suru-topped is-shallow">
   <div class="row">
     <div class="col-3">
       <div class="p-side-navigation" id="drawer">
@@ -59,7 +59,7 @@
               <a class="p-side-navigation__link{% if request.path == '/hosted-olm' %} is-active{% endif %}" href="/hosted-olm">Hosted Juju</a>
             </li>
             <li class="p-side-navigation__item">
-              <a class="p-side-navigation__link{% if request.path == '/beyond-configuration-management' %} is-active{% endif %}" href="/beyond-configuration-management">Beyond configuration management</a>
+              <a class="p-side-navigation__link{% if request.path == '/beyond-configuration-management' %} is-active{% endif %}" href="/beyond-configuration-management">Beyond config management</a>
             </li>
           </ul>
 
