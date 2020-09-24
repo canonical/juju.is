@@ -52,6 +52,40 @@
     }
   }
 
+  .p-strip--suru-index {
+    @extend %vf-strip;
+
+    background-blend-mode: multiply, multiply, normal, normal;
+    background-color: #772953;
+    background-image:
+      linear-gradient(
+        to bottom left,
+        rgba(228, 228, 228, 0.5) 0,
+        rgba(228, 228, 228, 0.5) 49.9%,
+        transparent 50%
+      ),
+      linear-gradient(
+        to bottom right,
+        rgba(228, 228, 228, 0.5) 0,
+        rgba(228, 228, 228, 0.5) 49.9%,
+        transparent 50%
+      ),
+      linear-gradient(
+        to top left,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 49.3%,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      linear-gradient(266deg, #044f66, #022935);
+    background-position: top right, top left, right bottom -1px, left top;
+    background-repeat: no-repeat;
+    background-size: 74% 99.83%, 68% 91%, 103.8% 20.26%, 100% 99.8%;
+    color: #fff;
+    padding-block-end: 3.5rem;
+    padding-block-start: 3rem;
+  }
+
   .p-strip--suru-top {
     @extend %jaas-strip-suru;
     padding-top: 8rem;
