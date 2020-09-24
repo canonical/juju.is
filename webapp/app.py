@@ -45,14 +45,14 @@ def operator_services():
     return render_template("about/operator-services.html")
 
 
-@app.route("/about")
-def about():
-    return render_template("about/index.html")
+@app.route("/mission")
+def mission():
+    return render_template("about/mission.html")
 
 
-@app.route("/olm-overview")
-def olm_overview():
-    return render_template("about/olm-overview.html")
+@app.route("/overview")
+def overview():
+    return render_template("about/overview.html")
 
 
 @app.route("/high-availability-enterprise-olm")
