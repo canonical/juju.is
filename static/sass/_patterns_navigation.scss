@@ -3,6 +3,9 @@
 
   .p-navigation {
     @extend %vf-has-box-shadow;
+
+    font-weight: 400;
+    font-size: 1.125rem;
     position: sticky;
     top: -1px;
 
