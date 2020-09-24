@@ -22,72 +22,67 @@ app = FlaskBase(
 
 @app.route("/integration")
 def integration():
-    return render_template("about/integration.html")
+    return render_template("overview/integration.html")
 
 
 @app.route("/model-driven-operations")
 def model_driven_operations():
-    return render_template("about/model-driven-operations.html")
+    return render_template("overview/model-driven-operations.html")
 
 
 @app.route("/devsecops")
 def devsecops():
-    return render_template("about/devsecops.html")
+    return render_template("overview/devsecops.html")
 
 
 @app.route("/universal-operators")
 def universal_operators():
-    return render_template("about/universal-operators.html")
+    return render_template("overview/universal-operators.html")
 
 
 @app.route("/operator-services")
 def operator_services():
-    return render_template("about/operator-services.html")
+    return render_template("overview/operator-services.html")
 
 
-@app.route("/about")
-def about():
-    return render_template("about/index.html")
-
-
-@app.route("/olm-overview")
-def olm_overview():
-    return render_template("about/olm-overview.html")
+@app.route("/mission")
+def mission():
+    return render_template("overview/mission.html")
 
 
 @app.route("/high-availability-enterprise-olm")
 def high_availability_enterprise_olm():
-    return render_template("about/high-availability-enterprise-olm.html")
+    return render_template("overview/high-availability-enterprise-olm.html")
 
 
 @app.route("/architecture")
 def architecture():
-    return render_template("about/architecture.html")
+    return render_template("overview/architecture.html")
 
 
 @app.route("/operator-lifecycle-manager")
 def operator_lifecycle_manager():
-    return render_template("about/operator-lifecycle-manager.html")
+    return render_template("overview/operator-lifecycle-manager.html")
 
 
 @app.route("/ops-code-quality")
 def ops_code_quality():
-    return render_template("about/ops-code-quality.html")
+    return render_template("overview/ops-code-quality.html")
 
 
 @app.route("/hosted-olm")
 def hosted_olm():
-    return render_template("about/hosted-olm.html")
+    return render_template("overview/hosted-olm.html")
 
 
 @app.route("/multi-cloud-operations")
 def multi_cloud_operations():
-    return render_template("about/multi-cloud-operations.html")
+    return render_template("overview/multi-cloud-operations.html")
 
 
 @app.route("/beyond-configuration-management")
 def beyond_configuration_management():
-    return render_template("about/beyond-configuration-management.html")
+    return render_template("overview/beyond-configuration-management.html")
 
 
 template_finder_view = TemplateFinder.as_view("template_finder")
