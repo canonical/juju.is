@@ -3,6 +3,10 @@ import datetime
 from canonicalwebteam.flask_base.app import FlaskBase
 from canonicalwebteam.templatefinder import TemplateFinder
 from canonicalwebteam import image_template
+from canonicalwebteam.yaml_responses.flask_helpers import (
+    prepare_deleted,
+    prepare_redirects,
+)
 from flask import render_template
 
 from webapp.docs.views import init_docs
@@ -18,6 +22,9 @@ app = FlaskBase(
     template_404="404.html",
     template_500="500.html",
 )
+
+app.before_request(prepare_redirects())
+app.before_request(prepare_deleted())
 
 
 @app.route("/integration")
