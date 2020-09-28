@@ -56,9 +56,9 @@
 			<div class="row">
 				<div class="col-8">
 					<h2>Clean, composable operators</h2>
-					<p class="p-heading--four">Do one thing and do it well</p>
+					<p class="p-heading--four"><a href="/integration#unix">Do one thing and do it well</a></p>
 					<p>
-						Keep each operator as simple as possible, then compose them to create rich application graph topologies for complex solutions with a simple, consistent experience and much less YAML.
+						Juju operator integration allows us to keep each operator as simple as possible, then <a href="/model-driven-operations#composition">compose them</a> to create <a href="/integration#application-graph">rich application graph topologies</a> that support complex <a href="/model-driven-operations#concepts">scenarios</a> with a <a href="/beyond-configuration-management#consistency">simple, consistent experience</a> and much less YAML. The UNIX philosophy of ‘doing one thing well’ applies to large-scale operations code too, and the benefits of clarity and reuse are exactly the same. Small is beautiful.
 					</p>
 				</div>
 			</div>
@@ -67,22 +67,10 @@
 		<section class="p-strip">
 			<div class="row">
 				<div class="col-8">
-					<h2>Both cloud-native and legacy ‘machine’ workloads</h2>
-					<p class="p-heading--four">Operators for traditional apps on bare metal, VMWare and IAAS</p>
+					<h2>K8s and legacy estate operators</h2>
+					<p class="p-heading--four"><a href="/universal-operators">Universal operators</a> for K8s as well as <a href="/universal-operators#linux">traditional Linux</a> and <a href="/universal-operators#windows">Windows apps</a> on bare metal, VMWare and IAAS</p>
 					<p>
-						Embrace the operator pattern for your entire business, including legacy estate. Dramatically reduce maintenance and operations costs for traditional workloads without re-platforming to K8s. The Juju Operator Lifecycle Manager (OLM) uniquely supports both container and machine-based apps, with seamless integration between them.
-					</p>
-				</div>
-			</div>
-		</section>
-
-		<section class="p-strip--muted-suru">
-			<div class="row">
-				<div class="col-8">
-					<h2>Multi-cloud freedom</h2>
-					<p class="p-heading--four">Portable operations code, tested on cloud and on premise</p>
-					<p>
-						Deploy any scenario on any cloud, and integrate easily across cloud boundaries. Achieve full multi-cloud independence with the operator pattern &mdash; not only for containers but also for legacy physical, virtual and cloud machine estate.
+						Juju allows you to adopt the <a href="/universal-operators#operator-pattern">operator pattern</a> for your entire estate, including legacy apps. <a href="/model-driven-operations">Model-driven operations</a> dramatically reduce maintenance and operations costs for traditional workloads without re-platforming to K8s. Once charmed, <a href="/multi-cloud-operations">legacy apps become multi-cloud ready</a>, too. The Juju Operator Lifecycle Manager (OLM) uniquely supports <a href="/universal-operators">both container and machine-based apps</a>, with <a href="/integration">seamless integration</a> between them.
 					</p>
 				</div>
 			</div>
@@ -92,9 +80,21 @@
 			<div class="row">
 				<div class="col-8">
 					<h2>Reusable integration code</h2>
-					<p class="p-heading--four">Application graph drives integration code packaged in the operator</p>
+					<p class="p-heading--four">An <a href="/model-driven-operations#application-graph">application graph</a> drives <a href="/integration#benefits">pre-packaged integration code</a> in the operator</p>
 					<p>
-						The biggest waste of enterprise time is custom integration. Don’t just drive the app lifecycle with operators, use the Juju OLM’s declarative operator integration to share and reuse open source integration code.
+						Custom integration code is the biggest waste of time in enterprise operations. Our <a href="/mission#integration">mission is to share integration code</a> along with ops code, so we don’t just drive the app lifecycle with operators, we use the Juju OLM’s <a href="/integration#declarative">declarative operator integration</a> to <a href="/devsecops#sharing">share and reuse open source integration code</a> for better security and cost.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="p-strip--muted-suru">
+			<div class="row">
+				<div class="col-8">
+					<h2>Multi-cloud operators</h2>
+					<p class="p-heading--four"><a href="/multi-cloud-operations#portable">Portable operations code</a> tested on every major public cloud, and on premise too</p>
+					<p>
+						The encapsulation of ops code in charms allows us to deploy any <a href="/model-driven-operations#concepts">scenario</a> on <a href="/multi-cloud-operations#cloud-agnostic">any cloud</a>, and <a href="/multi-cloud-operations#cross-cloud">integrate easily across cloud boundaries</a>. Because the Juju OLM handles provisioning we achieve full multi-cloud independence with <a href="/multi-cloud-operations#cloud-agnostic">cloud-agnostic operators</a> - not only for Kubernetes container workloads but also for legacy physical, virtual and cloud applications. Build models on any cloud, and unify your application management on public cloud, private cloud and container estate with <a href="/hosted-olm">JAAS</a>, the multi-cloud enterprise dashboard for Juju.
 					</p>
 				</div>
 			</div>
@@ -104,9 +104,9 @@
 			<div class="row">
 				<div class="col-8">
 					<h2>The Open Operator Collection</h2>
-					<p class="p-heading--four">Community-driven service catalogue for better operations</p>
+					<p class="p-heading--four">Community-driven <a href="https://charmhub.io/" class="p-link--external">operator catalogue</a></p>
 					<p>
-						The largest portfolio of operators for Kubernetes and traditional machine-based applications that work consistently and integrate seamlessly. Any cloud, any machines, or any Kubernetes, on any architecture, with long term support and maintenance.
+						<a href="https://charmhub.io/" class="p-link--external">Charmhub is the largest portfolio of operators</a> for Kubernetes as well as traditional Linux applications or Windows applications that work consistently and integrate seamlessly. Open source principles and the <a href="https://charmhub.io/manifesto" class="p-link--external">Open Operator Manifesto</a> guide the community. Find operators to drive apps on any cloud, or any bare metal, or any Kubernetes, on any architecture, with long term support and maintenance.
 					</p>
 				</div>
 			</div>
@@ -116,11 +116,10 @@
 			<div class="row">
 				<div class="col-8">
 					<h2>Highly available Enterprise OLM</h2>
-					<p class="p-heading--four">Production-grade operator lifecycle management
-					</p>
+					<p class="p-heading--four">Production-grade operator lifecycle management</p>
 					<p>
-						Built in Go for mission-critical workloads to embrace the operator pattern for both infrastructure and applications, across cloud-native and traditional estate. Juju provides resilient leader-election as a service to every operator.
-					</p>
+						Juju is built to run mission-critical infrastructure and applications, across cloud-native and traditional estate. The OLM controller itself features <a href="/high-availability-enterprise-olm">autonomous, self-healing high availability</a>, and provides <a href="/operator-services#leader-election">resilient leader-election as a service</a> that enables vendors and communities to create HA operators easily. Creating operators that support high availability is straightforward in the Python Operator Framework.
+						</p>
 				</div>
 			</div>
 		</section>
@@ -129,10 +128,10 @@
 			<div class="row">
 				<div class="col-8">
 					<h2>OLM-as-a-service</h2>
-					<p class="p-heading--four">Multi-cloud hosted Operator Lifecycle Manager</p>
+					<p class="p-heading--four">Multi-cloud <a href="/hosted-olm">hosted Operator Lifecycle Manager</a></p>
 					<p>
-						Run your own OLM anywhere, with or without Kubernetes. Or use <a href="https://jaas.ai/" class="p-link--external">JAAS.ai</a> as a fully managed multi-cloud multi-tenant infinitely scalable lifecycle manager for models on any cloud.
-					</p>
+						You can run your own Juju OLM anywhere, with or without Kubernetes. But instead of maintaining many OLM controllers across all the regions of all the clouds, you can use <a href="/hosted-olm">JAAS</a> to offer a single enterprise-wide service for operator management and governance. For public cloud estate, <a href="https://jaas.ai/" class="p-link--external">JAAS.ai</a> is a fully managed, multi-cloud, multi-tenant, infinitely scalable lifecycle manager.
+						</p>
 				</div>
 			</div>
 		</section>
@@ -143,7 +142,8 @@
 					<h2>Consistent operator experience</h2>
 					<p class="p-heading--four">Many operators, one CLI for lifecycle, config, integration and ops</p>
 					<p>
-						Unify the operator experience for diverse workloads from multiple vendors and communities. One consistent CLI for operator installation, updates, configuration, integration, scaling, and everyday ops like backup and restore. That makes documentation and training much simpler.
+						<a href="/operator-lifecycle-manager">Unify the operator experience</a> for diverse workloads from <a href="https://charmhub.io/" class=
+						"p-link--external">multiple vendors and communities</a>. One consistent CLI for operator installation, updates, configuration, integration, scaling, and <a href="/operator-lifecycle-manager#actions">everyday ops like backup and restore</a>. This consistent experience for all application management makes documentation and training much simpler and streamlines the process of onboarding new software into the enterprise.
 					</p>
 				</div>
 			</div>
@@ -153,9 +153,9 @@
 			<div class="row">
 				<div class="col-8">
 					<h2>SAAS integration</h2>
-					<p class="p-heading--four">Third-party SAAS is just another app in the model</p>
+					<p class="p-heading--four">Third-party SAAS is just another operator in the model</p>
 					<p>
-						Drive SAAS with operators too, for cloud deployments that combine software and SAAS seamlessly. For example, substitute Amazon RDS MySQL anywhere you use the MySQL operator.
+						<a href="/universal-operators#saas">Drive SAAS with operators too</a>, for cloud deployments that combine software and SAAS seamlessly. For example, substitute the Amazon RDS PostgreSQL operator anywhere you normally use the PostgreSQL operator. It is even straightforward to connect SAAS from one cloud to SAAS from another cloud.
 					</p>
 				</div>
 			</div>
@@ -164,10 +164,10 @@
 		<section class="p-strip">
 			<div class="row">
 				<div class="col-8">
-					<h2>Run your own SAAS</h2>
-					<p class="p-heading--four">Offer and consume managed apps between teams</p>
+					<h2>Offer home-grown SAAS internally</h2>
+					<p class="p-heading--four">Integrate managed apps between teams</p>
 					<p>
-						Delegate service operations to independent teams for home-grown SAAS, integrated across models in the enterprise. Your DBA team can run databases on cloud or on prem which other teams consume as SAAS.
+						Juju <a href="/multi-cloud-operations">model-driven operations</a> make it easy to delegate application operations to independent teams for home-grown SAAS. Each team that runs applications with Juju can offer them to other teams, to integrate across models in the enterprise. Each model has its own administrators, and cross-model integration just requires permission from both sets of admins. Your DBA team can run databases on cloud or on prem which other teams consume as SAAS. This even works across different clouds!
 					</p>
 				</div>
 			</div>
@@ -179,7 +179,7 @@
 					<h2>Devsecops by design</h2>
 					<p class="p-heading--four">Encapsulate security best practices with every service or application</p>
 					<p>
-						Operators provide repeatable best practice for installation, update, configuration, and integration. We track security issues in operators with CVEs and distribute patches automatically, so you can manage compliance professionally. And of course, open source operators evolve to meet multiple industry security and compliance standards.
+						Operators provide <a href="/devsecops#hardened">repeatable security best practice</a> for hardened application installation, update, configuration, and integration. We track <a href="/devsecops#cves">security issues in operators with CVEs</a> and <a href="/devsecops#fixes">distribute patches automatically</a>, so you can manage compliance professionally. And of course, open source operators evolve to meet multiple industry security and <a href="/devsecops#compliance">compliance standards</a>.
 					</p>
 				</div>
 			</div>
@@ -189,9 +189,9 @@
 			<div class="row">
 				<div class="col-8">
 					<h2>Pure Python operators</h2>
-					<p class="p-heading--four">Cleaner infra-as-code with the <a href="https://github.com/canonical/operator/" class="p-link--external">Python Operator Framework</a>.</p>
+					<p class="p-heading--four">Cleaner <a href="/universal-operators#iac">infra-as-code</a> with the Python Operator Framework</p>
 					<p>
-						You can write operators in any language with the Juju OLM, but most prefer Python. Every instance of every app in every deployment becomes an object, with methods for integration and operations. Clean, accessible code with a fully asynchronous API. Just perfect, just Python.
+						You can write operators in any language with the Juju OLM, but most people prefer Python. Every instance of every app in every deployment becomes an object, with methods for integration and operations. Clean, accessible code with a fully asynchronous API. Just perfect, just Python. Charmcraft lets you share libraries between charms easily for smoother operator integration.
 					</p>
 				</div>
 			</div>
@@ -200,11 +200,11 @@
 		<section class="p-strip--accent">
 			<div class="row">
 				<div class="col-8">
-					<h2>Windows workload operators</h2>
-					<p class="p-heading--four">Create operators for Windows workloads for cross-platform integration</p>
+					<h2>Windows operators</h2>
+					<p class="p-heading--four">Create operators for Windows apps for cross-platform integration</p>
 					<p>
-						Full support for Windows applications enables consistent use of the operator pattern across the entire business IT estate. Windows operators integrate perfectly with remote applications on Kubernetes and clouds thanks to Juju cross-model relations.
-					</p>
+						Full <a href="/universal-operators#windows">support for Windows applications</a> enables consistent use of the operator pattern across the entire business IT estate. Windows operators integrate perfectly with <a href="/integration#remote">remote applications</a> on Kubernetes and public clouds thanks to Juju cross-model relations.
+						</p>
 				</div>
 			</div>
 		</section>
@@ -215,8 +215,8 @@
 					<h2>App-centric operations</h2>
 					<p class="p-heading--four">Manage apps and services, not configuration files</p>
 					<p>
-						It’s not about configuration management, it’s about application management. Operators encapsulate applications to handle the details, especially in containers where config management doesn’t work.
-					</p>
+						It’s not about configuration management, <a href="/mission#application--management">it’s about application management</a>. Operators encapsulate applications to handle the details, especially in containers where <a href="/mission#config--management">config management doesn’t work</a>. This allows organisations to onboard new applications faster, because they don’t need to train admins on the details of configuration for every new application.
+						</p>
 				</div>
 			</div>
 		</section>
@@ -228,8 +228,8 @@
 					<p class="p-heading--four">Operators respond to real time desired state model
 					</p>
 					<p>
-						Integrated applications share a single model, so that changes can be made in one place and propagate to all affected applications. Each model is a separate RBAC domain for segregated management and administration controls.
-					</p>
+						Integrated applications on the same substrate <a href="/model-driven-operations">share a single model</a>, so that changes can be made in one place and <a href="/operator-services#events">propagate to all affected applications</a>. Each model is a <a href="/model-driven-operations#permissions">separate RBAC domain</a> for segregated management and administration controls. Multiple models can be composed and integrated into a single <a href="/multi-cloud-operations">multi-cloud scenario</a>.
+						</p>
 				</div>
 			</div>
 		</section>
@@ -403,19 +403,19 @@
 				<div class="col-4">
 					<img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" alt="Linux" style="margin: 27px 0; height: 90px;" />
 					<pre class="p-code-numbered"><code><span class="p-code-numbered__line">sudo snap install juju</span></code></pre>
-					<p><a href="https://juju.is/docs/installing#heading--ubuntu">Install instructions&nbsp;&rsaquo;</a></p>
+					<p><a href="/docs/installing#heading--ubuntu">Install instructions&nbsp;&rsaquo;</a></p>
 				</div>
 				<div class="col-4">
 					<img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" alt="Windows" />
 					<p><a href="https://launchpad.net/juju/2.8/2.8.1/+download/juju-setup-2.8.1-signed.exe" class="p-button--neutral">
 						<span class="p-link--external">Download Juju for Windows</span>
 					</a></p>
-					<p><a href="https://juju.is/docs/installing#heading--windows">Install instructions&nbsp;&rsaquo;</a></p>
+					<p><a href="/docs/installing#heading--windows">Install instructions&nbsp;&rsaquo;</a></p>
 				</div>
 				<div class="col-4">
 					<img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" alt="macOS" />
 					<pre class="p-code-numbered"><code><span class="p-code-numbered__line">brew install juju</span></code></pre>
-					<p><a href="https://juju.is/docs/installing#heading--macos">Install instructions&nbsp;&rsaquo;</a></p>
+					<p><a href="/docs/installing#heading--macos">Install instructions&nbsp;&rsaquo;</a></p>
 				</div>
 			</div>
 		</section>
