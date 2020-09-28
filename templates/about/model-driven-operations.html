@@ -18,7 +18,7 @@ In each case, we take different business decisions about resource allocation, ev
 <ul>
   <li><p><strong>Where should the application run?</strong> For example, it might run on a public cloud, or a private cloud,  a Kubernetes cluster on one of those, or it might be split across several different substrates. In each case, it is a business decision, driven by cost, privacy, compliance and latency, where we run the applications. We might test on a public cloud, and run production on private infrastructure, or the other way around. The applications are the same, the integration is the same, the operations are the same, the business decision is about locality.</p></li>
   <li><p><strong>Which software components should be included in the scenario?</strong> Any significant service will require multiple software components, or applications, that are integrated and working together to create the service. The business decision here is choice of component and version. We might want to use a specific version of MySQL. Or we might want to use Amazon RDS for a managed MySQL. We could of course use our own short-lived MySQL instance for testing, and RDS for production, or the other way around.</p></li>
-  <li><p><strong>What resources should be allocated to the scenario?</strong> Resources are expensive. The same software can be run with fewer resources, or more, depending on the business need. For a test or staging environment, we might allocate small machines on a cloud, for a production environment we might allocate large bare metal servers on premise. The technical details of operating the applications should accommodate those business needs.</p></li>
+  <li><p><strong>What capacity should be allocated to the scenario?</strong> Compute and storage are expensive. The same software can be run with fewer resources, or more, depending on the business need. For a test or staging environment, we might allocate small machines on a cloud, for a production environment we might allocate large bare metal servers on premise. The technical details of operating the applications should accommodate those business needs.</p></li>
   <li><p><strong>How should that scenario be integrated into the wider estate?</strong> While the applications in the service will be tightly integrated, there may also be integration work with systems that are not strictly part of this service. For example, if I have an institution-wide intrusion detection system, I may want to wire production and staging scenarios up to that, but not CI/CD test run scenarios. Similarly, I may not want to send all the logs from all my test runs to Splunk, even if I use that SAAS for my staging and production environments.</p></li>
 </ul>
 <p>
@@ -69,23 +69,23 @@ The first business decision is the substrate for the model. It can be any public
 <p>
 A single scenario might in fact involve several models on different substrates, because it involves applications that must run in multiple different clouds. I might have some components on my mainframe, some on a public cloud, some on a different cloud Kubernetes cluster, and some on servers. Each of those compute substrates would get a model, and applications placed in each model will run on that substrate.
 </p>
-<h3 id="teams">Who will be responsible for each application</h3>
+<h3 id="teams">Who is responsible for each application</h3>
 <p>
 Models also allow different groups of administrators to be responsible for particular subsets of the applications in the scenario. Since permissions are allocated by model, it is convenient to represent organisational boundaries in models as well. One team that has responsibility for the data lake could have permissions to administer a model with those components, another team that is responsible for machine learning could have permission to administer a second model.
 </p>
 <p>
 When we have separate teams responsible for subsets of the applications, we create a scenario with two models on the same substrate to segregate responsibilities. Since applications can be integrated across model boundaries, multiple models do not complicate the overall scenario design. So the second business decision is who has permission to administer each model.
 </p>
-<h3 id="scenario">Which applications we compose in the scenario</h3>
+<h3 id="composition">Which applications we compose in the scenario</h3>
 <p>
 The third business decision is which applications will be needed in that scenario. Operators are placed into models using the Juju operator lifecycle manager. The operators are integrated through matching integration points. Each line of integration represents a particular way in which those two operators are composed. Operators can be composed in many ways, if two operators have multiple pairs of matching integration points then there can be multiple lines of integration between them. The net effect is a rich application graph on the canvas.
 </p>
 <p>
 This graph is an abstraction. The same graph could describe a small deployment, on Raspberry Pi hosts, or a large deployment, on dual-socket x86 servers. The graph describes the logical relationships between the applications. We can reuse this graph on different substrates to build multiple copies of the same idea, for example development, staging and production.
 </p>
-<h3 id="hardware">How much we spend</h3>
+<h3 id="capacity">How much we spend on capacity</h3>
 <p>
-To make this abstract model real, we need to provide some compute capacity, some storage, and possibly some networks on which those applications will be run. This is the fourth business decision that we must take &mdash; how much we want to spend on this particular application.
+To make this abstract model real, we need to provide some compute capacity, some storage, and possibly some networks on which those applications will run. This is the fourth business decision that we must take &mdash; how much we want to spend on capacity for this particular scenario.
 </p>
 <p>
 On a machine substrate, like IAAS or VMware or bare metal with MAAS, compute capacity takes the form of machines. By allocating machines to the model we make a business decision &mdash; how much hardware we want to spend on this application. In the cloud, compute capacity is explicitly financial because it is clear that you are spending money for each instance hour. Bare metal has the same financial considerations. Every host has a cost, placing more hosts into the model, or more expensive hosts is a business decision.
@@ -144,7 +144,7 @@ It is possible to deploy the same operator multiple times in the same model, und
 <p>
 So ‘application’ is the name in the application graph in the model, an application in the model is defined by its operator and configuration, an operator can be used multiple times in a model under different names. The workload is the actual processes driven by the operator when it is running.
 </p>
-<h2 id="subordinate">Subordinate applications</h2>
+<h2 id="subordinates">Subordinate applications</h2>
 <p>
 There are certain software components which play a supporting role. They are essential, but they are not the reason for the model to exist. In business terms, they are not the drivers of resource allocation.
 </p>
