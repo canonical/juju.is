@@ -96,6 +96,7 @@ def multi_cloud_operations():
 def beyond_configuration_management():
     return render_template("about/beyond-configuration-management.html")
 
+
 @app.route("/get-in-touch")
 def get_in_touch():
     return render_template("partials/_get-in-touch.html")
