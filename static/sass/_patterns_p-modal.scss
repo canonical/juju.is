@@ -5,4 +5,16 @@
       min-width: 875px;
     }
   }
+
+  .pagination__link--previous {
+    margin-inline-end: 1rem;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      margin-block-end: 0;
+    }
+  }
+
+  .pagination__link--next {
+    margin-block-end: 0;
+  }
 }
