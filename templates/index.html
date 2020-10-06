@@ -18,67 +18,167 @@
 			<div class="col-7 u-align--center u-vertically-center">
 				<ul class="p-inline-images u-no-margin--bottom">
 					<li class="p-inline-images__item">
-						<a href="#install"><img class="p-inline-images__logo" src="https://assets.ubuntu.com/v1/57d86853-linux-logo-white.svg" alt="Linux" width="75" height="88"></a>
+						<a href="#install">
+							{{
+								image(
+									url="https://assets.ubuntu.com/v1/57d86853-linux-logo-white.svg",
+									alt="Linux",
+									height="88",
+									width="75",
+									hi_def=True,
+									loading="eager",
+									attrs={"class": "p-inline-images__logo"},
+								) | safe
+							}}
+						</a>
 					</li>
 					<li class="p-inline-images__item">
-						<a href="#install"><img class="p-inline-images__logo" src="https://assets.ubuntu.com/v1/82c19e2e-macos-logo-white.svg" alt="macOS" width="127" height="30"></a>
+						<a href="#install">
+							{{
+								image(
+									url="https://assets.ubuntu.com/v1/82c19e2e-macos-logo-white.svg",
+									alt="macOS",
+									height="30",
+									width="127",
+									hi_def=True,
+									loading="eager",
+									attrs={"class": "p-inline-images__logo"},
+								) | safe
+							}}
+						</a>
 					</li>
 					<li class="p-inline-images__item">
-						<a href="#install"><img class="p-inline-images__logo" src="https://assets.ubuntu.com/v1/bfc851de-windows-logo-white.svg" alt="Windows" width="144" height="33"></a>
+						<a href="#install">
+							{{
+								image(
+									url="https://assets.ubuntu.com/v1/bfc851de-windows-logo-white.svg",
+									alt="macOS",
+									height="33",
+									width="144",
+									hi_def=True,
+									loading="eager",
+									attrs={"class": "p-inline-images__logo"},
+								) | safe
+							}}
+						</a>
 					</li>
 				</ul>
 			</div>
 		</section>
 
-		<section class="p-strip u-no-padding--top u-no-padding--bottom">
+		<section class="p-strip is-bordered u-no-padding--top u-no-padding--bottom">
 			<div class="row">
 				<div class="col-12">
 					<h4 class="p-muted-heading u-align--center u-no-max-width">In production at</h4>
 					<ul class="p-inline-images u-no-margin--bottom">
 						<li class="p-inline-images__item u-no-margin--top u-no-margin--bottom">
-							<img class="p-inline-images__logo" src="https://assets.ubuntu.com/v1/7c97efb0-BT_logo.svg" alt="BT">
+							{{
+								image(
+									url="https://assets.ubuntu.com/v1/7c97efb0-BT_logo.svg",
+									alt="BT",
+									height="90",
+									width="90",
+									hi_def=True,
+									loading="eager",
+									attrs={"class": "p-inline-images__logo"},
+								) | safe
+							}}
 						</li>
 						<li class="p-inline-images__item u-no-margin--top u-no-margin--bottom">
-							<img class="p-inline-images__logo is-wide" src="https://assets.ubuntu.com/v1/d199354d-2018-logo-deutsche-telekom.svg" alt="Deutsche Telekom">
+							{{
+								image(
+									url="https://assets.ubuntu.com/v1/d199354d-2018-logo-deutsche-telekom.svg",
+									alt="Deutsche Telekom",
+									height="145",
+									width="145",
+									hi_def=True,
+									loading="eager",
+									attrs={"class": "p-inline-images__logo is-wide"},
+								) | safe
+							}}
 						</li>
 						<li class="p-inline-images__item u-no-margin--top u-no-margin--bottom">
-							<img class="p-inline-images__logo" src="https://assets.ubuntu.com/v1/17a1b35b-telefonica_logo.svg" alt="Telefonica">
+							{{
+								image(
+									url="https://assets.ubuntu.com/v1/17a1b35b-telefonica_logo.svg",
+									alt="Telefonica",
+									height="39",
+									width="131",
+									hi_def=True,
+									loading="eager",
+									attrs={"class": "p-inline-images__logo"},
+								) | safe
+							}}
 						</li>
 						<li class="p-inline-images__item u-no-margin--top u-no-margin--bottom">
-							<img class="p-inline-images__logo" src="https://assets.ubuntu.com/v1/7bbfb1d0-Scania_logo.svg" alt="Scania">
+							{{
+								image(
+									url="https://assets.ubuntu.com/v1/7bbfb1d0-Scania_logo.svg",
+									alt="Scania",
+									height="34",
+									width="130",
+									hi_def=True,
+									loading="eager",
+									attrs={"class": "p-inline-images__logo"},
+								) | safe
+							}}
 						</li>
 					</ul>
 				</div>
 			</div>
 		</section>
 
-		<section class="p-strip--accent">
-			<div class="row">
-				<div class="col-8">
-					<h2>Clean, composable operators</h2>
-					<p class="p-heading--four"><a href="/integration#unix">Do one thing and do it well</a></p>
-					<p>
-						Juju operator integration allows us to keep each operator as simple as possible, then <a href="/model-driven-operations#composition">compose them</a> to create rich application graph topologies that support complex <a href="/model-driven-operations#concepts">scenarios</a> with a <a href="/beyond-configuration-management#consistency">simple, consistent experience</a> and much less YAML. The UNIX philosophy of ‘doing one thing well’ applies to large-scale operations code too, and the benefits of clarity and reuse are exactly the same. Small is beautiful.
-					</p>
+		<section class="p-strip is-bordered">
+			<div class="row u-equal-height">
+				<div class="col-6 u-vertically-center">
+					<div>
+						<h2>Clean, composable operators</h2>
+						<p class="p-heading--four"><a href="/integration#unix">Do one thing and do it well</a></p>
+						<p>
+							Juju operator integration allows us to keep each operator as simple as possible, then <a href="/model-driven-operations#composition">compose them</a> to create rich application graph topologies that support complex <a href="/model-driven-operations#concepts">scenarios</a> with a <a href="/beyond-configuration-management#consistency">simple, consistent experience</a> and much less YAML. The UNIX philosophy of ‘doing one thing well’ applies to large-scale operations code too, and the benefits of clarity and reuse are exactly the same. Small is beautiful.
+						</p>
+					</div>
+				</div>
+				<div class="col-5 col-start-large-8 u-hide--small">
+					{{
+						image(
+							url="https://assets.ubuntu.com/v1/af9910e7-kubeflow-model.jpg",
+							alt="",
+							height="878",
+							width="858",
+							hi_def=True,
+						) | safe
+					}}
 				</div>
 			</div>
 		</section>
 
 		<section class="p-strip">
-			<div class="row">
-				<div class="col-8">
+			<div class="row u-equal-height">
+				<div class="col-6">
 					<h2>K8s and legacy estate operators</h2>
 					<p class="p-heading--four"><a href="/universal-operators">Universal operators</a> for K8s as well as <a href="/universal-operators#linux">traditional Linux</a> and Windows apps on bare metal, VMWare and IAAS</p>
 					<p>
 						Juju allows you to adopt the <a href="/universal-operators#operator-pattern">operator pattern</a> for your entire estate, including legacy apps. <a href="/model-driven-operations">Model-driven operations</a> dramatically reduce maintenance and operations costs for traditional workloads without re-platforming to K8s. Once charmed, <a href="/multi-cloud-operations">legacy apps become multi-cloud ready</a>, too. The Juju Operator Lifecycle Manager (OLM) uniquely supports <a href="/universal-operators">both container and machine-based apps</a>, with <a href="/integration">seamless integration</a> between them.
 					</p>
 				</div>
+				<div class="col-6 u-hide--small u-align--center u-vertically-center">
+					{{
+						image(
+							url="https://assets.ubuntu.com/v1/f554f76e-logos-01.svg",
+							alt="Red hat, Ubuntu, Windows and Kubernetes logos",
+							height="216",
+							width="170",
+							hi_def=True,
+						) | safe
+					}}
+				</div>
 			</div>
 		</section>
 
 		<section class="p-strip--muted-suru">
 			<div class="row">
-				<div class="col-8">
+				<div class="col-6">
 					<h2>Reusable integration code</h2>
 					<p class="p-heading--four">An <a href="/model-driven-operations#application-graph">application graph</a> drives <a href="/integration#benefits">pre-packaged integration code</a> in the operator</p>
 					<p>
@@ -89,56 +189,90 @@
 		</section>
 
 		<section class="p-strip">
-			<div class="row">
-				<div class="col-8">
+			<div class="row u-equal-height">
+				<div class="col-6">
 					<h2>Multi-cloud operators</h2>
 					<p class="p-heading--four"><a href="/multi-cloud-operations#portable">Portable operations code</a> tested on every major public cloud, and on premise too</p>
 					<p>
 						The encapsulation of ops code in charms allows us to deploy any <a href="/model-driven-operations#concepts">scenario</a> on <a href="/multi-cloud-operations#cloud-agnostic">any cloud</a>, and <a href="/multi-cloud-operations#cross-cloud">integrate easily across cloud boundaries</a>. Because the Juju OLM handles provisioning we achieve full multi-cloud independence with <a href="/multi-cloud-operations#cloud-agnostic">cloud-agnostic operators</a> - not only for Kubernetes container workloads but also for legacy physical, virtual and cloud applications. Build models on any cloud, and unify your application management on public cloud, private cloud and container estate with <a href="/hosted-olm">JAAS</a>, the multi-cloud enterprise dashboard for Juju.
 					</p>
 				</div>
+				<div class="col-6 u-vertically-center u-hide--small u-align--center">
+					{{
+						image(
+							url="https://assets.ubuntu.com/v1/aacaddec-logos-02.svg",
+							alt="Microsoft Azure, Google CLoud and AWS logos",
+							height="168",
+							width="210",
+							hi_def=True,
+						) | safe
+					}}
+				</div>
 			</div>
 		</section>
 
-		<section class="p-strip--accent">
+		<section class="p-strip--accent u-image-position">
 			<div class="row">
-				<div class="col-8">
+				<div class="col-6">
 					<h2>The Open Operator Collection</h2>
 					<p class="p-heading--four">Community-driven <a href="https://charmhub.io/" class="p-link--external">operator catalogue</a></p>
 					<p>
 						<a href="https://charmhub.io/" class="p-link--external">Charmhub is the largest portfolio of operators</a> for Kubernetes as well as traditional Linux applications or Windows applications that work consistently and integrate seamlessly. Open source principles and the <a href="https://charmhub.io/manifesto" class="p-link--external">Open Operator Manifesto</a> guide the community. Find operators to drive apps on any cloud, or any bare metal, or any Kubernetes, on any architecture, with long term support and maintenance.
 					</p>
 				</div>
+				<div class="col-6">
+					{{
+						image(
+							url="https://assets.ubuntu.com/v1/529fe273-operator-cards.svg",
+							alt="Microsoft Azure, Google CLoud and AWS logos",
+							height="535",
+							width="528",
+							hi_def=True,
+							attrs={"class": "u-image-position--bottom", "style": "bottom: -10rem;"}
+						) | safe
+					}}
+				</div>
 			</div>
 		</section>
 
 		<section class="p-strip">
 			<div class="row">
-				<div class="col-8">
+				<div class="col-6">
 					<h2>Highly available Enterprise OLM</h2>
 					<p class="p-heading--four">Production-grade operator lifecycle management</p>
 					<p>
 						Juju is built to run mission-critical infrastructure and applications, across cloud-native and traditional estate. The OLM controller itself features <a href="/high-availability-enterprise-olm">autonomous, self-healing high availability</a>, and provides <a href="/operator-services#leader-election">resilient leader-election as a service</a> that enables vendors and communities to create HA operators easily. Creating operators that support high availability is straightforward in the Python Operator Framework.
-						</p>
+					</p>
 				</div>
 			</div>
 		</section>
 
-		<section class="p-strip--muted-suru">
+		<section class="p-strip--half-and-half">
 			<div class="row">
-				<div class="col-8">
+				<div class="col-5">
 					<h2>OLM-as-a-service</h2>
 					<p class="p-heading--four">Multi-cloud <a href="/hosted-olm">hosted Operator Lifecycle Manager</a></p>
 					<p>
 						You can run your own Juju OLM anywhere, with or without Kubernetes. But instead of maintaining many OLM controllers across all the regions of all the clouds, you can use <a href="/hosted-olm">JAAS</a> to offer a single enterprise-wide service for operator management and governance. For public cloud estate, <a href="https://jaas.ai/" class="p-link--external">JAAS.ai</a> is a fully managed, multi-cloud, multi-tenant, infinitely scalable lifecycle manager.
 						</p>
 				</div>
+				<div class="col-6 col-start-large-7">
+					{{
+						image(
+							url="https://assets.ubuntu.com/v1/2ed31b31-jaa.ai-hero.png",
+							alt="",
+							height="522",
+							width="1068",
+							hi_def=True,
+						) | safe
+					}}
+				</div>
 			</div>
 		</section>
 
 		<section class="p-strip">
 			<div class="row">
-				<div class="col-8">
+				<div class="col-6">
 					<h2>Consistent operator experience</h2>
 					<p class="p-heading--four">Many operators, one CLI for lifecycle, config, integration and ops</p>
 					<p>
@@ -149,21 +283,32 @@
 			</div>
 		</section>
 
-		<section class="p-strip--accent">
-			<div class="row">
-				<div class="col-8">
+		<section class="p-strip--muted-suru">
+			<div class="row u-equal-height">
+				<div class="col-6">
 					<h2>SAAS integration</h2>
 					<p class="p-heading--four">Third-party SAAS is just another operator in the model</p>
 					<p>
 						<a href="/universal-operators#saas">Drive SAAS with operators too</a>, for cloud deployments that combine software and SAAS seamlessly. For example, substitute the Amazon RDS PostgreSQL operator anywhere you normally use the PostgreSQL operator. It is even straightforward to connect SAAS from one cloud to SAAS from another cloud.
 					</p>
 				</div>
+				<div class="col-6 u-align--center u-hide--small u-vertically-center">
+					{{
+						image(
+							url="https://assets.ubuntu.com/v1/3de862bb-logos-03.svg",
+							alt="Amazon RDS and PostgreSQL logos",
+							height="145",
+							width="344",
+							hi_def=True,
+						) | safe
+					}}
+				</div>
 			</div>
 		</section>
 
 		<section class="p-strip">
-			<div class="row">
-				<div class="col-8">
+			<div class="row u-equal-height">
+				<div class="col-6">
 					<h2>Offer home-grown SAAS internally</h2>
 					<p class="p-heading--four">Integrate managed apps between teams</p>
 					<p>
@@ -185,63 +330,109 @@
 			</div>
 		</section>
 
-		<section class="p-strip">
-			<div class="row">
-				<div class="col-8">
+		<section class="p-strip is-bordered">
+			<div class="row u-equal-height">
+				<div class="col-6">
 					<h2>Pure Python operators</h2>
 					<p class="p-heading--four">Cleaner <a href="/universal-operators#iac">infra-as-code</a> with the Python Operator Framework</p>
 					<p>
 						You can write operators in any language with the Juju OLM, but most people prefer Python. Every instance of every app in every deployment becomes an object, with methods for integration and operations. Clean, accessible code with a fully asynchronous API. Just perfect, just Python. Charmcraft lets you share libraries between charms easily for smoother operator integration.
 					</p>
 				</div>
-			</div>
-		</section>
-
-		<section class="p-strip--accent">
-			<div class="row">
-				<div class="col-8">
-					<h2>Windows operators</h2>
-					<p class="p-heading--four">Create operators for Windows apps for cross-platform integration</p>
-					<p>
-						Full support for Windows applications enables consistent use of the operator pattern across the entire business IT estate. Windows operators integrate perfectly with <a href="/integration#remote">remote applications</a> on Kubernetes and public clouds thanks to Juju cross-model relations.
-						</p>
+				<div class="col-6 u-align--center u-hide--small u-vertically-center">
+					{{
+						image(
+							url="https://assets.ubuntu.com/v1/12e0af6f-Python.svg",
+							alt="Python logo",
+							height="120",
+							width="120",
+							hi_def=True,
+						) | safe
+					}}
 				</div>
 			</div>
 		</section>
 
-		<section class="p-strip">
+		<section class="p-strip is-bordered">
+			<div class="row u-equal-height">
+				<div class="col-6">
+					<h2>Windows operators</h2>
+					<p class="p-heading--four">Create operators for Windows apps for cross-platform integration</p>
+					<p>
+						Full support for Windows applications enables consistent use of the operator pattern across the entire business IT estate. Windows operators integrate perfectly with <a href="/integration#remote">remote applications</a> on Kubernetes and public clouds thanks to Juju cross-model relations.
+					</p>
+				</div>
+				<div class="col-6 u-align--center u-hide--small u-vertically-center">
+					{{
+						image(
+							url="https://assets.ubuntu.com/v1/66c99aa0-windows-logo-blue.svg",
+							alt="Windows logo",
+							height="115",
+							width="112",
+							hi_def=True,
+						) | safe
+					}}
+				</div>
+			</div>
+		</section>
+
+		<section class="p-strip is-bordered">
 			<div class="row">
 				<div class="col-8">
 					<h2>App-centric operations</h2>
 					<p class="p-heading--four">Manage apps and services, not configuration files</p>
 					<p>
 						It’s not about configuration management, <a href="/mission#application-management">it’s about application management</a>. Operators encapsulate applications to handle the details, especially in containers where <a href="/mission#config-management">config management doesn’t work</a>. This allows organisations to onboard new applications faster, because they don’t need to train admins on the details of configuration for every new application.
-						</p>
-				</div>
-			</div>
-		</section>
-
-		<section class="p-strip--muted-suru">
-			<div class="row">
-				<div class="col-8">
-					<h2>Model-driven operations</h2>
-					<p class="p-heading--four">Operators respond to real time desired state model
 					</p>
-					<p>
-						Integrated applications on the same substrate <a href="/model-driven-operations">share a single model</a>, so that changes can be made in one place and <a href="/operator-services#events">propagate to all affected applications</a>. Each model is a <a href="/model-driven-operations#permissions">separate RBAC domain</a> for segregated management and administration controls. Multiple models can be composed and integrated into a single <a href="/multi-cloud-operations">multi-cloud scenario</a>.
-						</p>
 				</div>
 			</div>
 		</section>
 
-		<section class="p-strip">
+		<section class="p-strip is-bordered">
+			<div class="row u-equal-height">
+				<div class="col-6 u-vertically-center">
+					<div>
+						<h2>Model-driven operations</h2>
+						<p class="p-heading--four">Operators respond to real time desired state model
+						</p>
+						<p>
+							Integrated applications on the same substrate <a href="/model-driven-operations">share a single model</a>, so that changes can be made in one place and <a href="/operator-services#events">propagate to all affected applications</a>. Each model is a <a href="/model-driven-operations#permissions">separate RBAC domain</a> for segregated management and administration controls. Multiple models can be composed and integrated into a single <a href="/multi-cloud-operations">multi-cloud scenario</a>.
+						</p>
+					</div>
+				</div>
+				<div class="col-5 col-start-large-8 u-hide--small">
+					{{
+						image(
+							url="https://assets.ubuntu.com/v1/b91984f3-hadoop-kafka-model.png",
+							alt="Juju Kafka model topology",
+							height="554",
+							width="878",
+							hi_def=True,
+						) | safe
+					}}
+				</div>
+			</div>
+		</section>
+
+		<section class="p-strip--half-and-half">
 			<div class="row">
-				<div class="col-8">
+				<div class="col-5">
 					<h2>Enterprise multi-cloud operator dashboard</h2>
 					<p class="p-heading--four">A single global view of operators and models across all clouds and clusters</p>
 					<p>
 						On-premise JAAS connects all your lifecycle managers across all public clouds, VMware, bare metal and OpenStack into a single enterprise OLM service with RBAC. Manage operators across your hybrid estate.
 					</p>
+				</div>
+				<div class="col-6 col-start-large-7 u-hide--small u-align--center">
+					{{
+						image(
+							url="https://assets.ubuntu.com/v1/7dc04dfa-dashboard.png",
+							alt="Juju dashboard showing the model details of a hadoopspark deployment",
+							height="616",
+							width="1088",
+							hi_def=True,
+						) | safe
+					}}
 				</div>
 			</div>
 		</section>
@@ -401,19 +592,44 @@
 			</div>
 			<div class="row" id="install">
 				<div class="col-4">
-					<img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" alt="Linux" style="margin: 27px 0; height: 90px;" />
+					{{
+						image(
+							url="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg",
+							alt="Linux",
+							height="90",
+							width="76",
+							hi_def=True,
+							attrs={"style": "margin: 27px 0; height: 90px;"},
+						) | safe
+					}}
 					<pre class="p-code-numbered"><code><span class="p-code-numbered__line">sudo snap install juju</span></code></pre>
 					<p><a href="/docs/installing#heading--ubuntu">Install instructions&nbsp;&rsaquo;</a></p>
 				</div>
 				<div class="col-4">
-					<img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" alt="Windows" />
+					{{
+						image(
+							url="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg",
+							alt="Windows",
+							height="145",
+							width="145",
+							hi_def=True,
+						) | safe
+					}}
 					<p><a href="https://launchpad.net/juju/2.8/2.8.1/+download/juju-setup-2.8.1-signed.exe" class="p-button--neutral">
 						<span class="p-link--external">Download Juju for Windows</span>
 					</a></p>
 					<p><a href="/docs/installing#heading--windows">Install instructions&nbsp;&rsaquo;</a></p>
 				</div>
 				<div class="col-4">
-					<img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" alt="macOS" />
+					{{
+						image(
+							url="https://assets.ubuntu.com/v1/236f314d-macos.svg",
+							alt="macOS",
+							height="145",
+							width="146",
+							hi_def=True,
+						) | safe
+					}}
 					<pre class="p-code-numbered"><code><span class="p-code-numbered__line">brew install juju</span></code></pre>
 					<p><a href="/docs/installing#heading--macos">Install instructions&nbsp;&rsaquo;</a></p>
 				</div>
