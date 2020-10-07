@@ -6,7 +6,9 @@
     "watch": "watch -p 'static/sass/**/*.scss' -c 'yarn run build'",
     "build": "yarn run build-css && yarn run build-js",
     "build-css": "node-sass --include-path node_modules static/sass --source-map true --output-style compressed --output static/css && postcss --map false --use autoprefixer --replace 'static/css/**/*.css'",
-    "build-js": "mkdir -p static/js/build/global-nav && cp node_modules/@canonical/global-nav/dist/global-nav.js static/js/build/global-nav",
+    "build-js": "yarn run copy-cookie-policy && yarn run copy-global-nav",
+    "copy-cookie-policy": "mkdir -p static/js/modules/cookie-policy && cp node_modules/@canonical/cookie-policy/build/js/cookie-policy.js static/js/modules/cookie-policy",
+    "copy-global-nav": "mkdir -p static/js/build/global-nav && cp node_modules/@canonical/global-nav/dist/global-nav.js static/js/build/global-nav",
     "format-python": "black --line-length 79 webapp",
     "lint-python": "flake8 webapp tests && black --check --line-length 79 webapp tests",
     "lint-scss": "sass-lint static/**/*.scss --verbose --no-exit",
@@ -16,6 +18,7 @@
     "test": "yarn run lint-scss && yarn run lint-python && yarn run test-python"
   },
   "dependencies": {
+    "@canonical/cookie-policy": "3.0.4",
     "@canonical/global-nav": "2.4.3",
     "autoprefixer": "9.8.6",
     "concurrently": "5.3.0",

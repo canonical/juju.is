@@ -67,3 +67,4 @@ dist/
 .dotrun.json
 .venv/
 .webcache/
+static/js/modules/

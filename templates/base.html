@@ -189,6 +189,9 @@
               <a class="p-link--inverted p-link--external" href="https://www.ubuntu.com/legal">Legal Information</a>
             </li>
             <li class="p-inline-list__item">
+              <a class="p-footer__link js-revoke-cookie-manager" href="">Manage your tracker settings</a>
+            </li>
+            <li class="p-inline-list__item">
               <a class="p-link--inverted" href="https://github.com/canonical-web-and-design/juju.is/issues/new">Report a bug on
                 this site</a>
             </li>
@@ -233,7 +236,9 @@
     <script src="{{ versioned_static('js/dynamic-contact-form.js') }}"></script>
 
     <script src="/static/js/build/global-nav/global-nav.js"></script>
+    <script src="/static/js/modules/cookie-policy/cookie-policy.js"></script>
     <script>
+      cpNs.cookiePolicy();
       canonicalGlobalNav.createNav({ maxWidth: "72rem", showLogins: false });
     </script>
   </body>
