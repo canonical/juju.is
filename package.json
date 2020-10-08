@@ -7,7 +7,7 @@
     "build": "yarn run build-css && yarn run build-js",
     "build-css": "node-sass --include-path node_modules static/sass --source-map true --output-style compressed --output static/css && postcss --map false --use autoprefixer --replace 'static/css/**/*.css'",
     "build-js": "yarn run build-global-nav && yarn run build-cookie-policy",
-    "build-global-nav": "mkdir -p mkdir -p static/js/build/global-nav && cp node_modules/@canonical/global-nav/dist/global-nav.js static/js/build/global-nav",
+    "build-global-nav": "mkdir -p static/js/build/global-nav && cp node_modules/@canonical/global-nav/dist/global-nav.js static/js/build/global-nav",
     "build-cookie-policy": "mkdir -p static/js/build/cookie-policy && cp node_modules/@canonical/cookie-policy/build/js/cookie-policy.js static/js/build/cookie-policy",
     "format-python": "black --line-length 79 webapp",
     "lint-python": "flake8 webapp tests && black --check --line-length 79 webapp tests",
