@@ -6,6 +6,9 @@ $color-accent: #f0f5f7;
 @import "vanilla-framework/scss/vanilla";
 @include vanilla;
 
+// import cookie policy
+@import "@canonical/cookie-policy/build/css/cookie-policy";
+
 @import "patterns_docs";
 @import "hljs";
 
