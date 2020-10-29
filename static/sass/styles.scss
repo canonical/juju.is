@@ -2,7 +2,9 @@
 @import "settings";
 
 // Import Vanilla
-$color-accent: #f0f5f7;
+$color-accent-background: #f0f5f7;
+$color-accent: #e95420;
+
 @import "vanilla-framework/scss/vanilla";
 @include vanilla;
 
