@@ -17,9 +17,6 @@ $color-accent: #f0f5f7;
 @import "pattern_cards";
 @include juju-cards;
 
-@import "patterns_hero-tab";
-@include juju-hero-tab;
-
 @import "patterns_strips";
 @include juju-p-strips;
 
