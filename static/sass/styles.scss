@@ -19,9 +19,6 @@ $color-accent: #e95420;
 @import "pattern_cards";
 @include juju-cards;
 
-@import "patterns_hero-tab";
-@include juju-hero-tab;
-
 @import "patterns_strips";
 @include juju-p-strips;
 
@@ -122,4 +119,20 @@ $color-accent: #e95420;
 .p-heading--3,
 h3 {
   font-weight: 200;
+}
+
+.p-button--outline {
+  @extend %vf-button-base;
+
+  border-color: $color-x-light;
+  color: $color-x-light;
+
+  &:visited {
+    color: $color-x-light;
+  }
+
+  &:hover,
+  &:active:hover {
+    background-color: rgba($color-mid-x-light, 0.2);
+  }
 }
