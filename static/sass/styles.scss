@@ -121,3 +121,19 @@ $color-accent: #f0f5f7;
 h3 {
   font-weight: 200;
 }
+
+.p-button--outline {
+  @extend %vf-button-base;
+
+  border-color: $color-x-light;
+  color: $color-x-light;
+
+  &:visited {
+    color: $color-x-light;
+  }
+
+  &:hover,
+  &:active:hover {
+    background-color: rgba($color-mid-x-light, 0.2);
+  }
+}
