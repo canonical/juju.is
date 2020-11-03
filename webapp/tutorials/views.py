@@ -13,7 +13,7 @@ def init_tutorials(app, url_prefix):
     session = talisker.requests.get_session()
     discourse_parser = DocParser(
         api=DiscourseAPI(
-            base_url="https://discourse.juju.is/", session=session
+            base_url="https://discourse.charmhub.io/", session=session
         ),
         index_topic_id=2628,
         category_id=34,
