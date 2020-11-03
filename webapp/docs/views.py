@@ -1,30 +1,22 @@
 import talisker.requests
 
-from canonicalwebteam.discourse_docs import (
-    DiscourseAPI,
-    DiscourseDocs,
-    DocParser,
-)
+from canonicalwebteam.discourse import DiscourseAPI, DocParser, Docs
 
 from canonicalwebteam.search import build_search_view
 
 
 def init_docs(app, url_prefix):
     discourse_index_id = 1087
-    category_id = 22
 
     session = talisker.requests.get_session()
-    discourse_api = DiscourseAPI(
-        base_url="https://discourse.juju.is/", session=session
-    )
-    discourse_parser = DocParser(
-        api=discourse_api,
-        index_topic_id=discourse_index_id,
-        category_id=category_id,
-        url_prefix=url_prefix,
-    )
-    discourse_docs = DiscourseDocs(
-        parser=discourse_parser,
+    discourse_docs = Docs(
+        parser=DocParser(
+            api=DiscourseAPI(
+                base_url="https://discourse.charmhub.io/", session=session
+            ),
+            index_topic_id=discourse_index_id,
+            url_prefix=url_prefix,
+        ),
         document_template="docs/document.html",
         url_prefix=url_prefix,
     )
