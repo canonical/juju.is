@@ -86,8 +86,8 @@ $color-accent: #e95420;
 .p-strip--suru-top.is-homepage::before {
   background: linear-gradient(
     to bottom right,
-    $color-accent 0%,
-    $color-accent 49%,
+    $color-accent-background 0%,
+    $color-accent-background 49%,
     rgba(255, 255, 255, 0) 50%,
     rgba(255, 255, 255, 0) 100%
   );
