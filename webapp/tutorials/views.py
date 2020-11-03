@@ -2,25 +2,20 @@ import flask
 import math
 import talisker.requests
 
-from canonicalwebteam.discourse_docs import (
-    DiscourseAPI,
-    DiscourseDocs,
-    DocParser,
-)
+from canonicalwebteam.discourse import DiscourseAPI, DocParser, Docs
 
 
 def init_tutorials(app, url_prefix):
     session = talisker.requests.get_session()
-    discourse_parser = DocParser(
-        api=DiscourseAPI(
-            base_url="https://discourse.charmhub.io/", session=session
+    discourse_docs = Docs(
+        parser=DocParser(
+            api=DiscourseAPI(
+                base_url="https://discourse.charmhub.io/", session=session
+            ),
+            index_topic_id=2628,
+            category_id=34,
+            url_prefix=url_prefix,
         ),
-        index_topic_id=2628,
-        category_id=34,
-        url_prefix=url_prefix,
-    )
-    discourse_docs = DiscourseDocs(
-        parser=discourse_parser,
         document_template="tutorials/tutorial.html",
         url_prefix=url_prefix,
         blueprint_name="tutorials",
