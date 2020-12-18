@@ -2,13 +2,13 @@ import flask
 import math
 import talisker.requests
 
-from canonicalwebteam.discourse import DiscourseAPI, DocParser, Docs
+from canonicalwebteam.discourse import DiscourseAPI, TutorialParser, Tutorials
 
 
 def init_tutorials(app, url_prefix):
     session = talisker.requests.get_session()
-    discourse_docs = Docs(
-        parser=DocParser(
+    tutorials_discourse = Tutorials(
+        parser=TutorialParser(
             api=DiscourseAPI(
                 base_url="https://discourse.charmhub.io/", session=session
             ),
@@ -25,14 +25,14 @@ def init_tutorials(app, url_prefix):
     def index():
         page = flask.request.args.get("page", default=1, type=int)
         posts_per_page = 12
-        discourse_docs.parser.parse()
-        metadata = discourse_docs.parser.metadata
+        tutorials_discourse.parser.parse()
+        metadata = tutorials_discourse.parser.metadata
         total_pages = math.ceil(len(metadata) / posts_per_page)
 
         return flask.render_template(
             "tutorials/index.html",
-            navigation=discourse_docs.parser.navigation,
-            forum_url=discourse_docs.parser.api.base_url,
+            navigation=tutorials_discourse.parser.navigation,
+            forum_url=tutorials_discourse.parser.api.base_url,
             metadata=metadata,
             page=page,
             posts_per_page=posts_per_page,
@@ -40,4 +40,4 @@ def init_tutorials(app, url_prefix):
             active_section="tutorials",
         )
 
-    discourse_docs.init_app(app)
+    tutorials_discourse.init_app(app)
