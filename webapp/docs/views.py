@@ -6,7 +6,7 @@ from canonicalwebteam.search import build_search_view
 
 
 def init_docs(app, url_prefix):
-    discourse_index_id = 1087
+    discourse_index_id = 3994
 
     session = talisker.requests.get_session()
     discourse_docs = Docs(
