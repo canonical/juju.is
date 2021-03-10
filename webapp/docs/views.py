@@ -27,6 +27,8 @@ def init_docs(app, url_prefix):
         "/docs/search",
         "docs-search",
         build_search_view(
-            site="juju.is/docs", template_path="docs/search.html"
+            session=session,
+            site="juju.is/docs",
+            template_path="docs/search.html",
         ),
     )
