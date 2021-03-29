@@ -12,6 +12,7 @@ from flask import render_template
 from webapp.docs.views import init_docs
 from webapp.template_utils import current_url_with_query, static_url
 from webapp.tutorials.views import init_tutorials
+from webapp.blog.views import init_blog
 
 # Rename your project below
 app = FlaskBase(
@@ -109,6 +110,7 @@ app.add_url_rule("/<path:subpath>", view_func=template_finder_view)
 
 init_docs(app, "/docs")
 init_tutorials(app, "/tutorials")
+init_blog(app, "/blog")
 
 
 @app.context_processor
