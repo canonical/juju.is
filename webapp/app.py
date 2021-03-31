@@ -1,5 +1,7 @@
 import datetime
+import os
 
+import talisker.requests
 from canonicalwebteam.flask_base.app import FlaskBase
 from canonicalwebteam.templatefinder import TemplateFinder
 from canonicalwebteam import image_template
@@ -13,6 +15,7 @@ from webapp.docs.views import init_docs
 from webapp.template_utils import current_url_with_query, static_url
 from webapp.tutorials.views import init_tutorials
 from webapp.blog.views import init_blog
+from webapp.greenhouse import Greenhouse
 
 # Rename your project below
 app = FlaskBase(
@@ -27,6 +30,17 @@ app = FlaskBase(
 
 app.before_request(prepare_redirects())
 app.before_request(prepare_deleted())
+
+session = talisker.requests.get_session()
+greenhouse = Greenhouse(
+    session=session, api_key=os.environ.get("GREENHOUSE_API_KEY")
+)
+
+
+@app.route("/careers")
+def careers():
+    vacancies = greenhouse.get_vacancies_by_department_slug("juju")
+    return render_template("careers.html", vacancies=vacancies)
 
 
 @app.route("/integration")

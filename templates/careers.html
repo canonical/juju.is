@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Juju Careers{% endblock %}
+
+{% block content %}
+
+<section class="p-strip--suru-topped is-shallow u-no-padding--bottom">
+  <div class="row">
+    <h1>We’re Hiring!</h1>
+  </div>
+  <div class="row">
+    <p>Help SREs and DevSecOps to move from config management heck to application management happiness by building Juju, the Charmed Operator Framework, and Charmhub.</p>
+  </div>
+</section>
+
+<section class="p-strip is-shallow">
+  <div class="row u-equal-height">
+    {% for vacancy in vacancies %}
+        <div class="col-4 col-medium-3 p-card">
+          <div class="p-card__content">
+            <h3 class="p-heading--four">
+              <a href="https://canonical.com/careers/{{ vacancy.id }}">{{ vacancy.title | safe }}</a>
+            </h3>
+            <p>{{ vacancy.description | safe }}</p>
+          </div>
+        </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
