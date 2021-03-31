@@ -39,7 +39,7 @@ greenhouse = Greenhouse(
 
 @app.route("/careers")
 def careers():
-    vacancies = greenhouse.get_vacancies_by_department_slug("juju")
+    vacancies = greenhouse.get_vacancies_by_department_slug("Juju")
     return render_template("careers.html", vacancies=vacancies)
 
 
