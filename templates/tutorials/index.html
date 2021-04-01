@@ -4,11 +4,29 @@
 
 {% block content %}
 
-<section class="p-strip--suru-topped is-shallow">
+<section class="p-strip--suru-topped is-shallow u-no-padding--bottom">
   <div class="u-fixed-width">
     <h1 class="p-heading--two">Tutorials</h1>
   </div>
+</section>
 
+<section class="p-strip is-shallow">
+  <div class="row">
+    <div class="col-4">
+      <div class="p-form__group">
+        <label for="tutorials-topic">Topic:</label>
+        <select name="tutorials-topic" id="tutorials-topic" class="u-no-margin--bottom">
+          <option value="">Any</option>
+          <option value="cloud">Cloud</option>
+          <option value="containers">Containers</option>
+          <option value="documentation">Documentation</option>
+          <option value="cli">CLI</option>
+        </select>
+      </div>
+    </div>
+</section>
+
+<section>
   <div class="row u-equal-height">
     {% for item in metadata %}
       {% if loop.index <= posts_per_page * page and loop.index >= posts_per_page * page - posts_per_page + 1 %}
@@ -24,7 +42,9 @@
       {% endif %}
     {% endfor %}
   </div>
+</section>
 
+<section>
   {% if total_pages > 1 %}
   <div class="u-fixed-width">
     <ol class="p-pagination u-align--center">
@@ -111,4 +131,5 @@
   {% endif %}
 </section>
 
+<script src="{{ versioned_static('js/tutorials-list.js') }}"></script>
 {% endblock %}
