@@ -1,36 +1,11 @@
 (function () {
-  const topicsFilter = document.getElementById("tutorials-topic");
-  const urlObj = new URL(window.location);
-
-  function handleFilter(key, el, url) {
-    if (!el) {
-      return;
-    }
-
-    if (url.searchParams.has(key)) {
-      el.value = url.searchParams.get(key);
-    }
-
-    el.addEventListener("change", (e) => {
-      const value = e.target.value;
-
-      if (url.searchParams.has("page")) {
-        url.searchParams.delete("page");
-      }
-
-      if (value) {
-        if (url.searchParams.has(key)) {
-          url.searchParams.delete(key);
-        }
-
-        url.searchParams.append(key, value);
-      } else {
-        url.searchParams.delete(key);
-      }
-
-      window.location = url;
+  const selector = "tutorials-topic";
+  const topicsFilter = document.getElementById(selector);
+  if (topicsFilter) {
+    topicsFilter.addEventListener("change", (e) => {
+      window.location.search = `?topic=${e.target.value}`;
     });
+  } else {
+    throw new Error(`${selector} is not a valid element!`);
   }
-
-  handleFilter("topic", topicsFilter, urlObj);
 })();
