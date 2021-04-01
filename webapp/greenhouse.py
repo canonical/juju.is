@@ -4,6 +4,7 @@ from base64 import b64encode
 def _get_metadata(job, name):
     metadata_map = {
         "description": 2739137,
+        "Canonical site": 3209541,
     }
 
     for data in job["metadata"]:
@@ -16,8 +17,8 @@ class Vacancy:
     def __init__(self, job: dict):
         self.id: str = job["id"]
         self.title: str = job["title"]
-        self.department: str = job["departments"][0]["name"]
         self.description: str = _get_metadata(job, "description")
+        self.site: str = _get_metadata(job, "Canonical site")
 
 
 class Greenhouse:
@@ -47,13 +48,13 @@ class Greenhouse:
         return vacancies
 
     """
-    Get vacancies where the department matches a given department
+    Get vacancies where the site matches a given site
     """
 
-    def get_vacancies_by_department_slug(self, department):
+    def get_vacancies_by_site(self, site):
         vacancies = self.get_vacancies()
 
-        def department_filter(vacancy):
-            return vacancy.department == department
+        def site_filter(vacancy):
+            return site in vacancy.site if vacancy.site else False
 
-        return list(filter(department_filter, vacancies))
+        return list(filter(site_filter, vacancies))
