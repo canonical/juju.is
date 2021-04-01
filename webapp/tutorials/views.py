@@ -48,6 +48,7 @@ def init_tutorials(app, url_prefix):
             posts_per_page=posts_per_page,
             total_pages=total_pages,
             active_section="tutorials",
+            topic=topic,
         )
 
     tutorials_discourse.init_app(app)
