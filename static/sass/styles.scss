@@ -16,7 +16,7 @@ $color-accent: #e95420;
 
 @include juju-docs;
 // Local patterns
-@import "pattern_cards";
+@import "patterns_cards";
 @include juju-cards;
 
 @import "patterns_strips";
@@ -27,6 +27,9 @@ $color-accent: #e95420;
 
 @import "patterns_navigation";
 @include local-p-navigation;
+
+@import "patterns_p-subnav";
+@include local-p-subnav;
 
 @import "patterns_p-modal";
 @include juju-modal;
@@ -110,10 +113,6 @@ $color-accent: #e95420;
 .p-inline-images .p-inline-images__logo.is-wide {
   max-width: 9rem;
   max-height: none;
-}
-
-:target {
-  padding-top: 50px !important;
 }
 
 .p-heading--3,

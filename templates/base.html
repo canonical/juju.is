@@ -9,123 +9,80 @@
 -->
 
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="description"
-      content="{% block page_description %}Juju is an open source application modelling tool that allows you to deploy, configure, scale and operate cloud infrastructures quickly and efficiently on public clouds such as AWS, GCE, and Azure along with private ones such as MAAS, OpenStack, and VSphere.{% endblock %}"
-    />
-    <link rel="stylesheet" href="/static/css/styles.css" />
-    <title>
-      Juju | {% block page_title %}The simplest way to deploy and maintain
-      applications in the cloud{% endblock %}
-    </title>
-    <meta name="copydoc" content="{% block meta_copydoc %}https://drive.google.com/drive/u/0/folders/1-3OoeHxK5U7W_ktFY8rvwRzmjzCKte9a{% endblock %}">
 
-    <script
-      src="https://assets.ubuntu.com/v1/703e23c9-lazysizes+noscript+native-loading.5.1.2.min.js"
-      defer
-    ></script>
-    <script src="https://buttons.github.io/buttons.js" defer></script>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="{% block page_description %}Juju is an open source application modelling tool that allows you to deploy, configure, scale and operate cloud infrastructures quickly and efficiently on public clouds such as AWS, GCE, and Azure along with private ones such as MAAS, OpenStack, and VSphere.{% endblock %}" />
+  <link rel="stylesheet" href="/static/css/styles.css" />
+  <title>
+    Juju | {% block page_title %}The simplest way to deploy and maintain
+    applications in the cloud{% endblock %}
+  </title>
+  <meta name="copydoc" content="{% block meta_copydoc %}https://drive.google.com/drive/u/0/folders/1-3OoeHxK5U7W_ktFY8rvwRzmjzCKte9a{% endblock %}">
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K9KCMZ');</script>
-    <!-- End Google Tag Manager -->
-  </head>
+  <script src="https://assets.ubuntu.com/v1/703e23c9-lazysizes+noscript+native-loading.5.1.2.min.js" defer></script>
+  <script src="https://buttons.github.io/buttons.js" defer></script>
 
-  <body class="{% block page_class %}{% endblock %}">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K9KCMZ');</script>
+  <!-- End Google Tag Manager -->
+</head>
 
-    <header id="navigation" class="p-navigation">
-      <div class="p-navigation__row">
-        <div class="p-navigation__banner">
-          <div class="p-navigation__logo" style="margin-left: 0">
-            <a class="p-navigation__link" href="/">
-              <img
-                src="https://assets.ubuntu.com/v1/1300a99d-juju_white-orange%28hex%29.svg"
-                class="p-navigation__image"
-                width="88"
-                height="32"
-              />
-            </a>
-          </div>
-          <a href="#navigation" class="p-navigation__toggle--open" title="menu"
-            >Menu</a
-          >
-          <a
-            href="#navigation-closed"
-            class="p-navigation__toggle--close"
-            title="close menu"
-            >Close menu</a
-          >
-        </div>
-        <nav class="p-navigation__nav">
-          <span class="u-off-screen">
-            <a href="#main-content">Jump to main content</a>
-          </span>
-          <ul class="p-navigation__links" role="menu">
-            <li
-              class="p-navigation__link{% if request.path in ['/mission', '/overview', '/model-driven-operations', '/universal-operators', '/integration', '/operator-lifecycle-manager', '/operator-services', '/multi-cloud-operations', '/devsecops', '/ops-code-quality', '/architecture', '/high-availability-enterprise-olm', '/hosted-olm', '/beyond-configuration-management'] %} is-selected"
-              aria-current="page{% endif %}"
-              role="menuitem"
-            >
-              <a href="/mission">About</a>
-            </li>
-            <li
-              class="p-navigation__link{% if request.path.startswith('/tutorials') %} is-selected"
-              aria-current="page{% endif %}"
-              role="menuitem"
-              >
-              <a href="/tutorials">Tutorials</a>
-            </li>
-            <li
-              class="p-navigation__link{% if request.path.startswith('/docs') %} is-selected"
-              aria-current="page{% endif %}"
-              role="menuitem"
-            >
-              <a href="/docs">Docs</a>
-            </li>
-            <li class="p-navigation__link{% if request.path.startswith('/community') %} is-selected"
-              aria-current="page{% endif %}"
-              role="menuitem">
-              <a
-                href="/community"
-                >Community</a
-              >
-            </li>
-            <li
-              class="p-navigation__link{% if request.path.startswith('/contact-us') %} is-selected"
-              aria-current="page{% endif %}"
-              role="menuitem">
-              <a href="/contact-us">Contact us</a>
-            </li>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<body class="{% block page_class %}{% endblock %}">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-    {% block content %}{% endblock %}
+  {% include "partials/_navigation.html" %}
 
-    {% include "footer.html" %}
+  {% block content %}{% endblock %}
 
-    <div class="u-hide" id="contact-form-container" data-form-location="/get-in-touch" data-form-id="1337" data-lp-id="2313" data-return-url="http://juju.is/thank-you" data-lp-url=""></div>
-    <script src="{{ versioned_static('js/dynamic-contact-form.js') }}"></script>
+  {% include "footer.html" %}
 
-    <script src="/static/js/build/global-nav/global-nav.js"></script>
-    <script src="/static/js/build/cookie-policy/cookie-policy.js"></script>
-    <script>
-      canonicalGlobalNav.createNav({ maxWidth: "72rem", showLogins: false , hiring: 'https://juju.is/careers' });
-      cpNs.cookiePolicy();
-    </script>
-  </body>
+  <div class="u-hide" id="contact-form-container" data-form-location="/get-in-touch" data-form-id="1337" data-lp-id="2313" data-return-url="http://juju.is/thank-you" data-lp-url=""></div>
+  <script src="{{ versioned_static('js/dynamic-contact-form.js') }}"></script>
+
+  <script src="/static/js/navigation.js"></script>
+  <script src="/static/js/build/cookie-policy/cookie-policy.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var selector = "[data-js='sticky-nav-observer']";
+      // select the observer element
+      var observerEl = document.querySelector(selector);
+      // select the navigation element
+      var nav = document.getElementById("navigation");
+
+      if (observerEl && nav) {
+        // create a new observer
+        var observer = new IntersectionObserver(
+          function (entries) {
+            // add "sticky" class if the observerEl is not on the screen
+            if (entries[0].intersectionRatio === 0) {
+              nav.classList.add("is-sticky");
+            // remove "sticky" class if the observerEl is on the screen - i.e. you scrolled all the way to the top of the page
+            } else if (entries[0].intersectionRatio === 1)
+              nav.classList.remove("is-sticky");
+          },
+          { threshold: [0, 1] }
+        );
+        // ask the observer to observe the position of the observerEl - i.e. if it's on/off screen
+        observer.observe(observerEl);
+      } else {
+        throw new Error(
+          `${selector ? selector : "#navigation"} is not a valid element!`
+        );
+      }
+    })
+  </script>
+</body>
+
 </html>
