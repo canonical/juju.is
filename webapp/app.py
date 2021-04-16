@@ -122,7 +122,7 @@ template_finder_view = TemplateFinder.as_view("template_finder")
 app.add_url_rule("/", view_func=template_finder_view)
 app.add_url_rule("/<path:subpath>", view_func=template_finder_view)
 
-init_docs(app, "/docs")
+init_docs(app)
 init_tutorials(app, "/tutorials")
 init_blog(app, "/blog")
 
