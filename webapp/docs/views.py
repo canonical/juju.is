@@ -30,7 +30,7 @@ def init_docs(app):
             tutorials_url_prefix=tutorials_url_prefix,
         ),
         document_template="docs/document.html",
-        url_prefix="/docs",
+        url_prefix="/docs/olm",
     )
 
     discourse_docs.init_app(app)
