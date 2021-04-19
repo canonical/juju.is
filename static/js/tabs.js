@@ -50,8 +50,11 @@ function attachEvents(tabs) {
 */
 function setActiveTab(tabs) {
   var URLhash = window.location.hash;
+  var tabHashes = tabs.map(function (tab) {
+    return tab.getAttribute("href");
+  });
 
-  if (URLhash) {
+  if (URLhash && tabHashes.includes(URLhash)) {
     var tabLink = document.querySelector("[href='" + URLhash + "']");
     tabs.forEach(function (tab) {
       if (tab === tabLink) {
