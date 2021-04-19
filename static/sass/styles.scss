@@ -115,7 +115,7 @@ $color-accent: #e95420;
   max-height: none;
 }
 
-:target {
+:not(.p-tabs__content):target {
   padding-top: 50px !important;
 }
 
