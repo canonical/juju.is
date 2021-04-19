@@ -1,0 +1,18 @@
+@mixin juju-tabs {
+  @include jaas-p-tabs;
+}
+
+@mixin jaas-p-tabs {
+  .p-tabs__content {
+    display: none;
+
+    &:last-child,
+    &:target {
+      display: block;
+    }
+
+    &:target ~ &:last-child {
+      display: none;
+    }
+  }
+}
