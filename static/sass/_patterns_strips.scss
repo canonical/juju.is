@@ -3,6 +3,7 @@
   @include jaas-p-strip-slanted;
   @include jaas-p-strip-half-and-half;
   @include jaas-p-strip-muted-suru;
+  @include jaas-p-strip-blue;
 }
 
 @mixin jaas-p-strip-suru {
@@ -16,7 +17,7 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       height: 4rem;
       left: 0;
@@ -28,7 +29,7 @@
     &.has-accent {
       &::after {
         background: $suru-accent;
-        content: '';
+        content: "";
         display: block;
         height: 100px;
         position: absolute;
@@ -57,8 +58,7 @@
 
     background-blend-mode: multiply, multiply, normal, normal;
     background-color: #772953;
-    background-image:
-      linear-gradient(
+    background-image: linear-gradient(
         to bottom left,
         rgba(228, 228, 228, 0.5) 0,
         rgba(228, 228, 228, 0.5) 49.9%,
@@ -142,7 +142,7 @@
 }
 
 @mixin jaas-p-strip-slanted {
-  [class*='p-strip'].is-slanted {
+  [class*="p-strip"].is-slanted {
     overflow: hidden;
     padding-bottom: 8rem;
     position: relative;
@@ -155,7 +155,7 @@
         rgba(255, 255, 255, 0) 50%,
         rgba(255, 255, 255, 0) 100%
       );
-      content: '';
+      content: "";
       display: block;
       height: 4rem;
       left: 0;
@@ -228,6 +228,17 @@
 
     @media (max-width: $breakpoint-medium) {
       background: rgb(255, 255, 255);
+    }
+  }
+}
+
+@mixin jaas-p-strip-blue {
+  .p-strip--blue {
+    @extend %vf-strip;
+    background-color: #00365c;
+
+    &.is-dark {
+      color: $color-x-light;
     }
   }
 }
