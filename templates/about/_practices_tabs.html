@@ -1,0 +1,86 @@
+<style>
+  :target {
+    padding-top: 0 !important;
+  }
+  .is-vertical .p-tabs__list {
+    display: block;
+  }
+
+  .is-vertical .p-tabs__item {
+    white-space: normal;
+    width: 100%;
+  }
+</style>
+
+<div class="row">
+  <div class="col-4">
+    <div class="p-tabs is-vertical">
+      <ul class="p-tabs__list" role="tablist">
+        <li class="p-tabs__item" role="presentation">
+          <a href="#collaboration" id="collaboration-tab" class="p-tabs__link" tabindex="0" role="tab" aria-controls="collaboration" aria-selected="true">Collaboration over duplication.</a>
+        </li>
+        <li class="p-tabs__item" role="presentation">
+          <a href="#app-management" id="app-management-tab" class="p-tabs__link" tabindex="0" role="tab" aria-controls="app-management">Application management over configuration management.</a>
+        </li>
+        <li class="p-tabs__item" role="presentation">
+          <a href="#integration-simplicity" id="integration-simplicity-tab" class="p-tabs__link" tabindex="0" role="tab" aria-controls="integration-simplicity">Integration Simplicity.</a>
+        </li>
+        <li class="p-tabs__item" role="presentation">
+          <a href="#automate-everything" id="automate-everything-tab" class="p-tabs__link" tabindex="0" role="tab" aria-controls="automate-everything">Automate Everything: Including Security Incident Response.</a>
+        </li>
+        <li class="p-tabs__item" role="presentation">
+          <a href="#quality-assurance" id="quality-assurance-tab" class="p-tabs__link" tabindex="0" role="tab" aria-controls="quality-assurance">Quality assurance. Operators must be testable.</a>
+        </li>
+        <li class="p-tabs__item" role="presentation">
+          <a href="#communities" id="communities-tab" class="p-tabs__link" tabindex="0" role="tab" aria-controls="communities">Excellent communities build excellent user experience.</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-7 col-start-large-6">
+    <div id="app-management" class="p-tabs__content" role="tabpanel" aria-labelledby="app-management-tab">
+      <p class="p-heading--4">Focus on the four important business decisions and build an application to handle the execution.</p>
+      <ul>
+        <li>Where should the application run?</li>
+        <li>Which software components should be included in the scenario?</li>
+        <li>What resources should be allocated to the scenario?</li>
+        <li>How should that scenario be integrated into the wider estate?</li>
+      </ul>
+        
+      <p>The Charmed Operator Framework brings business thinking to the world of application management, making it much easier to have conversations between teams about the estate, and much easier to evolve capacity allocation over time: you can easily manage multiple compute environments and lower your costs of ownership. The separation of technical and commercial concerns means the operator is reusable in very different business settings. And reuse enhances the community value of the operator and increases software quality.</p>
+      
+      <p>Most importantly, Juju is not a ‘language for configuration file management’. It is not a successor to Puppet, Chef, Ansible, Terraform or Salt. Juju removes the requirement to invest in deep institutional knowledge of configuration details altogether, by encapsulating community knowledge in operators that handle those details automatically given a context. Moving beyond configuration management puts the focus on application management and resource allocation. It is the stepping stone to Model Driven Operations.</p>
+    </div>
+
+    <div id="integration-simplicity" class="p-tabs__content" role="tabpanel" aria-labelledby="integration-simplicity-tab">
+      <p>If each application ran completely independently, then we could share configuration management code as we know it today. The problem is that applications in the enterprise always need to be integrated with other applications. A particular business makes unique choices of combinations of applications to integrate for particular situations. Configuration management tools force us to blend all of those choices into a single tower of babel that reflects the unique landscape inside that enterprise.</p>
+      
+      <p>Whether it is Chef, Puppet, Salt, Ansible, or Terraform - that enterprise configuration management code cannot simply be taken to another enterprise, because it mixes up knowledge of the applications with knowledge of the particular business and situations those applications are being used. Charmed Operators and the Charmed OLM solve this.</p>
+    </div>
+
+    <div id="automate-everything" class="p-tabs__content" role="tabpanel" aria-labelledby="automate-everything-tab">
+      <p>Reusable packages of operations code get wider scrutiny which helps identify security issues faster. They attract a wider range of contributors and with that, a wider range of skills. Security is a many-layered challenge, and the breadth of participation in operator development raises the bar for all users of those operators.</p>
+      
+      <p>Since all deployment and configuration of the application is handled by the operator, manual mistakes are fewer and easier to discover. Policy can be enforced consistently, regardless of the cloud or infrastructure being used.</p>
+    </div>
+
+    <div id="quality-assurance" class="p-tabs__content" role="tabpanel" aria-labelledby="quality-assurance-tab">
+      <p>Testing, continuous integration, inspection, debugging, observability and traceability are all critical capabilities in distributed systems design and development. Mechanisms for testing are essential for high quality code. The Charmed Operator Framework enables unit testing at the code level. We also respect conventions for real-world functional and acceptance tests.</p>
+      
+      <p>As a community, continuous integration and testing of operators across a range of substrates and scenarios ensures a high standard of quality in the portfolio. We drive automated tests of operators across the entire ecosystem as a shared project, to raise the quality of operators for all users.</p>
+    </div>
+
+    <div id="communities" class="p-tabs__content" role="tabpanel" aria-labelledby="communities-tab">
+      <p>We are focused on the needs of software operations practitioners, with appropriate governance and mechanisms to bring the world's expertise to bear on the shared problem of application management.</p>
+    </div>
+    
+    <div id="collaboration" class="p-tabs__content" role="tabpanel" aria-labelledby="collaboration-tab">
+      <p class="p-heading--4">Share operations and integration code</p>
+      
+      <p>Instead of each business writing and maintaining their own scripts to manage their infrastructure, why not share operations and integrations code, through a system that works across substrates, across platforms, across operating systems and through the applications built upon them. Imagine a world where you don’t need to tweak every script, chart, or file to get your scenario to deploy, scale, or upgrade properly - because those operations are handled for you in code, created by yourself and the community around you.</p>
+      
+      <p>What would this allow you to do? Could you focus on the logic - on the business decisions - that give meaning to those operations? Together, we can combine the knowledge of the open source community into shared, open source applications, which are coded to react to different scenarios, situations, and operations as you’d like them to.</p>
+    </div>
+  </div>
+</div>
