@@ -37,7 +37,7 @@
   <div class="p-navigation__row">
     <nav class="p-navigation__nav">
       <ul class="p-navigation__items">
-        <li class="p-navigation__item{% if request.path in ['/mission', '/overview', '/model-driven-operations', '/universal-operators', '/integration', '/operator-lifecycle-manager', '/operator-services', '/multi-cloud-operations', '/devsecops', '/ops-code-quality', '/architecture', '/high-availability-enterprise-olm', '/hosted-olm', '/beyond-configuration-management'] %} is-selected{% endif %}">
+        <li class="p-navigation__item{% if request.path.startswith('/about') %} is-selected{% endif %}">
           <a class="p-navigation__link" href="/mission">About</a>
         </li>
         <li class="p-navigation__item{% if request.path.startswith('/blog') %} is-selected{% endif %}">
