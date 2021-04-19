@@ -31,6 +31,9 @@ $color-accent: #e95420;
 @import "patterns_p-modal";
 @include juju-modal;
 
+@import "patterns_tabs";
+@include juju-tabs;
+
 .p-navigation__logo {
   margin: 0.1rem 1rem 0 1.5rem;
 }
