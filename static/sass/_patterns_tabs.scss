@@ -3,6 +3,21 @@
 }
 
 @mixin jaas-p-tabs {
+  $color-sidenav-item-background-hover: $colors--light-theme--background-hover;
+  $color-sidenav-item-border-highlight: $colors--light-theme--text-default;
+  $color-sidenav-text-active: $colors--light-theme--text-default;
+
+  .p-side-navigation--tabs {
+    @include vf-p-side-navigation;
+
+    .p-side-navigation__link[aria-selected="true"] {
+      @include vf-highlight-bar($color-sidenav-item-border-highlight, left);
+
+      background: $color-sidenav-item-background-hover;
+      color: $color-sidenav-text-active;
+    }
+  }
+
   .p-tabs__content {
     display: none;
 

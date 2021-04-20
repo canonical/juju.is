@@ -82,5 +82,3 @@ function initTabs(selector) {
     setActiveTab(tabs);
   });
 }
-
-initTabs(".p-tabs");
