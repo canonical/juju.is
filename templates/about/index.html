@@ -66,7 +66,19 @@
       </ul>
     </div>
     <div class="col-4 col-start-large-7">
-      <div class="p-card--highlighted">
+      <div class="p-card--hero-image">
+        <div class="p-card__image">
+          {{
+            image(
+              url="https://ubuntu.com/wp-content/uploads/42d2/MG_0983.jpg",
+              alt="",
+              height="169",
+              width="400",
+              hi_def=True,
+              loading="lazy",
+            ) | safe
+          }}
+        </div>
         <h3 class="p-card__title p-heading--4">Send us your details</h3>
         <div class="p-card__content">
           <form class="marketo-form" action="https://pages.ubuntu.com/index.php/leadCapture/save" method="post" id="mktoForm_1337">
