@@ -82,3 +82,45 @@ function initTabs(selector) {
     setActiveTab(tabs);
   });
 }
+
+/**
+  Sets a group of tab panels to the same height
+  @param {Array} panels an array of tab panel elements
+*/
+function setEqualHeights(panels) {
+  var tabPanelHeights = [];
+
+  panels.forEach(function (tabPanel) {
+    tabPanel.style.display = "block";
+    tabPanelHeights.push(tabPanel.offsetHeight);
+    tabPanel.style.display = null;
+  });
+
+  var max = tabPanelHeights.reduce(function (a, b) {
+    return Math.max(a, b);
+  });
+
+  panels.forEach(function (tabPanel) {
+    tabPanel.style.height = max + "px";
+  });
+}
+
+/**
+  @param {String} selector class name of the element
+  containing tabpanels we want to be of equal height
+*/
+function initEqualHeightTabContent(selector) {
+  var tabContentContainers = [].slice.call(document.querySelectorAll(selector));
+
+  tabContentContainers.forEach(function (tabContentContainer) {
+    var tabPanels = [].slice.call(
+      tabContentContainer.querySelectorAll('[role="tabpanel"] .row')
+    );
+
+    setEqualHeights(tabPanels);
+
+    window.addEventListener("resize", function () {
+      setEqualHeights(tabPanels);
+    });
+  });
+}
