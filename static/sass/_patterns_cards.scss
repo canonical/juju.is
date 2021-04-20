@@ -1,6 +1,5 @@
 @mixin juju-cards {
   @include juju-card-resource;
-  @include juju-hero-image-card;
 }
 
 @mixin juju-card-resource {
@@ -114,19 +113,5 @@
     display: flex;
     margin-top: auto;
     padding-top: $sp-medium;
-  }
-}
-
-@mixin juju-hero-image-card {
-  .p-card--hero-image {
-    @extend %p-card--highlighted;
-
-    .p-card__image {
-      // negate the padding on the card
-      margin-left: -$spv-inner--large;
-      margin-right: -$spv-inner--large;
-      margin-top: -$spv-inner--large;
-      width: auto;
-    }
   }
 }
