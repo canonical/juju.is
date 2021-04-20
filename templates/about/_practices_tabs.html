@@ -1,44 +1,32 @@
-<style>
-  :target {
-    padding-top: 0 !important;
-  }
-  .is-vertical .p-tabs__list {
-    display: block;
-  }
-
-  .is-vertical .p-tabs__item {
-    white-space: normal;
-    width: 100%;
-  }
-</style>
-
 <div class="row">
   <div class="col-4">
-    <div class="p-tabs is-vertical">
-      <ul class="p-tabs__list" role="tablist">
-        <li class="p-tabs__item" role="presentation">
-          <a href="#collaboration" id="collaboration-tab" class="p-tabs__link" tabindex="0" role="tab" aria-controls="collaboration" aria-selected="true">Collaboration over duplication.</a>
-        </li>
-        <li class="p-tabs__item" role="presentation">
-          <a href="#app-management" id="app-management-tab" class="p-tabs__link" tabindex="0" role="tab" aria-controls="app-management">Application management over configuration management.</a>
-        </li>
-        <li class="p-tabs__item" role="presentation">
-          <a href="#integration-simplicity" id="integration-simplicity-tab" class="p-tabs__link" tabindex="0" role="tab" aria-controls="integration-simplicity">Integration Simplicity.</a>
-        </li>
-        <li class="p-tabs__item" role="presentation">
-          <a href="#automate-everything" id="automate-everything-tab" class="p-tabs__link" tabindex="0" role="tab" aria-controls="automate-everything">Automate Everything: Including Security Incident Response.</a>
-        </li>
-        <li class="p-tabs__item" role="presentation">
-          <a href="#quality-assurance" id="quality-assurance-tab" class="p-tabs__link" tabindex="0" role="tab" aria-controls="quality-assurance">Quality assurance. Operators must be testable.</a>
-        </li>
-        <li class="p-tabs__item" role="presentation">
-          <a href="#communities" id="communities-tab" class="p-tabs__link" tabindex="0" role="tab" aria-controls="communities">Excellent communities build excellent user experience.</a>
-        </li>
-      </ul>
+    <div class="p-side-navigation--tabs">
+      <nav class="p-side-navigation__drawer">
+        <ul class="p-side-navigation__list js-about-tabs" role="tablist">
+          <li class="p-side-navigation__item">
+            <a id="collaboration-tab" class="p-side-navigation__link" role="tab" href="#collaboration" aria-controls="#collaboration" aria-selected="true">Collaboration over duplication.</a>
+          </li>
+          <li class="p-side-navigation__item">
+            <a id="app-management-tab" class="p-side-navigation__link" role="tab" href="#app-management" aria-controls="#app-management">Application management over configuration management.</a>
+          </li>
+          <li class="p-side-navigation__item">
+            <a id="integration-simplicity-tab" class="p-side-navigation__link" role="tab" href="#integration-simplicity" aria-controls="#integration-simplicity">Integration Simplicity.</a>
+          </li>
+          <li class="p-side-navigation__item">
+            <a id="automate-everything-tab" class="p-side-navigation__link" role="tab" href="#automate-everything" aria-controls="#automate-everything">Automate Everything: Including Security Incident Response.</a>
+          </li>
+          <li class="p-side-navigation__item">
+            <a id="quality-assurance-tab" class="p-side-navigation__link" role="tab" href="#quality-assurance" aria-controls="#quality-assurance">Quality assurance. Operators must be testable.</a>
+          </li>
+          <li class="p-side-navigation__item">
+            <a id="communities-tab" class="p-side-navigation__link" role="tab" href="#communities" aria-controls="#communities">Excellent communities build excellent user experience.</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 
-  <div class="col-7 col-start-large-6">
+  <div class="col-6 col-start-large-6">
     <div id="app-management" class="p-tabs__content" role="tabpanel" aria-labelledby="app-management-tab">
       <p class="p-heading--4">Focus on the four important business decisions and build an application to handle the execution.</p>
       <ul>

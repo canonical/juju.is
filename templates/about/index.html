@@ -16,10 +16,10 @@
   </div>
 </section>
 
-<section class="p-strip">
+<section class="p-strip u-no-padding--top">
   <div class="row">
     <div class="col-12">
-      <h2>Technology</h2>
+      <h2 class="u-sv3">Technology</h2>
 
       {% include "about/_technology_tabs.html" %}
     </div>
@@ -31,10 +31,12 @@
     <div class="col-5">
       <h2>Mission</h2>
     </div>
-    <div class="col-7">
-      <p>Since its inception in 2009, Juju has facilitated the transition from simple configuration management to model-driven application management. Use it to deploy, <strong>integrate and operate</strong> applications and infrastructure - across any substrates (whether Kubernetes, VMs, or bare metal - on public or private clouds).</p>
+    <div class="col-6">
+      <p class="p-heading--4">Since its inception in 2009, Juju has facilitated the transition from simple configuration management to model-driven application management.</p>
+        
+      <p>Use it to deploy, <strong>integrate and operate</strong> applications and infrastructure - across any substrates (whether Kubernetes, VMs, or bare metal - on public or private clouds).</p>
       
-      <p>Enterprise software operations are costly and messy. Configuration management has not solved this. Together, the open source community has the power to dramatically reduce costs and improve the working lives of DevSecOps, SREs, operations teams, and the teams who rely on them. How?</p>
+      <p><em>Enterprise software operations are costly and messy. Configuration management has not solved this. Together, the open source community has the power to dramatically reduce costs and improve the working lives of DevSecOps, SREs, operations teams, and the teams who rely on them.</em> <strong>How?</strong></p>
     </div>
   </div>
 </section>
@@ -51,7 +53,7 @@
 
 <section class="p-strip">
   <div class="row u-vertically-center">
-    <div class="col-6">
+    <div class="col-5">
       <h2>Get the eBook and a t-shirt</h2>
       <h3 class="p-heading--4">From Configuration to Application Management:</h3>
 
@@ -63,7 +65,7 @@
         <li>Extending the operator pattern</li>
       </ul>
     </div>
-    <div class="col-6">
+    <div class="col-4 col-start-large-7">
       <div class="p-card--highlighted">
         <h3 class="p-card__title p-heading--4">Send us your details</h3>
         <div class="p-card__content">
@@ -86,4 +88,7 @@
 </section>
 
 <script src="{{ versioned_static('js/tabs.js') }}"></script>
+<script>
+  initTabs(".js-about-tabs");
+</script>
 {% endblock %}
