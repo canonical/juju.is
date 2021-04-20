@@ -24,17 +24,20 @@ def init_tutorials(app, url_prefix):
     @app.route(url_prefix)
     def index():
         page = flask.request.args.get("page", default=1, type=int)
-        topic = flask.request.args.get("topic", default=None, type=str)
+        topics_request = flask.request.args.get(
+            "topic", default=None, type=str
+        )
         posts_per_page = 12
         tutorials_discourse.parser.parse()
 
-        if not topic:
+        if not topics_request:
             metadata = tutorials_discourse.parser.metadata
         else:
+            topics = topics_request.split(",")
             metadata = [
                 doc
                 for doc in tutorials_discourse.parser.metadata
-                if topic in doc["categories"]
+                if doc["categories"] in topics
             ]
 
         total_pages = math.ceil(len(metadata) / posts_per_page)
@@ -48,7 +51,7 @@ def init_tutorials(app, url_prefix):
             posts_per_page=posts_per_page,
             total_pages=total_pages,
             active_section="tutorials",
-            topic=topic,
+            topic=topics_request,
         )
 
     tutorials_discourse.init_app(app)
