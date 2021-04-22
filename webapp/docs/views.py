@@ -10,11 +10,25 @@ DISCOURSE_API_USERNAME = getenv("DISCOURSE_API_USERNAME")
 
 
 def init_docs(app):
-    discourse_index_id = 1087
+    session = talisker.requests.get_session()
+    main_docs = Docs(
+        parser=DocParser(
+            api=DiscourseAPI(
+                base_url="https://discourse.charmhub.io/", session=session
+            ),
+            index_topic_id=4513,
+            url_prefix="/docs",
+        ),
+        document_template="docs/document.html",
+        url_prefix="/docs",
+        blueprint_name="main_docs",
+    )
+    main_docs.init_app(app)
+
+    discourse_index_id = 4302
     tutorials_index_topic_id = 2628
     tutorials_url_prefix = "/tutorials"
 
-    session = talisker.requests.get_session()
     discourse_docs = Docs(
         parser=DocParser(
             api=DiscourseAPI(
