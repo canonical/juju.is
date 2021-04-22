@@ -1,8 +1,13 @@
+from os import getenv
+
 import flask
 import math
 import talisker.requests
 
 from canonicalwebteam.discourse import DiscourseAPI, TutorialParser, Tutorials
+
+DISCOURSE_API_KEY = getenv("DISCOURSE_API_KEY")
+DISCOURSE_API_USERNAME = getenv("DISCOURSE_API_USERNAME")
 
 
 def init_tutorials(app, url_prefix):
@@ -10,10 +15,13 @@ def init_tutorials(app, url_prefix):
     tutorials_discourse = Tutorials(
         parser=TutorialParser(
             api=DiscourseAPI(
-                base_url="https://discourse.charmhub.io/", session=session
+                base_url="https://discourse.charmhub.io/",
+                session=session,
+                api_key=DISCOURSE_API_KEY,
+                api_username=DISCOURSE_API_USERNAME,
+                get_topics_query_id=2,
             ),
             index_topic_id=2628,
-            category_id=34,
             url_prefix=url_prefix,
         ),
         document_template="tutorials/tutorial.html",
@@ -29,24 +37,26 @@ def init_tutorials(app, url_prefix):
         )
         posts_per_page = 12
         tutorials_discourse.parser.parse()
+        tutorials_discourse.parser.parse_topic(
+            tutorials_discourse.parser.index_topic
+        )
 
         if not topics_request:
-            metadata = tutorials_discourse.parser.metadata
+            tutorials = tutorials_discourse.parser.tutorials
         else:
             topics = topics_request.split(",")
-            metadata = [
+            tutorials = [
                 doc
-                for doc in tutorials_discourse.parser.metadata
+                for doc in tutorials_discourse.parser.tutorials
                 if doc["categories"] in topics
             ]
 
-        total_pages = math.ceil(len(metadata) / posts_per_page)
+        total_pages = math.ceil(len(tutorials) / posts_per_page)
 
         return flask.render_template(
             "tutorials/index.html",
-            navigation=tutorials_discourse.parser.navigation,
             forum_url=tutorials_discourse.parser.api.base_url,
-            metadata=metadata,
+            tutorials=tutorials,
             page=page,
             posts_per_page=posts_per_page,
             total_pages=total_pages,

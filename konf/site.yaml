@@ -19,6 +19,16 @@ env:
       key: greenhouse_api_key
       name: canonical-com
 
+  - name: DISCOURSE_API_KEY
+    secretKeyRef:
+      key: charmhub-api-key
+      name: discourse-api
+
+  - name: DISCOURSE_API_USERNAME
+    secretKeyRef:
+      key: charmhub-api-username
+      name: discourse-api
+
 # Overrides for production
 production:
   replicas: 5
