@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block page_title %}About - Charmed Operator Framework for Kubernetes and VMs{% endblock page_title %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/186zQ7bYE-jXqNNTyKEvSzjq-yP-MiMW2zHKbgyrBrm4/edit#{% endblock meta_copydoc %}
+
+{% block meta_description %}Help DevSecOps and SREs manage complex hybrid clouds and the applications on them. Grow from config mgmt to app management and model-driven operations.{% endblock %}
+
+{% block content %}
+<section class="p-strip">
+  <div class="row">
+    <div class="col-8">
+      <h1>About the Charmed Operator Framework and Charmhub</h1>
+      <p>Juju is a Charmed Operator Framework; an open source application management and automation platform comprising 4 parts.</p>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip u-no-padding--top">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="u-sv3">Technology</h2>
+
+      {% include "about/_technology_tabs.html" %}
+    </div>
+  </div>
+</section>
+
+<section class="p-strip--blue is-dark">
+  <div class="row">
+    <div class="col-5">
+      <h2>Mission</h2>
+    </div>
+    <div class="col-6 col-start-large-7">
+      <p class="p-heading--4">Since its inception in 2009, Juju has facilitated the transition from simple configuration management to model-driven application management.</p>
+        
+      <p>Use it to deploy, <strong>integrate and operate</strong> applications and infrastructure - across any substrates (whether Kubernetes, VMs, or bare metal - on public or private clouds).</p>
+      
+      <p><em>Enterprise software operations are costly and messy. Configuration management has not solved this. Together, the open source community has the power to dramatically reduce costs and improve the working lives of DevSecOps, SREs, operations teams, and the teams who rely on them.</em> <strong>How?</strong></p>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="u-sv3">Practices</h2>
+
+      {% include "about/_practices_tabs.html" %}
+    </div>
+  </div>
+</section>
+
+<div class="u-fixed-width">
+  <hr />
+</div>
+
+<section class="p-strip">
+  <div class="row">
+    <div class="col-5">
+      <h2>Get the eBook and a t-shirt</h2>
+      <h3 class="p-heading--4">From Configuration to Application Management:</h3>
+
+      <p>The SRE’s Guide to Taking Control of Applications and Services in a Hybrid Cloud World</p>
+
+      <p>Covers such topics as:</p>
+      <ul>
+        <li>Model Driven Operations</li>
+        <li>Extending the operator pattern</li>
+      </ul>
+    </div>
+    <div class="col-4 col-start-large-7">
+      {{
+        image(
+          url="https://assets.ubuntu.com/v1/ac5fc4e3-charming-tshirt.jpg",
+          alt="",
+          height="298",
+          width="760",
+          hi_def=True,
+          loading="lazy",
+        ) | safe
+      }}
+      <h3 class="p-heading--4">Send us your details</h3>
+      
+      <form>
+        <label for="Email">Email address:</label>
+        <input disabled required type="email" value="Coming soon" />
+        
+        <p class="p-form-help-text u-sv1">
+          You'll receive an email with a link to get your t-shirt.
+        </p> 
+
+        <button type="submit" disabled class="p-button--positive u-no-margin--bottom" aria-label="Submit">Get the eBook</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script src="{{ versioned_static('js/tabs.js') }}"></script>
+<script>
+  initTabs(".js-about-tabs");
+  initEqualHeightTabContent(".js-equal-height-tabs")
+</script>
+{% endblock %}
