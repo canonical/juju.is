@@ -32,13 +32,67 @@
 	<section class="p-strip">
 		<div class="row">
 			<div class="col-12">
-				<p class="p-heading--2">When you need to...</p>
-
+				<p class="p-heading--2 u-sv3">When you need to...</p>
+				
+				<hr />
+				
 				<div class="row">
-					<div class="col-3"></div>
-					<div class="col-3"></div>
-					<div class="col-3"></div>
-					<div class="col-3"></div>
+					<div class="col-3 u-align--center">
+						{{
+							image(
+								url="https://assets.ubuntu.com/v1/740ac725-juju.is-deploy.svg",
+								alt="",
+								height="64",
+								width="64",
+								hi_def=True,
+								loading="auto"
+							) | safe
+						}}
+						<p><strong>Deploy</strong>, Integrate, & Manage applications across multiple K8s or VM environments</p>
+					</div>
+					<div class="col-3 u-align--center">
+						{{
+							image(
+								url="https://assets.ubuntu.com/v1/3a34c1ae-juju.is-build.svg",
+								alt="",
+								height="64",
+								width="64",
+								hi_def=True,
+								loading="auto"
+							) | safe
+						}}
+						<p><strong>Build</strong> complex environments frequently</p>
+					</div>
+					<div class="col-3 u-align--center">
+						{{
+							image(
+								url="https://assets.ubuntu.com/v1/8266afc3-juju.is-manage.svg",
+								alt="",
+								height="64",
+								width="64",
+								hi_def=True,
+								loading="auto"
+							) | safe
+						}}
+						<p><strong>Manage apps and services</strong> across multi-or-hybrid clouds</p>
+					</div>
+					<div class="col-3 u-align--center">
+						{{
+							image(
+								url="https://assets.ubuntu.com/v1/977ae58c-juju.is-managedaytwo.svg",
+								alt="",
+								height="64",
+								width="64",
+								hi_def=True,
+								loading="auto"
+							) | safe
+						}}
+						<p><strong>Manage Day 0 - Day 2</strong> operations at scale</p>
+					</div>
+				</div>
+
+				<div class="u-sv3">
+					<hr />
 				</div>
 
 				<p class="p-heading--2 u-align--right">...Juju helps you <strong>take control</strong></p>
@@ -48,10 +102,51 @@
 
 	<!-- WHAT IS JUJU SECTION -->
 
-	<section class="p-strip--light">
+	<section class="p-strip">
 		<div class="row">
 			<div class="col-12">
 				<h2>Juju supports</h2>
+			</div>
+		</div>
+	</section>
+
+	<section class="p-strip--light">
+		<div class="row">
+			<div class="col-12">
+				<blockquote class="p-pull-quote--large">
+					<p class="p-pull-quote__quote">Juju acts as a thin layer on top of your infrastructure that allows all your operational code to talk to each other. And because of this communication layer, a lot of the problems that conventional configuration management systems have just don’t exist anymore.</p>
+					<cite class="p-pull-quote__citation">Konstantin Boudnik, EPAM Systems</cite>
+				</blockquote>
+
+				<blockquote class="p-pull-quote--large">
+					<p class="p-pull-quote__quote">Using the modelling ethos brought by Juju allows me to quickly run big data applications in a multitude of places. Be it locally on my laptop, on bare metal or in the Cloud, Juju lets me reuse the same models and code without changing any aspects of my deployment.</p>
+					<cite class="p-pull-quote__citation">Tom Barber, Spicule LTD</cite>
+				</blockquote>
+
+				<blockquote class="p-pull-quote--large">
+					<p class="p-pull-quote__quote">Juju enables you to encapsulate each different part of your infrastructure and lets everything talk to each other. So if you have a web server that's managed by Chef and a database that's deployed by a Docker container, you can have the web server talk to the database and the relations between these two very easily.</p>
+					<cite class="p-pull-quote__citation">Merlijn Sebrechts, Ghent University</cite>
+				</blockquote>
+
+				<blockquote class="p-pull-quote--large">
+					<p class="p-pull-quote__quote">Juju seamlessly integrates with our current ATS system.</p>
+					<cite class="p-pull-quote__citation">Sara V</cite>
+				</blockquote>
+
+				<blockquote class="p-pull-quote--large">
+					<p class="p-pull-quote__quote">I like how easy Juju makes deploying services on most any cloud configuration. It also simplifies the relational setup between said services. I'm quite impressed with how simple it is to work with. I'm still in awe of how simple it was to set up MaaS and Juju.</p>
+					<cite class="p-pull-quote__citation">Abraham S</cite>
+				</blockquote>
+
+				<blockquote class="p-pull-quote--large">
+					<p class="p-pull-quote__quote">Easy but powerful cloud provisioning and configuration with one tool. Juju is available on the command line as well as with an easy to install web user interface. The ecosystem provides a large number of charms (packages defining the services and their configuration as well as runtime hooks) and can be used from testing with local LXC containers up to Amazon, OpenStack, Azure, and more.</p>
+					<cite class="p-pull-quote__citation">User in Computer & Network Security</cite>
+				</blockquote>
+
+				<blockquote class="p-pull-quote--large">
+					<p class="p-pull-quote__quote">It's so easy and powerful to implement and maintain. I implemented some private charms on my private cloud on MAAS, it works perfect.</p>
+					<cite class="p-pull-quote__citation">User in Biotechnology</cite>
+				</blockquote>
 			</div>
 		</div>
 	</section>
@@ -60,6 +155,67 @@
 		<div class="row">
 			<div class="col-12">
 				<h2>Users and contributors</h2>
+			</div>
+
+			<div class="col-12">
+				<div class="p-logo-section">
+					<div class="p-logo-section__items">
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/adac6928-ubuntu.svg" alt="Ubuntu logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/ef4f489e-Deutsche_Telekom-Logo.svg" alt="Deutsche Telekom logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/67db21e0-logo-ibm.png" alt="IBM logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/093c43ef-intel_logo.svg" alt="Intel logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/22fd6473-MicrosoftAzure_logo.svg" alt="Microsoft Azure logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/16aec8e3-cisco-logo-transparent.png" alt="Cisco logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/a78cad70-china-telecom.svg" alt="China Telecom logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/56c03384-logo-nec.png" alt="nec logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/9081f01d-hp_logo.svg" alt="Hewlett Packard logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/5d403409-2018-logo-yahoo-japan.svg" alt="Yahoo! Japan logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/4c6fb640-logo-verizon.png" alt="verizon logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/eaf98009-Bell_Blue_large_transparent.png" alt="Bell logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/890ffa71-Swissquote_logo.svg" alt="Swissquote logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/1f395c09-Panasonic-Logo.svg" alt="Panasonic logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/7bbfb1d0-Scania_logo.svg" alt="Scania logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/7c97efb0-BT_logo.svg" alt="BT logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/ee5d503f-rabobank-4.svg" alt="Rabobank logo">
+						</div>
+						<div class="p-logo-section__item">
+							<img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/ab9074df-logo-tele2.png" alt="tele2 logo">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
