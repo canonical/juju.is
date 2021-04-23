@@ -1,0 +1,15 @@
+@mixin juju-icons {
+  @include jaas-p-icon-chat;
+}
+
+@mixin jaas-p-icon-chat {
+  .p-icon--chat {
+    @extend %social-icon;
+    background-image: url("data:image/svg+xml,%3Csvg id='artwork_1' data-name='artwork 1' xml
+ns='http://www.w3.org/2000/svg' viewBox='0 0 26.967 28'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfi
+ll:%23666%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M29.802 28h-1.277a10.994 10.99
+4 0 0 1-7.294-2.752A13.04 13.04 0 0 1 16 26.33a13.163 13.163 0 1 1 10.706-5.502 11.939 11.
+939 0 0 0 2.332 6.15zm-8.327-4.276.318.302a9.722 9.722 0 0 0 5.48 2.615 13.214 13.214 0 0 
+1-1.862-5.958l-.015-.236.141-.19a11.879 11.879 0 1 0-4.459 3.655z' transform='translate(-2.835)'/%3E%3Ccircle class='cls-1' cx='13.165' cy='13.125' r='1.625'/%3E%3Ccircle class='cls-1' cx='7.165' cy='13.125' r='1.625'/%3E%3Ccircle class='cls-1' cx='19.165' cy='13.125' r='1.625'/%3E%3C/svg%3E");
+  }
+}
