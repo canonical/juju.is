@@ -4,6 +4,11 @@
 {% block meta_copydoc %}https://docs.google.com/document/d/147spDkSVH0YaEGKZ4tDi7i28zzhIcacF1hBOMHvxaC0/edit{% endblock meta_copydoc %}
 {% block page_description %}Juju enables model-driven operators for applications and infrastructure, from bare metal to cloud, with or without Kubernetes.{% endblock %}
 
+{% block head_extra %}
+<script src="{{ versioned_static('js/build/flickity/flickity.pkgd.min.js') }}"></script>
+<link rel="stylesheet" href="{{ versioned_static('css/build/flickity/flickity.min.css') }}">
+{% endblock %}
+
 {% block content %}
 <main id="main-content">
 	<section class="p-strip is-shallow u-no-padding--bottom">
@@ -55,4 +60,9 @@
 
 	{% include 'partials/_contributors.html' %}
 </main>
+
+<script src="{{ versioned_static('js/carousels.js') }}"></script>
+<script>
+  initCarousel('#testimonials', '#testimonials-next', '#testimonials-previous');
+</script>
 {% endblock %}

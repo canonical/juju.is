@@ -35,6 +35,8 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-K9KCMZ');</script>
   <!-- End Google Tag Manager -->
+
+  {% block head_extra %}{% endblock %}
 </head>
 
 <body class="{% block page_class %}{% endblock %}">
