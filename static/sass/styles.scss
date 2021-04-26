@@ -13,6 +13,7 @@ $color-accent: #e95420;
 
 @import "patterns_docs";
 @import "hljs";
+@import "flickity/dist/flickity";
 
 @include juju-docs;
 // Local patterns

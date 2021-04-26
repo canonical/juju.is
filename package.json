@@ -9,7 +9,7 @@
     "build-js": "yarn run build-global-nav && yarn run build-cookie-policy && yarn run build-flickity",
     "build-global-nav": "mkdir -p static/js/build/global-nav && cp node_modules/@canonical/global-nav/dist/global-nav.js static/js/build/global-nav",
     "build-cookie-policy": "mkdir -p static/js/build/cookie-policy && cp node_modules/@canonical/cookie-policy/build/js/cookie-policy.js static/js/build/cookie-policy",
-    "build-flickity": "mkdir -p static/js/build/flickity && cp node_modules/flickity/dist/flickity.pkgd.min.js static/js/build/flickity && mkdir -p static/css/build/flickity && cp node_modules/flickity/dist/flickity.min.css static/css/build/flickity",
+    "build-flickity": "mkdir -p static/js/build/flickity && cp node_modules/flickity/dist/flickity.pkgd.min.js static/js/build/flickity",
     "format-python": "black --line-length 79 webapp",
     "lint-python": "flake8 webapp tests && black --check --line-length 79 webapp tests",
     "lint-scss": "sass-lint static/**/*.scss --verbose --no-exit",
