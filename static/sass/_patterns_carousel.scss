@@ -3,6 +3,7 @@
     position: relative;
 
     .p-carousel__cell {
+      // height: 100%;
       width: 100%;
     }
 
@@ -43,7 +44,7 @@
     }
 
     // the carousels currently use https://github.com/metafizzy/flickity
-    // so style the dots it gives us out of the box
+    // so style the elements it gives us out of the box
     .flickity-page-dots {
       bottom: 0px;
 
@@ -62,6 +63,11 @@
           background: $color-ubuntu-orange;
         }
       }
+    }
+
+    .flickity-slider {
+      display: flex;
+      align-items: center;
     }
   }
 }
