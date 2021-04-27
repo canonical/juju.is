@@ -18,14 +18,12 @@
 				</div>
 				
 				<div class="row">
-					<div class="col-3">
+					<div class="col-5 p-button-grid">
 						<a href="https://juju.is/about" class="p-button u-align-text--left">Why use the Charmed Operator Framework?</a>
-					</div>
-					<div class="col-3">
+
 						<a href="https://juju.is/docs/sdk" class="p-button u-align-text--left">How do I build a Charmed Operator?</a>
-					</div>
-					<div class="col-6">
-						<a href="#" class="p-button--positive u-full-width u-align-text--left">Install the Operator Lifecycle Manager</a>
+
+						<a href="#" class="p-button--positive u-full-width">Install the Operator Lifecycle Manager</a>
 					</div>
 				</div>
 			</div>
@@ -59,6 +57,7 @@
 <script src="{{ versioned_static('js/build/flickity/flickity.pkgd.min.js') }}"></script>
 <script src="{{ versioned_static('js/carousels.js') }}"></script>
 <script>
+	initCarousel('#supports', '#supports-next', '#supports-previous');
   initCarousel('#testimonials', '#testimonials-next', '#testimonials-previous');
 </script>
 {% endblock %}
