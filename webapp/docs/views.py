@@ -39,7 +39,7 @@ def init_docs(app):
                 get_topics_query_id=2,
             ),
             index_topic_id=discourse_index_id,
-            url_prefix="/docs",
+            url_prefix="/docs/olm",
             tutorials_index_topic_id=tutorials_index_topic_id,
             tutorials_url_prefix=tutorials_url_prefix,
         ),
