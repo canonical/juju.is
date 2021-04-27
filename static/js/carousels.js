@@ -2,6 +2,7 @@ function initCarousel(carouselSelector, nextCTAselector, previousCTAselector) {
   var nextCTA = document.querySelector(nextCTAselector);
   var previousCTA = document.querySelector(previousCTAselector);
   var carousel = new Flickity(carouselSelector, {
+    imagesLoaded: true,
     prevNextButtons: false,
     wrapAround: true,
   });
