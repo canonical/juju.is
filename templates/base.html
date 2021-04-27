@@ -77,9 +77,11 @@
         // ask the observer to observe the position of the observerEl - i.e. if it's on/off screen
         observer.observe(observerEl);
       } else {
-        throw new Error(
-          `${selector ? selector : "#navigation"} is not a valid element!`
-        );
+        if (selector) {
+          console.error(selector + " is not a valid element!");
+        } else {
+          console.error("#navigation is not a valid element!");
+        }
       }
     })
   </script>
