@@ -25,7 +25,7 @@ def init_docs(app):
     )
     main_docs.init_app(app)
 
-    discourse_index_id = 4302
+    discourse_index_id = 1087
     tutorials_index_topic_id = 2628
     tutorials_url_prefix = "/tutorials"
 
