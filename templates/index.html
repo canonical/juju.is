@@ -6,58 +6,58 @@
 
 {% block content %}
 <main id="main-content">
-	<section class="p-strip is-shallow u-no-padding--bottom">
-		<div class="row">
-			<div class="col-7">
-				<h1>Take control of Kubernetes</h1>
+  <section class="p-strip is-shallow u-no-padding--bottom">
+    <div class="row">
+      <div class="col-7">
+        <h1>Take control of Kubernetes</h1>
 
-				<div class="row">
-					<div class="col-6">
-						<p>Juju is a Charmed Operator Framework, composed of a Charmed Operator Lifecycle Manager and the Charmed Operator SDK. Deploy, <strong>integrate</strong>, and manage Kubernetes, container and VM-native applications seamlessly across hybrid clouds. Juju drives Day 0 through Day 2 operations in your complex environment.</p>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-5 p-button-grid">
-						<a href="/about" class="p-button u-align-text--left">Why use the Charmed Operator Framework?</a>
+        <div class="row">
+          <div class="col-6">
+            <p>Juju is a Charmed Operator Framework, composed of a Charmed Operator Lifecycle Manager and the Charmed Operator SDK. Deploy, <strong>integrate</strong>, and manage Kubernetes, container and VM-native applications seamlessly across hybrid clouds. Juju drives Day 0 through Day 2 operations in your complex environment.</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-5 p-button-grid">
+            <a href="/about" class="p-button u-align-text--left">Why use the Charmed Operator Framework?</a>
 
-						<a href="/docs/sdk" class="p-button u-align-text--left">How do I build a Charmed Operator?</a>
+            <a href="/docs/sdk" class="p-button u-align-text--left">How do I build a Charmed Operator?</a>
 
-						<a href="/docs/installing" class="p-button--positive u-full-width">Install the Operator Lifecycle Manager</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-5">
-				{{
-					image(
-						url="https://assets.ubuntu.com/v1/2c7e3fab-juju-header-illustration.svg",
-						alt="",
-						height="544",
-						width="600",
-						hi_def=True,
-						loading="auto",
-						attrs={"class": "u-hide--small"}
-					) | safe
-				}}
-			</div>
-		</div>
-	</section>
+            <a href="/docs/installing" class="p-button--positive u-full-width">Install the Operator Lifecycle Manager</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-5">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/2c7e3fab-juju-header-illustration.svg",
+            alt="",
+            height="544",
+            width="600",
+            hi_def=True,
+            loading="auto",
+            attrs={"class": "u-hide--small"}
+          ) | safe
+        }}
+      </div>
+    </div>
+  </section>
 
-	{% include 'partials/_take-control.html' %}
+  {% include 'partials/_take-control.html' %}
 
-	<!-- WHAT IS JUJU SECTION -->
+  <!-- WHAT IS JUJU SECTION -->
 
-	{% include 'partials/_juju-supports.html' %}
+  {% include 'partials/_juju-supports.html' %}
 
-	{% include 'partials/_testimonials.html' %}
+  {% include 'partials/_testimonials.html' %}
 
-	{% include 'partials/_contributors.html' %}
+  {% include 'partials/_contributors.html' %}
 </main>
 
 <script src="{{ versioned_static('js/build/flickity/flickity.pkgd.min.js') }}"></script>
 <script src="{{ versioned_static('js/carousels.js') }}"></script>
 <script>
-	initCarousel('#supports', '#supports-next', '#supports-previous');
+  initCarousel('#supports', '#supports-next', '#supports-previous');
   initCarousel('#testimonials', '#testimonials-next', '#testimonials-previous');
 </script>
 {% endblock %}
