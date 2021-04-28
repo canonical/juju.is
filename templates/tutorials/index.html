@@ -5,142 +5,67 @@
 
 {% block content %}
 
-<section class="p-strip--suru-topped is-shallow u-no-padding--bottom">
-  <div class="u-fixed-width">
-    <h1 class="p-heading--two">Charmed Operator Framework Tutorials</h1>
-    <p>These tutorials cover ground from the Charmed Operator Lifecycle Manager to creating a Charmed Operator with the SDK, packaging it as a Charm, publishing it to Charmhub, and to using charmed products such as Kubernetes, Cassandra, Kafka, and much much more. </p>
-    <p>
-      <a href="/tutorials/how-to-write-a-tutorial" class="p-button--positive">Contribute a Tutorial</a>
-    </p>
+<section class="p-strip--light is-shallow u-no-padding--bottom">
+  <div class="row">
+    <div class="col-6">
+      <h1>Charmed Operator Framework Tutorials</h1>
+    </div>
+    <div class="col-6">
+      <p>These tutorials cover ground from the Charmed Operator Lifecycle Manager to creating a Charmed Operator with the SDK, packaging it as a Charm, publishing it to Charmhub, and to using charmed products such as Kubernetes, Cassandra, Kafka, and much much more. </p>
+      <p>
+        <a href="/tutorials/how-to-write-a-tutorial" class="p-button--positive">Contribute a Tutorial</a>
+      </p>
+    </div>
   </div>
 </section>
 
-<section class="p-strip is-shallow">
-  <div class="row">
-    <div class="col-4">
-      <div class="p-form__group">
-        <label for="tutorials-topic">Topic:</label>
-        <select name="tutorials-topic" id="tutorials-topic" class="u-no-margin--bottom">
-          <option value="">Any</option>
-          <option value="building-charmed-operators">Building Charmed Operators</option>
-          <option value="charmed-kubernetes">Charmed Kubernetes</option>
-          <option value="deploy-applications">Deploy Applications</option>
-          <option value="get-started">Get Started</option>
-          <option value="kubeflow">Kubeflow</option>
-          <option value="meta">Meta</option>
-          <option value="openstack">OpenStack</option>
-          <option value="osm">OSM</option>
-          <option value="using-charmhub">Using Chamrhub</option>
-        </select>
+<section class="p-strip">
+  <div class="l-fluid-breakout">
+    <div class="l-fluid-breakout__aside">
+      <div class="p-side-navigation" id="drawer">
+        <a href="#drawer" class="p-side-navigation__toggle js-drawer-toggle" aria-controls="drawer">
+          Filters
+        </a>
+
+        <div class="p-side-navigation__overlay js-drawer-toggle" aria-controls="drawer"></div>
+        <nav class="p-side-navigation__drawer" aria-label="Filters drawer">
+          <div class="p-side-navigation__drawer-header">
+            <a href="#" class="p-side-navigation__toggle--in-drawer js-drawer-toggle" data-js="filter-button-mobile-close" aria-controls="drawer">Hide filters</a>
+          </div>
+          <h3 class="p-heading--5" style="color: #111;">
+            Topic
+          </h3>
+          <form>
+            <ul class="p-side-navigation__list">
+              {% for topic in topics %}
+                <li class="p-side-navigation__item">
+                  <label class="p-checkbox">
+                    <input class="p-checkbox__input" aria-labelledby="{{ topic.slug }}-filter" type="checkbox" value="{{ topic.slug }}" data-js="filter">
+                    <span class="p-checkbox__label" id="{{ topic.slug }}-filter">{{ topic.name }}</span>
+                  </label>
+                </li>
+              {% endfor %}
+            </ul>
+          </form>
+        </nav>
       </div>
     </div>
-</section>
-
-<section>
-  <div class="row u-equal-height">
-    {% for item in tutorials %}
-      {% if loop.index <= posts_per_page * page and loop.index >= posts_per_page * page - posts_per_page + 1 %}
-        <div class="col-4 col-medium-3 p-card">
+    <div class="l-fluid-breakout__main">
+      {% for item in tutorials %}
+        <div class="l-fluid-breakout__item p-card--tutorial" data-filter={{ item.categories.slug }} data-js="item">
+          <header class="p-card__header">
+            <p class="p-muted-heading u-no-margin u-no-padding">{{ item.categories.name }}</p>
+          </header>
           <div class="p-card__content">
-            <h3 class="p-heading--four">
-              <a class="inline-onebox" href="{{ item.link }}">
-                {{ item.title | safe }}
-              </a>
+            <h3 class="p-heading--4 u-no-margin--top u-no-margin--bottom">
+              <a class="p-link--soft" href="/tutorials/how-to-ubuntu-core-recovery-mode">{{ item.title | safe | truncate(50, true) }}</a>
             </h3>
-            <p>{{ item.summary | safe }}</p>
+            <p><small>{{ item.summary | safe | truncate(85, true)}}</small></p>
           </div>
-          <p>Difficulty: <span class="p-tutorials-meter p-tutorials-meter--{{ item.difficulty }}">{{ item.difficulty }} out of 5</span></p>
         </div>
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
-</section>
-
-<section>
-  {% if total_pages > 1 %}
-  <div class="u-fixed-width">
-    <ol class="p-pagination u-align--center">
-      {% set current_page = page %}
-      {% if current_page > 1 %}
-        <li class="p-pagination__item">
-          <a class="p-pagination__link--previous" href="/tutorials?page={{ current_page - 1 }}{% if topic %}&topic={{ topic }}{% endif %}" title="Previous page">
-            <i class="p-icon--contextual-menu">Previous page</i>
-          </a>
-        </li>
-      {% else %}
-        <li class="p-pagination__item">
-          <span class="p-pagination__link--previous is-disabled"><i class="p-icon--contextual-menu">Previous page</i></span>
-        </li>
-      {% endif %}
-
-      {# always show 5 pages in pagination #}
-      {% if current_page > 4 and current_page == total_pages %}
-        <li class="p-pagination__item">
-          <a class="p-pagination__link" href="/tutorials?page={{ current_page - 4 }}{% if topic %}&topic={{ topic }}{% endif %}">{{ current_page - 4 }}</a>
-        </li>
-      {% endif %}
-
-      {% if current_page > 3 and current_page >= total_pages - 1 %}
-        <li class="p-pagination__item">
-          <a class="p-pagination__link" href="/tutorials?page={{ current_page - 3 }}{% if topic %}&topic={{ topic }}{% endif %}">{{ current_page - 3 }}</a>
-        </li>
-      {% endif %}
-
-      {% if current_page > 2 %}
-        <li class="p-pagination__item">
-          <a class="p-pagination__link" href="/tutorials?page={{ current_page - 2 }}{% if topic %}&topic={{ topic }}{% endif %}">{{ current_page - 2 }}</a>
-        </li>
-      {% endif %}
-
-      {% if current_page > 1 %}
-        <li class="p-pagination__item">
-          <a class="p-pagination__link" href="/tutorials?page={{ current_page - 1 }}{% if topic %}&topic={{ topic }}{% endif %}">{{ current_page - 1 }}</a>
-        </li>
-      {% endif %}
-
-      <!-- current page -->
-      <li class="p-pagination__item">
-        <a class="p-pagination__link is-active" href="/tutorials?page={{ current_page }}{% if topic %}&topic={{ topic }}{% endif %}">{{ current_page }}</a>
-      </li>
-
-      {% if current_page < total_pages %}
-        <li class="p-pagination__item">
-          <a class="p-pagination__link" href="/tutorials?page={{ current_page + 1 }}{% if topic %}&topic={{ topic }}{% endif %}">{{ current_page + 1 }}</a>
-        </li>
-      {% endif %}
-
-      {% if current_page < total_pages - 1 %}
-        <li class="p-pagination__item">
-          <a class="p-pagination__link" href="/tutorials?page={{ current_page + 2 }}{% if topic %}&topic={{ topic }}{% endif %}">{{ current_page + 2 }}</a>
-        </li>
-      {% endif %}
-
-      {% if current_page < total_pages - 2 and current_page <= 2 %}
-        <li class="p-pagination__item">
-          <a class="p-pagination__link" href="/tutorials?page={{ current_page + 3 }}{% if topic %}&topic={{ topic }}{% endif %}">{{ current_page + 3 }}</a>
-        </li>
-      {% endif %}
-
-      {% if current_page < total_pages - 3 and current_page == 1 %}
-        <li class="p-pagination__item">
-          <a class="p-pagination__link" href="/tutorials?page={{ current_page + 4 }}{% if topic %}&topic={{ topic }}{% endif %}">{{ current_page + 4 }}</a>
-        </li>
-      {% endif %}
-
-      {% if current_page != total_pages %}
-        <li class="p-pagination__item">
-          <a class="p-pagination__link--next" href="/tutorials?page={{ current_page + 1 }}{% if topic %}&topic={{ topic }}{% endif %}" title="Next page">
-            <i class="p-icon--contextual-menu">Next page</i>
-          </a>
-        </li>
-      {% else %}
-        <li class="p-pagination__item">
-          <span class="p-pagination__link--next is-disabled"><i class="p-icon--contextual-menu">Next page</i></span>
-        </li>
-      {% endif %}
-    </ol>
-  </div>
-  {% endif %}
 </section>
 
 <script src="{{ versioned_static('js/tutorials-list.js') }}"></script>
