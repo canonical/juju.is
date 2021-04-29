@@ -29,6 +29,9 @@ function setStage(scrollPos) {
       animation.setAttribute("data-half", "false");
     }
     animation.setAttribute("data-stage", stage);
+  } else {
+    animation.setAttribute("data-half", "false");
+    animation.setAttribute("data-stage", "0");
   }
 }
 
