@@ -1,4 +1,3 @@
-
 let lastKnownScrollPosition = 0;
 let ticking = false;
 let stage = 0;
