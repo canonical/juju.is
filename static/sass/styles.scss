@@ -13,6 +13,7 @@ $color-accent: #e95420;
 
 @import "patterns_docs";
 @import "hljs";
+@import "flickity/dist/flickity";
 
 @include juju-docs;
 // Local patterns
@@ -40,6 +41,18 @@ $color-accent: #e95420;
 @import "patterns_icons";
 @include juju-icons;
 
+@import "patterns_carousel";
+@include juju-carousel;
+
+@import "patterns_what-is-juju";
+@include local-what-is-juju;
+
+@import "patterns_heading-highlight";
+@include local-heading-highlight;
+
+@import "patterns_scroller";
+@include local-scroller;
+
 .p-navigation__logo {
   margin: 0.1rem 1rem 0 1.5rem;
 }
@@ -53,6 +66,12 @@ $color-accent: #e95420;
 
 .u-hide--x-small {
   @media only screen and (max-width: $breakpoint-x-small) {
+    display: none;
+  }
+}
+
+.u-hide--x-large {
+  @media only screen and (min-width: $grid-max-width) {
     display: none;
   }
 }
@@ -143,5 +162,29 @@ h3 {
   &:hover,
   &:active:hover {
     background-color: rgba($color-mid-x-light, 0.2);
+  }
+}
+
+.p-button-grid {
+  @media screen and (min-width: $breakpoint-x-small) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+
+    [class*="p-button"] {
+      padding: 0.75rem;
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
   }
 }
