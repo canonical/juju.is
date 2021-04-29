@@ -7,10 +7,10 @@ const title = document.querySelector('.p-feature__title');
 function setStage(scrollPos) {
   const cache = stage;
   const vh = window.innerHeight;
-  const stripPosition = animation.getBoundingClientRect();
-  var bodyRect = document.body.getBoundingClientRect(),
-    elemRect = animation.getBoundingClientRect(),
-    offset   = elemRect.top - bodyRect.top;
+  const bodyRect = document.body.getBoundingClientRect();
+  const elemRect = animation.getBoundingClientRect();
+  const offset = elemRect.top - bodyRect.top;
+
   if (scrollPos >= offset) {
     scrollPos = scrollPos - offset;
     stage = Math.floor(scrollPos / vh);
