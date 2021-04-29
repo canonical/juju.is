@@ -1,15 +1,15 @@
-let lastKnownScrollPosition = 0;
-let ticking = false;
-let stage = 0;
-const animation = document.querySelector('.p-feature');
-const title = document.querySelector('.p-feature__title');
+var lastKnownScrollPosition = 0;
+var ticking = false;
+var stage = 0;
+var animation = document.querySelector('.p-feature');
+var title = document.querySelector('.p-feature__title');
 
 function setStage(scrollPos) {
-  const cache = stage;
-  const vh = window.innerHeight;
-  const bodyRect = document.body.getBoundingClientRect();
-  const elemRect = animation.getBoundingClientRect();
-  const offset = elemRect.top - bodyRect.top;
+  var cache = stage;
+  var vh = window.innerHeight;
+  var bodyRect = document.body.getBoundingClientRect();
+  var elemRect = animation.getBoundingClientRect();
+  var offset = elemRect.top - bodyRect.top;
 
   if (scrollPos >= offset) {
     scrollPos = scrollPos - offset;
