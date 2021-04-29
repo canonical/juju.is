@@ -154,7 +154,7 @@
       }
       &[data-stage="5"][data-half="true"] {
         .p-feature__illustration--5 {
-          transition-duration: .1s;
+          transition-duration: 1s;
           opacity: 0;
           transform: translateY(-20px);
         }
