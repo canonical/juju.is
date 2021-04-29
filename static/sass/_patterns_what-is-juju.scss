@@ -154,7 +154,7 @@
       }
       &[data-stage="5"][data-half="true"] {
         .p-feature__illustration--5 {
-          transition-duration: 1s;
+          transition-duration: .1s;
           opacity: 0;
           transform: translateY(-20px);
         }
@@ -210,7 +210,7 @@
 
   [class^="p-feature__multi"] {
     position: absolute;
-    transition: transform .2s;
+    transition: transform .5s;
     transform: scale(.75) translate(0, 0);
   }
 
