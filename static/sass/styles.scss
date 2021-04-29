@@ -44,6 +44,15 @@ $color-accent: #e95420;
 @import "patterns_carousel";
 @include juju-carousel;
 
+@import "patterns_what-is-juju";
+@include local-what-is-juju;
+
+@import "patterns_heading-highlight";
+@include local-heading-highlight;
+
+@import "patterns_scroller";
+@include local-scroller;
+
 .p-navigation__logo {
   margin: 0.1rem 1rem 0 1.5rem;
 }
@@ -57,6 +66,12 @@ $color-accent: #e95420;
 
 .u-hide--x-small {
   @media only screen and (max-width: $breakpoint-x-small) {
+    display: none;
+  }
+}
+
+.u-hide--x-large {
+  @media only screen and (min-width: $grid-max-width) {
     display: none;
   }
 }
