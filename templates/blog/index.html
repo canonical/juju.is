@@ -43,7 +43,8 @@
   {% endif %}
 
   <div class="row u-clearfix">
-    {% for article in articles %}
+    {% set all_articles = featured_articles + articles %}
+    {% for article in all_articles %}
       {% if current_page == 1 and loop.index == 3 %}
         <div class="col-4 col-medium-3">
           {% include 'blog/_newsletter-signup.html' %}
