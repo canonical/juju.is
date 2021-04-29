@@ -1,0 +1,273 @@
+@mixin local-scroller {
+  $color-accent: #009EE9;
+
+  %animate {
+    animation-timing-function: ease-in-out;
+    will-change: transform;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+  }
+
+  .p-scroller {
+    background: rgba(0, 54, 92, .85);
+    color: $color-x-light;
+    min-height: 665px;
+
+    .p-scroller__label {
+      position: absolute;
+      left: calc(50% - 38ch);
+      top: 13rem;
+      background: transparent;
+
+      @media only screen and (min-width: 1681px) {
+        left: calc(50% - 34ch);
+      }
+    }
+
+    .p-scroller__user {
+      font-size: 32px;
+      color: $color-accent;
+      margin-right: 1rem;
+      border-right: 10px solid $color-x-light;
+      padding: .5rem 1rem;
+    }
+
+    .p-scroller__cli {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .p-scroller__prefix {
+      color: $color-x-light;
+    }
+
+    .p-scroller__commands ul {
+      @extend %animate;
+      transform: translateY(72px);
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        @extend %animate;
+        line-height: 1.5;
+        font-size: 32px;
+
+        &:nth-of-type(1) {
+          transform: scale(.55) rotateX(40deg);
+          opacity: .2;
+          transform-origin: 0 100%;
+        }
+        &:nth-of-type(2) {
+          transform: scale(.6) rotateX(30deg);
+          opacity: .4;
+          transform-origin: 0 90%;
+        }
+        &:nth-of-type(3) {
+          transform: scale(.7) rotateX(20deg);
+          opacity: .6;
+          transform-origin: 0 80%;
+        }
+        &:nth-of-type(4) {
+          transform: scale(.85) rotateX(10deg);
+          opacity: .8;
+          transform-origin: 0 70%;
+        }
+        &:nth-of-type(5) {
+          transform: scale(1) rotateX(0deg);
+          opacity: 1;
+          transform-origin: 0 60%;
+        }
+        &:nth-of-type(6) {
+          transform: scale(.85) rotateX(-10deg);
+          opacity: .8;
+          transform-origin: 0 50%;
+        }
+        &:nth-of-type(7) {
+          transform: scale(.7)  rotateX(-20deg);
+          opacity: .6;
+          transform-origin: 0 40%;
+        }
+        &:nth-of-type(8) {
+          transform: scale(.6) rotateX(-30deg);
+          opacity: .4;
+          transform-origin: 0 30%;
+        }
+        &:nth-of-type(9) {
+          transform: scale(.55) rotateX(-40deg);
+          opacity: .2;
+          transform-origin: 0 20%;
+        }
+        &:nth-of-type(10),
+        &:nth-of-type(11),
+        &:nth-of-type(12),
+        &:nth-of-type(13),
+        &:nth-of-type(14),
+        &:nth-of-type(15) {
+          transform: scale(0);
+          opacity: 0;
+          transform-origin: 0 0%;
+        }
+      }
+    }
+
+    @keyframes command1 {
+      33% {
+        transform: scale(.55) rotateX(40deg);
+        opacity: 0;
+        transform-origin: 0 100%;
+      }
+      100% {
+        transform: scale(.55) rotateX(40deg);
+        opacity: 0;
+        transform-origin: 0 100%;
+      }
+    }
+    @keyframes command2 {
+      66% {
+        transform: scale(.55) rotateX(40deg);
+        opacity: 0;
+        transform-origin: 0 100%;
+      }
+      100% {
+        transform: scale(.55) rotateX(40deg);
+        opacity: 0;
+        transform-origin: 0 100%;
+      }
+    }
+    @keyframes command3 {
+      100% {
+        transform: scale(.55) rotateX(40deg);
+        opacity: 0;
+        transform-origin: 0 100%;
+      }
+    }
+    @keyframes command4 {
+      100% {
+        transform: scale(.55) rotateX(40deg);
+        opacity: .2;
+        transform-origin: 0 100%;
+      }
+    }
+    @keyframes command5 {
+      100% {
+        transform: scale(.6) rotateX(30deg);
+        opacity: .4;
+        transform-origin: 0 90%;
+      }
+    }
+    @keyframes command6 {
+      50% {
+        transform: scale(1) rotateX(0deg);
+        opacity: 1;
+        transform-origin: 0 60%;
+      }
+      100% {
+        transform: scale(.7) rotateX(-20deg);
+        opacity: .6;
+        transform-origin: 0 80%;
+      }
+    }
+    @keyframes command7 {
+      66% {
+        transform: scale(1) rotateX(0deg);
+        opacity: 1;
+        transform-origin: 0 60%;
+      }
+      100% {
+        transform: scale(.85) rotateX(10deg);
+        opacity: .8;
+        transform-origin: 0 70%;
+      }
+    }
+    @keyframes command8 {
+      100% {
+        transform: scale(1) rotateX(0deg);
+        opacity: 1;
+        transform-origin: 0 60%;
+      }
+    }
+    @keyframes command9 {
+      100% {
+        transform: scale(.85) rotateX(-10deg);
+        opacity: .8;
+        transform-origin: 0 50%;
+      }
+    }
+    @keyframes command10 {
+      100% {
+        transform: scale(.7) rotateX(-20deg);
+        opacity: .6;
+        transform-origin: 0 40%;
+      }
+    }
+    @keyframes command11 {
+      100% {
+        transform: scale(.6) rotateX(-30deg);
+        opacity: .4;
+        transform-origin: 0 30%;
+      }
+    }
+    @keyframes command12 {
+      100% {
+        transform: scale(.55) rotateX(-40deg);
+        opacity: .2;
+        transform-origin: 0 20%;
+      }
+    }
+    @keyframes scroll {
+      0% {
+        transform: translateY(72px);
+      }
+      100% {
+        transform: translateY(-72px);
+      }
+    }
+
+    .p-scroller__cli.is-playing .p-scroller__commands ul {
+      animation-name: scroll;
+
+      li {
+        &:nth-of-type(1) {
+          animation-name: command1;
+        }
+        &:nth-of-type(2) {
+          animation-name: command2;
+        }
+        &:nth-of-type(3) {
+          animation-name: command3;
+        }
+        &:nth-of-type(4) {
+          animation-name: command4;
+        }
+        &:nth-of-type(5) {
+          animation-name: command5;
+        }
+        &:nth-of-type(6) {
+          animation-name: command6;
+        }
+        &:nth-of-type(7) {
+          animation-name: command7;
+        }
+        &:nth-of-type(8) {
+          animation-name: command8;
+        }
+        &:nth-of-type(9) {
+          animation-name: command9;
+        }
+        &:nth-of-type(10) {
+          animation-name: command10;
+        }
+        &:nth-of-type(11) {
+          animation-name: command11;
+        }
+        &:nth-of-type(12) {
+          animation-name: command12;
+        }
+      }
+    }
+  }
+}

@@ -16,7 +16,7 @@
             <p>Juju is a Charmed Operator Framework, composed of a Charmed Operator Lifecycle Manager and the Charmed Operator SDK. Deploy, <strong>integrate</strong>, and manage Kubernetes, container and VM-native applications seamlessly across hybrid clouds. Juju drives Day 0 through Day 2 operations in your complex environment.</p>
           </div>
         </div>
-        
+
         <div class="row">
           <div class="col-5 p-button-grid">
             <a href="/about" class="p-button u-align-text--left">Why use the Charmed Operator Framework?</a>
@@ -45,7 +45,7 @@
 
   {% include 'partials/_take-control.html' %}
 
-  <!-- WHAT IS JUJU SECTION -->
+  {% include 'partials/_what-is-juju.html' %}
 
   {% include 'partials/_juju-supports.html' %}
 
@@ -56,6 +56,7 @@
 
 <script src="{{ versioned_static('js/build/flickity/flickity.pkgd.min.js') }}"></script>
 <script src="{{ versioned_static('js/carousels.js') }}"></script>
+<script src="{{ versioned_static('js/what-is-juju.js') }}"></script>
 <script>
   initCarousel('#supports', '#supports-next', '#supports-previous');
   initCarousel('#testimonials', '#testimonials-next', '#testimonials-previous');

@@ -1,0 +1,28 @@
+@mixin local-heading-highlight {
+  $color-accent: #009EE9;
+
+  .p-heading-highlight {
+    padding-left: 1rem;
+    position: relative;
+
+    .p-heading-highlight__item.p-heading--two {
+      margin-bottom: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+
+    .p-heading-highlight__item::before {
+      content: "";
+      width: 2px;
+      height: 3rem;
+      background-color: $color-accent;
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+    }
+
+    p.p-heading-highlight__item:before {
+      top: -1.2rem;
+    }
+  }
+}
