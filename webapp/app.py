@@ -1,7 +1,6 @@
 import datetime
 import os
 
-import flask
 import talisker.requests
 from canonicalwebteam.flask_base.app import FlaskBase
 from canonicalwebteam.templatefinder import TemplateFinder
