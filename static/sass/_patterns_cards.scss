@@ -1,5 +1,13 @@
 @mixin juju-cards {
   @include juju-card-resource;
+  @include local-blog-card;
+}
+
+@mixin local-blog-card {
+  .p-blog-card {
+    @extend %p-card--highlighted;
+    border-top: 3px solid $color-brand;
+  }
 }
 
 @mixin juju-card-resource {

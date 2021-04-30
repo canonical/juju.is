@@ -8,22 +8,7 @@
 
 {% block content %}
 
-<section id="main-content" class="p-strip--image is-shallow snapcraft-banner-background">
-  <div class="row">
-    <div class="col-10">
-      <h2 class="u-no-margin--bottom">Blog</h2>
-    </div>
-  </div>
-</section>
-
-<section class="p-strip is-shallow">
-  {% if newsletter_subscribed %}
-    <div class="row">
-      <div class="p-notification--positive">
-        <div class="p-notification__response"><b>Success:</b> Thanks for subscribing!</div>
-      </div>
-    </div>
-  {% endif %}
+<section class="p-strip">
   {% if categories %}
     <div class="row u-align--right">
       <form class="p-form p-form--inline" data-js="filterForm" method="get">
@@ -43,15 +28,14 @@
   {% endif %}
 
   <div class="row u-clearfix">
-    {% set all_articles = featured_articles + articles %}
-    {% for article in all_articles %}
-      {% if current_page == 1 and loop.index == 3 %}
-        <div class="col-4 col-medium-3">
-          {% include 'blog/_newsletter-signup.html' %}
-        </div>
-      {% else %}
-        {% include 'blog/_blog-card.html' %}
-      {% endif %}
+    {% for article in featured_articles %}
+      {% include 'blog/partials/_blog-card_featured.html' %}
+    {% endfor %}
+  </div>
+
+  <div class="row u-clearfix">
+    {% for article in articles %}
+      {% include 'blog/partials/_blog-card.html' %}
     {% endfor %}
   </div>
 
