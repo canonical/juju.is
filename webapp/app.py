@@ -49,12 +49,6 @@ def get_in_touch():
     return render_template("partials/_get-in-touch.html")
 
 
-@app.route("/discourse-top.json")
-def top():
-    top = session.get('https://discourse.charmhub.io/top.json')
-    return flask.jsonify(top.json())
-
-
 template_finder_view = TemplateFinder.as_view("template_finder")
 app.add_url_rule("/", view_func=template_finder_view)
 app.add_url_rule("/<path:subpath>", view_func=template_finder_view)

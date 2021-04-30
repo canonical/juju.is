@@ -10,12 +10,19 @@
 
 <section class="p-strip">
   <div class="row u-clearfix">
-    {% for article in featured_articles %}
-      {% include 'blog/partials/_blog-card_featured.html' %}
+    {% set all_articles = featured_articles + articles %}
+    {% for article in all_articles %}
+      {% if loop.index <= 1 %}
+        {% include 'blog/partials/_blog-card_featured.html' %}
+      {% endif %}
     {% endfor %}
     <div class="col-4">
-      <ul class="p-list--divided js-comunity-top-posts">
-        <i class="p-icon--spinner u-animation--spin"></i>
+      <ul class="p-list--divided">
+      {% for article in all_articles %}
+        {% if loop.index > 1 and loop.index < 6 %}
+          {% include 'blog/partials/_blog-card_aside.html' %}
+        {% endif %}
+      {% endfor %}
       </ul>
       <p>
         <a href="https://discourse.charmhub.io/" class="p-button--positive">
@@ -27,7 +34,9 @@
 
   <div class="row u-clearfix">
     {% for article in articles %}
-      {% include 'blog/partials/_blog-card.html' %}
+      {% if loop.index > 6 %}
+        {% include 'blog/partials/_blog-card.html' %}
+      {% endif %}
     {% endfor %}
   </div>
 
@@ -114,7 +123,4 @@
     </ol>
   </div>
 </section>
-
-<script src="/static/js/discourse-topics.js"></script>
-
 {% endblock %}
