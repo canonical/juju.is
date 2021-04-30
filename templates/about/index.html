@@ -58,7 +58,7 @@
 <section class="p-strip">
   <div class="row">
     <div class="col-5">
-      <h2>Get the eBook and a t-shirt</h2>
+      <h2>Get the eBook and a chance to win a t-shirt</h2>
       <h3 class="p-heading--4">From Configuration to Application Management:</h3>
 
       <p>The SRE’s Guide to Taking Control of Applications and Services in a Hybrid Cloud World</p>
@@ -72,7 +72,7 @@
     <div class="col-4 col-start-large-7">
       {{
         image(
-          url="https://assets.ubuntu.com/v1/ac5fc4e3-charming-tshirt.jpg",
+          url="https://assets.ubuntu.com/v1/ec0a68a4-charming-t-shirt.jpg",
           alt="",
           height="298",
           width="760",
@@ -80,18 +80,15 @@
           loading="lazy",
         ) | safe
       }}
-      <h3 class="p-heading--4">Send us your details</h3>
+      <h3 id="send-us-your-details" class="p-heading--4">Send us your details</h3>
       
-      <form>
-        <label for="Email">Email address:</label>
-        <input disabled required type="email" value="Coming soon" />
-        
-        <p class="p-form-help-text u-sv1">
-          You'll receive an email with a link to get your t-shirt.
-        </p> 
-
-        <button type="submit" disabled class="p-button--positive u-no-margin--bottom" aria-label="Submit">Get the eBook</button>
-      </form>
+      {% if 'form_success' in request.args %}
+        <div class="p-notification--positive">
+          <p class="p-notification__response"><span class="p-notification__status">Success:</span> Thank you for your entry, you'll receive an email very soon.</p>
+        </div>
+      {% else %}
+        {% include 'about/_ebook-signup-form.html' %}
+      {% endif %}
     </div>
   </div>
 </section>
