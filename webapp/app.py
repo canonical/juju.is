@@ -1,6 +1,7 @@
 import datetime
 import os
 
+import flask
 import talisker.requests
 from canonicalwebteam.flask_base.app import FlaskBase
 from canonicalwebteam.templatefinder import TemplateFinder
@@ -46,6 +47,12 @@ def careers():
 @app.route("/get-in-touch")
 def get_in_touch():
     return render_template("partials/_get-in-touch.html")
+
+
+@app.route("/discourse-top.json")
+def top():
+    top = session.get('https://discourse.charmhub.io/top.json')
+    return flask.jsonify(top.json())
 
 
 template_finder_view = TemplateFinder.as_view("template_finder")
