@@ -6,13 +6,13 @@
   </div>
   {% endif %}
     <div class="p-card__content">
-    {% if article.image and article.image.source_url %}
+      {% if article.image and article.image.source_url %}
       <div class="u-crop--16-9">
         <a href="/blog/{{ article.slug }}" aria-hidden="true" tabindex="-1">
-          {{ article.image.source_url|safe }}
+          {{ article.image.rendered|safe }}
         </a>
       </div>
-    {% endif %}
+      {% endif %}
     <h3 class="p-heading--4">
       <a href="/blog/{{ article.slug }}">{{ article.title.rendered|safe }}</a>
     </h3>

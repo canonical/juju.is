@@ -9,6 +9,7 @@
 {% block content %}
 
 <section class="p-strip">
+  {% if current_page == 1 %}
   <div class="row u-clearfix">
     {% set all_articles = featured_articles + articles %}
     {% for article in all_articles %}
@@ -39,6 +40,14 @@
       {% endif %}
     {% endfor %}
   </div>
+  {% else %}
+  <div class="row u-clearfix">
+    {% set all_articles = featured_articles + articles %}
+    {% for article in all_articles %}
+      {% include 'blog/partials/_blog-card.html' %}
+    {% endfor %}
+  </div>
+  {% endif %}
 
   <div class="u-fixed-width">
     <ol class="p-pagination u-align--center">

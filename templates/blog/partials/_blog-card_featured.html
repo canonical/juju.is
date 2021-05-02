@@ -8,7 +8,7 @@
   {% if article.image and article.image.source_url %}
     <div class="u-crop--16-9">
       <a href="/blog/{{ article.slug }}" aria-hidden="true" tabindex="-1">
-        <img src="{{ article.image.link }}" alt="{{ article.image.alt }}" />
+        <img src="{{ article.image.source_url }}" alt="{{ article.image.alt }}" />
       </a>
     </div>
   {% endif %}
