@@ -20,7 +20,7 @@
     <div class="col-4">
       <ul class="p-list--divided">
       {% for article in all_articles %}
-        {% if loop.index > 1 and loop.index <= 5 %}
+        {% if loop.index > 1 and loop.index <= 4 %}
           {% include 'blog/partials/_blog-card_aside.html' %}
         {% endif %}
       {% endfor %}
@@ -35,7 +35,7 @@
 
   <div class="row u-clearfix">
     {% for article in articles %}
-      {% if loop.index >= 5 %}
+      {% if loop.index >= 4 %}
         {% include 'blog/partials/_blog-card.html' %}
       {% endif %}
     {% endfor %}
