@@ -1,7 +1,6 @@
 from os import getenv
 
 import flask
-import math
 import talisker.requests
 
 from canonicalwebteam.discourse import DiscourseAPI, TutorialParser, Tutorials
@@ -31,37 +30,44 @@ def init_tutorials(app, url_prefix):
 
     @app.route(url_prefix)
     def index():
-        page = flask.request.args.get("page", default=1, type=int)
-        topics_request = flask.request.args.get(
-            "topic", default=None, type=str
-        )
-        posts_per_page = 12
         tutorials_discourse.parser.parse()
         tutorials_discourse.parser.parse_topic(
             tutorials_discourse.parser.index_topic
         )
 
-        if not topics_request:
-            tutorials = tutorials_discourse.parser.tutorials
-        else:
-            topics = topics_request.split(",")
-            tutorials = [
-                doc
-                for doc in tutorials_discourse.parser.tutorials
-                if doc["categories"] in topics
-            ]
+        tutorials = tutorials_discourse.parser.tutorials
+        topic_list = []
 
-        total_pages = math.ceil(len(tutorials) / posts_per_page)
+        for item in tutorials:
+            if item["categories"] not in topic_list:
+                topic_list.append(item["categories"])
+            item["categories"] = {
+                "slug": item["categories"],
+                "name": " ".join(
+                    [
+                        word.capitalize()
+                        for word in item["categories"].split("-")
+                    ]
+                ),
+            }
+
+        topic_list.sort()
+        topics = []
+
+        for topic in topic_list:
+            topics.append(
+                {
+                    "slug": topic,
+                    "name": " ".join(
+                        [word.capitalize() for word in topic.split("-")]
+                    ),
+                }
+            )
 
         return flask.render_template(
             "tutorials/index.html",
-            forum_url=tutorials_discourse.parser.api.base_url,
             tutorials=tutorials,
-            page=page,
-            posts_per_page=posts_per_page,
-            total_pages=total_pages,
-            active_section="tutorials",
-            topic=topics_request,
+            topics=topics,
         )
 
     tutorials_discourse.init_app(app)

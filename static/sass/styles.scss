@@ -23,9 +23,6 @@ $color-accent: #e95420;
 @import "patterns_strips";
 @include juju-p-strips;
 
-@import "patterns_tutorials";
-@include juju-tutorials;
-
 @import "patterns_navigation";
 @include local-p-navigation;
 
@@ -56,6 +53,9 @@ $color-accent: #e95420;
 @import "utility_crop";
 @include local-crop;
 
+@import "patterns_l-fluid-breakout";
+@include l-juju-fluid-breakout;
+
 .p-navigation__logo {
   margin: 0.1rem 1rem 0 1.5rem;
 }
@@ -64,12 +64,6 @@ $color-accent: #e95420;
   &--open,
   &--close {
     font-weight: 400;
-  }
-}
-
-.u-hide--x-small {
-  @media only screen and (max-width: $breakpoint-x-small) {
-    display: none;
   }
 }
 
@@ -143,10 +137,6 @@ $color-accent: #e95420;
   max-height: none;
 }
 
-:not(.p-tabs__content):target {
-  padding-top: 50px !important;
-}
-
 .p-heading--3,
 h3 {
   font-weight: 200;
@@ -189,5 +179,13 @@ h3 {
         grid-column-end: 3;
       }
     }
+  }
+}
+
+// XXX Ovi 28.04.2021 - This can be removed once this issue is closed
+// https://github.com/canonical-web-and-design/vanilla-framework/issues/3723
+.l-fluid-breakout__item {
+  @media (min-width: $breakpoint-small) {
+    max-width: 30rem;
   }
 }

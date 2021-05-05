@@ -1,6 +1,28 @@
 @mixin juju-cards {
-  @include juju-card-resource;
   @include local-blog-card;
+
+  .p-card--tutorial {
+    @extend %vf-has-round-corners;
+    @extend %vf-has-box-shadow;
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $spv-outer--scaleable;
+    overflow: auto;
+
+    .p-card__header {
+      align-items: center;
+      border-bottom: 1px solid $color-mid-x-light;
+      border-top: 3px solid #00365c;
+      display: flex;
+      padding: 0.5rem 1rem;
+    }
+
+    .p-card__content {
+      height: 100%;
+      padding: 1rem;
+    }
+  }
 }
 
 @mixin local-blog-card {
@@ -10,8 +32,8 @@
   }
 }
 
-@mixin juju-card-resource {
-  .resource-p-card__category {
+@mixin blog-p-card {
+  .blog-p-card__category {
     background: url("#{$assets-path}ed42aefa-icon-resource-hub-icon-document.png")
       left center no-repeat;
     color: $color-mid-dark;
@@ -38,29 +60,24 @@
     padding: $sp-medium $sp-medium $sp-small;
   }
 
-  .resource-p-card--post {
+  .blog-p-card--post {
     @extend %p-card--highlighted;
     display: flex !important;
     flex-direction: column;
     padding: 0;
 
     .p-strip--featured & {
-      background-color: rgba(
-        255,
-        255,
-        255,
-        0.9
-      ); //sass-lint:disable-line no-color-literals
+      background-color: rgba(255, 255, 255, 0.9);
       position: relative;
       z-index: 1;
     }
 
-    > .resource-p-card__content {
-      border-top: 1px dotted $color-mid-light;
+    > .blog-p-card__content {
+      border-top: 1px solid $color-mid-light;
       display: flex;
       flex-direction: column;
       height: 100%;
-      margin: 0 $sp-small;
+      margin: 0;
       padding: $sp-medium $sp-small $sp-small;
 
       > a,
@@ -71,7 +88,7 @@
       }
     }
 
-    .resource-p-card__footer {
+    .blog-p-card__footer {
       border-top: 1px dotted $color-mid-light;
       font-size: 0.875rem;
       margin: auto $sp-small 0;
@@ -80,19 +97,19 @@
     }
   }
 
-  .resource-p-card--muted {
-    @extend .p-card; //sass-lint:disable-line placeholder-in-extend
+  .blog-p-card--muted {
+    @extend .p-card;
     background-color: $color-light;
     box-shadow: 0 1px 2px 0 transparentize($color-dark, 0.8);
     padding: 0;
 
-    > .resource-p-card__header {
+    > .blog-p-card__header {
       border-bottom: 0;
       border-top: 3px solid $color-light;
       margin-bottom: 0;
     }
 
-    > .resource-p-card__content {
+    > .blog-p-card__content {
       border-top: 1px dotted $color-mid-light;
       margin: 0 $sp-small $sp-small;
       padding: $sp-medium $sp-small $sp-small;
@@ -101,23 +118,43 @@
 
   // a fallback to catch any instances where a post.group exists,
   // but we haven't yet defined a BEM variant to match
-  [class*="resource-p-card__header"] {
+  [class*="blog-p-card__header"] {
     @extend %post-card-header;
     border-top: 3px solid $color-mid-dark;
   }
 
-  .resource-p-card__header {
-    &--cloud {
-      border-color: #a87ca0; //sass-lint:disable-line no-color-literals
+  .blog-p-card__header {
+    &--canonical-announcements {
+      border-color: #ff8936;
     }
 
-    &--containers {
-      border-color: #faba54; //sass-lint:disable-line no-color-literals
+    &--cloud-and-server {
+      border-color: #a87ca0;
+    }
+
+    &--desktop {
+      border-color: #faba54;
+    }
+
+    &--internet-of-things {
+      border-color: #8db255;
+    }
+
+    &--phone-and-tablet {
+      border-color: $color-mid-light;
+    }
+
+    &--webinar {
+      border-color: #48929b;
+    }
+
+    &--tutorials {
+      border-color: #47919e;
     }
   }
 
-  .resource-p-card__date {
-    @extend .p-media-object__meta-list; //sass-lint:disable-line placeholder-in-extend
+  .blog-p-card__date {
+    @extend .p-media-object__meta-list;
     display: flex;
     margin-top: auto;
     padding-top: $sp-medium;
