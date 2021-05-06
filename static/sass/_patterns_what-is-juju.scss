@@ -57,14 +57,9 @@
       &[data-stage="5"] {
         .p-feature__illustration {
           position: fixed;
-          right: calc(calc(100vw - #{$grid-max-width}) * .56);
+          right: calc(calc(100vw - #{$grid-max-width}) * .535);
           top: 23%;
-          width: 820px;
-
-          @media only screen and (min-width: 1681px) {
-            width: 922.5px;
-            right: calc(calc(100vw - #{$grid-max-width}) * .535);
-          }
+          width: 51.2em;
         }
       }
 
