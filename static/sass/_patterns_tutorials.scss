@@ -1,0 +1,53 @@
+@mixin p-tutorials {
+  .p-tutorial__nav-title {
+    padding-left: 2rem;
+    position: relative;
+
+    &::before {
+      height: $sp-large;
+      left: 0;
+      margin-right: $sp-medium;
+      position: absolute;
+      width: $sp-large;
+    }
+
+    .is-active & {
+      font-weight: 400;
+
+      &::before {
+        background-color: $color-brand;
+        color: $color-x-light;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .p-tutorial__nav-link {
+    color: $color-dark;
+
+    &:visited {
+      color: $color-dark;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .p-tutorial-content {
+    margin-top: 0;
+
+    @media (min-width: $breakpoint-large) {
+      margin-top: -20rem;
+    }
+  }
+
+  .p-tutorial-section {
+    display: none;
+
+    &:target {
+      display: block;
+      padding-top: 20rem;
+    }
+  }
+}
