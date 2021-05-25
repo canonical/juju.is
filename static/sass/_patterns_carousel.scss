@@ -14,7 +14,9 @@
 
       [class*="p-icon"] {
         @extend %icon;
+
         @include vf-icon-chevron($color-mid-light);
+
         height: 2rem;
         width: 2rem;
       }
@@ -45,7 +47,7 @@
     // the carousels currently use https://github.com/metafizzy/flickity
     // so style the elements it gives us out of the box
     .flickity-page-dots {
-      bottom: 0px;
+      bottom: 0;
 
       .dot {
         background: $color-mid-light;
@@ -66,8 +68,8 @@
     }
 
     .flickity-slider {
-      display: flex;
       align-items: center;
+      display: flex;
     }
   }
 }

@@ -6,11 +6,11 @@ $color-accent-background: #f0f5f7;
 $color-accent: #e95420;
 
 @import "vanilla-framework/scss/vanilla";
+
 @include vanilla;
 
 // import cookie policy
 @import "@canonical/cookie-policy/build/css/cookie-policy";
-
 @import "patterns_docs";
 @import "hljs";
 @import "flickity/dist/flickity";
@@ -18,42 +18,55 @@ $color-accent: #e95420;
 @include juju-docs;
 // Local patterns
 @import "patterns_cards";
+
 @include juju-cards;
 
 @import "patterns_strips";
+
 @include juju-p-strips;
 
 @import "patterns_navigation";
+
 @include local-p-navigation;
 
 @import "patterns_p-subnav";
+
 @include local-p-subnav;
 
 @import "patterns_p-modal";
+
 @include juju-modal;
 
 @import "patterns_tabs";
+
 @include juju-tabs;
 
 @import "patterns_icons";
+
 @include juju-icons;
 
 @import "patterns_carousel";
+
 @include juju-carousel;
 
 @import "patterns_what-is-juju";
+
 @include local-what-is-juju;
 
 @import "patterns_heading-highlight";
+
 @include local-heading-highlight;
 
 @import "patterns_scroller";
+
 @include local-scroller;
 
 @import "utility_crop";
+
 @include local-crop;
 
 @import "patterns_l-fluid-breakout";
+
 @include l-juju-fluid-breakout;
 
 @import "patterns_tutorials";
@@ -113,13 +126,14 @@ $color-accent: #e95420;
 
 // Homepage footer overide
 .p-strip--suru-top.is-homepage::before {
-  background: linear-gradient(
-    to bottom right,
-    $color-accent-background 0%,
-    $color-accent-background 49%,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background:
+    linear-gradient(
+      to bottom right,
+      $color-accent-background 0%,
+      $color-accent-background 49%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
 }
 
 .p-code-numbered__line {
@@ -137,8 +151,8 @@ $color-accent: #e95420;
 }
 
 .p-inline-images .p-inline-images__logo.is-wide {
-  max-width: 9rem;
   max-height: none;
+  max-width: 9rem;
 }
 
 .p-heading--3,
@@ -165,10 +179,10 @@ h3 {
 .p-button-grid {
   @media screen and (min-width: $breakpoint-x-small) {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
 
     [class*="p-button"] {
       padding: 0.75rem;
@@ -179,8 +193,8 @@ h3 {
       }
 
       &:last-child {
-        grid-column-start: 1;
         grid-column-end: 3;
+        grid-column-start: 1;
       }
     }
   }

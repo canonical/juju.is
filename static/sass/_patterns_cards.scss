@@ -28,13 +28,15 @@
 @mixin local-blog-card {
   .p-blog-card {
     @extend %p-card--highlighted;
+
     border-top: 3px solid $color-brand;
   }
 }
 
 @mixin blog-p-card {
   .blog-p-card__category {
-    background: url("#{$assets-path}ed42aefa-icon-resource-hub-icon-document.png")
+    background:
+      url("#{$assets-path}ed42aefa-icon-resource-hub-icon-document.png")
       left center no-repeat;
     color: $color-mid-dark;
     font-size: $sp-medium;
@@ -62,6 +64,7 @@
 
   .blog-p-card--post {
     @extend %p-card--highlighted;
+
     display: flex !important;
     flex-direction: column;
     padding: 0;
@@ -99,6 +102,7 @@
 
   .blog-p-card--muted {
     @extend .p-card;
+
     background-color: $color-light;
     box-shadow: 0 1px 2px 0 transparentize($color-dark, 0.8);
     padding: 0;
@@ -120,6 +124,7 @@
   // but we haven't yet defined a BEM variant to match
   [class*="blog-p-card__header"] {
     @extend %post-card-header;
+
     border-top: 3px solid $color-mid-dark;
   }
 
@@ -155,6 +160,7 @@
 
   .blog-p-card__date {
     @extend .p-media-object__meta-list;
+
     display: flex;
     margin-top: auto;
     padding-top: $sp-medium;
