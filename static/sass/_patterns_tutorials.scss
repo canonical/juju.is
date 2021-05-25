@@ -35,11 +35,7 @@
   }
 
   .p-tutorial-content {
-    margin-top: 0;
-
-    @media (min-width: $breakpoint-large) {
-      margin-top: -20rem;
-    }
+    margin-top: -20rem;
   }
 
   .p-tutorial-section {
