@@ -6,6 +6,22 @@
       width: 100%;
     }
 
+    .p-carousel__next {
+      right: 0;
+
+      [class*="p-icon"] {
+        transform: rotate(-0.25turn);
+      }
+    }
+
+    .p-carousel__previous {
+      left: 0;
+
+      [class*="p-icon"] {
+        transform: rotate(0.25turn);
+      }
+    }
+
     .p-carousel__next,
     .p-carousel__previous {
       position: absolute;
@@ -25,22 +41,6 @@
         [class*="p-icon"] {
           @include vf-icon-chevron($color-mid-dark);
         }
-      }
-    }
-
-    .p-carousel__next {
-      right: 0;
-
-      [class*="p-icon"] {
-        transform: rotate(-0.25turn);
-      }
-    }
-
-    .p-carousel__previous {
-      left: 0;
-
-      [class*="p-icon"] {
-        transform: rotate(0.25turn);
       }
     }
 
