@@ -1,5 +1,5 @@
 @mixin local-heading-highlight {
-  $color-accent: #009EE9;
+  $color-accent: #009ee9;
 
   .p-heading-highlight {
     padding-left: 1rem;
@@ -11,17 +11,17 @@
     }
 
     .p-heading-highlight__item::before {
-      content: "";
-      width: 2px;
-      height: 3rem;
       background-color: $color-accent;
-      position: absolute;
+      content: "";
       display: block;
+      height: 3rem;
       left: 0;
+      position: absolute;
       top: 0;
+      width: 2px;
     }
 
-    p.p-heading-highlight__item:before {
+    p.p-heading-highlight__item::before {
       top: -1.2rem;
     }
   }

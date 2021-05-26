@@ -1,3 +1,7 @@
+/* stylelint-disable */
+@use "sass:math";
+/* stylelint-enable */
+
 @mixin juju-docs {
   $sidebar-width: 18rem;
 
@@ -24,45 +28,8 @@
     }
   }
 
-  .l-docs-content {
-    flex: 5;
-    margin-top: 0;
-    overflow: hidden;
-
-    @media only screen and (max-width: $breakpoint-navigation-threshold) {
-      flex: auto;
-    }
-
-    .meta {
-      display: none;
-    }
-
-    details + p,
-    details + h3 {
-      margin-top: $sp-large;
-    }
-  }
-
-  .l-docs-row {
-    @extend .row;
-    margin-left: inherit;
-    padding: 0 $sp-xxx-large;
-
-    @media only screen and (max-width: $breakpoint-navigation-threshold) {
-      padding-left: $sph-outer--large;
-    }
-  }
-
-  .p-sidenav__toggle {
-    background-size: $sp-medium;
-    cursor: pointer;
-    float: right;
-    padding: $sp-x-large;
-    z-index: 1;
-  }
-
   .p-sidenav__body {
-    padding: $sp-large / 2 $sp-large;
+    padding: math.div($sp-large, 2) $sp-large;
 
     // Fix p-sidebar-nav to understand
     // h3 headings, and not require any classes on the <ul>s and <li>s
@@ -106,5 +73,42 @@
         }
       }
     }
+  }
+
+  .l-docs-content {
+    flex: 5;
+    margin-top: 0;
+    overflow: hidden;
+
+    @media only screen and (max-width: $breakpoint-navigation-threshold) {
+      flex: auto;
+    }
+
+    .meta {
+      display: none;
+    }
+
+    details + p,
+    details + h3 {
+      margin-top: $sp-large;
+    }
+  }
+
+  .l-docs-row {
+    @extend .row;
+
+    margin-left: inherit;
+    padding: 0 $sp-xxx-large;
+
+    @media only screen and (max-width: $breakpoint-navigation-threshold) {
+      padding-left: $sph-outer--large;
+    }
+  }
+
+  .p-sidenav__toggle {
+    background-size: $sp-medium;
+    cursor: pointer;
+    float: right;
+    padding: $sp-x-large;
   }
 }
