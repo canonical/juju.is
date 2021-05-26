@@ -1,3 +1,7 @@
+/* stylelint-disable */
+@use "sass:math";
+/* stylelint-enable */
+
 @mixin juju-docs {
   $sidebar-width: 18rem;
 
@@ -25,7 +29,7 @@
   }
 
   .p-sidenav__body {
-    padding: $sp-large / 2 $sp-large;
+    padding: math.div($sp-large, 2) $sp-large;
 
     // Fix p-sidebar-nav to understand
     // h3 headings, and not require any classes on the <ul>s and <li>s
