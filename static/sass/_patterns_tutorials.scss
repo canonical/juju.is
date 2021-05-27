@@ -46,4 +46,16 @@
       padding-top: 20rem;
     }
   }
+
+  .p-tutorial__pagination-item--prev {
+    .p-icon--contextual-menu {
+      transform: rotate(90deg);
+    }
+  }
+
+  .p-tutorial__pagination-item--next {
+    .p-icon--contextual-menu {
+      transform: rotate(-90deg);
+    }
+  }
 }
