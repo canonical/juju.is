@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@canonical/cookie-policy": "3.2.0",
-    "@canonical/global-nav": "2.4.5",
+    "@canonical/global-nav": "2.5.0",
     "autoprefixer": "10.2.6",
     "concurrently": "6.2.0",
     "flickity": "2.2.2",
