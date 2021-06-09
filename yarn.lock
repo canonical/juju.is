@@ -219,12 +219,12 @@
   resolved "https://registry.yarnpkg.com/@canonical/cookie-policy/-/cookie-policy-3.2.0.tgz"
   integrity sha512-7353+uyTR5b5UcqomsVimH+JJqlNqOmj+GKQN9cVQ7m8OsUHcLzNjwCt/txjKt0o6Hw5I/DRS+fLMsmmP0Iokg==
 
-"@canonical/global-nav@2.4.5":
-  version "2.4.5"
-  resolved "https://registry.yarnpkg.com/@canonical/global-nav/-/global-nav-2.4.5.tgz"
-  integrity sha512-OoSfKtD86QDbj9zcOrRg1je3CDQQRPm8Erq+yfDuR5jnN0eB8NfsT7JjAEDcANkzyJues3gMDDmv+cjN3Tu5KQ==
+"@canonical/global-nav@2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@canonical/global-nav/-/global-nav-2.5.0.tgz#f1cff4474ebbc435381a22fee353e123df870bda"
+  integrity sha512-emgBRHl9pDswbpg2/UvGRLZcclMs9EP09xWc3PdxC9NKlHr5dr9OeU/OEYsQ1+/VA2NmLLioVmqVe63TNRQW4w==
   dependencies:
-    vanilla-framework "2.19.1"
+    vanilla-framework "2.25.1"
 
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
@@ -2233,9 +2233,9 @@ tree-kill@^1.2.2:
   integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
 trim-newlines@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/trim-newlines/-/trim-newlines-3.0.0.tgz#79726304a6a898aa8373427298d54c2ee8b1cb30"
-  integrity sha512-C4+gOpvmxaSMKuEf9Qc134F1ZuOHVXKRbtEflf4NTtuuJDEIJ9p5PXsalL8SkeRw+qit1Mo+yuvMPAKwWg/1hA==
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/trim-newlines/-/trim-newlines-3.0.1.tgz#260a5d962d8b752425b32f3a7db0dcacd176c144"
+  integrity sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==
 
 trough@^1.0.0:
   version "1.0.5"
@@ -2343,10 +2343,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vanilla-framework@2.19.1:
-  version "2.19.1"
-  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-2.19.1.tgz"
-  integrity sha512-y79SKAwertvgHVAf1PbGxiq6QvVxNI78txilSgESx80HUWBrooT1nXCDUuHC/ySGEq+JUpmVIv0PrmXXilYWdg==
+vanilla-framework@2.25.1:
+  version "2.25.1"
+  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-2.25.1.tgz#fb3a30bc832d1ffc3b1b909a87dbe8f7a03b8618"
+  integrity sha512-jZeyUsjNqUI9LW5A5UUS8X/asMOlKwMbD/HoSnxegAUH0fil7XUzB+F1A1IqRSGdgonWxFehAZA2qIzmKtOnIA==
 
 vanilla-framework@2.30.0:
   version "2.30.0"
