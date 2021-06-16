@@ -212,3 +212,8 @@ h3 {
 [id^="heading--"] {
   scroll-margin-top: 60px;
 }
+
+// Fix emojis on discourse docs
+.emoji {
+    height: 1rem;
+}
