@@ -74,6 +74,10 @@ $color-accent: #e95420;
 
 @include p-tutorials;
 
+@import "patterns_p-survey-chart";
+
+@include p-survey-chart;
+
 .p-navigation__logo {
   margin: 0.1rem 1rem 0 1.5rem;
 }
@@ -215,5 +219,24 @@ h3 {
 
 // Fix emojis on discourse docs
 .emoji {
-    height: 1rem;
+  height: 1rem;
+}
+
+.u-inline-block-images a > div {
+  display: inline-block;
+}
+
+.p-side-navigation--raw-html {
+  top: 80px !important;
+  overflow-x: hidden;
+  max-height: calc(100vh - 80px) !important;
+}
+
+.p-side-navigation--raw-html h3 a {
+  color: $color-dark;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
