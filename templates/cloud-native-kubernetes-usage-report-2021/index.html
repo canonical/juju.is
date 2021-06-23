@@ -972,10 +972,49 @@
 
       <p>Across the board, industry experts felt this survey represented a fair distribution of the cloud native space today.</p>
 
-      <ul>
-        <li><strong>Ken Sipe</strong> &mdash; Great distribution. Huge % of DevOps. Not a surprise for Kubernetes. Often, change agents are developers and many developers self-opt-in to the DevOps category. Sometimes you see organisations create &ldquo;DevOps roles or DevOps teams&rdquo; which act more like traditional Ops with a new name. Ideally, you&rsquo;re hoping that people who list themselves as DevOps can wear both hats &mdash; they&rdquo;ll code, read the logs and understand them, and have access to ops; all in one person.</li>
-        <li><strong>Kelsey Hightower</strong> &mdash; This data tells me two things: 1. That Kubernetes is predominantly for people who build platforms. They are different from developers who are interested in things like Ruby on Rails, gRPC, JS web frameworks, or iOS. If you group some of the categories here, it might even be safe to say that 50% of the people identify as being platform team members. 2. It also tells me that the tools these people are using are pushing them towards looking at Kubernetes. Why would a DBA be concerned with Kubernetes? Probably, because they&rsquo;re starting to see some of the databases they&rsquo;d manage, have a Kubernetes installation option. But DBA&rsquo;s are only 1% here. And this looks accurate. So far, not a lot of database products say things like &ldquo;here&rsquo;s our community&rsquo;s official Kubernetes operator&rdquo;. So this is picking up, but it&rsquo;s still early.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/0117de54-ken-sipe.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">Great distribution. Huge % of DevOps. Not a surprise for Kubernetes. Often, change agents are developers and many developers self-opt-in to the DevOps category. Sometimes you see organisations create &ldquo;DevOps roles or DevOps teams&rdquo; which act more like traditional Ops with a new name. Ideally, you&rsquo;re hoping that people who list themselves as DevOps can wear both hats &mdash; they&rdquo;ll code, read the logs and understand them, and have access to ops; all in one person</p>
+            <cite class="p-pull-quote__citation">Ken Sipe, Cloud Native Computing Foundation, Edward Jones</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This data tells me two things: 1. That Kubernetes is predominantly for people who build platforms. They are different from developers who are interested in things like Ruby on Rails, gRPC, JS web frameworks, or iOS. If you group some of the categories here, it might even be safe to say that 50% of the people identify as being platform team members. 2. It also tells me that the tools these people are using are pushing them towards looking at Kubernetes. Why would a DBA be concerned with Kubernetes? Probably, because they&rsquo;re starting to see some of the databases they&rsquo;d manage, have a Kubernetes installation option. But DBA&rsquo;s are only 1% here. And this looks accurate. So far, not a lot of database products say things like &ldquo;here&rsquo;s our community&rsquo;s official Kubernetes operator&rdquo;. So this is picking up, but it&rsquo;s still early.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <p>Many of the questions later in this report have different answers, depending on who you ask &mdash; so we&rdquo;ve grouped respondents by job role to see if we can gain extra insight. These groups can be broken down as follows:</p>
 
@@ -1534,13 +1573,50 @@
 
       <p>Throughout this report, the intention was to highlight areas where certain industries responded significantly differently to others. If you feel that your industry is underrepresented, the <a href="https://ubuntu.com/kubernetes/kubernetes-operations-survey" class="p-link--external">survey is still open and you can share your responses here</a>.</p>
 
-      <ul>
-        <li><strong>Ken Sipe</strong> &mdash; I&rsquo;m surprised Financial Services is #2 here. Often, this sector is highly conservative but, presumably, they&rsquo;re learning about the new tech. The early days of Kubernetes had a lot of telco involved, good to see it&rsquo;s still there. I&rsquo;m keen to explore the financial angle in the answers to the other questions.</li>
-        <li>
-          <p><strong>Kelsey Hightower</strong> &mdash; This confirms a lot of what we see in the real world. Even though a lot of people think financial services companies are all legacy &mdash; it turns out that even though they have all the risks and the security concerns, they&rsquo;re typically the ones to adopt new technology sooner because they have margins to contend with.</p>
-          <p>Telecommunications is another big one, too. Telcos are leveraging Kubernetes in their regional data centres for streaming devices and do things like scale to zero, or subscription-based dynamic rollouts of content. They have their custom networking stack and streaming protocols and use Kubernetes to integrate their data plane. Also, K8s has a much smaller footprint than virtualization platforms like OpenStack &mdash; this one is a bit heavy for the task. Kubernetes can run on bare metal and telcos tend to end up there for the performance, while also integrating their own control plane and start to leverage the automation available in K8s.</p>
-        </li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/0117de54-ken-sipe.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I&rsquo;m surprised Financial Services is #2 here. Often, this sector is highly conservative but, presumably, they&rsquo;re learning about the new tech. The early days of Kubernetes had a lot of telco involved, good to see it&rsquo;s still there. I&rsquo;m keen to explore the financial angle in the answers to the other questions.</p>
+            <cite class="p-pull-quote__citation">Ken Sipe, Cloud Native Computing Foundation, Edward Jones</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This confirms a lot of what we see in the real world. Even though a lot of people think financial services companies are all legacy &mdash; it turns out that even though they have all the risks and the security concerns, they&rsquo;re typically the ones to adopt new technology sooner because they have margins to contend with.</p>
+            <p class="p-pull-quote__quote">Telecommunications is another big one, too. Telcos are leveraging Kubernetes in their regional data centres for streaming devices and do things like scale to zero, or subscription-based dynamic rollouts of content. They have their custom networking stack and streaming protocols and use Kubernetes to integrate their data plane. Also, K8s has a much smaller footprint than virtualization platforms like OpenStack &mdash; this one is a bit heavy for the task. Kubernetes can run on bare metal and telcos tend to end up there for the performance, while also integrating their own control plane and start to leverage the automation available in K8s.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="video-conferences">4. Video conferences</h3>
 
@@ -1783,13 +1859,118 @@
 
       <p>Before looking at technologies or practices, it&rsquo;s best to understand people&rsquo;s goals &mdash; so that&rsquo;s what the report starts from.</p>
 
-      <ul>
-        <li><strong>Kelsey Hightower</strong> &mdash; This looks to be super accurate. A lot of people think organisations are moving to Kubernetes because of scale, or because they want to be a hyperscaler, or have the same traffic levels as Twitter. That&rsquo;s not necessarily the case for the majority of organisations. A lot of people like the fact that many decisions are just built into K8s, such as logging, monitoring and load balancing. People tend to forget how complex things were, just to build an app without all that automation. If you were on a public cloud you could have used some of the native integrations and tools. But if you were on-prem, that was not a given &mdash; you had to go and glue the solution together yourself. With Kubernetes, you almost collapsed 25 different tools into one. This is what people mean when they say &lsquo;modern infrastructure&rsquo; &mdash; they&rsquo;re not literally talking about doing something that has never been done before. They&rsquo;re talking about the things that have been in production for the past 10 or 15 years. Kubernetes is today&rsquo;s checkpoint on all the &ldquo;modern patterns&rdquo;.</li>
-        <li><strong>James Strachan</strong> &mdash; One of the things Kubernetes has really helped with is standardising infrastructure. It used to be that everyone&rsquo;s on-premise was completely different &mdash; different control planes, tools, infrastructure, everything. What we all want is to improve the maintenance and monitoring of all of our software. And we want that to just work. These first two answers match my thinking &mdash; we want a modern standard way of running software that works in every way.</li>
-        <li><strong>Ken Sipe</strong> &mdash; Maintenance, monitoring and automation is a big category &mdash; that&rsquo;s a lot of things coupled together. I&rsquo;d propose to separate automation from monitoring and maintenance. Maintenance could mean versioning of Kubernetes (and deciding if you want to keep up with the Kubernetes release cycle), but it could also mean maintaining your own tooling and/or infrastructure. I&rsquo;d expect security-sensitive organisations to want to control more things &mdash; to build out their own infrastructure perhaps. There is room to explore this more.</li>
-        <li><strong>Alexis Richardson</strong> &mdash; I think that&rsquo;s one of your flagship results. We see automation being a big theme; it&rsquo;s about lowering operating costs and it also ties into faster time to market, which is definitely a good business driver. Another theme that we see has to do with flexibility, as expressed from the number of people looking for portability and removing vendor dependencies, which could be linked to modernising infrastructure.</li>
-        <li><strong>Karthikeyan Shanmugam</strong> &mdash; This result correlates with the survey&rsquo;s sample population, the majority being SRE&rsquo;s. Improved maintenance, monitoring and automation are most important to this group of people.*</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This looks to be super accurate. A lot of people think organisations are moving to Kubernetes because of scale, or because they want to be a hyperscaler, or have the same traffic levels as Twitter. That&rsquo;s not necessarily the case for the majority of organisations. A lot of people like the fact that many decisions are just built into K8s, such as logging, monitoring and load balancing. People tend to forget how complex things were, just to build an app without all that automation. If you were on a public cloud you could have used some of the native integrations and tools. But if you were on-prem, that was not a given &mdash; you had to go and glue the solution together yourself. With Kubernetes, you almost collapsed 25 different tools into one. This is what people mean when they say &lsquo;modern infrastructure&rsquo; &mdash; they&rsquo;re not literally talking about doing something that has never been done before. They&rsquo;re talking about the things that have been in production for the past 10 or 15 years. Kubernetes is today&rsquo;s checkpoint on all the &ldquo;modern patterns&rdquo;.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/ba2dd769-james.jpeg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">One of the things Kubernetes has really helped with is standardising infrastructure. It used to be that everyone&rsquo;s on-premise was completely different &mdash; different control planes, tools, infrastructure, everything. What we all want is to improve the maintenance and monitoring of all of our software. And we want that to just work. These first two answers match my thinking &mdash; we want a modern standard way of running software that works in every way.</p>
+            <cite class="p-pull-quote__citation">James Strachan, CloudBees</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/0117de54-ken-sipe.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">Maintenance, monitoring and automation is a big category &mdash; that&rsquo;s a lot of things coupled together. I&rsquo;d propose to separate automation from monitoring and maintenance. Maintenance could mean versioning of Kubernetes (and deciding if you want to keep up with the Kubernetes release cycle), but it could also mean maintaining your own tooling and/or infrastructure. I&rsquo;d expect security-sensitive organisations to want to control more things &mdash; to build out their own infrastructure perhaps. There is room to explore this more.</p>
+            <cite class="p-pull-quote__citation">Ken Sipe, Cloud Native Computing Foundation, Edward Jones</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/d02a1632-alexis_richardson.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I think that&rsquo;s one of your flagship results. We see automation being a big theme; it&rsquo;s about lowering operating costs and it also ties into faster time to market, which is definitely a good business driver. Another theme that we see has to do with flexibility, as expressed from the number of people looking for portability and removing vendor dependencies, which could be linked to modernising infrastructure.</p>
+            <cite class="p-pull-quote__citation">Alexis Richardson, Founder and CEO, Weaveworks</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/29491306-Karthik-profile.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This result correlates with the survey&rsquo;s sample population, the majority being SRE&rsquo;s. Improved maintenance, monitoring and automation are most important to this group of people.*</p>
+            <cite class="p-pull-quote__citation">Karthikeyan Shanmugam, Digital Solution Architect, HCL</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <p><small>* Note: Karthik&rsquo;s comment was bang on. When we dug into the data, we found that 77.8% of SREs/DevOps selected improved maintenance, monitoring and automation as one of their two choices for this question.</small></p>
 
@@ -1899,9 +2080,26 @@
 
       <p>And now, for today&rsquo;s moment of zen, we give you Ken Sipe:</p>
 
-      <ul>
-        <li><strong>Ken Sipe</strong> &mdash; Reality is what the majority of people perceive it to be.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/0117de54-ken-sipe.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">Reality is what the majority of people perceive it to be.</p>
+            <cite class="p-pull-quote__citation">Ken Sipe, Cloud Native Computing Foundation, Edward Jones</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="what-are-your-hybrid-cloud-or-multi-cloud-use-cases">9. What are your hybrid cloud or multi-cloud use cases?</h3>
 
@@ -2037,12 +2235,95 @@
 
       <p>Relevant Quotes:</p>
 
-      <ul>
-        <li><strong>Michael Hausenblas</strong> &mdash; There are different use cases and motivations for hybrid and multi-cloud. For example, hybrid is very often used for app migration or cloud bursting, whereas multi-cloud can be more related to cost consolidation or even acquisitions &mdash; resulting in different workloads on different cloud providers.</li>
-        <li><strong>Ken Sipe</strong> &mdash; People dip their toe in before they adopt. I see bursting into the cloud based on scale as a reasonably advanced technique, so I&rsquo;m not surprised that it&rsquo;s not done by a majority of people yet.</li>
-        <li><strong>Alexis Richardson</strong> &mdash; Multi-cloud is an interesting market driver, especially for regulated companies. I was recently talking with a banking customer who said they were interested in multi-cloud and hybrid cloud because the regulation dictates they should avoid having a high concentration of risk on a single cloud.</li>
-        <li><strong>Kelsey Hightower</strong> &mdash; 22% of people say &ldquo;I&rsquo;m not using hybrid or multi-cloud&rdquo;. This looks a little too high to me. I think people might be saying, &ldquo;we&rsquo;re not running things under our domain in places we do not own&rdquo;, but they often forget that their organisation probably uses Salesforce or email services as part of day to day operations and these definitely run in somebody else&rsquo;s cloud. If they include SAAS in their multi-cloud definition, I&rsquo;d expect this number to be much lower.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/8cb586b3-michael_hausenblas.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">There are different use cases and motivations for hybrid and multi-cloud. For example, hybrid is very often used for app migration or cloud bursting, whereas multi-cloud can be more related to cost consolidation or even acquisitions &mdash; resulting in different workloads on different cloud providers.</p>
+            <cite class="p-pull-quote__citation">Michael Hausenblas, Solution Engineering Lead, AWS</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/0117de54-ken-sipe.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">People dip their toe in before they adopt. I see bursting into the cloud based on scale as a reasonably advanced technique, so I&rsquo;m not surprised that it&rsquo;s not done by a majority of people yet.</p>
+            <cite class="p-pull-quote__citation">Ken Sipe, Cloud Native Computing Foundation, Edward Jones</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/d02a1632-alexis_richardson.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">Multi-cloud is an interesting market driver, especially for regulated companies. I was recently talking with a banking customer who said they were interested in multi-cloud and hybrid cloud because the regulation dictates they should avoid having a high concentration of risk on a single cloud.</p>
+            <cite class="p-pull-quote__citation">Alexis Richardson, Founder and CEO, Weaveworks</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">22% of people say &ldquo;I&rsquo;m not using hybrid or multi-cloud&rdquo;. This looks a little too high to me. I think people might be saying, &ldquo;we&rsquo;re not running things under our domain in places we do not own&rdquo;, but they often forget that their organisation probably uses Salesforce or email services as part of day to day operations and these definitely run in somebody else&rsquo;s cloud. If they include SAAS in their multi-cloud definition, I&rsquo;d expect this number to be much lower.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="size-is-important-how-many-machines-and-clusters-are-people-running">10. Size is important: How many machines and clusters are people running?</h3>
 
@@ -2277,17 +2558,142 @@
 
       <p>And here&rsquo;s what our industry experts had to say about all this:</p>
 
-      <ul>
-        <li><strong>Kelsey Hightower</strong> &mdash; This speaks to what we saw previously: people are using Kubernetes for things like better config management or like a better automation tool. They&rsquo;re not waiting until they get to a 200 node scale problem where current tools fall apart. My guess is that 20 to 50 node clusters is probably the sweet spot for most people. For some organisations, it makes sense to have a lot of small clusters, one for every team or one for every project, for example. But, in order for that analysis to be more accurate, I&rsquo;d need to know how many K8s clusters they have and then how big are these clusters.</li>
-        <li><strong>Ken Sipe</strong> &mdash; It&rsquo;s interesting to think about use cases of clusters. What size do they have for given use cases? A cluster dedicated to analytics often cycles between times where it&rsquo;s heavily utilised and others where it&rsquo;s not. Web apps often tend to have times with gaps in resources because they don&rsquo;t have high density, so they&rsquo;re ready to scale &mdash; but in off-peak or off-season times, they use less. In using the cloud, have organisations decoupled capacity and the ability to scale in a way that allows them to save money? I like to ask them what they&rsquo;re using to manage this.</li>
-        <li>
-          <p><strong>Tim Hockin</strong> &mdash; I&rsquo;ve spent a lot of time recently talking to customers about their use and experience with single and multiple clusters. I can probably name 25 different answers to the question &ldquo;Why do I need multiple clusters?&rdquo;. Some of them are obvious, like &ldquo;I want to put a cluster in Europe and a cluster in the US and I want to load-balance between them&rdquo;. There are others that make some sense, like &ldquo;I have a really high-value application, and I want to just give it extra safety so I put it in its own cluster&rdquo;. Some are kind of FUD: &ldquo;I don&rsquo;t trust the way that Kubernetes does isolation between applications. So I&rsquo;m going to put it in another cluster and put all my apps in their own clusters&rdquo;. Others, I think, can potentially be disastrous at scale: &ldquo;I&rsquo;m going to give every team their own cluster and let them do whatever they want&rdquo;.</p>
-          <p>The question, I think, is really interesting; essentially, it is: &lsquo;how do you think about your clusters as an organisation? Are they a set of pets? Or are they actually cattle in a herd that you want to manage together?&rsquo; SIG multi-cluster has been trying to figure out models that work for people, with moderate success. There are also a few companies, like Rancher and Canonical, looking at this problem from a different angle. Something like a one or two machine installation in the back office of every store is very different from our customers at Google asking us to put 1000 nodes on a single cluster.</p>
-        </li>
-        <li>Michael Hausenblas &mdash; I still see people treating clusters more like pets rather than cattle. They deploy clusters with hundreds of nodes and keep adding more nodes to them. This can lead to single clusters of extreme sizes. So how do you do isolation or multi-tenancy in that case? What is your upgrade strategy? Do you require zero downtime? Have you considered the blast radius? Instead, if they went with a more cell-oriented architecture, where every team has its own cluster, or even multiple ones for dev, test and production, the separation of concern would probably simplify the operations. Overall, this is a maturity indicator.</li>
-        <li>Tim Hockin &mdash; If we take out the &ldquo;Don't know&rsquo;s&rdquo;, 60% of people have more than one cluster. To those people, I would ask: do you have policies that you want the same across those clusters? How do you enact them? Do you use your multiple clusters for load balancing or geo-distribution? Or you just have one cluster for dev and another one for prod? Are you afraid of cluster upgrades? Afraid of the blast radius? If you mess up the cluster upgrade, does that mean your entire business is taken down? How do you defend against that? Those, to me, are the interesting questions around multi-cluster.</li>
-        <li>Kelsey Hightower &mdash; This is in line with my experience of talking to the community. I see people choosing to split their Kubernetes clusters between at least two zones, to give them a little bit of high availability, thinking about failure domains and blast radius &mdash; that&rsquo;s just smart. Now, 2-5 clusters might be about a multi-region setup or compartmentalisation. An example of the latter can be having a dedicated cluster for databases, one for all the web apps and the rest of the clusters for the more sensitive apps and/or data. People probably still prefer to isolate these at the cluster level with their own set of dedicated machines. 10% of the people are doing 6-10 clusters. That could mean that there&rsquo;s two for dev, two for the UAT environment, and then two for prod that gives you the total of six. That 50+ range is where we might see one cluster per team or per business unit. Here&rsquo;s where multi-cluster tooling is necessary to deal with the challenge of cluster management at scale. A single cluster might be for people that still are at the planning/experimenting phase, the first step before going into multi-cluster.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This speaks to what we saw previously: people are using Kubernetes for things like better config management or like a better automation tool. They&rsquo;re not waiting until they get to a 200 node scale problem where current tools fall apart. My guess is that 20 to 50 node clusters is probably the sweet spot for most people. For some organisations, it makes sense to have a lot of small clusters, one for every team or one for every project, for example. But, in order for that analysis to be more accurate, I&rsquo;d need to know how many K8s clusters they have and then how big are these clusters.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/0117de54-ken-sipe.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">It&rsquo;s interesting to think about use cases of clusters. What size do they have for given use cases? A cluster dedicated to analytics often cycles between times where it&rsquo;s heavily utilised and others where it&rsquo;s not. Web apps often tend to have times with gaps in resources because they don&rsquo;t have high density, so they&rsquo;re ready to scale &mdash; but in off-peak or off-season times, they use less. In using the cloud, have organisations decoupled capacity and the ability to scale in a way that allows them to save money? I like to ask them what they&rsquo;re using to manage this.</p>
+            <cite class="p-pull-quote__citation">Ken Sipe, Cloud Native Computing Foundation, Edward Jones</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/132b999e-tim_hockin.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I&rsquo;ve spent a lot of time recently talking to customers about their use and experience with single and multiple clusters. I can probably name 25 different answers to the question &ldquo;Why do I need multiple clusters?&rdquo;. Some of them are obvious, like &ldquo;I want to put a cluster in Europe and a cluster in the US and I want to load-balance between them&rdquo;. There are others that make some sense, like &ldquo;I have a really high-value application, and I want to just give it extra safety so I put it in its own cluster&rdquo;. Some are kind of FUD: &ldquo;I don&rsquo;t trust the way that Kubernetes does isolation between applications. So I&rsquo;m going to put it in another cluster and put all my apps in their own clusters&rdquo;. Others, I think, can potentially be disastrous at scale: &ldquo;I&rsquo;m going to give every team their own cluster and let them do whatever they want&rdquo;.</p>
+            <p class="p-pull-quote__quote">The question, I think, is really interesting; essentially, it is: &lsquo;how do you think about your clusters as an organisation? Are they a set of pets? Or are they actually cattle in a herd that you want to manage together?&rsquo; SIG multi-cluster has been trying to figure out models that work for people, with moderate success. There are also a few companies, like Rancher and Canonical, looking at this problem from a different angle. Something like a one or two machine installation in the back office of every store is very different from our customers at Google asking us to put 1000 nodes on a single cluster.</p>
+            <cite class="p-pull-quote__citation">Tim Hockin, Principal Software Engineer, GCP</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/8cb586b3-michael_hausenblas.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I still see people treating clusters more like pets rather than cattle. They deploy clusters with hundreds of nodes and keep adding more nodes to them. This can lead to single clusters of extreme sizes. So how do you do isolation or multi-tenancy in that case? What is your upgrade strategy? Do you require zero downtime? Have you considered the blast radius? Instead, if they went with a more cell-oriented architecture, where every team has its own cluster, or even multiple ones for dev, test and production, the separation of concern would probably simplify the operations. Overall, this is a maturity indicator.</p>
+            <cite class="p-pull-quote__citation">Michael Hausenblas, Solution Engineering Lead, AWS</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/132b999e-tim_hockin.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">If we take out the &ldquo;Don't know&rsquo;s&rdquo;, 60% of people have more than one cluster. To those people, I would ask: do you have policies that you want the same across those clusters? How do you enact them? Do you use your multiple clusters for load balancing or geo-distribution? Or you just have one cluster for dev and another one for prod? Are you afraid of cluster upgrades? Afraid of the blast radius? If you mess up the cluster upgrade, does that mean your entire business is taken down? How do you defend against that? Those, to me, are the interesting questions around multi-cluster.</p>
+            <cite class="p-pull-quote__citation">Tim Hockin, Principal Software Engineer, GCP</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This is in line with my experience of talking to the community. I see people choosing to split their Kubernetes clusters between at least two zones, to give them a little bit of high availability, thinking about failure domains and blast radius &mdash; that&rsquo;s just smart. Now, 2-5 clusters might be about a multi-region setup or compartmentalisation. An example of the latter can be having a dedicated cluster for databases, one for all the web apps and the rest of the clusters for the more sensitive apps and/or data. People probably still prefer to isolate these at the cluster level with their own set of dedicated machines. 10% of the people are doing 6-10 clusters. That could mean that there&rsquo;s two for dev, two for the UAT environment, and then two for prod that gives you the total of six. That 50+ range is where we might see one cluster per team or per business unit. Here&rsquo;s where multi-cluster tooling is necessary to deal with the challenge of cluster management at scale. A single cluster might be for people that still are at the planning/experimenting phase, the first step before going into multi-cluster.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="defining-substrate">11. Defining &ldquo;substrate&rdquo;</h3>
 
@@ -2375,10 +2781,49 @@
 
       <p>Substrate is a word that we hear a LOT in internal conversations. In a multi-cloud or hybrid cloud world, sometimes people are building on bare metal, sometimes VMs, sometimes Kubernetes, sometimes VMs on Kubernetes &mdash; so it helps to have a term to handle all of them at once. We like&ldquo;substrate&rdquo;. What do you use?</p>
 
-      <ul>
-        <li><strong>Kelsey Hightower</strong> &mdash; I tend to associate the word &ldquo;substrate&rdquo; with networking. That, to me, is the most fundamental thing as it connects storage, traffic, enables the communication between all the things running in a cluster. Going above networking and towards Kubernetes, we often refer to &ldquo;platforms&rdquo;, like the compute layer is a platform or the data platform.</li>
-        <li><strong>Ken Sipe</strong> &mdash; While we&rsquo;re defining terms, it would be interesting for DevOps to define &ldquo;control plane&rdquo;. This tends to be a vendor-defined term, and the challenge we have is that Kubernetes is the control plane for the most part (in K8s-only environments), but now that &ldquo;operators&rdquo; are opening up with &ldquo;Charmed Operators&rdquo; across substrates, charmed operators act as a &ldquo;control plane extension&rdquo; for k8s, containers, VMs, bare metal, etc.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I tend to associate the word &ldquo;substrate&rdquo; with networking. That, to me, is the most fundamental thing as it connects storage, traffic, enables the communication between all the things running in a cluster. Going above networking and towards Kubernetes, we often refer to &ldquo;platforms&rdquo;, like the compute layer is a platform or the data platform.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/0117de54-ken-sipe.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">While we&rsquo;re defining terms, it would be interesting for DevOps to define &ldquo;control plane&rdquo;. This tends to be a vendor-defined term, and the challenge we have is that Kubernetes is the control plane for the most part (in K8s-only environments), but now that &ldquo;operators&rdquo; are opening up with &ldquo;Charmed Operators&rdquo; across substrates, charmed operators act as a &ldquo;control plane extension&rdquo; for k8s, containers, VMs, bare metal, etc.</p>
+            <cite class="p-pull-quote__citation">Ken Sipe, Cloud Native Computing Foundation, Edward Jones</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="are-companies-contributing-code-back-to-open-source-projects-they-use">12. Are companies contributing code back to open source projects they use?</h3>
 
@@ -2489,10 +2934,49 @@
       <p>Is everybody swimming deep into the K8s ocean? Or are we still just dipping our toes in the water? Almost 30% of our respondents run applications on multiple environments and only 15.7% are all in on Kubernetes. Every year the usage of Kubernetes as the de-facto platform to run application estates increases ever so slightly. While we&rsquo;re excited about this &mdash; as it means that the industry is slowly but steadily standardising the way people deal with infrastructure &mdash; we&rsquo;re also 100% supportive of the idea that the best infrastructure for your applications is the infra combination that makes the most sense to YOU. As Mark Shuttleworth said in the KubeCon Operator Day keynote this year: &ldquo;Kubernetes? Yes. VMs? Yes. Bare metal? Yes. Public clouds or private clouds? Yes.&rdquo;</p>
       <p>No matter your substrate, once those decisions are made, there is a shift in focus to the next big challenge: automation of operations.</p>
 
-      <ul>
-        <li><strong>James Strachan</strong> &mdash; Only 15% fully using Kubernetes. So I think this clearly shows we've got a long way to go before we've properly modernised the infrastructure, until &ldquo;the rest&rdquo; is just part of the Kubernetes backplane.</li>
-        <li><strong>Kelsey Hightower</strong> &mdash; This is probably super spot on. I don't think anyone is all-in on Kubernetes. What we&rsquo;re seeing is that organisations coming from traditional approaches are moving things to SAAS. And then what&rsquo;s left can probably go on Kubernetes. Managed services also fall in that SAAS category. So I think you have to dig into that 15% (All our applications run on Kubernetes). Why are you running everything on Kubernetes? And how many of your things went to managed services, instead of being ported from VMs to K8s? That&rsquo;s the reality right there, a very mature set of responses. Kubernetes is great for lots of workloads, and it keeps getting better every year. But the truth is, (e.g.) for some interactive machine learning jobs, you just want the biggest piece of bare metal you can get with no additional layers, you don&rsquo;t really care about centralized logging, you just want speed. So it makes a lot of sense that people are mixing and matching. The idea that everyone&rsquo;s using Kubernetes is probably not 100% accurate, but I think it is true that everyone is experimenting, that there is a small Kubernetes cluster somewhere in every org even if it&rsquo;s only a POC.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/ba2dd769-james.jpeg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">Only 15% fully using Kubernetes. So I think this clearly shows we've got a long way to go before we've properly modernised the infrastructure, until &ldquo;the rest&rdquo; is just part of the Kubernetes backplane.</p>
+            <cite class="p-pull-quote__citation">James Strachan, CloudBees</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This is probably super spot on. I don't think anyone is all-in on Kubernetes. What we&rsquo;re seeing is that organisations coming from traditional approaches are moving things to SAAS. And then what&rsquo;s left can probably go on Kubernetes. Managed services also fall in that SAAS category. So I think you have to dig into that 15% (All our applications run on Kubernetes). Why are you running everything on Kubernetes? And how many of your things went to managed services, instead of being ported from VMs to K8s? That&rsquo;s the reality right there, a very mature set of responses. Kubernetes is great for lots of workloads, and it keeps getting better every year. But the truth is, (e.g.) for some interactive machine learning jobs, you just want the biggest piece of bare metal you can get with no additional layers, you don&rsquo;t really care about centralized logging, you just want speed. So it makes a lot of sense that people are mixing and matching. The idea that everyone&rsquo;s using Kubernetes is probably not 100% accurate, but I think it is true that everyone is experimenting, that there is a small Kubernetes cluster somewhere in every org even if it&rsquo;s only a POC.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="kubernetes-will-bring-world-peace-change-our-minds">14. Kubernetes will bring world peace. Change our minds</h3>
 
@@ -2608,9 +3092,26 @@
       <p>From a job role category point of view, Ops are mostly (48%) working on KaaS deployment whereas Devs are focusing (35%) on re-architecting applications.</p>
       <p>Overall, these are mostly &ldquo;easy&rdquo; use cases, which tells us again that the majority is still early in the cloud native journey. Looks like Ken Sipe also agrees with us, while adding further considerations:</p>
 
-      <ul>
-        <li><strong>Ken Sipe</strong> &mdash; The top two answers are consistent with my worldview of the industry. Most people are only at the beginning. The majority are deploying and managing Kubernetes as a service &mdash; they&rsquo;re getting AKS, EKS, or something similar and they&rsquo;re re-architecting apps. I'm seeing both of these. The challenge is: When you have this at large scale, monitoring bandwidth becomes one of your most important activities. You notice that one application with hundreds of instances becomes too &ldquo;chatty&rdquo;, or demands too much bandwidth. This can actually saturate the trunk, so much so that it affects your other services, and solving that becomes your next challenge. You&rsquo;ll need to move data to the cloud, which a lot of organisations, e.g. in the financial industry, are challenged to do, or you have to increase bandwidth or segment, or implement a combination of the two.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/0117de54-ken-sipe.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">The top two answers are consistent with my worldview of the industry. Most people are only at the beginning. The majority are deploying and managing Kubernetes as a service &mdash; they&rsquo;re getting AKS, EKS, or something similar and they&rsquo;re re-architecting apps. I'm seeing both of these. The challenge is: When you have this at large scale, monitoring bandwidth becomes one of your most important activities. You notice that one application with hundreds of instances becomes too &ldquo;chatty&rdquo;, or demands too much bandwidth. This can actually saturate the trunk, so much so that it affects your other services, and solving that becomes your next challenge. You&rsquo;ll need to move data to the cloud, which a lot of organisations, e.g. in the financial industry, are challenged to do, or you have to increase bandwidth or segment, or implement a combination of the two.</p>
+            <cite class="p-pull-quote__citation">Ken Sipe, Cloud Native Computing Foundation, Edward Jones</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 16. id="what-are-the-top-challenges-kubernetes-brings-to-businesses">What are the top challenges Kubernetes brings to businesses?</h3>
 
@@ -2786,11 +3287,72 @@
 
       <p>Many organisations are using or experimenting with Kubernetes, but these results help illustrate that usage has not permeated completely. Nearly 55% of respondents believe they lack Kubernetes skills and in-house expertise. This leads to challenges tuning the platform for optimal security, observability, networking and storage configurations, challenges training users (29.7%) and resistance due to company IT culture (37%) or monolithic architectures by 33%. Our experts mostly empathise with the users and provide a positive perspective and solutions to the problem:</p>
 
-      <ul>
-        <li><strong>Kelsey Hightower</strong> &mdash; People are often struggling to start with Kubernetes. What I often tell them is that, in truth, they already know 80% of what&rsquo;s going on in Kubernetes, if they come from the Linux community. Their cluster probably runs on Ubuntu, their apps are already written to run on Linux, the apps are going to make the same system calls, look for the same config files and run on the same kernel as before Kubernetes. If they start from the base principles, they can have their apps running on a newer version of Ubuntu and that will bring them at 90%. It&rsquo;s really all about using a different tool to automate. They may lack the confidence that comes with the transition to a different stack, but they should rest assured that the basics are the same.</li>
-        <li><strong>Michael Hausenblas</strong> &mdash; Everyone is still struggling with regards to in-house skills around Kubernetes. It really is a matter of buy versus build though. There are companies keen to invest in building up their skillset and engineering power so that they can run the entire stack and even hire evangelists that preach and lead with good practices. Other businesses say &ldquo;We&rsquo;re not in the business of Kubernetes, we just want the benefits&rdquo;. They are happy to outsource the skills to consultants and professional services, only keeping a limited number of in-house experts to ensure smooth operations. They are also the prominent users of the DIY PAAS solutions that completely shield the low-level details. In the end, developer teams don't really see a difference. Where they previously had a tool that provisioned their VM, now they have something similar that creates a pod in a namespace.</li>
-        <li><strong>James Strachan</strong> &mdash; I find the lack of skills answer particularly interesting. I believe people underestimate how big of a technology leap there&rsquo;s been in the last five years: Kubernetes, cloud, CICD, DevOps, GitOps, ChatOps. So much has changed. And it&rsquo;s really hard for lots of people to keep doing their job, but also learn all this new stuff. Lack of skills and training manpower is a huge issue right now. And I think the only way to really learn is by doing; pick a path and try the new tech.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">People are often struggling to start with Kubernetes. What I often tell them is that, in truth, they already know 80% of what&rsquo;s going on in Kubernetes, if they come from the Linux community. Their cluster probably runs on Ubuntu, their apps are already written to run on Linux, the apps are going to make the same system calls, look for the same config files and run on the same kernel as before Kubernetes. If they start from the base principles, they can have their apps running on a newer version of Ubuntu and that will bring them at 90%. It&rsquo;s really all about using a different tool to automate. They may lack the confidence that comes with the transition to a different stack, but they should rest assured that the basics are the same.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/8cb586b3-michael_hausenblas.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">Everyone is still struggling with regards to in-house skills around Kubernetes. It really is a matter of buy versus build though. There are companies keen to invest in building up their skillset and engineering power so that they can run the entire stack and even hire evangelists that preach and lead with good practices. Other businesses say &ldquo;We&rsquo;re not in the business of Kubernetes, we just want the benefits&rdquo;. They are happy to outsource the skills to consultants and professional services, only keeping a limited number of in-house experts to ensure smooth operations. They are also the prominent users of the DIY PAAS solutions that completely shield the low-level details. In the end, developer teams don't really see a difference. Where they previously had a tool that provisioned their VM, now they have something similar that creates a pod in a namespace.</p>
+            <cite class="p-pull-quote__citation">Michael Hausenblas, Solution Engineering Lead, AWS</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/ba2dd769-james.jpeg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I find the lack of skills answer particularly interesting. I believe people underestimate how big of a technology leap there&rsquo;s been in the last five years: Kubernetes, cloud, CICD, DevOps, GitOps, ChatOps. So much has changed. And it&rsquo;s really hard for lots of people to keep doing their job, but also learn all this new stuff. Lack of skills and training manpower is a huge issue right now. And I think the only way to really learn is by doing; pick a path and try the new tech.</p>
+            <cite class="p-pull-quote__citation">James Strachan, CloudBees</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <p>If any of these concerns resonate with you &mdash; Canonical can help.</p>
       <ul>
@@ -3027,9 +3589,26 @@
 
       <p>Respondents were able to choose multiple answers to this question &mdash; based on the multiple environments they&rsquo;re running. If we dissect the data, it looks like the first wave is made up of public clouds, who have been a steady wave of innovation for the IT industry over the past decade. That is also true for Kubernetes and the cloud native space. The second wave of responses are all on-prem solutions such as VMware, Openstack and bare metal. Following them, a long tail of various answers with smaller percentages shows the diversity of environments, something that speaks to the universality of Kubernetes as a platform.</p>
 
-      <ul>
-        <li><strong>Kelsey Hightower</strong> &mdash; I think this really speaks to the original promise that Kubernetes would be a vendor-neutral solution to the cloud space. It&rsquo;s not a Google-only technology. It&rsquo;s something a lot of people contribute to. What&rsquo;s really interesting here is the bare metal component. Do you really need a lot of VM provisioning superpowers? Probably not. You're probably going to be able to get more performance if, for certain types of apps, such as  Kubeflow for machine learning or some high-performance web applications, you get rid of some of the VM management layers and just give the whole raw compute layer to Kubernetes. Kubernetes has APIs for attaching storage volumes or managing IP ranges, so why add the hypervisor overhead?</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I think this really speaks to the original promise that Kubernetes would be a vendor-neutral solution to the cloud space. It&rsquo;s not a Google-only technology. It&rsquo;s something a lot of people contribute to. What&rsquo;s really interesting here is the bare metal component. Do you really need a lot of VM provisioning superpowers? Probably not. You're probably going to be able to get more performance if, for certain types of apps, such as  Kubeflow for machine learning or some high-performance web applications, you get rid of some of the VM management layers and just give the whole raw compute layer to Kubernetes. Kubernetes has APIs for attaching storage volumes or managing IP ranges, so why add the hypervisor overhead?</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="kubernetes-versions-and-upgrades-too-fast-or-too-slow">18. Kubernetes versions and upgrades: too fast or too slow?</h3>
 
@@ -3117,12 +3696,95 @@
 
       <p>Kubernetes releases happen, as of 2020, three times a year. The community is adamant about fixing issues and improving the technology quickly. But is that same pace being adopted by industries? Are they able to keep up and benefit from the latest improvements? The survey showed that this is an area for improvement with 26% of respondents at least 4 versions behind the latest stable. We will let the actual maintainers and contributors speak their mind:</p>
 
-      <ul>
-        <li><strong>Tim Hockin</strong> &mdash; People are stuck between a rock and a hard place on this one. On one hand, they say it&rsquo;s hard to keep up with releases &mdash; enterprises in particular struggle to absorb a new release every quarter. On the other hand, slowing down a release doesn&rsquo;t mean the development will slow down too,  which means more risk will be accumulated in every release. Most providers like Google or Amazon pick up the release many months after the initial release date. This means that if I fix a critical bug, it can take between nine to fifteen months for the end customers to receive it. As developers, it&rsquo;s really difficult to get good feedback this way. We do a lot of testing, we have our own CI, but I usually only have a few critical users try something out, bulk data is hard to find.</li>
-        <li><strong>Kelsey Hightower</strong> &mdash; This tells me that 26% of the people may have rolled their own cluster, maybe they're not quite ready to use a distribution. And they're just using a homegrown or community-based deployment tool. For the 1.17 to 1.19 version these are either people that are really good at managing K8s on their own or using a managed service or a cloud provider. The data is also aligned with the mentality seen in the Linux distribution world, where we have things like Ubuntu LTS. People don&rsquo;t just upgrade to the newest version of Kubernetes just because it got released. They will kick the tires to see what it brings, way before moving to it in production.</li>
-        <li><strong>Tim Hockin</strong> &mdash; Let&rsquo;s put that in perspective: 1.17 is over a year ago. And 1.10 is 2,5 years ago. So people are using software that has bugs that have been fixed for 2,5 years. I'm sure they're unhappy about it. All I can say to them is to upgrade to a newer version because it&rsquo;s fixed. As a community, we cannot backport changes to 1.10 because we just don't have the capacity for it. This is where vendors like Canonical or Red Hat make their hay, with extended support contracts. If somebody is willing to pay for that, and someone&rsquo;s willing to fund the engineering to keep backporting those changes, more power to them.</li>
-        <li><strong>Michael Hausenblas</strong> &mdash; Again, this comes back to pets versus cattle on the cluster level. If you do have a big &mdash; hundreds or thousands of nodes &mdash; cluster, then you will probably be very conservative with upgrading. On the other hand, if you treat your clusters immutably, like cattle, then a few of them might be on an old version, but I would expect the majority to be on the latest versions.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/132b999e-tim_hockin.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">People are stuck between a rock and a hard place on this one. On one hand, they say it&rsquo;s hard to keep up with releases &mdash; enterprises in particular struggle to absorb a new release every quarter. On the other hand, slowing down a release doesn&rsquo;t mean the development will slow down too,  which means more risk will be accumulated in every release. Most providers like Google or Amazon pick up the release many months after the initial release date. This means that if I fix a critical bug, it can take between nine to fifteen months for the end customers to receive it. As developers, it&rsquo;s really difficult to get good feedback this way. We do a lot of testing, we have our own CI, but I usually only have a few critical users try something out, bulk data is hard to find.</p>
+            <cite class="p-pull-quote__citation">Tim Hockin, Principal Software Engineer, GCP</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This tells me that 26% of the people may have rolled their own cluster, maybe they're not quite ready to use a distribution. And they're just using a homegrown or community-based deployment tool. For the 1.17 to 1.19 version these are either people that are really good at managing K8s on their own or using a managed service or a cloud provider. The data is also aligned with the mentality seen in the Linux distribution world, where we have things like Ubuntu LTS. People don&rsquo;t just upgrade to the newest version of Kubernetes just because it got released. They will kick the tires to see what it brings, way before moving to it in production.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/132b999e-tim_hockin.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">Let&rsquo;s put that in perspective: 1.17 is over a year ago. And 1.10 is 2,5 years ago. So people are using software that has bugs that have been fixed for 2,5 years. I'm sure they're unhappy about it. All I can say to them is to upgrade to a newer version because it&rsquo;s fixed. As a community, we cannot backport changes to 1.10 because we just don't have the capacity for it. This is where vendors like Canonical or Red Hat make their hay, with extended support contracts. If somebody is willing to pay for that, and someone&rsquo;s willing to fund the engineering to keep backporting those changes, more power to them.</p>
+            <cite class="p-pull-quote__citation">Tim Hockin, Principal Software Engineer, GCP</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/8cb586b3-michael_hausenblas.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">Again, this comes back to pets versus cattle on the cluster level. If you do have a big &mdash; hundreds or thousands of nodes &mdash; cluster, then you will probably be very conservative with upgrading. On the other hand, if you treat your clusters immutably, like cattle, then a few of them might be on an old version, but I would expect the majority to be on the latest versions.</p>
+            <cite class="p-pull-quote__citation">Michael Hausenblas, Solution Engineering Lead, AWS</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="kubernetes-in-local-development">19. Kubernetes in local development</h3>
 
@@ -3254,10 +3916,49 @@
 
       <p>Lightweight Kubernetes distributions lower the barrier of entry to Kubernetes and are being used more and more by developers on their local workstations, as the first step of their development workflows. Depending on how one would look at this, these can increase efficiency and quality, by bringing developers closer to real production environments and standardising their workflows, or, if used thoughtlessly, can make the same workflows more complicated and error-prone. In any case, distributions like <a href="https://microk8s.io/" class="p-link--external">MicroK8s</a> and k3s, following the path that Minikube started, are here to stay and now span use cases even beyond local development.</p>
 
-      <ul>
-        <li><strong>James Strachan</strong> &mdash; I&rsquo;m a big advocate of using Kubernetes for development. That said, I think people should use the same kind of cluster for local development as the one they have in production, just use a different namespace. There are tools out there to help build container images on Kubernetes, try them out and experiment. Why learn different things like Docker or docker-compose if, in the end, you want to run containers on Kubernetes? Have the same infrastructure for dev, staging and production in K8s and use that for everything. That will encourage developers to learn what production is really like and allow them to uncover issues early in dev more easily.</li>
-        <li><strong>Kelsey Hightower</strong> &mdash; I personally don&rsquo;t use Kubernetes for local development. My take is you're never going to be close to production on your laptop, there&rsquo;s just so many things that will never be the same. This speaks to the fact that there&rsquo;s no good way to share things in a remote cluster and there are no great packaging tools, so people can't install different versions of the apps, so this is why there&rsquo;s demand for local K8s. I&rsquo;m surprised there&rsquo;s no one just saying &ldquo;I&rsquo;m just using Docker, just Docker, no Kubernetes&rdquo;. I think people are painting themselves into a corner here. Using Kubernetes on their laptop, trying to have a similar workflow as the production deployment. But the truth is, the secret is going to be different. The network policies are going to be different. And so things will work on the laptop but might not work in production. I expect these numbers to change, but again, it&rsquo;s going to depend on the evolution of developer tools.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/ba2dd769-james.jpeg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I&rsquo;m a big advocate of using Kubernetes for development. That said, I think people should use the same kind of cluster for local development as the one they have in production, just use a different namespace. There are tools out there to help build container images on Kubernetes, try them out and experiment. Why learn different things like Docker or docker-compose if, in the end, you want to run containers on Kubernetes? Have the same infrastructure for dev, staging and production in K8s and use that for everything. That will encourage developers to learn what production is really like and allow them to uncover issues early in dev more easily.</p>
+            <cite class="p-pull-quote__citation">James Strachan, CloudBees</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I personally don&rsquo;t use Kubernetes for local development. My take is you're never going to be close to production on your laptop, there&rsquo;s just so many things that will never be the same. This speaks to the fact that there&rsquo;s no good way to share things in a remote cluster and there are no great packaging tools, so people can't install different versions of the apps, so this is why there&rsquo;s demand for local K8s. I&rsquo;m surprised there&rsquo;s no one just saying &ldquo;I&rsquo;m just using Docker, just Docker, no Kubernetes&rdquo;. I think people are painting themselves into a corner here. Using Kubernetes on their laptop, trying to have a similar workflow as the production deployment. But the truth is, the secret is going to be different. The network policies are going to be different. And so things will work on the laptop but might not work in production. I expect these numbers to change, but again, it&rsquo;s going to depend on the evolution of developer tools.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="what-is-the-best-kubernetes-meme">20. What is the best Kubernetes meme?</h3>
 
@@ -3383,9 +4084,26 @@
 
       <p>This question was meant to be slightly tongue-in-cheek, and since we couldn&rsquo;t find great answers, we opted to smile instead. Whether you hate it or love it, yet another markdown language (YAML) is here to stay. The cloud native community is working meticulously to abstract complexity from the different solutions, including automating many of the low-level configuration steps that have people screaming &ldquo;yaml&rdquo; in their sleep. Brighter days are ahead!</p>
 
-      <ul>
-        <li><strong>Karthikeyan Shanmugam</strong> &mdash; I can certainly relate to this, YAML files are tough to maintain and open the door to a lot of human errors that can even mess up entire deployments.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/29491306-Karthik-profile.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I can certainly relate to this, YAML files are tough to maintain and open the door to a lot of human errors that can even mess up entire deployments.</p>
+            <cite class="p-pull-quote__citation">Karthikeyan Shanmugam, Digital Solution Architect, HCL</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="how-many-helm-charts-has-your-team-used-modified-in-the-last-90-days">22. How many Helm charts has your team used/modified in the last 90 days</h3>
 
@@ -3460,12 +4178,95 @@
         </div>
       </div>
 
-      <ul>
-        <li><strong>James Strachan</strong> &mdash; Helm is a package manager, it stores versioned Helm charts in a repository. It also does a form of configuration management that allows you to templatize yaml. Some developers are put off because of the templating side, but they don't realize that&rsquo;s completely optional. You can just use Helm as a way of versioning tarballs of yaml which on its own is really useful. Helm needs to be standardised so that everyone just gets on with it.</li>
-        <li><strong>Ken Sipe</strong> &mdash; Interesting. People are using it but in small amounts. I think zero is the most interesting part of this. It&rsquo;s either that people aren&rsquo;t using it yet, or that they&rsquo;re intentionally planning not to. I&rsquo;d like to know which.</li>
-        <li><strong>Tim Hockin</strong> &mdash; This aligns with my own anecdata of helm being attractive at small scale and counter-productive at a larger scale.</li>
-        <li><strong>Kelsey Hightower</strong> &mdash; This whole thing with Helm resembles the days of configuration management, with Chef, Ansible, Puppet etc. Helm is really great to get people started, inexperienced users can use somebody else&rsquo;s blueprint and just run with it. When the need comes to start tweaking things, that&rsquo;s where it gets complicated. More major changes and you get to a point where you&rsquo;re essentially on your own and have to keep track of what the community is doing and try to align. The &ldquo;1-10&rdquo; response might be people using official third party Helm charts, like when I go on the Redis website and it says &ldquo;the best way to try our product on Kubernetes is to use this Helm chart&rdquo;. Fine. When I see the &ldquo;100 to 500&rdquo; response, that to me is people using Helm for their own, custom apps. And that percentage is still fairly low. The zero Helm charts group is a mix of people at the start of their journey with K8s or just the fact that people won&rsquo;t trust unofficial, non-bulletproof Helm charts for third-party software in production, which makes sense.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/ba2dd769-james.jpeg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">Helm is a package manager, it stores versioned Helm charts in a repository. It also does a form of configuration management that allows you to templatize yaml. Some developers are put off because of the templating side, but they don't realize that&rsquo;s completely optional. You can just use Helm as a way of versioning tarballs of yaml which on its own is really useful. Helm needs to be standardised so that everyone just gets on with it.</p>
+            <cite class="p-pull-quote__citation">James Strachan, CloudBees</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/0117de54-ken-sipe.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">Interesting. People are using it but in small amounts. I think zero is the most interesting part of this. It&rsquo;s either that people aren&rsquo;t using it yet, or that they&rsquo;re intentionally planning not to. I&rsquo;d like to know which.</p>
+            <cite class="p-pull-quote__citation">Ken Sipe, Cloud Native Computing Foundation, Edward Jones</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/132b999e-tim_hockin.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This aligns with my own anecdata of helm being attractive at small scale and counter-productive at a larger scale.</p>
+            <cite class="p-pull-quote__citation">Tim Hockin, Principal Software Engineer, GCP</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This whole thing with Helm resembles the days of configuration management, with Chef, Ansible, Puppet etc. Helm is really great to get people started, inexperienced users can use somebody else&rsquo;s blueprint and just run with it. When the need comes to start tweaking things, that&rsquo;s where it gets complicated. More major changes and you get to a point where you&rsquo;re essentially on your own and have to keep track of what the community is doing and try to align. The &ldquo;1-10&rdquo; response might be people using official third party Helm charts, like when I go on the Redis website and it says &ldquo;the best way to try our product on Kubernetes is to use this Helm chart&rdquo;. Fine. When I see the &ldquo;100 to 500&rdquo; response, that to me is people using Helm for their own, custom apps. And that percentage is still fairly low. The zero Helm charts group is a mix of people at the start of their journey with K8s or just the fact that people won&rsquo;t trust unofficial, non-bulletproof Helm charts for third-party software in production, which makes sense.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <p>These expert responses are quite interesting. We&rsquo;re also hearing from enterprises interested in moving from configuration management to application management and model driven operations to handle Day Zero through Day 1000. <a href="/about#app-management">Management: Applications over configurations</a>.</p>
 
@@ -3555,10 +4356,49 @@
 
       <p>28% of respondents use Helm as the top option to manage software on K8s. Helm&rsquo;s popularity stems from the fact it made it easy to get started with container deployments, albeit it cannot handle operations in the long-term. Our experts had very insightful comments to make about this particular topic:</p>
 
-      <ul>
-        <li><strong>Kelsey Hightower</strong> &mdash; If you combine bash scripts and config management, that&rsquo;s 40%. That&rsquo;s really telling me that the operations folks are bringing their existing tooling over to the K8s side. This has to do with Kubernetes&rsquo; maturity and people&rsquo;s confidence level, again most stuff are already automated, you could mostly use kubectl. But people are still learning, so this is why we are seeing that crossover. This also matches the nature of who is managing software on these clusters. It&rsquo;s a lot more operations people than it is developers.</li>
-        <li><strong>James Strachan</strong> &mdash; I like Kustomize conceptually, but I do find it hard to use. And it looks like Helm is a lot more popular, which I think is because it&rsquo;s much easier to use. I would like to see Helm and Kustomize merge in some way, at some point, because it just seems silly to have two ways to do the same thing.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">If you combine bash scripts and config management, that&rsquo;s 40%. That&rsquo;s really telling me that the operations folks are bringing their existing tooling over to the K8s side. This has to do with Kubernetes&rsquo; maturity and people&rsquo;s confidence level, again most stuff are already automated, you could mostly use kubectl. But people are still learning, so this is why we are seeing that crossover. This also matches the nature of who is managing software on these clusters. It&rsquo;s a lot more operations people than it is developers.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/ba2dd769-james.jpeg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I like Kustomize conceptually, but I do find it hard to use. And it looks like Helm is a lot more popular, which I think is because it&rsquo;s much easier to use. I would like to see Helm and Kustomize merge in some way, at some point, because it just seems silly to have two ways to do the same thing.</p>
+            <cite class="p-pull-quote__citation">James Strachan, CloudBees</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="what-is-the-solution-to-too-many-helm-charts">24. What is the solution to too many Helm charts?</h3>
 
@@ -3611,11 +4451,72 @@
         </div>
       </div>
 
-      <ul>
-        <li><strong>Ken Sipe</strong> &mdash; This is a problem in the ecosystem. It&rsquo;s not that there are too many, rather that a great many Helm charts are of varying maturity. You cannot know what they do exactly without heavy due diligence. In the financial space, there needs to be a practice of vetting these from a security and maturity standpoint. The same applies to operators.</li>
-        <li><strong>James Strachan</strong> &mdash; GitOps might be a way to manage Helm charts at scale. Solutions such as Jenkins X, Argo and Flux provide a way of configuring which Helm charts have been installed in which clusters using just source control gates and files in Git. But the thing that&rsquo;s missing in these solutions right now is a standard Git layout of how multiple Helm charts should be configured in source code.</li>
-        <li><strong>Kelsey Hightower</strong> &mdash; Helm made it easy to deal with the current problem, which is too many YAML files. People wanted something simpler, an abstraction or a wrapper, but Helm only solved the Day One problem. An operator is going to go a little bit deeper into the full lifecycle management, active management and deal with healing and so forth. So that&rsquo;s why I think operators are probably going to keep growing over time. People don&rsquo;t know what the solution to too many Helm charts is, of course, because everyone&rsquo;s still learning and practising.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/0117de54-ken-sipe.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This is a problem in the ecosystem. It&rsquo;s not that there are too many, rather that a great many Helm charts are of varying maturity. You cannot know what they do exactly without heavy due diligence. In the financial space, there needs to be a practice of vetting these from a security and maturity standpoint. The same applies to operators.</p>
+            <cite class="p-pull-quote__citation">Ken Sipe, Cloud Native Computing Foundation, Edward Jones</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/ba2dd769-james.jpeg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">GitOps might be a way to manage Helm charts at scale. Solutions such as Jenkins X, Argo and Flux provide a way of configuring which Helm charts have been installed in which clusters using just source control gates and files in Git. But the thing that&rsquo;s missing in these solutions right now is a standard Git layout of how multiple Helm charts should be configured in source code.</p>
+            <cite class="p-pull-quote__citation">James Strachan, CloudBees</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">Helm made it easy to deal with the current problem, which is too many YAML files. People wanted something simpler, an abstraction or a wrapper, but Helm only solved the Day One problem. An operator is going to go a little bit deeper into the full lifecycle management, active management and deal with healing and so forth. So that&rsquo;s why I think operators are probably going to keep growing over time. People don&rsquo;t know what the solution to too many Helm charts is, of course, because everyone&rsquo;s still learning and practising.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <p>If you&rsquo;re interested in learning more about operators and managing operations beyond Day One, here are some resources for you:</p>
       <ul>
@@ -3675,10 +4576,49 @@
         </div>
       </div>
 
-      <ul>
-        <li><strong>Ken Sipe</strong> &mdash; This one is easy. If you want good tooling to live for a period of time, you&rsquo;ve got to pony up.</li>
-        <li><strong>Kelsey Hightower</strong> &mdash; I think people are willing to pay for things they don't have time to build, use cloud provider services or buy a vendor&rsquo;s provisioning stack. If they can build or download something for free, they&rsquo;d probably be hesitant to pay for it, especially if it tends to work out of the box.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/0117de54-ken-sipe.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This one is easy. If you want good tooling to live for a period of time, you&rsquo;ve got to pony up.</p>
+            <cite class="p-pull-quote__citation">Ken Sipe, Cloud Native Computing Foundation, Edward Jones</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I think people are willing to pay for things they don't have time to build, use cloud provider services or buy a vendor&rsquo;s provisioning stack. If they can build or download something for free, they&rsquo;d probably be hesitant to pay for it, especially if it tends to work out of the box.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="does-your-team-use-community-provided-templates-playbooks-scripts-packages">26. Does your team use community-provided templates/playbooks/scripts/packages?</h3>
 
@@ -3753,10 +4693,49 @@
 
       <p>Like we stated above &mdash; there is power in working together to solve problems. That said &mdash; Trust is very very important. James and Kelsey weigh in:</p>
 
-      <ul>
-        <li><strong>James Strachan</strong> &mdash; I think that for all the cloud infrastructure and cloud services, we do need to delve deep only when that is really necessary, but overall stay fairly high level and get things to just work. Otherwise, we will spend our lives in university learning every property of every Kubernetes resource and the new acronyms for all the different services, which come out by the thousands every year. Life shouldn&rsquo;t be that complicated, therefore getting things to work is more important.</li>
-        <li><strong>Kelsey Hightower</strong> &mdash;  This is where I would say someone in every organisation should know because Helm today can do pretty much anything in your cluster. So do you really not care about what&rsquo;s in that Helm chart? I think this is really a matter of provenance. Did you get this Helm chart from a trusted actor, like your operations team or is it supported by an official vendor? Ok, that&rsquo;s fine. If you&rsquo;re just getting this from the internet and GitHub and you don&rsquo;t know who wrote it, I think you should probably spend a little time checking it out in detail.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/ba2dd769-james.jpeg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I think that for all the cloud infrastructure and cloud services, we do need to delve deep only when that is really necessary, but overall stay fairly high level and get things to just work. Otherwise, we will spend our lives in university learning every property of every Kubernetes resource and the new acronyms for all the different services, which come out by the thousands every year. Life shouldn&rsquo;t be that complicated, therefore getting things to work is more important.</p>
+            <cite class="p-pull-quote__citation">James Strachan, CloudBees</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This is where I would say someone in every organisation should know because Helm today can do pretty much anything in your cluster. So do you really not care about what&rsquo;s in that Helm chart? I think this is really a matter of provenance. Did you get this Helm chart from a trusted actor, like your operations team or is it supported by an official vendor? Ok, that&rsquo;s fine. If you&rsquo;re just getting this from the internet and GitHub and you don&rsquo;t know who wrote it, I think you should probably spend a little time checking it out in detail.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="in-a-typical-organization-who-manages-the-cloud-infrastructure">28. In a typical organization, who manages the cloud infrastructure?</h3>
 
@@ -3831,11 +4810,72 @@
         </div>
       </div>
 
-      <ul>
-        <li><strong>Alexis Richardson</strong> &mdash; It&rsquo;s really weird that &ldquo;managed service&rdquo; is so low given the high number of cloud-hosted Kubernetes usage. To me, this reads as if DevOps teams are expected to manage the entire cloud. Is that how businesses think of it? It&rsquo;s not clear. I don't believe 37.5% of the DevOps folks are all managing their own on-premise infrastructure. I think some of them are using tools like EKS. But maybe they are answering as if they are managing them because they own the relationship with the clouds.</li>
-        <li><strong>Ken Sipe</strong> &mdash; In the organisation I&rsquo;m working with, they have a policy: you build it, you run it. So in some cases, you&rsquo;d expect the app teams to be managing it &mdash; but they don&rsquo;t really manage it. They manage a section or a subscription, or an organisational unit. When I think of somebody who manages cloud infrastructure, I think about somebody who spans multiple OU&rsquo;s or has the right to create an OU. It&rsquo;s really surprising not to see SREs more towards the top. Maybe it&rsquo;s a lack of industry-standard on terminology?</li>
-        <li><strong>Tim Hockin</strong> &mdash; When you take something as complicated as a running Kubernetes cluster and offload its management to individual teams &mdash; that&rsquo;s just another side job to them &mdash; you're going to have poorly configured, inefficient and insecure clusters that are governed differently from each other and are on different versions. I know some big organisations that started with this model and quickly realised it doesn&rsquo;t work. So what they ended up doing is implementing a central governance model for those clusters, splitting responsibility between people who run and people who use the clusters. These are not necessarily the same team, mind you.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/d02a1632-alexis_richardson.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">It&rsquo;s really weird that &ldquo;managed service&rdquo; is so low given the high number of cloud-hosted Kubernetes usage. To me, this reads as if DevOps teams are expected to manage the entire cloud. Is that how businesses think of it? It&rsquo;s not clear. I don't believe 37.5% of the DevOps folks are all managing their own on-premise infrastructure. I think some of them are using tools like EKS. But maybe they are answering as if they are managing them because they own the relationship with the clouds.</p>
+            <cite class="p-pull-quote__citation">Alexis Richardson, Founder and CEO, Weaveworks</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/0117de54-ken-sipe.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">In the organisation I&rsquo;m working with, they have a policy: you build it, you run it. So in some cases, you&rsquo;d expect the app teams to be managing it &mdash; but they don&rsquo;t really manage it. They manage a section or a subscription, or an organisational unit. When I think of somebody who manages cloud infrastructure, I think about somebody who spans multiple OU&rsquo;s or has the right to create an OU. It&rsquo;s really surprising not to see SREs more towards the top. Maybe it&rsquo;s a lack of industry-standard on terminology?</p>
+            <cite class="p-pull-quote__citation">Ken Sipe, Cloud Native Computing Foundation, Edward Jones</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/132b999e-tim_hockin.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">When you take something as complicated as a running Kubernetes cluster and offload its management to individual teams &mdash; that&rsquo;s just another side job to them &mdash; you're going to have poorly configured, inefficient and insecure clusters that are governed differently from each other and are on different versions. I know some big organisations that started with this model and quickly realised it doesn&rsquo;t work. So what they ended up doing is implementing a central governance model for those clusters, splitting responsibility between people who run and people who use the clusters. These are not necessarily the same team, mind you.</p>
+            <cite class="p-pull-quote__citation">Tim Hockin, Principal Software Engineer, GCP</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="top-considerations-for-devops-in-cloud-native-technologies">29. Top considerations for DevOps in cloud native technologies</h3>
 
@@ -3954,11 +4994,72 @@
         </div>
       </div>
 
-      <ul>
-        <li><strong>Alexis Richardson</strong> &mdash; When people worry about the basics, i.e. security, costs, resources, observability and configuration, this is an indication that they haven't yet crossed the chasm of full enterprise adoption.</li>
-        <li><strong>Ken Sipe</strong> &mdash; Security as the #1 concern &mdash; this might be the finance and government audiences coming out, combined with good DevOps practices. It might also be tied to current events &mdash; SolarWinds, the Colonial Pipeline hack. All of this might be bringing security higher in our minds.</li>
-        <li><strong>Kelsey Hightower</strong> &mdash; If you look at the top four to five answers those are all about what the application should be doing. Security is always a thing. Then, now that we have all that visibility, from the existing tooling, the teams should be informed about what resources they use and we should try to get a much better cluster utilisation. The bottom part of responses I could label as &ldquo;how to describe a deployment&rdquo;. Should we use the .yaml directly? Should we use something like Helm? Do we know what&rsquo;s going on in that Helm chart? Should we go get an operator?</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/d02a1632-alexis_richardson.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">When people worry about the basics, i.e. security, costs, resources, observability and configuration, this is an indication that they haven't yet crossed the chasm of full enterprise adoption.</p>
+            <cite class="p-pull-quote__citation">Alexis Richardson, Founder and CEO, Weaveworks</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/0117de54-ken-sipe.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">Security as the #1 concern &mdash; this might be the finance and government audiences coming out, combined with good DevOps practices. It might also be tied to current events &mdash; SolarWinds, the Colonial Pipeline hack. All of this might be bringing security higher in our minds.</p>
+            <cite class="p-pull-quote__citation">Ken Sipe, Cloud Native Computing Foundation, Edward Jones</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">If you look at the top four to five answers those are all about what the application should be doing. Security is always a thing. Then, now that we have all that visibility, from the existing tooling, the teams should be informed about what resources they use and we should try to get a much better cluster utilisation. The bottom part of responses I could label as &ldquo;how to describe a deployment&rdquo;. Should we use the .yaml directly? Should we use something like Helm? Do we know what&rsquo;s going on in that Helm chart? Should we go get an operator?</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <p>From the point of view of your humble authors, we believe that ops people should focus on these four important business decisions:</p>
       <ul>
@@ -4026,9 +5127,26 @@
 
       <p>While we were trying to make a reference to the classic joke of screwing in a lightbulb, respondents seemed to get our intention, but then Tim went on and dropped the mic:</p>
 
-      <ul>
-        <li><strong>Tim Hockin</strong> &mdash; It takes a team of 9 to screw it in but just 1 to screw it up.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/132b999e-tim_hockin.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">It takes a team of 9 to screw it in but just 1 to screw it up.</p>
+            <cite class="p-pull-quote__citation">Tim Hockin, Principal Software Engineer, GCP</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h2 id="cncf-landscape">CNCF Landscape</h2>
 
@@ -4284,10 +5402,50 @@
       <p>The <a href="https://landscape.cncf.io/" class="p-link--external">CNCF landscape</a> has grown to become the single reference point for cloud native technologies. The CNCF annual survey takes an in-depth pulse around these technologies and their usage across different categories. Our intention was not to repeat the work of the CNCF here, rather ask respondents to share their level of experience and comfort working with the technologies from all the categories, as defined by the CNCF.</p>
       <p>We are proud to say the cloud native community provided truthful answers, something that can be deduced from the fact that, besides CI/CD which got the majority of answers with 32%, most reported to be still learning at either a beginner or expert level.</p>
 
-      <ul>
-        <li><strong>James Strachan</strong> &mdash; I think the really interesting part of this question is, literally everything in that list may be used on any project. And that&rsquo;s what&rsquo;s challenging and scary about the cloud. Depending on your use case, you might need one or more of everything on that list. And this ties back to training and lack of skilled people. Once you&rsquo;ve made a few things in the cloud, you can quickly really build up confidence. But I can imagine a lot of people have never touched the cloud before and looking at that list they don&rsquo;t know where to start. The hardest thing with the cloud is what technology and tools and services do you pick and in what order for a given solution?</li>
-        <li><strong>Kelsey Hightower</strong> &mdash; I think that the interesting thing that starts to match the rest of the analysis is that people, almost 50%, saying we&rsquo;re still learning, which is similar to previous questions that showed concern around lack of skills and training. But, as I said before, they don&rsquo;t realise they already have a lot of the required skills. Kubernetes is not where these skills originated. Observability isn&rsquo;t new, it didn&rsquo;t just start when cloud native came out. What is cloud native storage? All of the storage options that are being used right now originated 10 years ago, including S3. Low-level things like container runtime and container registry &mdash; we have Docker to thank for these &mdash; people feel more confident about because Docker has been around for a long time. Continuous delivery and integration. Those are things that existed before cloud native. So I think that&rsquo;s why you see a higher response and confidence because people have been doing that since 2005. Overall, I would say that when we go down this list and see the new terms used for older concepts, many people lack confidence, because they believe that the fundamentals have changed somehow.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/ba2dd769-james.jpeg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I think the really interesting part of this question is, literally everything in that list may be used on any project. And that&rsquo;s what&rsquo;s challenging and scary about the cloud. Depending on your use case, you might need one or more of everything on that list. And this ties back to training and lack of skilled people. Once you&rsquo;ve made a few things in the cloud, you can quickly really build up confidence. But I can imagine a lot of people have never touched the cloud before and looking at that list they don&rsquo;t know where to start. The hardest thing with the cloud is what technology and tools and services do you pick and in what order for a given solution?</p>
+            <cite class="p-pull-quote__citation">James Strachan, CloudBees</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I think that the interesting thing that starts to match the rest of the analysis is that people, almost 50%, saying we&rsquo;re still learning, which is similar to previous questions that showed concern around lack of skills and training. But, as I said before, they don&rsquo;t realise they already have a lot of the required skills. Kubernetes is not where these skills originated. Observability isn&rsquo;t new, it didn&rsquo;t just start when cloud native came out. What is cloud native storage? All of the storage options that are being used right now originated 10 years ago, including S3. Low-level things like container runtime and container registry &mdash; we have Docker to thank for these &mdash; people feel more confident about because Docker has been around for a long time. Continuous delivery and integration. Those are things that existed before cloud native. So I think that&rsquo;s why you see a higher response and confidence because people have been doing that since 2005. Overall, I would say that when we go down this list and see the new terms used for older concepts, many people lack confidence, because they believe that the fundamentals have changed somehow.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
+
       <p>Can we take a look at this from the exact opposite angle? <em>Let&rsquo;s not focus on the fact that not everyone is a master of particular technologies, but on the fact that there are already masters out there</em>. There are 90 people here who consider themselves masters at chaos engineering. 163 at observability. 176 at ingres / service proxies. How many of them would it take to create charmed operators that cover the use cases of tens of thousands of Devs, DevOps, and SRE&rsquo;s?</p>
       <p>Clearly, based on the question about people using community-provided playbooks/charts/recipes and the interest in operators (described in the upcoming section), there is room in the cloud native space for experts to help the entire community to make significant advances by applying their knowledge.</p>
 
@@ -4322,9 +5480,26 @@
         </div>
       </div>
 
-      <ul>
-        <li><strong>Alexis Richardson</strong> &mdash; This is a really exciting area, operations at scale. Today, we are fundamentally seeing Helm, Juju, operators and other extension points. An enterprise app store for operators could be a thing in the future, but not just yet. With an enterprise app store in place, application developers could just choose the operator they want, pay as they go, and be much more efficient and productive.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/d02a1632-alexis_richardson.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This is a really exciting area, operations at scale. Today, we are fundamentally seeing Helm, Juju, operators and other extension points. An enterprise app store for operators could be a thing in the future, but not just yet. With an enterprise app store in place, application developers could just choose the operator they want, pay as they go, and be much more efficient and productive.</p>
+            <cite class="p-pull-quote__citation">Alexis Richardson, Founder and CEO, Weaveworks</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <p>Sounds interesting. Whether paid or free, access to the knowledge of experts, coded into operators, enabling application management at scale also sounds quite intriguing. We asked a few more questions about this.</p>
 
@@ -4405,12 +5580,95 @@
 
       <p><strong>We like to define an operator as software that encapsulates a single application and all the code and know-how it takes to operate it on Kubernetes or machines.</strong></p>
 
-      <ul>
-        <li><strong>Alexis Richardson</strong> &mdash; People need to understand Kubernetes operators if they want to do data in Kubernetes. These results show that we&rsquo;re still early on the journey. Familiarity with K8s operators is a sign of maturity; it indicates how many people have started to think beyond just setting up clusters to leveraging the Kubernetes extensibility model. There are business decisions to be made around the extensibility model, such as how to work with it &mdash; in-house or outsource &mdash; and of course, limitations will stem from these decisions. I believe this whole topic will shake out as platform teams are going to be sophisticated users of operators and then app dev teams will consider them basically as add-ons.</li>
-        <li><strong>Ken Sipe</strong> &mdash; The first answer is the starting point for what people call &ldquo;operators&rdquo; in the space. I&rsquo;m not sure that I would have answered this way. It&rsquo;s really about domain-centric knowledge, which doesn&rsquo;t require a CRD but it could use one. Ha &mdash; anyone who would claim &lsquo;Go&rsquo; as a requirement is kind of jaded. There&rsquo;s enough humour in the survey that maybe they were just being funny too? I&rsquo;m not sure. There is support for tons of languages. Frankly, it&rsquo;s just a controller, it could be Bash. There&rsquo;s an opportunity to improve clarity here.</li>
-        <li><strong>James Strachan</strong> &mdash; I agree, operators help by hiding complexity from the user and just run stuff on their behalf, so they do make Kubernetes easier. But there's still quite a lot to know to get to that, unfortunately.</li>
-        <li><strong>Kelsey Hightower</strong> &mdash; I think of an operator as a control plane that you install into Kubernetes to give you an extended set of capabilities. It then boils down to setting the bar of what defines a really good operator. As a community, we need to raise the bar to say an operator has to deal with day two and day three concerns. It&rsquo;s not enough to just go from Helm to the CRD.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/d02a1632-alexis_richardson.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">People need to understand Kubernetes operators if they want to do data in Kubernetes. These results show that we&rsquo;re still early on the journey. Familiarity with K8s operators is a sign of maturity; it indicates how many people have started to think beyond just setting up clusters to leveraging the Kubernetes extensibility model. There are business decisions to be made around the extensibility model, such as how to work with it &mdash; in-house or outsource &mdash; and of course, limitations will stem from these decisions. I believe this whole topic will shake out as platform teams are going to be sophisticated users of operators and then app dev teams will consider them basically as add-ons.</p>
+            <cite class="p-pull-quote__citation">Alexis Richardson, Founder and CEO, Weaveworks</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/0117de54-ken-sipe.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">The first answer is the starting point for what people call &ldquo;operators&rdquo; in the space. I&rsquo;m not sure that I would have answered this way. It&rsquo;s really about domain-centric knowledge, which doesn&rsquo;t require a CRD but it could use one. Ha &mdash; anyone who would claim &lsquo;Go&rsquo; as a requirement is kind of jaded. There&rsquo;s enough humour in the survey that maybe they were just being funny too? I&rsquo;m not sure. There is support for tons of languages. Frankly, it&rsquo;s just a controller, it could be Bash. There&rsquo;s an opportunity to improve clarity here.</p>
+            <cite class="p-pull-quote__citation">Ken Sipe, Cloud Native Computing Foundation, Edward Jones</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/ba2dd769-james.jpeg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I agree, operators help by hiding complexity from the user and just run stuff on their behalf, so they do make Kubernetes easier. But there's still quite a lot to know to get to that, unfortunately.</p>
+            <cite class="p-pull-quote__citation">James Strachan, CloudBees</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I think of an operator as a control plane that you install into Kubernetes to give you an extended set of capabilities. It then boils down to setting the bar of what defines a really good operator. As a community, we need to raise the bar to say an operator has to deal with day two and day three concerns. It&rsquo;s not enough to just go from Helm to the CRD.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="experience-with-operators">34. Experience with operators</h3>
 
@@ -4635,9 +5893,26 @@
 
       <p>The biggest takeaway from these two questions is that trying out operators are on to-do lists across the board.</p>
 
-      <ul>
-        <li><strong>Kelsey Hightower</strong> &mdash; I think this just speaks to the maturity of these things. It&rsquo;s going to take time for these things to do more than just the initial deployment. Some people look at operators as a much easier interface to deploy complex software. But there are matters of trust when it comes to handling lifecycle like upgrades in production. Some don&rsquo;t even trust the people on the team that are supposed to be doing the upgrades. So I think it's going to be a while before we delegate that to the software.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I think this just speaks to the maturity of these things. It&rsquo;s going to take time for these things to do more than just the initial deployment. Some people look at operators as a much easier interface to deploy complex software. But there are matters of trust when it comes to handling lifecycle like upgrades in production. Some don&rsquo;t even trust the people on the team that are supposed to be doing the upgrades. So I think it's going to be a while before we delegate that to the software.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h2 id="kubernetes-advanced-usage">Kubernetes advanced usage</h2>
 
@@ -4727,10 +6002,49 @@
 
       <p>Yes, Kubernetes is the go-to platform on top of which modern applications are built. But can you do everything you want with it? Even things beyond your wildest dreams? Even coffee? The people have spoken, the next release should include pod support for at least a flavourful espresso.</p>
 
-      <ul>
-        <li><strong>Alexis Richardson</strong> &mdash; &ldquo;I can do everything I need using Kubernetes.&rdquo; That&rsquo;s what we call Kubris.</li>
-        <li><strong>Michael Hausenblas</strong> &mdash; I don&rsquo;t know why &ldquo;make coffee&rdquo; didn&rsquo;t get way more responses.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/d02a1632-alexis_richardson.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">&ldquo;I can do everything I need using Kubernetes.&rdquo; That&rsquo;s what we call Kubris.</p>
+            <cite class="p-pull-quote__citation">Alexis Richardson, Founder and CEO, Weaveworks</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/8cb586b3-michael_hausenblas.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I don&rsquo;t know why &ldquo;make coffee&rdquo; didn&rsquo;t get way more responses.</p>
+            <cite class="p-pull-quote__citation">Michael Hausenblas, Solution Engineering Lead, AWS</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="selection-criteria-for-container-images">36. Selection criteria for container images</h3>
 
@@ -4840,10 +6154,49 @@
 
       <p>Hardened, long-lived, trusted, and lightweight. An ideal base image is the building block for production-grade, secure, performant cloud native apps. As best practices evolve, the focus is now on curating what needs to be included inside OCI layers, at build time vs. at run time. According to our experts, while workarounds exist, there is currently no optimal way to address this challenge:</p>
 
-      <ul>
-        <li><strong>Kelsey Hightower</strong> &mdash; When building our container images, we are porting old habits from VMs to the container world. We just take the OS and put it in the base image. I think there is a better way, over time, to start making smaller, lightweight images. Any one container we build the old way, is probably not using the largest part of the stuff it carries. We&rsquo;re just carrying baggage, more bits to maintain and update. There is currently no efficient build toolset allowing us to benefit from the lightweightness of a container image versus a full virtual machine. People mostly do what they already know and understand, but the resulting artifacts are far from ideal.</li>
-        <li><strong>Tim Hockin</strong> &mdash; This is a ripe space for new exciting tech to solve an important problem; how to just take the stuff I need from a base image and throw everything else away. Take apt-get for example. I surely don&rsquo;t need this at runtime, I only need it at build time, when I assemble my container. So why would it run as part of my base image? There is currently no good, secure way to do this. A real minimal image. There are solutions out there like BusyBox or Alpine &mdash; that actually includes BusyBox &mdash; but these are not enterprise-friendly. And then there&rsquo;s Debian, Ubuntu, Red Hat. These are enterprise-grade distros, but still quite big as base images. Why do I need 75 megabytes of Python and other utilities when I just want to run my 12 megabyte Go program?</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">When building our container images, we are porting old habits from VMs to the container world. We just take the OS and put it in the base image. I think there is a better way, over time, to start making smaller, lightweight images. Any one container we build the old way, is probably not using the largest part of the stuff it carries. We&rsquo;re just carrying baggage, more bits to maintain and update. There is currently no efficient build toolset allowing us to benefit from the lightweightness of a container image versus a full virtual machine. People mostly do what they already know and understand, but the resulting artifacts are far from ideal.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/132b999e-tim_hockin.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This is a ripe space for new exciting tech to solve an important problem; how to just take the stuff I need from a base image and throw everything else away. Take apt-get for example. I surely don&rsquo;t need this at runtime, I only need it at build time, when I assemble my container. So why would it run as part of my base image? There is currently no good, secure way to do this. A real minimal image. There are solutions out there like BusyBox or Alpine &mdash; that actually includes BusyBox &mdash; but these are not enterprise-friendly. And then there&rsquo;s Debian, Ubuntu, Red Hat. These are enterprise-grade distros, but still quite big as base images. Why do I need 75 megabytes of Python and other utilities when I just want to run my 12 megabyte Go program?</p>
+            <cite class="p-pull-quote__citation">Tim Hockin, Principal Software Engineer, GCP</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="stateful-applications-in-kubernetes">37. Stateful applications in Kubernetes</h3>
 
@@ -4898,9 +6251,26 @@
 
       <p>Originally, containers were built to be stateless, flexible and portable. However, we see that only 21% use them solely for stateless applications, which also aligns with the latest data from the CNCF. The number that use stateful apps in production has dropped from <a href="https://www.cncf.io/wp-content/uploads/2020/11/CNCF_Survey_Report_2020.pdf" class="p-link--external">55% of the CNCF Report 2020</a> to 37% which is probably skewed due to the more varied sample we had in this survey &mdash; 50% of Ops team representatives that are using stateful apps in production were balanced by 63-68% of Devs, Managers and Executives that don&rsquo;t. Also, the number of people evaluating or planning to use stateful containers in the next 12 months has grown from last year, which is another sign of the platform&rsquo;s maturity. Even so, our experts bring a fresh perspective to these numbers:</p>
 
-      <ul>
-        <li><strong>Kelsey Hightower</strong> &mdash; This depends a bit on how people define stateful applications. All apps in the world have state of some sort. It&rsquo;s more about where the state lives. Is it on a database? Is it on a local cache? Or do they mean state in a more traditional sense, something like Redis? Now, if Redis went down, are you out of business? The answer is probably &lsquo;no&rsquo;, you probably have a system of record somewhere else. And then you can just repopulate that cache and keep moving. I&rsquo;d be surprised if 37% of those people are really dealing with the system of record in containers. Kubernetes is getting better, in that sense sure, but I need more questions to know if this is accurate.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This depends a bit on how people define stateful applications. All apps in the world have state of some sort. It&rsquo;s more about where the state lives. Is it on a database? Is it on a local cache? Or do they mean state in a more traditional sense, something like Redis? Now, if Redis went down, are you out of business? The answer is probably &lsquo;no&rsquo;, you probably have a system of record somewhere else. And then you can just repopulate that cache and keep moving. I&rsquo;d be surprised if 37% of those people are really dealing with the system of record in containers. Kubernetes is getting better, in that sense sure, but I need more questions to know if this is accurate.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="kubernetes-security-how-to-isolate-your-applications">38. Kubernetes security: how to isolate your applications</h3>
 
@@ -4966,10 +6336,49 @@
 
       <p>Another sign of Kubernetes maturing is users asking how to address container security in a way that is viable for production in their organisation. Namespaces take the lion&rsquo;s share when it comes to separating applications, while using separate clusters and labels are a close second and third.</p>
 
-      <ul>
-        <li><strong>Michael Hausenblas</strong> &mdash; Interesting that people still think that namespaces are a matter of isolation. I think the challenge here is logical versus proper isolation in terms of tenancy.</li>
-        <li><strong>Kelsey Hightower</strong> &mdash; This one is probably the biggest challenge people have. In the cloud, there are different ways to separate apps. On AWS, you can have an entirely separate account. In Google Cloud, you can have separate projects. What most people end up doing is trying to mirror the organisation in some way. Namespaces are a great way to have lightweight environments and according to the data that&rsquo;s the default way. Using separate clusters, that&rsquo;s very much the enterprise approach. I think the thing that's missing here is separate nodes in the same cluster. There, you can create node pools for different apps. Like the database lands on these three nodes and the main app is on a different set of nodes. That&rsquo;s kind of an intermediary step before going all the way to separate clusters. There's no one way to guarantee separation of your apps, this depends a lot on your workflows.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/8cb586b3-michael_hausenblas.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">Interesting that people still think that namespaces are a matter of isolation. I think the challenge here is logical versus proper isolation in terms of tenancy.</p>
+            <cite class="p-pull-quote__citation">Michael Hausenblas, Solution Engineering Lead, AWS</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">This one is probably the biggest challenge people have. In the cloud, there are different ways to separate apps. On AWS, you can have an entirely separate account. In Google Cloud, you can have separate projects. What most people end up doing is trying to mirror the organisation in some way. Namespaces are a great way to have lightweight environments and according to the data that&rsquo;s the default way. Using separate clusters, that&rsquo;s very much the enterprise approach. I think the thing that's missing here is separate nodes in the same cluster. There, you can create node pools for different apps. Like the database lands on these three nodes and the main app is on a different set of nodes. That&rsquo;s kind of an intermediary step before going all the way to separate clusters. There's no one way to guarantee separation of your apps, this depends a lot on your workflows.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="kubernetes-like-a-pro-highly-available-air-gapped-offline">39. Kubernetes like a Pro. Highly-available. Air-gapped. Offline</h3>
 
@@ -5056,10 +6465,27 @@
 
       <p>As people start to get more familiar with Kubernetes, there are trends towards a more advanced use of the platform; users deploying Kubernetes in a highly available architecture to ensure full uptime for production and even extreme cases where they look to be independent from an internet connection while running their clusters. Here&rsquo;s what Kelsey Hightower had to say about all this:</p>
 
-      <ul>
-        <li><strong>Kelsey Hightower</strong> &mdash; I think the 54% is using high availability where that's easy to do, like a cloud provider&rsquo;s distribution or a managed Kubernetes offering, where you click a button, and have it spread across multiple zones. If it&rsquo;s not easy, then I doubt people will put in the extra effort needed to run an HA Kubernetes &mdash; it can be a huge undertaking for people who&rsquo;ve never done it before.</li>
-        <li><strong>Kelsey Hightower</strong> &mdash;  For those unfamiliar with air gap it&rsquo;s like saying &ldquo;I want to never depend on the internet to run my Kubernetes cluster&rdquo;. I think that's really reserved for extreme cases like running in a department store, a retail environment or in a government setting. The numbers here loosely reflect reality, my guess is more like 85-90% of people are not running in an air-gapped or an offline environment.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">I think the 54% is using high availability where that's easy to do, like a cloud provider&rsquo;s distribution or a managed Kubernetes offering, where you click a button, and have it spread across multiple zones. If it&rsquo;s not easy, then I doubt people will put in the extra effort needed to run an HA Kubernetes &mdash; it can be a huge undertaking for people who&rsquo;ve never done it before.</p>
+            <p class="p-pull-quote__quote">For those unfamiliar with air gap it&rsquo;s like saying &ldquo;I want to never depend on the internet to run my Kubernetes cluster&rdquo;. I think that's really reserved for extreme cases like running in a department store, a retail environment or in a government setting. The numbers here loosely reflect reality, my guess is more like 85-90% of people are not running in an air-gapped or an offline environment.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h3 id="enough-about-kubernetes-leave-me-with-my-bash-scripts">40. Enough about Kubernetes. Leave me with my bash scripts.</h3>
 
@@ -5471,10 +6897,49 @@
 
       <p>Wrapping up the report with a very hot topic that is mostly looking towards the future of cloud computing: bringing applications closer to the consumer, where scale, latency and operations across geographies are the main challenges. Various industries have already made that investment and their representatives shared the main requirements for Kubernetes around the space. More than anywhere else, security and compliance is the top priority at the edge.</p>
 
-      <ul>
-        <li><strong>Karthikeyan Shanmugam</strong> &mdash; Minimal Kubernetes distributions, like MicroK8s and k3s, have revolutionised Kubernetes for the edge. Think about the telco or healthcare industries; they are currently running embedded software in a way that is very inefficient. Now they can transform their business using microservices on Kubernetes at the edge, with lower footprint and optimised resource allocation without impacting performance.</li>
-        <li><strong>Kelsey Hightower</strong> &mdash; For brick-and-mortar locations that have a computer inside that runs business apps, the previous choices were a couple of Linux machines or virtualization. My guess is that the sample of people that already made those investments are looking at Kubernetes to be a lighter-weight implementation of sharing compute inside these brick-and-mortars. All the requirements listed here are typical things one would want in a data centre. I do think Kubernetes will bring a lot to the table that didn&rsquo;t exist before, such as observability or security and compliance at the app level and improved resource allocation. As a result, it will be easier for businesses to start provisioning and managing their fleet, keeping VMs as simple as possible, and to focus on the apps at scale with K8s.</li>
-      </ul>
+      <div class="p-media-object--large">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/29491306-Karthik-profile.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">Minimal Kubernetes distributions, like MicroK8s and k3s, have revolutionised Kubernetes for the edge. Think about the telco or healthcare industries; they are currently running embedded software in a way that is very inefficient. Now they can transform their business using microservices on Kubernetes at the edge, with lower footprint and optimised resource allocation without impacting performance.</p>
+            <cite class="p-pull-quote__citation">Karthikeyan Shanmugam, Digital Solution Architect, HCL</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr style="margin-bottom: 2rem;">
+
+      <div class="p-media-object--large is-reversed">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/6dca16b6-1123322.jpg",
+            alt="",
+            height="96",
+            width="96",
+            hi_def=True,
+            loading="lazy",
+            attrs={"class": "p-media-object__image is-round"}
+          ) | safe
+        }}
+
+        <div class="p-media-object__details">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">For brick-and-mortar locations that have a computer inside that runs business apps, the previous choices were a couple of Linux machines or virtualization. My guess is that the sample of people that already made those investments are looking at Kubernetes to be a lighter-weight implementation of sharing compute inside these brick-and-mortars. All the requirements listed here are typical things one would want in a data centre. I do think Kubernetes will bring a lot to the table that didn&rsquo;t exist before, such as observability or security and compliance at the app level and improved resource allocation. As a result, it will be easier for businesses to start provisioning and managing their fleet, keeping VMs as simple as possible, and to focus on the apps at scale with K8s.</p>
+            <cite class="p-pull-quote__citation">Kelsey Hightower, Principal Developer, GCP Advocate</cite>
+          </blockquote>
+        </div>
+      </div>
 
       <h2 id="conclusion">Conclusion</h2>
 
