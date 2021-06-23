@@ -673,6 +673,8 @@
         </div>
       </div>
 
+      <hr style="margin-bottom: 3rem;">
+
       <h2 id="who-is-using-kubernetes-and-cloud-native-technologies">Who is using Kubernetes and cloud native technologies?</h2>
 
       <h3 id="respondents-by-job-role">1. Respondents by job role</h3>
@@ -1903,7 +1905,7 @@
 
       <h3 id="what-are-your-hybrid-cloud-or-multi-cloud-use-cases">9. What are your hybrid cloud or multi-cloud use cases?</h3>
 
-      <p><strong>Analysis</strong>: In conversations with industry experts, Kelsey Hightower mentioned something interesting. He suggested that if we grouped &ldquo;accelerate development&rdquo;, &ldquo;automate DevOps&rdquo; and &ldquo;disaster recovery&rdquo;, then you could say that &ldquo;often, the first use case for multi-cloud is to handle the things we can&rsquo;t do: back up our own stuff and get super quick capacity to unblock Dev in case of a disaster.&rdquo;</p>
+      <p>In conversations with industry experts, Kelsey Hightower mentioned something interesting. He suggested that if we grouped &ldquo;accelerate development&rdquo;, &ldquo;automate DevOps&rdquo; and &ldquo;disaster recovery&rdquo;, then you could say that &ldquo;often, the first use case for multi-cloud is to handle the things we can&rsquo;t do: back up our own stuff and get super quick capacity to unblock Dev in case of a disaster.&rdquo;</p>
 
       <h4>We mainly use hybrid or multi-cloud for/to:</h4>
       <p>1154 out of 1166 people answered this question</p>
@@ -2031,7 +2033,7 @@
         </div>
       </div>
 
-      <p>Overall, 78.8% of respondents are using hybrid or multi-clouds. As this technology continues to progress through the technology adoption curve, new challenges are going to arise &mdash; particularly around scale. We&rsquo;re already seeing scale issues in the bare metal, VM, and Kubernetes spaces, often referred to as &ldquo;sprawl&rdquo;. The movement towards &ldquo;model driven operations&rdquo; is an example of people aiming to solve these scale issues.</p>
+      <p>Overall, 77.8% of respondents are using hybrid or multi-clouds. As this technology continues to progress through the technology adoption curve, new challenges are going to arise &mdash; particularly around scale. We&rsquo;re already seeing scale issues in the bare metal, VM, and Kubernetes spaces, often referred to as &ldquo;sprawl&rdquo;. The movement towards &ldquo;model driven operations&rdquo; is an example of people aiming to solve these scale issues.</p>
 
       <p>Relevant Quotes:</p>
 
@@ -2263,7 +2265,7 @@
         </div>
       </div>
 
-      <p>Whether you&rsquo;&rsquo;e in the gym, at the kid park, or out in town, everyone is talking numbers. How many machines are you running? How many clusters? How big are the nodes? What type of nodes (CPU, GPU, etc)?</p>
+      <p>Whether you&rsquo;re in the gym, at the kid park, or out in town, everyone is talking numbers. How many machines are you running? How many clusters? How big are the nodes? What type of nodes (CPU, GPU, etc)?</p>
 
       <p>21.4% of respondents are managing more than 500 machines. It&rsquo;s worth examining these responses broken down by job role. Devs most commonly responded 1-5 (19.61%), while nearly all other job role categories reported managing significantly more machines than the devs. Their top answers were as follows:</p>
 
@@ -2277,7 +2279,7 @@
 
       <ul>
         <li><strong>Kelsey Hightower</strong> &mdash; This speaks to what we saw previously: people are using Kubernetes for things like better config management or like a better automation tool. They&rsquo;re not waiting until they get to a 200 node scale problem where current tools fall apart. My guess is that 20 to 50 node clusters is probably the sweet spot for most people. For some organisations, it makes sense to have a lot of small clusters, one for every team or one for every project, for example. But, in order for that analysis to be more accurate, I&rsquo;d need to know how many K8s clusters they have and then how big are these clusters.</li>
-        <li><strong>Ken Sipe</strong> &mdash; It&rsquo;s interesting to think about use cases of clusters. What size do they have for given use cases? A cluster dedicated to analytics often cycles between times where it&rsquo;s heavily utilised and others where it&rsquo;s not. Web apps often tend to have times with gaps in resources because they don&rsquo;t have high density, so they&rsquo;re ready to scale &mdash; but in off-peak or off-season times, they use less. In using the cloud, have organisations decoupled capacity and the ability to scale in a way that allows them to save money? I like asking them what they&rsquo;re using to manage this.</li>
+        <li><strong>Ken Sipe</strong> &mdash; It&rsquo;s interesting to think about use cases of clusters. What size do they have for given use cases? A cluster dedicated to analytics often cycles between times where it&rsquo;s heavily utilised and others where it&rsquo;s not. Web apps often tend to have times with gaps in resources because they don&rsquo;t have high density, so they&rsquo;re ready to scale &mdash; but in off-peak or off-season times, they use less. In using the cloud, have organisations decoupled capacity and the ability to scale in a way that allows them to save money? I like to ask them what they&rsquo;re using to manage this.</li>
         <li>
           <p><strong>Tim Hockin</strong> &mdash; I&rsquo;ve spent a lot of time recently talking to customers about their use and experience with single and multiple clusters. I can probably name 25 different answers to the question &ldquo;Why do I need multiple clusters?&rdquo;. Some of them are obvious, like &ldquo;I want to put a cluster in Europe and a cluster in the US and I want to load-balance between them&rdquo;. There are others that make some sense, like &ldquo;I have a really high-value application, and I want to just give it extra safety so I put it in its own cluster&rdquo;. Some are kind of FUD: &ldquo;I don&rsquo;t trust the way that Kubernetes does isolation between applications. So I&rsquo;m going to put it in another cluster and put all my apps in their own clusters&rdquo;. Others, I think, can potentially be disastrous at scale: &ldquo;I&rsquo;m going to give every team their own cluster and let them do whatever they want&rdquo;.</p>
           <p>The question, I think, is really interesting; essentially, it is: &lsquo;how do you think about your clusters as an organisation? Are they a set of pets? Or are they actually cattle in a herd that you want to manage together?&rsquo; SIG multi-cluster has been trying to figure out models that work for people, with moderate success. There are also a few companies, like Rancher and Canonical, looking at this problem from a different angle. Something like a one or two machine installation in the back office of every store is very different from our customers at Google asking us to put 1000 nodes on a single cluster.</p>
@@ -3315,7 +3317,9 @@
       <p><em>Click thumbnails for full size images</em></p>
 
       <p>At this point we just wanted to decompress by nerding out a bit. We picked our favorite two Kubernetes memes and asked our respondents their favorite one. &ldquo;Mr. kubeconfig&rdquo; won by a very close margin with 51.5%. Not that this is saying anything, but executives were the only job group that went with the &ldquo;K8s Sith Lord&rdquo; as their top choice with 57%.</p>
-      <p>Mini-competition: Please, tweet your favorite K8s meme and tag @ubuntu. This is super important to us. You might even win a Charming t-shirt.</p>
+      <p><em>Mini-competition: Please, tweet your favorite K8s meme and tag @ubuntu.* This is super important to us. You might even win a Charming t-shirt!</em></p>
+
+      <p><small>* By tweeting you agree to Canonical&rsquo;s <a href="https://ubuntu.com/legal/data-privacy" class="p-link--external">Privacy Policy</a>, <a href="https://ubuntu.com/legal/data-privacy/online-competitions" class="p-link--external">Privacy Notice</a>, and the competition&rsquo;s <a href="https://pages.ubuntu.com/rs/066-EOV-335/images/Cloud Native Report Raffle 2021 - Terms and Conditions .pdf" class="p-link--external">Terms and Conditions</a>.</small></p>
 
       <h2 id="configuration-management">Configuration Management</h2>
 
