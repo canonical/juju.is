@@ -2612,7 +2612,7 @@
         <li><strong>Ken Sipe</strong> &mdash; The top two answers are consistent with my worldview of the industry. Most people are only at the beginning. The majority are deploying and managing Kubernetes as a service &mdash; they&rsquo;re getting AKS, EKS, or something similar and they&rsquo;re re-architecting apps. I'm seeing both of these. The challenge is: When you have this at large scale, monitoring bandwidth becomes one of your most important activities. You notice that one application with hundreds of instances becomes too &ldquo;chatty&rdquo;, or demands too much bandwidth. This can actually saturate the trunk, so much so that it affects your other services, and solving that becomes your next challenge. You&rsquo;ll need to move data to the cloud, which a lot of organisations, e.g. in the financial industry, are challenged to do, or you have to increase bandwidth or segment, or implement a combination of the two.</li>
       </ul>
 
-      <h3 16. id="#what-are-the-top-challenges-kubernetes-brings-to-businesses">What are the top challenges Kubernetes brings to businesses?</h3>
+      <h3 16. id="what-are-the-top-challenges-kubernetes-brings-to-businesses">What are the top challenges Kubernetes brings to businesses?</h3>
 
       <h4>What are your biggest challenges when migrating to/using Kubernetes and containers? Select all that apply.</h4>
       <p>1153 out of 1166 people answered this question (with multiple choice)</p>
@@ -4293,7 +4293,7 @@
 
       <h2 id="kubernetes-operators">Kubernetes operators</h2>
 
-      <h3 id="#would-you-trust-an-operator-build-by-an-expert">32. Would you trust an operator built by an expert?</h3>
+      <h3 id="would-you-trust-an-operator-build-by-an-expert">32. Would you trust an operator built by an expert?</h3>
 
       <h4>I would be willing to use a MySQL operator developed by someone who has spent the last 5 years maintaining MySQL in production.</h4>
       <p>1134 out of 1166 people answered this question</p>
@@ -4328,7 +4328,7 @@
 
       <p>Sounds interesting. Whether paid or free, access to the knowledge of experts, coded into operators, enabling application management at scale also sounds quite intriguing. We asked a few more questions about this.</p>
 
-      <h3 id="#definition-of-an-operator">33. Definition of an operator</h3>
+      <h3 id="definition-of-an-operator">33. Definition of an operator</h3>
 
       <h4>Which of the following sentences most accurately describes a Kubernetes operator?</h4>
       <p>1141 out of 1166 people answered this question</p>
@@ -4412,7 +4412,7 @@
         <li><strong>Kelsey Hightower</strong> &mdash; I think of an operator as a control plane that you install into Kubernetes to give you an extended set of capabilities. It then boils down to setting the bar of what defines a really good operator. As a community, we need to raise the bar to say an operator has to deal with day two and day three concerns. It&rsquo;s not enough to just go from Helm to the CRD.</li>
       </ul>
 
-      <h3 id="#experience-with-operators">34. Experience with operators</h3>
+      <h3 id="experience-with-operators">34. Experience with operators</h3>
 
       <h4>What is your experience with Kubernetes operators?</h4>
       <p>1136 out of 1166 people answered this question</p>
@@ -4641,7 +4641,7 @@
 
       <h2 id="kubernetes-advanced-usage">Kubernetes advanced usage</h2>
 
-      <h3 id="#what-cant-you-do-with-kubernetes">35. What <em>can&rsquo;t</em> you do with Kubernetes</h3>
+      <h3 id="what-cant-you-do-with-kubernetes">35. What <em>can&rsquo;t</em> you do with Kubernetes</h3>
 
       <h4>What things do you wish to be able to do in Kubernetes that you currently can&rsquo;t?</h4>
       <p>1136 out of 1166 people answered this question</p>
@@ -4732,7 +4732,7 @@
         <li><strong>Michael Hausenblas</strong> &mdash; I don&rsquo;t know why &ldquo;make coffee&rdquo; didn&rsquo;t get way more responses.</li>
       </ul>
 
-      <h3 id="#selection-criteria-for-container-images">36. Selection criteria for container images</h3>
+      <h3 id="selection-criteria-for-container-images">36. Selection criteria for container images</h3>
 
       <h4>Which of the following do you value the most when selecting a base image of a container image? Choose 3.</h4>
       <p>1142 out of 1166 people answered this question (with multiple choice)</p>
@@ -4845,7 +4845,7 @@
         <li><strong>Tim Hockin</strong> &mdash; This is a ripe space for new exciting tech to solve an important problem; how to just take the stuff I need from a base image and throw everything else away. Take apt-get for example. I surely don&rsquo;t need this at runtime, I only need it at build time, when I assemble my container. So why would it run as part of my base image? There is currently no good, secure way to do this. A real minimal image. There are solutions out there like BusyBox or Alpine &mdash; that actually includes BusyBox &mdash; but these are not enterprise-friendly. And then there&rsquo;s Debian, Ubuntu, Red Hat. These are enterprise-grade distros, but still quite big as base images. Why do I need 75 megabytes of Python and other utilities when I just want to run my 12 megabyte Go program?</li>
       </ul>
 
-      <h3 id="#stateful-applications-in-kubernetes">37. Stateful applications in Kubernetes</h3>
+      <h3 id="stateful-applications-in-kubernetes">37. Stateful applications in Kubernetes</h3>
 
       <h4>Do you run stateful applications in containers?</h4>
       <p>1141 out of 1166 people answered this question</p>
@@ -4902,7 +4902,7 @@
         <li><strong>Kelsey Hightower</strong> &mdash; This depends a bit on how people define stateful applications. All apps in the world have state of some sort. It&rsquo;s more about where the state lives. Is it on a database? Is it on a local cache? Or do they mean state in a more traditional sense, something like Redis? Now, if Redis went down, are you out of business? The answer is probably &lsquo;no&rsquo;, you probably have a system of record somewhere else. And then you can just repopulate that cache and keep moving. I&rsquo;d be surprised if 37% of those people are really dealing with the system of record in containers. Kubernetes is getting better, in that sense sure, but I need more questions to know if this is accurate.</li>
       </ul>
 
-      <h3 id="#kubernetes-security-how-to-isolate-your-applications">38. Kubernetes security: how to isolate your applications</h3>
+      <h3 id="kubernetes-security-how-to-isolate-your-applications">38. Kubernetes security: how to isolate your applications</h3>
 
       <h4>How do you separate applications in Kubernetes? Select all that apply.</h4>
       <p>1135 out of 1166 people answered this question</p>
@@ -4971,7 +4971,7 @@
         <li><strong>Kelsey Hightower</strong> &mdash; This one is probably the biggest challenge people have. In the cloud, there are different ways to separate apps. On AWS, you can have an entirely separate account. In Google Cloud, you can have separate projects. What most people end up doing is trying to mirror the organisation in some way. Namespaces are a great way to have lightweight environments and according to the data that&rsquo;s the default way. Using separate clusters, that&rsquo;s very much the enterprise approach. I think the thing that's missing here is separate nodes in the same cluster. There, you can create node pools for different apps. Like the database lands on these three nodes and the main app is on a different set of nodes. That&rsquo;s kind of an intermediary step before going all the way to separate clusters. There's no one way to guarantee separation of your apps, this depends a lot on your workflows.</li>
       </ul>
 
-      <h3 id="#kubernetes-like-a-pro-highly-available-air-gapped-offline">39. Kubernetes like a Pro. Highly-available. Air-gapped. Offline</h3>
+      <h3 id="kubernetes-like-a-pro-highly-available-air-gapped-offline">39. Kubernetes like a Pro. Highly-available. Air-gapped. Offline</h3>
 
       <h4>Are you running High Availability Kubernetes clusters?</h4>
       <p>1139 out of 1166 people answered this question</p>
@@ -5061,7 +5061,7 @@
         <li><strong>Kelsey Hightower</strong> &mdash;  For those unfamiliar with air gap it&rsquo;s like saying &ldquo;I want to never depend on the internet to run my Kubernetes cluster&rdquo;. I think that's really reserved for extreme cases like running in a department store, a retail environment or in a government setting. The numbers here loosely reflect reality, my guess is more like 85-90% of people are not running in an air-gapped or an offline environment.</li>
       </ul>
 
-      <h3 id="#enough-about-kubernetes-leave-me-with-my-bash-scripts">40. Enough about Kubernetes. Leave me with my bash scripts.</h3>
+      <h3 id="enough-about-kubernetes-leave-me-with-my-bash-scripts">40. Enough about Kubernetes. Leave me with my bash scripts.</h3>
 
       <h4>Bash is the only programming language anyone needs.</h4>
       <p>1147 out of 1166 people answered this question</p>
