@@ -20,7 +20,9 @@
     Juju | {% block page_title %}The simplest way to deploy and maintain
     applications in the cloud{% endblock %}
   </title>
-  <meta name="copydoc" content="{% block meta_copydoc %}https://drive.google.com/drive/u/0/folders/1-3OoeHxK5U7W_ktFY8rvwRzmjzCKte9a{% endblock %}">
+  {% if self.meta_copydoc() %}
+  <meta name="copydoc" content="{% block meta_copydoc %}{% endblock %}">
+  {% endif %}
   {% if self.meta_image %}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{{ self.meta_image() }}">
