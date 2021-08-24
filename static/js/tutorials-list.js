@@ -103,7 +103,7 @@
 
     function filterDom() {
       if (filters.length === 0 && tutorials) {
-        closeFiltersButtonMobile.innerHTML="Hide filters";
+        closeFiltersButtonMobile.innerHTML = "Hide filters";
         tutorials.forEach(function (tutorial) {
           tutorial.classList.remove("u-hide");
         });
