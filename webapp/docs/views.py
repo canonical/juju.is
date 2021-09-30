@@ -71,6 +71,28 @@ def init_docs(app):
 
     sdk_docs.init_app(app)
 
+    lma2_docs_id = 5132
+    lma2_docs = Docs(
+        parser=DocParser(
+            api=DiscourseAPI(
+                base_url="https://discourse.charmhub.io/",
+                session=session,
+                api_key=DISCOURSE_API_KEY,
+                api_username=DISCOURSE_API_USERNAME,
+                get_topics_query_id=2,
+            ),
+            index_topic_id=lma2_docs_id,
+            url_prefix="/docs/lma2",
+            tutorials_index_topic_id=tutorials_index_topic_id,
+            tutorials_url_prefix=tutorials_url_prefix,
+        ),
+        document_template="docs/document.html",
+        url_prefix="/docs/lma2",
+        blueprint_name="lma2_docs",
+    )
+
+    lma2_docs.init_app(app)
+
     app.add_url_rule(
         "/docs/search",
         "docs-search",
