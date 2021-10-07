@@ -21,16 +21,16 @@
   "dependencies": {
     "@canonical/cookie-policy": "3.3.0",
     "@canonical/global-nav": "2.5.0",
-    "autoprefixer": "10.3.4",
-    "concurrently": "6.2.1",
+    "autoprefixer": "10.3.7",
+    "concurrently": "6.3.0",
     "flickity": "2.2.2",
-    "postcss": "8.3.6",
-    "postcss-cli": "8.3.1",
-    "sass": "1.39.0",
+    "postcss": "8.3.9",
+    "postcss-cli": "9.0.1",
+    "sass": "1.42.1",
     "stylelint": "13.13.1",
     "stylelint-config-standard": "22.0.0",
     "stylelint-order": "4.1.0",
-    "vanilla-framework": "2.35.0",
+    "vanilla-framework": "2.37.0",
     "watch-cli": "0.2.3"
   }
 }
