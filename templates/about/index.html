@@ -33,9 +33,9 @@
     </div>
     <div class="col-6 col-start-large-7">
       <p class="p-heading--4">Since its inception in 2009, Juju has facilitated the transition from simple configuration management to model-driven application management.</p>
-        
+
       <p>Use it to deploy, <strong>integrate and operate</strong> applications and infrastructure - across any substrates (whether Kubernetes, VMs, or bare metal - on public or private clouds).</p>
-      
+
       <p><em>Enterprise software operations are costly and messy. Configuration management has not solved this. Together, the open source community has the power to dramatically reduce costs and improve the working lives of DevSecOps, SREs, operations teams, and the teams who rely on them.</em> <strong>How?</strong></p>
     </div>
   </div>
@@ -81,10 +81,13 @@
         ) | safe
       }}
       <h3 id="send-us-your-details" class="p-heading--4">Send us your details</h3>
-      
+
       {% if 'form_success' in request.args %}
         <div class="p-notification--positive">
-          <p class="p-notification__response"><span class="p-notification__status">Success:</span> Thank you for your entry, you'll receive an email very soon.</p>
+          <div class="p-notification__content">
+            <h5 class="p-notification__title">Success</h5>
+            <p class="p-notification__message">Thank you for your entry, you'll receive an email very soon.</p>
+          </div>
         </div>
       {% else %}
         {% include 'about/_ebook-signup-form.html' %}
