@@ -1,8 +1,7 @@
 name: docs links on juju.is/docs
 
 on:
-  schedule:
-    - cron: "0 13 * * *"
+  workflow_dispatch:
 
 jobs:
   check-links:
