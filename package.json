@@ -19,18 +19,21 @@
     "test": "yarn run lint-scss && yarn run lint-python && yarn run test-python"
   },
   "dependencies": {
-    "@canonical/cookie-policy": "3.3.0",
-    "@canonical/global-nav": "2.5.0",
-    "autoprefixer": "10.3.7",
-    "concurrently": "6.3.0",
-    "flickity": "2.2.2",
-    "postcss": "8.3.9",
-    "postcss-cli": "9.0.1",
-    "sass": "1.42.1",
-    "stylelint": "13.13.1",
-    "stylelint-config-standard": "22.0.0",
-    "stylelint-order": "4.1.0",
-    "vanilla-framework": "2.37.0",
+    "@canonical/cookie-policy": "3.4.0",
+    "@canonical/global-nav": "2.6.0",
+    "autoprefixer": "10.4.2",
+    "concurrently": "7.0.0",
+    "flickity": "2.3.0",
+    "prettier": "2.5.1",
+    "postcss": "8.4.5",
+    "postcss-cli": "9.1.0",
+    "sass": "1.49.0",
+    "stylelint": "^14.1.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-scss": "^5.0.2",
+    "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "vanilla-framework": "2.37.1 ",
     "watch-cli": "0.2.3"
   }
 }

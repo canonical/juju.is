@@ -35,8 +35,7 @@
 
 @mixin blog-p-card {
   .blog-p-card__category {
-    background:
-      url("#{$assets-path}ed42aefa-icon-resource-hub-icon-document.png")
+    background: url("#{$assets-path}ed42aefa-icon-resource-hub-icon-document.png")
       left center no-repeat;
     color: $color-mid-dark;
     font-size: $sp-medium;
