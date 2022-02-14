@@ -252,21 +252,3 @@ html {
 .is-reversed {
   flex-direction: row-reverse;
 }
-
-.brew-page-hero {
-  background-image: url(https://assets.ubuntu.com/v1/e3134288-London+Eye.svg);
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: 80%;
-  padding-bottom: 60%;
-
-  @media (min-width: $breakpoint-medium) {
-    background-position: bottom right;
-    padding-bottom: 4rem;
-    background-size: contain;
-  }
-
-  @media (min-width: $breakpoint-large) {
-    min-height: 467px;
-  }
-}
