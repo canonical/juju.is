@@ -12,3 +12,8 @@ operator-services/?: /about
 ops-code-quality/?: /about
 overview/?: /about
 universal-operators/?: /about
+docs/lma2/on MicroK8s/?: /topics/canonical-observability-stack/install/microk8s
+docs/lma2/install/microk8s/?: /topics/canonical-observability-stack/install/microk8s
+docs/lma2/juju-topology/?: /topics/canonical-observability-stack/juju-topology
+docs/lma2/?: /topics/canonical-observability-stack
+docs/cos/?: /topics/canonical-observability-stack
