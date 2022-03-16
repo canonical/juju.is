@@ -12,11 +12,4 @@ operator-services/?: /about
 ops-code-quality/?: /about
 overview/?: /about
 universal-operators/?: /about
-docs/lma2/on MicroK8s/?: https://charmhub.io/topics/canonical-observability-stack/install/microk8s
-docs/lma2/install/microk8s/?: https://charmhub.io/topics/canonical-observability-stack/install/microk8s
-docs/lma2/juju-topology/?: https://charmhub.io/topics/canonical-observability-stack/juju-topology
-docs/lma2/?: https://charmhub.io/topics/canonical-observability-stack
-docs/cos/?: https://charmhub.io/topics/canonical-observability-stack
-docs/cos/on MicroK8s/?: https://charmhub.io/topics/canonical-observability-stack/install/microk8s
-docs/cos/install/microk8s/?: https://charmhub.io/topics/canonical-observability-stack/install/microk8s
-docs/cos/juju-topology/?: https://charmhub.io/topics/canonical-observability-stack/juju-topology
+docs/(lma2|cos)(?P<page>.*)/?: https://charmhub.io/topics/canonical-observability-stack{page}
