@@ -19,7 +19,7 @@
     {% for vacancy in vacancies %}
         <div class="col-4 col-medium-3 p-card">
           <div class="p-card__content">
-            <h3 class="p-heading--four">
+            <h3 class="p-heading--4">
               <a href="https://canonical.com/careers/{{ vacancy.id }}">{{ vacancy.title | safe }}</a>
             </h3>
             <p>{{ vacancy.description | safe }}</p>
