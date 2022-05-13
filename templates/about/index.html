@@ -13,7 +13,7 @@
       <h1>About Juju</h1>
       <p>Juju is an  open-source framework that helps you move from configuration management to application management across your hybrid cloud estate through sharable, reusable, tiny applications called Charmed Operators.</p>
 
-      <p>A Charmed Operator is Juju's expansion and generalisation of the Kubernetes notion of an operator. In the Kubernetes tradition, an Operator is an application packaged with all the operational knowledge required to (1) install and (2) maintain and upgrade it on a Kubernetes cluster. A Charmed Operator ('charm') is an application packaged with all the operational knowledge required to (1) install, (2) maintain and upgrade, and (3) <em>integrate it with other applications</em>, (4) on a Kubernetes cluster, container,  virtual machine, or bare metal machine, running on public or private cloud.</p>
+      <p>A Charmed Operator is Juju's expansion and generalisation of the Kubernetes notion of an operator. In the Kubernetes tradition, an Operator is an application packaged with all the operational knowledge required to (1) install and (2) maintain and upgrade it on a Kubernetes cluster. A Charmed Operator ('charm') is an application packaged with all the operational knowledge required to (1) install, (2) maintain and upgrade, and (3) <em>integrate it with other applications</em>, (4) on a Kubernetes cluster, <em>container</em>,  <em>virtual machine</em>, or <em>bare metal machine</em>, running on public or private cloud.</p>
     </div>
   </div>
 </section>
@@ -26,31 +26,34 @@
   </div>
 
   <div class="row u-equal-height">
-    <div class="col-4 p-card">
-      <h4>The Charmed Operator Lifecycle Manager (OLM), a platform for managing charms.</h4>
-
-      <p>The OLM consists of the command line tool <a href="https://juju.is/docs/olm/the-juju-client">Juju ('juju')</a>.</p>
-
-      <p>Visit <a href="https://juju.is/docs/olm">the OLM docs</a> to start managing charms!</p>
+    <div class="col-4 p-card" style="display:flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <h4><strong>The Charmed Operator Lifecycle Manager (OLM)</strong>, a platform for managing charms.</h4>
+        <p>The OLM consists of the command line tool <a href="https://juju.is/docs/olm/the-juju-client">Juju ('juju')</a>.</p>
+      </div>
+      <p class="u-sv3">Visit <a href="https://juju.is/docs/olm">the OLM docs</a> to start managing charms!</p>
     </div>
 
-    <div class="col-4 p-card">
-      <h4>Charmhub, a repository of ready-to-use charms.</h4>
-      <p>Need to deploy Kubernetes? Grab the <a href="https://charmhub.io/charmed-kubernetes">Charmed Kubernetes</a> charm bundle! Need to deploy Wordpress on Kubernetes or on containers or virtual machines? Grab the <a href="https://charmhub.io/wordpress-k8s">Wordpress K8s</a> or the <a href="https://charmhub.io/wordpress">Wordpress charm</a>.</p>
+    <div class="col-4 p-card" style="display:flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <h4 class="u-sv3"><strong>Charmhub</strong>, a repository of ready-to-use charms.</h4>
+        <p>Need to deploy Kubernetes? Grab the <a href="https://charmhub.io/charmed-kubernetes">Charmed Kubernetes</a> charm bundle! Need to deploy Wordpress on Kubernetes or on containers or virtual machines? Grab the <a href="https://charmhub.io/wordpress-k8s">Wordpress K8s</a> or the <a href="https://charmhub.io/wordpress">Wordpress charm</a>.</p>
+      </div>
 
       <p>Visit <a href="https://charmhub.io/">Charmhub</a> to try a ready-made charm or to find an easy place to start contributing!</p>
     </div>
 
-    <div class="col-4 p-card">
-      <h4>The Charmed Operator Software Development Kit (SDK), a toolkit for building charms.</h4>
-      <p>The SDK consists of <a href="https://juju.is/docs/sdk/ops">Ops</a> and <a href="https://juju.is/docs/sdk/charmcraft">Charmcraft</a>.</p>
+    <div class="col-4 p-card" style="display:flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <h4><strong>The Charmed Operator Software Development Kit (SDK)</strong>, a toolkit for building charms.</h4>
+        <p>The SDK consists of <a href="https://juju.is/docs/sdk/ops">Ops</a> and <a href="https://juju.is/docs/sdk/charmcraft">Charmcraft</a>.</p>
+        <ul>
+          <li>Ops is a Python operator framework for developing charms.</li>
+          <li>Charmcraft is a command line tool used alongside Ops to simplify the creation, building, and publication of a charm.</li>
+        </ul>
+      </div>
 
-      <ul>
-        <li>Ops is a Python operator framework for developing charms.</li>
-        <li>Charmcraft is a command line tool used alongside Ops to simplify the creation, building, and publication of a charm.</li>
-      </ul>
-
-      <p>Visit <a href="https://juju.is/docs/sdk">the SDK docs</a> to start building charms ('charming')!</p>
+      <p class="u-sv3">Visit <a href="https://juju.is/docs/sdk">the SDK docs</a> to start building charms ('charming')!</p>
     </div>
   </div>
 </section>
