@@ -58,4 +58,26 @@
       transform: rotate(-90deg);
     }
   }
+
+  .p-tutorial__feedback-icon {
+    cursor: pointer;
+  }
+
+  .p-tutorial__feedback-options {
+    .p-inline-list__item {
+      .has-color {
+        display: none;
+      }
+
+      &:hover {
+        .p-tutorial__feedback-icon {
+          display: none;
+        }
+
+        .has-color {
+          display: inline-block;
+        }
+      }
+    }
+  }
 }

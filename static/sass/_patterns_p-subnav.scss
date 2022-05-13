@@ -3,12 +3,6 @@
     color: $color-text-orange;
   }
 
-  // Fix to align the chevrons with the text
-  // Remove once https://github.com/canonical-web-and-design/vanilla-framework/issues/3711 is fixed
-  .p-subnav::after {
-    top: 1.25rem;
-  }
-
   .p-subnav__items {
     background-color: $color-x-light;
     padding-block-end: 0.75rem;

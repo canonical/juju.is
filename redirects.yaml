@@ -12,3 +12,4 @@ operator-services/?: /about
 ops-code-quality/?: /about
 overview/?: /about
 universal-operators/?: /about
+docs/(lma2|cos)(?P<page>.*)/?: https://charmhub.io/topics/canonical-observability-stack{page}

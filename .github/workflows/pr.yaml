@@ -23,10 +23,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install dotrun
-        run: |
-          sudo snap install dotrun
-          sudo chown root:root /
+      - name: Install Dotrun
+        uses: canonical/install-dotrun@main
 
       - name: Install dependencies
         run: dotrun install
@@ -90,3 +88,17 @@ jobs:
         run: |
           SECRET_KEY=insecure_secret_key coverage run  --source=. -m unittest discover tests
           bash <(curl -s https://codecov.io/bash) -cF python
+          
+  check-inclusive-naming:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Check inclusive naming
+        uses: canonical-web-and-design/inclusive-naming@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          fail-on-error: true

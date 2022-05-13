@@ -1,0 +1,26 @@
+@mixin p-radio-card {
+  .p-radio-card {
+    @extend .p-card;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 0 !important;
+    min-height: 128px;
+    text-align: center;
+    width: 100%;
+
+    [type="radio"] {
+      display: none;
+    }
+
+    .p-radio-card__icon {
+      height: 48px;
+    }
+
+    &:hover,
+    &.is-selected {
+      background-color: $color-light;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block page_class %}docs{% endblock %}
-{% block page_title %}{% if document %}{{ document.title }}{% else %}Docs{% endif %}{% endblock %}
+{% block title %}{% if document %}{{ document.title }}{% else %}Docs{% endif %}{% endblock %}
 
 {% block content %}
   <section id="search-docs" class="p-strip--image is-shallow" style="background-image: url('https://assets.ubuntu.com/v1/e54487e2-maas-docs-suru.png')">

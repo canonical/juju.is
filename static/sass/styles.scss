@@ -78,6 +78,10 @@ $color-accent: #e95420;
 
 @include p-survey-chart;
 
+@import "patterns_p-radio-card";
+
+@include p-radio-card;
+
 .p-navigation__logo {
   margin: 0.1rem 1rem 0 1.5rem;
 }
