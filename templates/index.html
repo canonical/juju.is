@@ -8,35 +8,34 @@
 <main id="main-content">
   <section class="p-strip is-shallow u-no-padding--bottom">
     <div class="row">
-      <div class="col-7">
+      <div class="col-6">
         <h1>Take control of <br /><span style="display: block; height: 1.2em;" class="typer" id="main" data-words="Kubernetes,VM workloads,operators,hybrid cloud,multi-cloud,integration,data,observability,identity,applications,sprawl" data-delay="60" data-deleteDelay="1000" data-colors="#111111"></span></h1>
-
+        <p>Juju is the Charmed Operator Framework; an open source framework that uses <a href="/docs/sdk/charmed-operators">Charmed Operators</a>, or 'charms’, to deploy cloud infrastructure and applications and manage their operations from Day 0 through Day 2. With Juju, you can install, maintain, upgrade, and integrate applications across Kubernetes clusters, containers, virtual machines, and bare metal machines, on public or private clouds. <a href="/docs/olm/installing-juju">Take control of your hybrid environment</a>.</p>
         <div class="row">
-          <div class="col-6">
-            <p>Juju is a Charmed Operator Framework, composed of a Charmed Operator Lifecycle Manager and the Charmed Operator SDK. Deploy, <strong>integrate</strong>, and manage Kubernetes, container and VM-native applications seamlessly across hybrid clouds. Juju drives Day 0 through Day 2 operations in your complex environment.</p>
+          <div class="col-2">
+            <p><b>Manage</b> charms with the <a href="/docs/olm">Charmed Operator Lifecycle Manager (OLM)</a></p>
+          </div>
+          <div class="col-2">
+            <p><b>Try</b> a ready-made charm from <a href="https://charmhub.io">Charmhub</a></p>
+          </div>
+          <div class="col-2">
+            <p><b>Build</b> a charm with the <a href="/docs/sdk">Charmed Operator SDK</a></p>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-5 p-button-grid">
-            <a href="/about" class="p-button u-align-text--left">Why use the Charmed Operator Framework?</a>
-
-            <a href="/docs/sdk" class="p-button u-align-text--left">How do I build a Charmed Operator?</a>
-
-            <a href="/docs/olm/installing-juju" class="p-button--positive u-full-width">Install the Operator Lifecycle Manager</a>
-          </div>
-        </div>
+       <div class="p-button-grid">
+         <a href="/docs/olm/installing-juju" class="p-button--positive u-full-width">Install the Operator Lifecycle Manager</a>
+       </div>
       </div>
-      <div class="col-5">
+      <div class="col-6 u-align--center u-vertically-center">
         {{
           image(
             url="https://assets.ubuntu.com/v1/2c7e3fab-juju-header-illustration.svg",
             alt="",
-            height="544",
-            width="600",
+            height="453",
+            width="500",
             hi_def=True,
             loading="auto",
-            attrs={"class": "u-hide--small"}
+            attrs={"class": "u-hide--small "}
           ) | safe
         }}
       </div>
