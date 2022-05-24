@@ -60,7 +60,7 @@
       &[data-stage="5"] {
         .p-feature__illustration {
           position: fixed;
-          right: calc(calc(100vw - #{$grid-max-width}) * 0.535);
+          right: calc(calc(100vw - 70.25rem) * 0.535);
           top: 23%;
           width: 51.2em;
         }
