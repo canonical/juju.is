@@ -111,4 +111,8 @@
     float: right;
     padding: $sp-x-large;
   }
+
+  li:not(:last-child) > details:last-child {
+    margin-bottom: 0;
+  }
 }
