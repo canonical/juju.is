@@ -100,7 +100,5 @@ def init_docs(app):
             session=session,
             site="juju.is/docs",
             template_path="docs/search.html",
-            site_restricted_search=True,
-            search_engine_id="fdc2d22def1453cf1",
         ),
     )
