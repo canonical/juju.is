@@ -35,7 +35,7 @@
 
   <div class="row u-clearfix">
     {% for article in articles %}
-      {% if loop.index >= 4 %}
+      {% if loop.index >= 3 %}
         {% include 'blog/partials/_blog-card.html' %}
       {% endif %}
     {% endfor %}
@@ -53,7 +53,7 @@
     <nav class="p-pagination" aria-label="Pagination">
 
       <ol class="p-pagination__items u-align--center">
-  
+
         {% if current_page > 1 %}
           <li class="p-pagination__item">
             <a class="p-pagination__link--previous" href="/blog?page={{ current_page - 1 }}" title="Previous page">
@@ -65,61 +65,61 @@
             <span class="p-pagination__link--previous is-disabled"><i class="p-icon--chevron-down">Previous page</i></span>
           </li>
         {% endif %}
-  
+
         {# always show 5 pages in pagination #}
         {% if current_page > 4 and current_page == total_pages %}
           <li class="p-pagination__item">
             <a class="p-pagination__link" href="/blog?page={{ current_page - 4 }}">{{ current_page - 4 }}</a>
           </li>
         {% endif %}
-  
+
         {% if current_page > 3 and current_page >= total_pages - 1 %}
           <li class="p-pagination__item">
             <a class="p-pagination__link" href="/blog?page={{ current_page - 3 }}">{{ current_page - 3 }}</a>
           </li>
         {% endif %}
-  
+
         {% if current_page > 2 %}
           <li class="p-pagination__item">
             <a class="p-pagination__link" href="/blog?page={{ current_page - 2 }}">{{ current_page - 2 }}</a>
           </li>
         {% endif %}
-  
+
         {% if current_page > 1 %}
           <li class="p-pagination__item">
             <a class="p-pagination__link" href="/blog?page={{ current_page - 1 }}">{{ current_page - 1 }}</a>
           </li>
         {% endif %}
-  
+
         <!-- current page -->
         <li class="p-pagination__item">
           <a class="p-pagination__link is-active" href="/blog?page={{ current_page }}">{{ current_page }}</a>
         </li>
-  
+
         {% if current_page < total_pages %}
           <li class="p-pagination__item">
             <a class="p-pagination__link" href="/blog?page={{ current_page + 1 }}">{{ current_page + 1 }}</a>
           </li>
         {% endif %}
-  
+
         {% if current_page < total_pages - 1 %}
           <li class="p-pagination__item">
             <a class="p-pagination__link" href="/blog?page={{ current_page + 2 }}">{{ current_page + 2 }}</a>
           </li>
         {% endif %}
-  
+
         {% if current_page < total_pages - 2 and current_page <= 2 %}
           <li class="p-pagination__item">
             <a class="p-pagination__link" href="/blog?page={{ current_page + 3 }}">{{ current_page + 3 }}</a>
           </li>
         {% endif %}
-  
+
         {% if current_page < total_pages - 3 and current_page == 1 %}
           <li class="p-pagination__item">
             <a class="p-pagination__link" href="/blog?page={{ current_page + 4 }}">{{ current_page + 4 }}</a>
           </li>
         {% endif %}
-  
+
         {% if current_page != total_pages %}
           <li class="p-pagination__item">
             <a class="p-pagination__link--next" href="/blog?page={{ current_page + 1 }}" title="Next page">
