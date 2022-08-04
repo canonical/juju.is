@@ -102,3 +102,23 @@ def init_docs(app):
             template_path="docs/search.html",
         ),
     )
+
+    juju_dev_docs_id = 6669
+    juju_dev_docs = Docs(
+        parser=DocParser(
+            api=DiscourseAPI(
+                base_url="https://discourse.charmhub.io/",
+                session=session,
+                api_key=DISCOURSE_API_KEY,
+                api_username=DISCOURSE_API_USERNAME,
+                get_topics_query_id=2,
+            ),
+            index_topic_id=juju_dev_docs_id,
+            url_prefix="/docs/dev",
+        ),
+        document_template="docs/document.html",
+        url_prefix="/docs/dev",
+        blueprint_name="juju_dev_docs",
+    )
+
+    juju_dev_docs.init_app(app)
