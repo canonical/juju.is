@@ -6,6 +6,7 @@
 $color-accent-background: #f0f5f7;
 $color-accent: #e95420;
 $breakpoint-medium: 619px;
+$breakpoint-navigation-threshold: 900px;
 
 @import "vanilla-framework/scss/vanilla";
 
@@ -29,11 +30,7 @@ $breakpoint-medium: 619px;
 
 @import "patterns_navigation";
 
-@include local-p-navigation;
-
-@import "patterns_p-subnav";
-
-@include local-p-subnav;
+@include p-charmhub-navigation;
 
 @import "patterns_p-modal";
 

@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@canonical/cookie-policy": "3.4.0",
-    "@canonical/global-nav": "2.7.0",
+    "@canonical/global-nav": "3.2.0",
     "autoprefixer": "10.4.7",
     "concurrently": "7.2.1",
     "flickity": "3.0.0",
@@ -33,7 +33,7 @@
     "stylelint-config-recommended-scss": "5.0.2",
     "stylelint-order": "5.0.0",
     "stylelint-prettier": "2.0.0",
-    "vanilla-framework": "3.7.0",
+    "vanilla-framework": "3.8.2",
     "watch-cli": "0.2.3"
   }
 }
