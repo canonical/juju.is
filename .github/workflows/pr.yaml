@@ -65,7 +65,7 @@ jobs:
         run: yarn lint-python
 
   test-python:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
       - uses: actions/checkout@v3
@@ -88,7 +88,7 @@ jobs:
         run: |
           SECRET_KEY=insecure_secret_key coverage run  --source=. -m unittest discover tests
           bash <(curl -s https://codecov.io/bash) -cF python
-          
+
   check-inclusive-naming:
     runs-on: ubuntu-latest
 

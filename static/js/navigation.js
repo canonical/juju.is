@@ -6,9 +6,9 @@ function toggleDropdown(toggle, open) {
   dropdown.setAttribute("aria-hidden", !open);
 
   if (open) {
-    parentElement.classList.add("is-active");
+    parentElement.classList.add("is-active", "is-selected");
   } else {
-    parentElement.classList.remove("is-active");
+    parentElement.classList.remove("is-active", "is-selected");
   }
 }
 
@@ -48,5 +48,3 @@ function initNavDropdowns(containerClass) {
     });
   });
 }
-
-initNavDropdowns(".p-navigation__item--dropdown-toggle");
