@@ -20,7 +20,7 @@ def init_blog(app, url_prefix):
         BlogViews(
             api=blog_api,
             blog_title="Juju Blog",
-            tag_ids=[4059],
+            tag_ids=[1286],
             excluded_tags=[3184, 3265, 3408],
         )
     )
@@ -41,7 +41,7 @@ def init_blog(app, url_prefix):
         while True:
             url = (
                 f"https://ubuntu.com/blog/wp-json/wp/v2/posts?"
-                f"tags=4059&per_page=100&page={page}"
+                f"tags=1286&per_page=100&page={page}"
                 f"&tags_exclude=3184%2C3265%2C3408"
             )
 
