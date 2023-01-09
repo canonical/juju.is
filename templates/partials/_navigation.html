@@ -95,7 +95,21 @@
           <a class="p-navigation__link" href="https://jaas.ai">JAAS</a>
         </li>
       </ul>
-      <ul class="p-navigation__items global-nav"></ul>
+      <ul class="p-navigation__items global-nav">
+        <li class="p-navigation__item">
+          <button class="js-search-button p-navigation__link--search-toggle">
+            <span class="p-navigation__search-label">Search</span>
+          </button>
+        </li>
+      </ul>
+      <div class="p-navigation__search">
+        <form class="p-search-box" action="https://charmhub.io" data-js="search-handler-desktop">
+          <input type="search" data-js="search-input-desktop" class="p-search-box__input" name="q" aria-label="Search Charmhub" placeholder="Search Charmhub" required>
+          <button type="reset" class="p-search-box__reset"><i class="p-icon--close"></i></button>
+          <button type="submit" class="p-search-box__button"><i class="p-icon--search"></i></button>
+        </form>
+      </div>
     </nav>
   </div>
+  <div class="p-navigation__search-overlay"></div>
 </header>
