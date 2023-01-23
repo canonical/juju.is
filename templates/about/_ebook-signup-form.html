@@ -1,17 +1,31 @@
-<form action="https://pages.ubuntu.com/index.php/leadCapture/save" method="post" id="mktoForm_3875" class="marketo-form">
+<form action="https://ubuntu.com/marketo/submit" method="post" id="mktoForm_3875" class="marketo-form" onsubmit="ga('send', 'About', 'Signup', 'Get the eBook');">
   <label for="Email" class="mktoLabel ">Email address:</label>
   <input required  id="email" name="Email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired">
-  
+
   <p class="p-form-help-text u-sv1">
     You'll receive an email with a link to get your t-shirt.
-  </p> 
+  </p>
+
+  {# These are honey pot fields to catch bots #}
+  <div class="u-off-screen">
+    <label class="website" for="website">Website:</label>
+    <input name="website" type="text" class="website" autocomplete="off" value="" id="website" tabindex="-1" />
+  </div>
+  <div class="u-off-screen">
+    <label class="name" for="name">Name:</label>
+    <input name="name" type="text" class="name" autocomplete="off" value="" id="name" tabindex="-1" />
+  </div>
+  {# End of honey pots #}
 
   <input type="hidden" name="formid" class="mktoField" value="3875">
-  <input type="hidden" name="formVid" class="mktoField" value="3875">
 
-  <input type="hidden" name="munchkinId" class="mktoField" value="066-EOV-335">
+  <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_campaign" id="utm_campaign" value="" />
+  <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_medium" id="utm_medium" value="" />
+  <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_source" id="utm_source" value="" />
+  <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_content" id="utm_content" value="" />
+  <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_term" id="utm_term" value="" />
+
   <input type="hidden" name="Consent_to_Processing__c" value="yes" />
-  <input type="hidden" aria-hidden="true" aria-label="hidden field" name="gclid" class="mktoField" id="gclid" value="" />
 
   <input type="hidden" name="returnURL" value="{{ request.url}}?form_success=true#send-us-your-details" />
 
