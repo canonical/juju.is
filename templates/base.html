@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="{{ versioned_static('css/styles.css') }}" />
   <meta property="og:url" content="https://juju.is/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Take control">
+  <meta property="og:title" content="{% block meta_title %}Take control{% endblock %}">
   <title>
     Juju | {% block title %}The simplest way to deploy and maintain
     applications in the cloud{% endblock %}
