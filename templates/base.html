@@ -16,21 +16,32 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="{% block page_description %}Juju is an open source application modelling tool that allows you to deploy, configure, scale and operate cloud infrastructures quickly and efficiently on public clouds such as AWS, GCE, and Azure along with private ones such as MAAS, OpenStack, and VSphere.{% endblock %}" />
   <link rel="stylesheet" href="{{ versioned_static('css/styles.css') }}" />
-  <meta property="og:url" content="https://juju.is/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{% block meta_title %}Take control{% endblock %}">
   <title>
-    Juju | {% block title %}The simplest way to deploy and maintain
+    Juju | {% block meta_title %}The simplest way to deploy and maintain
     applications in the cloud{% endblock %}
   </title>
   {% if self.meta_copydoc() %}
   <meta name="copydoc" content="{% block meta_copydoc %}{% endblock %}">
   {% endif %}
-  {% if self.meta_image %}
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="{{ self.meta_image() }}">
-  <meta property="og:image" content="{{ self.meta_image() }}">
-  {% endif %}
+
+  <meta name="description" content="{% block meta_description %}Juju is the Charmed Operator Framework; an open source framework that uses Charmed Operators, or 'Charms’, to deploy cloud infrastructure and applications and manage their operations from Day 0 through Day 2.{% endblock %}">
+  
+ {% block meta %}
+   <meta property="og:title" content="{{ self.meta_title() }}"/>
+   <meta property="og:site_name" content="Juju"/>
+   <meta property="og:type" content="{% block meta_type %}website{% endblock %}"/>
+   <meta property="og:description" content="{{ self.meta_description() }}"/>
+   <meta property="og:image" content="{% block meta_image %}https://assets.ubuntu.com/v1/eeb4c506-Canonical-Juju-logo-2022.svg{% endblock %}" />
+   <meta property="og:image:width" content="{% block meta_image_width %}1660{% endblock %}" />
+   <meta property="og:image:height" content="{% block meta_image_height %}1000{% endblock %}" />
+   <meta property="og:image:alt" content="{% block meta_image_alt %}Canonical Juju banner{% endblock %}" />
+   <meta property="og:url" content="https://juju.is{% block meta_path %}{{ path }}{% endblock %}" />
+   <meta property="twitter:card" content="{% block meta_twitter_card %}summary_large_image{% endblock %}" />
+   <meta property="twitter:site" content="@juju_devops" />
+   <meta property="twitter:creator" content="@juju_devops" />
+   <meta property="twitter:image" content="{{ self.meta_image() }}" />
+   <meta property="twitter:url" content="https://juju.is{{ self.meta_path() }}" />
+  {% endblock %}
 
   <script src="https://assets.ubuntu.com/v1/703e23c9-lazysizes+noscript+native-loading.5.1.2.min.js" defer></script>
   <script src="https://buttons.github.io/buttons.js" defer></script>
@@ -71,6 +82,33 @@
     canonicalGlobalNav.createNav();
     initNavDropdowns(".p-navigation__item--dropdown-toggle");
   </script>
+
+  <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@id": "https://juju.is/#organization",
+        "@type": "Organization",
+        "name": "Juju",
+        "logo": "https://assets.ubuntu.com/v1/eeb4c506-Canonical-Juju-logo-2022.svg",
+        "url": "https://juju.is",
+        "sameAs": [
+          "https://github.com/canonical/operator/",
+          "https://en.wikipedia.org/wiki/Juju_(software)",
+          "https://twitter.com/juju_devops",
+          "https://www.youtube.com/@jujucharms"
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@id": "https://juju.is/#website",
+        "@type": "WebPage",
+        "name": "Juju",
+        "url": "https://juju.is{{ self.meta_path() }}"
+      }
+    </script>
 </body>
 
 </html>
