@@ -13,3 +13,15 @@ ops-code-quality/?: /about
 overview/?: /about
 universal-operators/?: /about
 docs/(lma2|cos)(?P<page>.*)/?: https://charmhub.io/topics/canonical-observability-stack{page}
+tutorials/deploy-nextcloud-and-collabora-on-ubuntu/?: https://charmhub.io/nextcloud/
+tutorials/build-and-deploy-mini-charm/?: /docs/sdk/build-and-deploy-minimal-machine-charm
+tutorials/monitor-elasticsearch-with-elasticsearch-and-kibana/?: /docs/olm/monitor-elasticsearch-with-elasticsearch-and-kibana
+tutorials/streaming-hadoop-analysis/?: /docs/olm/how-to
+tutorials/build-a-minimal-operator/?: /docs/sdk/from-zero-to-hero-write-your-first-kubernetes-charm
+tutorials/document-your-library/?: /docs/sdk/document-your-charm-library
+tutorials/get-started-hadoop-spark/?: /docs/olm/how-to
+tutorials/publish-on-charmhub/?: /docs/sdk/publishing
+tutorials/how-to-work-with-resources-in-charmcraft/?: /docs/sdk/resources
+tutorials/how-to-work-with-bundles-in-charmcraft/?: /docs/sdk/manage-bundles
+tutorials/deploy-postgres-on-ubuntu-server/?: /docs/olm/how-to
+tutorials/?: /docs/tutorials
