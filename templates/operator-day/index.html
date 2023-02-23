@@ -1,311 +1,123 @@
 {% extends 'base.html' %}
 
-{% block page_title %}Operator Day - Charmed Operator Framework for Kubernetes and VMs{% endblock page_title %}
+{% block meta_title %}Operator Day - Charmed Operator Framework for Kubernetes and VMs{% endblock %}
 
 {% block meta_copydoc %}https://docs.google.com/document/d/1ZFRGkZ4vvvMVOgq4MIsBuebHsA7Y0rTyiZ76qjQpOAg/edit#{% endblock meta_copydoc %}
 
 {% block content %}
 
-<section class="p-strip is-shallow">
-  <div class="u-fixed-width u-sv3">
-    <h1>Operator Day</h1>
+<section class="p-strip--blue is-dark">
+  <div class="u-fixed-width">
+    <h1>How is the tech industry using software operators?</h1>
+    <h2>Find out at the next Operator Day</h2>
+     <p>A rich agenda with various sessions about the basics behind operators, what they are, how to use them, how to create them and how your team can benefit from them.</p>
+      <p>Speakers share knowledge and insights about their software operator journey, from configuration management to application management.</p>
+      <a class="p-button--positive" href="https://app.myonvent.com/event/operator-day">Register for Operator Day at KubeCon EU 2023</a>
   </div>
 </section>
-
-<div class="u-fixed-width">
-  <hr>
-</div>
-
-<section class="p-strip">
-  <div class="u-fixed-width u-sv3">
-    <h2 class="p-heading--3">May 2022</h2>
-  </div>
-
-  <div class="row">
-    <div class="col-7">
-      <h3 class="p-heading--4"><a href="https://www.youtube.com/watch?v=kHG_nCSv51s">Plenary session with Mark Shuttleworth and David Booth</a></h3>
-      <p>“Kubernetes is taking the app development world by storm.” is one of the most popular phrases about Kubernetes. How can we make best use of this technology?</p>
-      <p>Mark Shuttleworth (founder of Canonical, the company behind Ubuntu, and one-time astronaut) talks with David Booth (VP Cloud Native Applications at Canonical) about the past year and what to expect in the near future.</p>
-    
-    </div>
-
-    <div class="col-5">
-      <div class="u-embedded-media">
-        <iframe
-          class="u-embedded-media__element"
-          width="448"
-          height="252"
-          src="https://www.youtube.com/embed/kHG_nCSv51s?controls=0"
-          title="Plenary session with Mark Shuttleworth and David Booth"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-7">
-      <h3 class="p-heading--4"><a href="https://www.youtube.com/watch?v=rV_Su4QDpOk">A common substrate for enabling solutions with Alex Jones</a></h3>
-      <p>Together we explore the current landscape of Kubernetes, how Canonical is leveraging and contributing to the ecosystem, with a view to the future of needs of end-users. We highlight trends such as the synthesis of human behaviours through operators, the shift towards GPU/networking offloads and Kubernetes at IoT/Edge.</p>
-      <p>The goal of this session is to invigorate and excited about Canonical's part within a much larger and thriving cloud native ecosystem, centered around Kubernetes.</p>
-    </div>
-
-    <div class="col-5">
-      <div class="u-embedded-media">
-        <iframe
-          class="u-embedded-media__element"
-          width="448"
-          height="252"
-          src="https://www.youtube.com/embed/rV_Su4QDpOk?controls=0"
-          title="A common substrate for enabling solutions with Alex Jones"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-7">
-      <h3 class="p-heading--4"><a href="https://www.youtube.com/watch?v=602N4MCaMvs">Juju & Charmed Ecosystem Update with Jon Seager</a></h3>
-      <p>In this session we take a look back at the past year and the developments we've enjoyed in Juju, Operator Framework and the broader ecosystem, then take a look at the year ahead.</p>
-    </div>
-
-    <div class="col-5">
-      <div class="u-embedded-media">
-        <iframe
-          class="u-embedded-media__element"
-          width="448"
-          height="252"
-          src="https://www.youtube.com/embed/602N4MCaMvs?controls=0"
-          title="Juju & Charmed Ecosystem Update with Jon Seager"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </div>
-  
-  <div class="row">
-    <div class="col-7">
-      <h3 class="p-heading--4"><a href="https://www.youtube.com/watch?v=vj0NUixg-Tg">30 mins to stand up a simple app with Daniela Plascencia</a></h3>
-      <p>In this session we'll introduce the project and explore the Juju ecosystem, as well as basic charming concepts. We'll deep dive into the build and deploy process for a simple charm.</p>
-    </div>
-
-    <div class="col-5">
-      <div class="u-embedded-media">
-        <iframe
-          class="u-embedded-media__element"
-          width="448"
-          height="252"
-          src="https://www.youtube.com/embed/vj0NUixg-Tg?controls=0"
-          title="30 mins to stand up a simple app with Daniela Plascencia"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </div>
-  
-  <div class="row">
-    <div class="col-7">
-      <h3 class="p-heading--4"><a href="https://www.youtube.com/watch?v=PEJc-SfEFt8">Observability for developers of Charmed Operators with Simon Aronsson</a></h3>
-      <p> In this session, elaborating upon the work already done by Daniela Plascencia, we'll have a look at how we may leverage Juju and the Canonical Observability Stack to make our charm observable, and by that also monitorable.</p>
-    </div>
-
-    <div class="col-5">
-      <div class="u-embedded-media">
-        <iframe
-          class="u-embedded-media__element"
-          width="448"
-          height="252"
-          src="https://www.youtube.com/embed/PEJc-SfEFt8?controls=0"
-          title="Observability for developers of Charmed Operators with Simon Aronsson"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-7">
-      <h3 class="p-heading--4"><a href="https://www.youtube.com/watch?v=MT4y6bYyX0o">Testing framework for Juju Charmed Operators with Marc Oppenheimer</a></h3>
-      <p>In this session, Marc will take you through how to use the Charmed Operator framework's testing harness to check that your charm is doing exactly what you think it's doing across multiple scenarios.</p>
-    </div>
-
-    <div class="col-5">
-      <div class="u-embedded-media">
-        <iframe
-          class="u-embedded-media__element"
-          width="448"
-          height="252"
-          src="https://www.youtube.com/embed/MT4y6bYyX0o?controls=0"
-          title="Testing framework for Juju Charmed Operators with Marc Oppenheimer"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-7">
-      <h3 class="p-heading--4"><a href="https://www.youtube.com/watch?v=8ozNW-rJXj8">Publishing Charmed Operators with Michael Jaeger and Pedro Leão Da Cruz</a></h3>
-      <p>Charmed Operators make a lot more sense, if they are reused for new applications in a new context. This session covers publishing of Charmed Operators for others. In addition, it introduces the collection of available Charmed Operators on Charmhub.io.</p>
-    </div>
-
-    <div class="col-5">
-      <div class="u-embedded-media">
-        <iframe
-          class="u-embedded-media__element"
-          width="448"
-          height="252"
-          src="https://www.youtube.com/embed/8ozNW-rJXj8?controls=0"
-          title="Publishing Charmed Operators with Michael Jaeger and Pedro Leão Da Cruz"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </div>
-  
-  <div class="row">
-    <div class="col-7">
-      <h3 class="p-heading--4"><a href="https://www.youtube.com/watch?v=XP-wmLOQsuU">Building a sophisticated product on Juju with Rob Gibbon</a></h3>
-      <p>Like a charm &ndash; building an integrated, operator-driven MLOps ecosystem on Kubernetes.</p>
-    </div>
-
-    <div class="col-5">
-      <div class="u-embedded-media">
-        <iframe
-          class="u-embedded-media__element"
-          width="448"
-          height="252"
-          src="https://www.youtube.com/embed/XP-wmLOQsuU?controls=0"
-          title="Building a sophisticated product on Juju with Rob Gibbon"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </div>
-  
-  <div class="row">
-    <div class="col-7">
-      <h3 class="p-heading--4"><a href="https://www.youtube.com/watch?v=ac5d5dHDVmE">Experts Panel Discussion: Outlook to Kubernetes and cloud native operations</a></h3>
-      <p>Industry thought leaders come together in a panel discussion covering the State of Kubernetes, the goals of real users, the challenges they face, and possible futures of cloud native technologies.</p>
-    </div>
-
-    <div class="col-5">
-      <div class="u-embedded-media">
-        <iframe
-          class="u-embedded-media__element"
-          width="448"
-          height="252"
-          src="https://www.youtube.com/embed/ac5d5dHDVmE?controls=0"
-          title="Experts Panel Discussion: Outlook to Kubernetes and cloud native operations"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </div>  
-</section>
-
-<div class="u-fixed-width">
-  <hr>
-</div>
 
 <section class="p-strip">
   <div class="u-fixed-width">
-    <h2 class="p-heading--3">October 2021</h2>
+    <h2>What is Operator Day?</h2>
   </div>
-
   <div class="row">
-    <div class="col-7">
-      <h3 class="p-heading--4"><a href="https://www.youtube.com/watch?v=uWFC1_DeIZU">KubeCon NA 2021: Operator Day Keynote with Mark Shuttleworth</a></h3>
-      <p>Operators, Models, Kubernetes, Hybrid Clouds, massive scale and bootstrapping quickly &ndash; Kubernetes is taking the the world by storm. So what's next? Mark Shuttleworth (one time astronaut, founder of Canonical, the company behind Ubuntu) talks with David Booth (VP Cloud Native Applications at Canonical) about the past and lays down a vision for the future.</p>
+    <div class="col-6">
+      <p>Software operators are crucial in the <a href="https://ubuntu.com/kubernetes">Kubernetes landscape</a>. A software operator encapsulates the knowledge and expertise of a real-world operations team and codifies it into a dedicated piece of software. Software operators help human operators and administrators run their applications efficiently and effectively.</p>
+      <p>Canonical has redefined how we operate applications and provides <a href="https://juju.is/">an OSS-based platform and framework</a> for building and running operators.</p>
+      <p>And what better place to talk about operators than KubeCon? KubeCon is a bi-annual event in Europe and North America, with presentations, sessions, tutorials and hands-on demos for open-source communities building cloud-native applications.</p>
+      <p>It is the most significant event for cloud-native computing, receiving more than 15.000 registrations in the past. KubeCon is the flagship conference of the <a href="https://www.cncf.io/">Cloud Native Computing Foundation (CNCF)</a>.
+        Canonical has inaugurated the Operator Day event at KubeCon conference in 2020. If you missed them, you could freely access recordings from the sessions <a href="https://www.youtube.com/@UbuntuOS/playlists">on YouTube</a>.</p>
     </div>
+    <div class="col-6">
+      {{ image (
+      url="https://assets.ubuntu.com/v1/950e529a-operator-day.png",
+      alt="",
+      width="636",
+      height="358",
+      hi_def=True,
+      loading="auto|lazy"
+      ) | safe
+      }}
+    </div>
+</section>
 
-    <div class="col-5">
-      <div class="u-embedded-media">
-        <iframe
-          class="u-embedded-media__element"
-          width="448"
-          height="252"
-          src="https://www.youtube.com/embed/uWFC1_DeIZU?controls=0"
-          title="KubeCon NA 2021: Operator Day Keynote with Mark Shuttleworth"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
+<section class="p-strip--light is-shallow">
+  <div class="u-fixed-width">
+    <h3>Operator Day at KubeCon EU 2023</h3>
+    <p>Come and join our new edition of Operator Day colocated at KubeCon EU 2023 in Amsterdam, the Netherlands - an online event, free to attend!</p>
+    <a class="p-button--positive" href="https://app.myonvent.com/event/operator-day">Register for Operator Day at KubeCon EU 2023</a>
   </div>
 </section>
 
-<div class="u-fixed-width">
-  <hr>
-</div>
-
 <section class="p-strip">
-  <div class="u-fixed-width u-sv3">
-    <h2 class="p-heading--3">May 2021</h2>
+  <div class="u-fixed-width">
+    <h2>See past Operator Day events</h2>
+    <ul class="p-matrix">
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <h3 class="p-matrix__title">
+            <a class="p-matrix__link" href="/operator-day/kubecon-na-2022">Operator Day at KubeCon NA 2022</a>
+          </h3>
+          <div class="p-matrix__desc">Operators beyond Kubernetes, the journey from configuration management to application management.</div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-matrix__title">
+            <h3 class="p-matrix__title">
+              <a class="p-matrix__link" href="/operator-day/kubecon-eu-2022">Operator Day at KubeCon EU 2022</a>
+            </h3>
+          </div>
+          <div class="p-matrix__desc">Everything about software operators explained, including how they can help you.</div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-matrix__title">
+            <h3 class="p-matrix__title">
+              <a class="p-matrix__link" href="/operator-day/kubecon-na-2021">Operator Day at KubeCon NA 2021</a>
+            </h3>
+          </div>
+          <div class="p-matrix__desc">From Kubernetes operators to MLOps, Data Ops and observability in the enterprise stack.</div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-matrix__title">
+            <h3 class="p-matrix__title">
+              <a class="p-matrix__link" href="/operator-day/kubecon-eu-2021">Operator Day at KubeCon EU 2021</a>
+            </h3>
+          </div>
+          <div class="p-matrix__desc">How to use operators,  create them in Python, and evolve from configuration management to application management.</div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-matrix__title">
+            <h3 class="p-matrix__title">
+              <a class="p-matrix__link" href="/operator-day/kubecon-na-2020">Operator Day at KubeCon NA 2020</a>
+            </h3>
+          </div>
+          <div class="p-matrix__desc">The <a href="https://juju.is/model-driven-operations-manifesto">Open Operator Manifesto</a>, working to create a community-driven collection of operators for everyone.</div>
+        </div>
+      </li>
+      <li class="p-matrix__item"></li>
+    </ul>
   </div>
+</section>
 
-  <div class="row">
-    <div class="col-7">
-      <h3 class="p-heading--4"><a href="https://www.youtube.com/watch?v=jDvQrcFE32g">KubeCon Operator Day keynote with Mark Shuttleworth</a></h3>
-      <p>Operators, Models, Kubernetes, Hybrid Clouds, massive scale and bootstrapping quickly - Kubernetes is taking the world by storm. So what's next? Mark Shuttleworth (one time astronaut, founder of Canonical, the company behind Ubuntu) talks with David Booth (VP Cloud Native Applications at Canonical) about the past and lays down a vision for the future.</p>
-    </div>
-
-    <div class="col-5">
-      <div class="u-embedded-media">
-        <iframe
-          class="u-embedded-media__element"
-          width="448"
-          height="252"
-          src="https://www.youtube.com/embed/jDvQrcFE32g?controls=0"
-          title="KubeCon Operator Day keynote with Mark Shuttleworth"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-7">
-      <h3 class="p-heading--4"><a href="https://www.youtube.com/watch?v=yxeJX2WRYjg">How to build a Charmed Operator for Kubernetes with Jon Seager</a></h3>
-      <p>A guided tour of the Charmed Operator Framework illustrating the development of a simple Charmed Operator that targets Kubernetes.</p>
-    </div>
-
-    <div class="col-5">
-      <div class="u-embedded-media">
-        <iframe
-          class="u-embedded-media__element"
-          width="448"
-          height="252"
-          src="https://www.youtube.com/embed/yxeJX2WRYjg?controls=0"
-          title="How to build a Charmed Operator for Kubernetes"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
+<section class="p-strip is-shallow">
+  <div class="u-fixed-width">
+    <h2>Learn more</h2>
+    <p>Read our introduction to <a href="https://juju.is/">Juju and Charmed Operators</a></p>
+    <ul>
+      <li>Browse our collection of Charmed Operators on <a href="https://charmhub.io/">Charmhub.io</a></li>
+      <li>Learn about <a href="https://juju.is/docs/olm">Juju Charmed Operator Lifecycle Manager</a></li>
+      <li>Learn about the <a href="https://juju.is/docs/sdk">Juju Charmed Operator SDK</a></li>
+      <li>Watch <a href="https://ubuntu.com/blog/juju-and-charmed-operators-videos">videos  to get started with Juju and Charmed Operators</a></li>
+      <li>Watch the <a href="https://ubuntu.com/engage/developer-guide-to-operators">webinar about charmed operators ready for publication</a></li>
+    </ul>
+    <a class="p-button" href="https://ubuntu.com/contact-us/form?product=generic-contact-us" rel="noreferrer noopener" target="_blank" aria-label="Contact Canonical (opens in a new tab)">Still have questions? Contact us</a>
   </div>
 </section>
 {% endblock %}

@@ -1,0 +1,346 @@
+{% extends 'base.html' %}
+
+{% block meta_title %}Operator Day 5th edition{% endblock %}
+
+{% block meta_description %}This edition centred on cases where software operators have been applied successfully. The presenters discussed building software operators using Juju, an open-source operator lifecycle manager.{% endblock %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1ZFRGkZ4vvvMVOgq4MIsBuebHsA7Y0rTyiZ76qjQpOAg/edit#{% endblock meta_copydoc %}
+
+{% block content %}
+  <section class="p-strip--blue is-dark is-shallow">
+    <div class="u-fixed-width">
+      <h1>Operator Day 5th edition</h1>
+      <h3>KubeCon NA 2022 - Nov 16th</h3>
+    </div>
+  </section>
+
+  <section class="p-strip">
+    <div class="u-fixed-width">
+      <p>The 5th Operator Day took place at KubeCon North America 2022. This edition centred on cases where software operators have been applied successfully. The presenters discussed building software operators using Juju, an open-source operator lifecycle manager. Operators implemented for Juju are called Charmed Operators.</p>
+
+      <h2>Agenda</h2>
+      <h3>May 16th</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td width="200px">13:00 - 13:20</td>
+            <td><b>Opening Plenary</b><br/>Mark Shuttleworth & David Booth</td>
+          </tr>
+          <tr>
+            <td>13:20 - 13:25</td>
+            <td><b>Introduction to the Kubernetes Landscape</b><br />Alex Jones</td>
+          </tr>
+          <tr>
+            <td>13:25 - 13:40</td>
+            <td><b>Canonical's role in Security in the Cloud Native landscape</b><br/>Massimiliano Gori</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">In today’s threat landscape you will never know which layer of your infrastructure is going to be attacked next. From host OS to containers to infrastructure Canonical offerings are unique as they cover the entire stack, and so does our security approach.<br />During this session we will discuss why you should be thinking about securing your workloads from the host OS up and how Canonical products can help you deliver a cohesive, defence in depth approach.</td>
+          </tr>
+          <tr>
+            <td>13:40 - 14:10</td>
+            <td><b>Juju & Charmed Ecosystem Update</b><br/>Jon Seager</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Dive into progress across the entire Juju and Charmed Operator engineering teams at Canonical and the broader community. The session also provides a look forward to the features we're working on over the next 6-12 months.</td>
+          </tr>
+          <tr>
+            <td>14:10 - 14:25</td>
+            <td><b>The Juju Dev Tools Suite</b><br/>Pietro Pasotti</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">In this session we present the latest developments in terms of development and debugging tools available to the fledgling and pro charmers. Juju is complicated, and these tools aim to make charming easier, but not more obscure. Therefore we will present the tools, but also explain why they work -- and their limitations. Closing, a hands-on session where we show just how productive you can be if you just have the right tools.</td>
+          </tr>
+          <tr>
+            <td>14:25 - 14:45</td>
+            <td><b>Kubernetes lifecycle management</b><br/>Alex Jones</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Upgrades, updates and patches are the stuff of nightmare for system administrators working with Kubernetes. This alone is often a reason that many look to others to manage their digital estate for them. We show that with the power of Canonical Kubernetes you can take control of your critical infrastructure, reducing costs, improving security and decoupling reliance from single proprietary solutions.</td>
+          </tr>
+          <tr>
+            <td>14:45 - 15:05</td>
+            <td><b>Unlock charmed operators</b><br/>Anton Smith (SpectroCloud)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Palette & its usage of Cluster API is a revolution in the way that Kubernetes clusters are deployed and managed, while Juju and Charmed Operators provide a wealth of applications that are ready-to-go.<br />In this talk, learn more about how Palette utilises Cluster API to manage clusters in a declarative, GitOps driven way, and how Juju has been integrated with Palette to unlock the power of Charmhub - allowing users to easily deploy any charm onto any cluster, quickly, easily, and repeatedly.</td>
+          </tr>
+          <tr>
+            <td>15:05 - 15:25</td>
+            <td><b>Juju on Metal for HPC</b><br/>Jon Thor Kristinsson</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">In this session we will introduce MAAS. How charms can be used with MAAS to deploy anything from LXD to k8s and OpenStack. And how that can be extended to deploy bare metal workloads such as those that exist in the realm of HPC straight to a cluster of nodes all through MAAS using Juju and charms.</td>
+          </tr>
+          <tr>
+            <td>15:25 - 15:55</td>
+            <td><b>Omnivector Slurm</b><br/>James Beedy (Omnivector), Jon Thor Kristinsson</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">In this session we will introduce Omnivector. There community experience of charming and how they are contributing to the open source ecosystem by maintaining a suite of automation for HPC such as the SLURM charms. Introduce the SLURM charms, what they are. SLURM charm use cases, with a demo of the SLURM charms with an OpenFOAM workload showing the value of SLURM charms with the Canonical Observability Stack.</td>
+          </tr>
+          <tr>
+            <td>15:55 - 16:25</td>
+            <td><b>Evolving Charmed OpenStack</b><br/>James Page, Billy Olsen</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">In the session we will cover why we need Charmed Operators and what problems they solve for us in the context of OpenStack and how they have helped us successfully deliver deployment and operations for OpenStack over the last decade.  We’ll then switch focus to detail how we intend to move to a hybrid model including both Kubernetes and machine charmed operators to leverage the benefits that this combined approach brings to move us from automated to automatic ops.</td>
+          </tr>
+          <tr>
+            <td>16:25 - 16:50</td>
+            <td><b>Charmed Operators for Open-Source Storage</b><br/>Moritz Wanzenboeck (LINBIT)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Persistent storage is a hot topic on Kubernetes. In this talk we will introduce Piraeus, a flexible and fast storage solution. We will use Charms to set up production-ready storage for our cluster.</td>
+          </tr>
+          <tr>
+            <td>16:50 - 17:15</td>
+            <td><b>Easy integration of Capsule</b><br/>Alessio Greggi (Clastix)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Let's look at Capsule and how we integrated it on Charmed Kubernetes, to enable multi-tenancy on the Canonical distribution.</td>
+          </tr>
+          <tr>
+            <td>17:15 - 17:35</td>
+            <td><b>Charmed Landscape</b><br/>Rajan Patel</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Landscape provides system administration at scale for all versions of Ubuntu, anywhere. This presentation will cover the deployment of Charmed Landscape using Juju across LXD containers.</td>
+          </tr>
+          <tr>
+            <td>17:35 - 18:00</td>
+            <td><b>Charmed Indico</b><br/>Varshi Gupta, Tom Haddon, Arturo Seijas</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">In this session, we will go over an application of Juju and charming- a charmed operator for Indico which is an open source tool for event/conference management. This Kubernetes based sidecar charm makes the deployment, maintenance and operations easier for the application. We will go over the charm architecture, why we decided on juju and operator framework and a live demo.</td>
+          </tr>
+          <tr>
+            <td>18:00 - 18:05</td>
+            <td><b>Concluding Remarks</b><br/>David Booth</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Speakers</h2>
+      <ul class="p-matrix">
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/0 - Mark Shuttleworth.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Mark Shuttleworth</h3>
+                <p class="p-media-object__content">Founder & CEO, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/0 - David Booth.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">David Booth</h3>
+                <p class="p-media-object__content">VP Cloud Native Applications, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/3-alexjones.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Alex Jones</h3>
+                <p class="p-media-object__content">Engineering Director</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Massimiliano Gori</h3>
+                <p class="p-media-object__content">Product Manager Cybersecurity, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/4-jamesbeedy.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">James Beedy</h3>
+                <p class="p-media-object__content">CEO of Omnivector</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/4-jonthor.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Jon Thor Kristinsson</h3>
+                <p class="p-media-object__content">Product Manager, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/2-pietro-pasotti.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Pietro Pasotti</h3>
+                <p class="p-media-object__content">Software Engineer, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/5-jamespage.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">James Page</h3>
+                <p class="p-media-object__content">Principal Engineer, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/6-moritz.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Moritz Wanzenböck</h3>
+                <p class="p-media-object__content">Software Engineer, LINBIT</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/7-alessio.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Alessio Greggi</h3>
+                <p class="p-media-object__content">DevOps Engineer, Clastix</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/8-rajan-headshot-cropped.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Rajan Patel</h3>
+                <p class="p-media-object__content">Product Manager, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/9-varshi.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Varshi Gupta</h3>
+                <p class="p-media-object__content">Engineering Director, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/9-tom2.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Tom Haddon</h3>
+                <p class="p-media-object__content">Engineering Manager, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/9-seijas.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Arturo Seijas</h3>
+                <p class="p-media-object__content">DevOps Engineer, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/1-jon-seager.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Jon Seager</h3>
+                <p class="p-media-object__content">VP Engineering, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/5 - Billy Olsen.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Billy Olsen</h3>
+                <p class="p-media-object__content">Engineering Director, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/5b - Anton Smith.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Anton Smith</h3>
+                <p class="p-media-object__content">Head of Product, Spectro Cloud</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item"></li>
+      </ul>
+
+      <h2>Video</h2>
+      <div class="u-embedded-media">
+        <iframe
+          class="u-embedded-media__element"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/videoseries?controls=0&amp;list=PLwFSk464RMxkgdBICFjoH4TwSFkr5PGjk"
+          title="Operator Day 2022 Playlist"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+     
+      <h2>Links</h2>
+      <p>Event platform: <a href="https://app.myonvent.com/event/operator-day">https://app.myonvent.com/event/operator-day</a></p>
+      <p>Canonical blog post: <a href="https://ubuntu.com/blog/operator-day-hosted-by-canonical-oct-2022">Join us at Operator Day, hosted by Canonical at Kubecon NA 2022</a></p>
+      <p>Event page: <a href="https://sched.co/1BaUj">https://sched.co/1BaUj</a></p>
+    </div>
+  </section>
+{% endblock %}
