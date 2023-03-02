@@ -1,0 +1,432 @@
+{% extends 'base.html' %}
+
+{% block meta_title %}Operator Day 3rd edition{% endblock %}
+
+{% block meta_description %}The third edition of Operator Day explained the concept of model-driven operations.{% endblock %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1ZFRGkZ4vvvMVOgq4MIsBuebHsA7Y0rTyiZ76qjQpOAg/edit#{% endblock meta_copydoc %}
+
+{% block content %}
+  <section class="p-strip--blue is-dark is-shallow">
+    <div class="u-fixed-width">
+      <h1>Operator Day 3rd edition</h1>
+      <h3>KubeCon 2021 - October 12th</h3>
+    </div>
+  </section>
+
+  <section class="p-strip">
+    <div class="u-fixed-width">
+      <p>Enterprises deploy their apps on bare metal, virtual machines and Kubernetes. The third edition of Operator Day explained the concept of model-driven operations. Model-driven operations simplify management of the application lifecycle regardless of the environment they run on.</p>
+      <p>This Operator Day returned with fresh content, focusing on the various use cases of Kubernetes operators, from MLOps and Data Ops to enterprise Observability and even vertical-specific workshops.</p>
+      <p>Each block started with a keynote introduction by Mark Shuttleworth, then led attendees through technical demos from the Canonical team, customers and partners. As a bonus feature 5 industry thought leaders from the CNCF, AWS, Google and more joined a panel discussion on the state and future of cloud-native and Kubernetes.</p>
+
+      <h2>Agenda</h2>
+      <h3>October 12th</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td width="200px">2:00 PM - 2:20 PM</td>
+            <td><b>KubeCon Operator Day keynote with Mark Shuttleworth</b><br/>Mark Shuttleworth, David Booth</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Operators, Models, Kubernetes, Hybrid Clouds, massive scale and bootstrapping quickly - Kubernetes is taking the the world by storm. So what's next? Mark Shuttleworth (one time astronaut, founder of Canonical, the company behind Ubuntu) talks with David Booth (VP Cloud Native Applications at Canonical) about the past and lays down a vision for the future.</td>
+          </tr>
+          <tr>
+            <td>2:20 PM - 3:05 PM</td>
+            <td><b>Zero to hero: Enterprise multi-cloud application management from Day 0 to Day 2, on any substrate</b><br />Ryan Barry, Omar Amin Emam</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Kubernetes and Operators have stormed the IT industry, but the enterprise landscape is still a mix of bare metal, virtual machines and Kubernetes, on-prem and on public clouds, all running different workloads. How can we manage the lifecycle of all those applications across all these environments, whithout having to learn new tools and frameworks as the industry is already moving to serverless? In this fast-flowing demo we will show you how the Charmed Operator Framework brings a unified approach for application management across clouds and infrastructure generations.</td>
+          </tr>
+          <tr>
+            <td>3:05 PM - 3:45 PM</td>
+            <td><b>Working with LMA bundles: building the modern observability stack</b><br/>Michele Mancioppi</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">In the Juju world, the Logging, Monitoring and Alerting (LMA) stack provides Juju-native observability capabilities for charms. We have been working on the next iteration of LMA that builds on the new capabilities of Juju, it is designed to run on Kubernetes, and leverages the declarative nature of the Juju model to its fullest. Join us to learn how to build the modern observability stack, using model-driven observability, the virtues of Juju topology, and a running commentary on writing a system of charms that work well on their own, and better together.</td>
+          </tr>
+          <tr>
+            <td>3:45 PM - 4:00 PM</td>
+            <td><b>Removing Toil: Improvements in the Charmed Operator ecosystem</b><br/>Pete Vander Giessen</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">The Charmed Operator Framework is undergoing constant development. What are the key goals of the charmed operator framework? What's happened since the last Operator Day? What's coming up in the next few months? Join this session to learn more about Juju, Pebble, Charmcraft, Charmed Operators and more.</td>
+          </tr>
+          <tr>
+            <td>4:00 PM - 4:30 PM</td>
+            <td><b>Case study: Automating MLOps with Charmed Operators</b><br/>Maciej Mazur</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">If you're into automating your operations, this case study in MLOps is for you. MLOps solutions are composed of multiple technologies (open source, startups, and industry leaders). For users the biggest challenge is often integrating pieces of a software puzzle in a maintainable way. Model-driven operators promise a solution by connecting the ops of a single application with declarative integration in a standard that empowers providers.</td>
+          </tr>
+          <tr>
+            <td>4:30 PM - 4:50 PM</td>
+            <td><b>Keep the data flowing with Model-driven Operations</b><br/>Rob Gibbon</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">In this session we'll examine Model-driven Operations and apply it to DataOps to understand how teams can deliver more, spend more time in flow state, and just have more fun.</td>
+          </tr>
+          <tr>
+            <td>4:50 PM - 5:20 PM</td>
+            <td><b>Financial Services Case Study: Charming Legend - Automating application deployment and management</b><br/>Kris Sharma, Pedro Leao da Cruz</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">This session explores how charmed operators help streamline the deployment and Day-2 ops of Legend platform. Goldman Sachs had open sourced its internally developed Legend data management platform into FINOS. Legend is an end-to-end data platform that handles the full data lifecycle used across pricing, risk and reporting business function for FS organisations. It allows companies to build data-driven applications and insightful business intelligence dashboards.</td>
+          </tr>
+          <tr>
+            <td>5:20 PM - 5:50 PM</td>
+            <td><b>Integrations and network function management in open-source telco</b><br/>Wajeeha Hamid, David Garcia</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">How the OSM open source community use Juju's Charmed Operators and how they can create a working 5G network, with the simulators in an easy way. Charms are revolutionizing the telecom industry right now, enabling collaboration across mobile newtork operators, NEPs and open source projects providing choice and flexibility for the users.</td>
+          </tr>
+          <tr>
+            <td>5:50 PM - 6:20 PM</td>
+            <td><b>K8s is tough, right? Who's doing it well? How are they measuring results?</b><br/>Alex Chalkias</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Alex Chalkias (product manager Kubernetes) walks through some Kubernetes success stories to highlight wins, challenges, and how they got there.</td>
+          </tr>
+          <tr>
+            <td>6:20 PM - 6:30 PM</td>
+            <td><b>Community Networking</b><br/></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Jump on a video roulette to meet and greet fellow community members, approach a specific person you wanna chat with 121, or start your own mini-roundtable.</td>
+          </tr>
+          <tr>
+            <td>6:30 PM - 8:00 PM</td>
+            <td><b>Live Panel Discussion: The future of Kubernetes and cloud native operations</b><br/>Michael Hausenblas, Tim Hockin, Karthik Shanmugam, Alexis Richardson, Ken Sipe, Mark Shuttleworth</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Industry thought leaders come together in a panel discussion covering the State of Kubernetes, the goals of real users, the challenges they face, and possible futures of cloud native technologies. Including Mark Shuttleworth (CEO Canonical), Tim Hockin (Kubernetes, Google), Alexis Richardson (CEO Weaveworks), Ken Sipe (Co-Chair Operator Framework, CNCF), Michael Hausenblas (Observability @ Amazon Web Services), and Karthikeyan Shanmugam (HCL Technologies).</td>
+          </tr>
+          <tr>
+            <td>8:30 PM - 8:50 PM</td>
+            <td><b>KubeCon Operator Day keynote with Mark Shuttleworth</b><br/>Mark Shuttleworth, David Booth</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Operators, Models, Kubernetes, Hybrid Clouds, massive scale and bootstrapping quickly - Kubernetes is taking the the world by storm. So what's next? Mark Shuttleworth (one time astronaut, founder of Canonical, the company behind Ubuntu) talks with David Booth (VP Cloud Native Applications at Canonical) about the past and lays down a vision for the future.</td>
+          </tr>
+          <tr>
+            <td>8:50 PM - 9:35 PM</td>
+            <td><b>Zero to hero: Enterprise multi-cloud application management from Day 0 to Day 2, on any substrate</b><br/>Ryan Barry, Omar Amin Emam</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Kubernetes and Operators have stormed the IT industry, but the enterprise landscape is still a mix of bare metal, virtual machines and Kubernetes, on-prem and on public clouds, all running different workloads. How can we manage the lifecycle of all those applications across all these environments, whithout having to learn new tools and frameworks as the industry is already moving to serverless? In this fast-flowing demo we will show you how the Charmed Operator Framework brings a unified approach for application management across clouds and infrastructure generations.</td>
+          </tr>
+          <tr>
+            <td>9:35 PM - 10:15 PM</td>
+            <td><b>Working with LMA bundles: building the modern observability stack</b><br/>Michele Mancioppi</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">In the Juju world, the Logging, Monitoring and Alerting (LMA) stack provides Juju-native observability capabilities for charms. We have been working on the next iteration of LMA that builds on the new capabilities of Juju, it is designed to run on Kubernetes, and leverages the declarative nature of the Juju model to its fullest. Join us to learn how to build the modern observability stack, using model-driven observability, the virtues of Juju topology, and a running commentary on writing a system of charms that work well on their own, and better together.</td>
+          </tr>
+          <tr>
+            <td>10:15 PM - 10:30 PM</td>
+            <td><b>Removing Toil: Improvements in the Charmed Operator ecosystem</b><br/>Pete Vander Giessen</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">The Charmed Operator Framework is undergoing constant development. What are the key goals of the charmed operator framework? What's happened since the last Operator Day? What's coming up in the next few months? Join this session to learn more about Juju, Pebble, Charmcraft, Charmed Operators and more.</td>
+          </tr>
+          <tr>
+            <td>10:30 PM - 11:00 PM</td>
+            <td><b>Case study: Automating MLOps with Charmed Operators</b><br/>Maciej Mazur</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">If you're into automating your operations, this case study in MLOps is for you. MLOps solutions are composed of multiple technologies (open source, startups, and industry leaders). For users the biggest challenge is often integrating pieces of a software puzzle in a maintainable way. Model-driven operators promise a solution by connecting the ops of a single application with declarative integration in a standard that empowers providers.</td>
+          </tr>
+          <tr>
+            <td>11:00 PM - 11:20 PM</td>
+            <td><b>Keep the data flowing with Model-driven Operations</b><br/>Rob Gibbon</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">In this session we'll examine Model-driven Operations and apply it to DataOps to understand how teams can deliver more, spend more time in flow state, and just have more fun.</td>
+          </tr>
+          <tr>
+            <td>11:20 PM - 11:50 PM</td>
+            <td><b>Financial Services Case Study: Charming Legend - Automating application deployment and management</b><br/>Kris Sharma, Pedro Leao da Cruz</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">This session explores how charmed operators help streamline the deployment and Day-2 ops of Legend platform. Goldman Sachs had open sourced its internally developed Legend data management platform into FINOS. Legend is an end-to-end data platform that handles the full data lifecycle used across pricing, risk and reporting business function for FS organisations. It allows companies to build data-driven applications and insightful business intelligence dashboards.</td>
+          </tr>
+          <tr>
+            <td>11:50 PM - 12:20 AM +1</td>
+            <td><b>Integrations and network function management in open-source telco</b><br/>Wajeeha Hamid, David Garcia</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">How the OSM open source community use Juju's Charmed Operators and how they can create a working 5G network, with the simulators in an easy way. Charms are revolutionizing the telecom industry right now, enabling collaboration across mobile newtork operators, NEPs and open source projects providing choice and flexibility for the users.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>October 13th</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td width="200px">12:20 AM - 12:30 AM</td>
+            <td><b>K8s is tough, right? Who's doing it well? How are they measuring results?</b><br/>Alex Chalkias</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Alex Chalkias (product manager Kubernetes) walks through some Kubernetes success stories to highlight wins, challenges, and how they got there.</td>
+          </tr>
+          <tr>
+            <td>12:30 AM - 2:00 AM</td>
+            <td><b>Community Networking</b><br/></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Jump on a video roulette to meet and greet fellow community members, approach a specific person you wanna chat with 121, or start your own mini-roundtable.</td>
+          </tr>
+          <tr>
+            <td>2:00 AM - 2:20 AM</td>
+            <td><b>Live Panel Discussion: The future of Kubernetes and cloud native operations</b><br/>Michael Hausenblas, Tim Hockin, Karthik Shanmugam, Alexis Richardson, Ken Sipe, Mark Shuttleworth</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Industry thought leaders come together in a panel discussion covering the State of Kubernetes, the goals of real users, the challenges they face, and possible futures of cloud native technologies. Including Mark Shuttleworth (CEO Canonical), Tim Hockin (Kubernetes, Google), Alexis Richardson (CEO Weaveworks), Ken Sipe (Co-Chair Operator Framework, CNCF), Michael Hausenblas (Observability @ Amazon Web Services), and Karthikeyan Shanmugam (HCL Technologies).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Speakers</h2>
+      <ul class="p-matrix">
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image2.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Alex Chalkias</h3>
+                <p class="p-media-object__content">Product Manager, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+         <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image8.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">David Booth</h3>
+                <p class="p-media-object__content">VP Cloud Native Applications, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image33.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Rob Gibbon</h3>
+                <p class="p-media-object__content">Product Manager, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image6.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Mark Shuttleworth</h3>
+                <p class="p-media-object__content">Founder & CEO, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image20.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Kris Sharma</h3>
+                <p class="p-media-object__content">Financial Services Lead, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image5.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Maciej Mazur</h3>
+                <p class="p-media-object__content">Telco Lead, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image13.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Omar Amin Emam</h3>
+                <p class="p-media-object__content">Product Manager, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image37.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Pete Vander Giessen</h3>
+                <p class="p-media-object__content">Engineering Manager, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image7.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Ryan Barry</h3>
+                <p class="p-media-object__content">Software Engineer, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image16.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Michele Mancioppi</h3>
+                <p class="p-media-object__content">Product Manager, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image18.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Ken Sipe</h3>
+                <p class="p-media-object__content">Co-Chair Operator Framework, CNCF</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image39.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Alexis Richardson</h3>
+                <p class="p-media-object__content">CEO, Weaveworks</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image21.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Karthik Shanmugam</h3>
+                <p class="p-media-object__content">Digital Solutions Architect, HCL</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image9.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Tim Hockin</h3>
+                <p class="p-media-object__content">Principal Software Engineer, Google Cloud</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image19.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Michael Hausenblas</h3>
+                <p class="p-media-object__content">Solution Engineering Lead, AWS</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image25.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Wajeeha Hamid</h3>
+                <p class="p-media-object__content">Product Manager, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image28.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Pedro Leao da Cruz</h3>
+                <p class="p-media-object__content">Product Lead, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image32.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">David Garcia</h3>
+                <p class="p-media-object__content">Software Engineer, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <h2>Video</h2>
+      <div class="u-embedded-media">
+        <iframe
+          class="u-embedded-media__element"
+          width="448"
+          height="252"
+          src="https://www.youtube.com/embed/uWFC1_DeIZU?controls=0"
+          title="KubeCon NA 2021: Operator Day Keynote with Mark Shuttleworth"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          ></iframe>
+      </div>
+     
+      <h2>Links</h2>
+      <p>Event platform: <a href="https://hopin.com/events/operator-day-hosted-by-canonical">https://hopin.com/events/operator-day-hosted-by-canonical</a></p>
+    </div>
+  </section>
+{% endblock %}

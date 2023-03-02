@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+
+{% block meta_title %}Operator Day 4th edition{% endblock %}
+
+{% block meta_description %}Operator Day at KubeCon EU 2022 talked about software operators, shared best practices and insights on operating Kubernetes applications.{% endblock %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1ZFRGkZ4vvvMVOgq4MIsBuebHsA7Y0rTyiZ76qjQpOAg/edit#{% endblock meta_copydoc %}
+
+{% block content %}
+  <section class="p-strip--blue is-dark is-shallow">
+    <div class="u-fixed-width">
+      <h1>Operator Day 4th edition</h1>
+      <h3>KubeCon EU 2022 - May 16th</h3>
+    </div>
+  </section>
+
+  <section class="p-strip">
+    <div class="u-fixed-width">
+      <p>Operator Day at KubeCon EU 2022 talked about software operators, shared best practices and insights on operating Kubernetes applications, and explored the Canonical implementation of Kubernetes Operators: Charmed Operators.</p>
+      <p>This 4th edition also hosted a panel discussion featuring industry thought leaders from CNCF, AWS, Google, Microsoft and weave.works with Mark Shuttleworth, moderated by David Booth.</p>
+
+      <h2>Agenda</h2>
+      <h3>May 16th</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td width="200px">13:00 - 13:30</td>
+            <td><b>Opening Plenary</b><br/>Mark Shuttleworth & David Booth</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">“Kubernetes is taking the app development world by storm” is one of the most popular phrases about Kubernetes. How can we make best use of this technology?<br />Mark Shuttleworth (founder of Canonical, the company behind Ubuntu, and one-time astronaut) talks with David Booth (VP Cloud Native Applications at Canonical) about the past year and what to expect in the near future.</td>
+          </tr>
+          <tr>
+            <td>13:30 - 14:00</td>
+            <td><b>Kubernetes: A common substrate for enabling solutions</b><br />Alex Jones</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Together we explore the current landscape of Kubernetes, how Canonical is leveraging and contributing to the ecosystem, with a view to the future of needs of end-users. We highlight trends such as the synthesis of human behaviours through operators, the shift towards GPU/networking offloads and Kubernetes at IoT/Edge.<br />The goal of this session is to invigorate and excited about Canonical's part within a much larger and thriving cloud native ecosystem, centered around Kubernetes.</td>
+          </tr>
+          <tr>
+            <td>14:00 - 14:30</td>
+            <td><b>Juju & Charmed Ecosystem Update</b><br/>Jon Seager</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">In this session we take a look back at the past year and the developments we've enjoyed in Juju, Operator Framework and the broader ecosystem, then take a look at the year ahead.</td>
+          </tr>
+          <tr>
+            <td>14:45 - 15:15</td>
+            <td><b>30 mins to stand up a simple app</b><br/>Daniela Plascencia</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">In this session we'll introduce the project and explore the Juju ecosystem, as well as basic charming concepts. We'll deep dive into the build and deploy process for a simple charm.<br />By the end of this session, attendees will:<br />- Understand Juju and charms on a high level<br />- Know the structure of a simple charm<br />- Know how to build, deploy, and interact with a simple charm</td>
+          </tr>
+          <tr>
+            <td>15:15 - 15:45</td>
+            <td><b>Observability for developers of Charmed Operators</b><br/>Simon Aronsson</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">In this session, elaborating upon the work already done by Daniela Plascencia, we'll have a look at how we may leverage Juju and the Canonical Observability Stack to make our charm observable, and by that also monitorable.<br />By the end of this session, attendees will:<br />- Know how to expose telemetry in the form of metrics and logs<br />- Know how this telemetry is collected by the observability stack<br />- Know how to bundle a charm with dashboards for telemetry visualization<br />- Know how to bundle a charm with alerts for automated symptom detection</td>
+          </tr>
+          <tr>
+            <td>15:45 - 16:15</td>
+            <td><b>Testing framework for Juju Charmed Operators</b><br/>Marc Oppenheimer</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">In this session, Marc will take you through how to use the Charmed Operator framework's testing harness to check that your charm is doing exactly what you think it's doing across multiple scenarios.<br />We will cover:<br />- Unit testing the methods implemented in the previous sessions<br />- Simulating container networking within the charm<br />- Integration testing your charm with real requests</td>
+          </tr>
+          <tr>
+            <td>16:45 - 17:15</td>
+            <td><b>Publishing Charmed Operators and their Ecosystem</b><br/>Pedro Cruz & Michael Jaeger</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Charmed Operators make a lot more sense, if they are reused for new applications in a new context. This session covers publishing of Charmed Operators for others. In addition, it introduces the collection of available Charmed Operators on Charmhub.io.</td>
+          </tr>
+          <tr>
+            <td>17:15 - 17:30</td>
+            <td><b>Building a sophisticated product on Juju</b><br/>Rob Gibbon</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2">Like a charm - building an integrated, operator-driven MLOps ecosystem on Kubernetes</td>
+          </tr>
+          <tr>
+            <td>17:30 - 18:30</td>
+            <td><b>Experts Panel Discussion: Outlook to Kubernetes and cloud native operations</b><br/>Mark Shuttleworth, David Booth, Ken Sipe, Steve George, Michael Hausenblas, Lachlan Evanson, Tim Hockin</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Speakers</h2>
+      <ul class="p-matrix">
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image6.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Mark Shuttleworth</h3>
+                <p class="p-media-object__content">Founder & CEO, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image8.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">David Booth</h3>
+                <p class="p-media-object__content">VP Cloud Native Applications, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image24.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Alex Jones</h3>
+                <p class="p-media-object__content">Engineering Director, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image4.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Jon Seager</h3>
+                <p class="p-media-object__content">VP, Enterprise Solutions, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image3.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Daniela Plascencia</h3>
+                <p class="p-media-object__content">Charm Engineering, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image15.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Simon Aronsson</h3>
+                <p class="p-media-object__content">Charm Engineering, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image11.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Michael Jaeger</h3>
+                <p class="p-media-object__content">Product Manager, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image26.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Rob Gibbon</h3>
+                <p class="p-media-object__content">Product Manager, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image28.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Pedro Leao da Cruz</h3>
+                <p class="p-media-object__content">Product Lead, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+         <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image18.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Ken Sipe</h3>
+                <p class="p-media-object__content">Co-Chair Operator Framework, CNCF</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image19.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Michael Hausenblas</h3>
+                <p class="p-media-object__content">Solution Engineering Lead, AWS</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image30.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Steve George</h3>
+                <p class="p-media-object__content">Chief Operations Officer at Weaveworks</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image9.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Tim Hockin</h3>
+                <p class="p-media-object__content">Principal Software Engineer, Google Cloud</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image34.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Marc Oppenheimer</h3>
+                <p class="p-media-object__content">Charm Engineering, Canonical</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-matrix__item">
+          <div class="p-matrix__content">
+            <div class="p-media-object">
+              <img src="/static/images/operator-day/image17.jpg" class="p-media-object__image is-round" alt="">
+              <div class="p-media-object__details">
+                <h3 class="p-media-object__title">Lachie Evenson</h3>
+                <p class="p-media-object__content">Principal Program Manager, Microsoft</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <h2>Video Playlist</h2>
+      <div class="u-embedded-media">
+        <iframe
+          class="u-embedded-media__element"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/videoseries?controls=0&amp;list=PLwFSk464RMxmoE7oRpws6vl86ujoQ5iU6"
+          title="Operator Day 2022 Playlist"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+
+      <h2>Links</h2>
+      <p>Event platform: <a href="https://hopin.com/events/operator-day-hosted-by-canonical-may-2022">https://hopin.com/events/operator-day-hosted-by-canonical-may-2022</a></p>
+      <p>Canonical blog post: <a href="https://ubuntu.com/blog/operator-day-hosted-by-canonical-2022">Operator Day hosted by Canonical at Kubecon EU 2022</a></p>
+      <p>Event page: <a href="https://kccnceu2022.sched.com/event/10eaS">https://kccnceu2022.sched.com/event/10eaS</a></p>
+    </div>
+  </section>
+{% endblock %}
