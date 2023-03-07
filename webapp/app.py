@@ -39,18 +39,6 @@ greenhouse = Greenhouse(
 )
 
 
-def version_reducer(acc, item):
-    if not list(
-        filter(
-            lambda value: item.major == value.major
-            and item.minor == item.minor,
-            acc,
-        )
-    ):
-        acc.append(item)
-    return acc
-
-
 @app.route("/careers")
 def careers():
     vacancies = greenhouse.get_vacancies_by_site("juju.is")
