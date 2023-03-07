@@ -57,7 +57,16 @@ def get_latest_versions():
 
         # get dashboard verion
         dashboard_response = requests.get(
-            "https://api.github.com/repos/canonical/jaas-dashboard/releases/latest"
+            "/".join(
+                [
+                    "https://api.github.com",
+                    "repos",
+                    "canonical",
+                    "jaas-dashboard",
+                    "releases",
+                    "latest",
+                ]
+            )
         )
         dashboard_json_response = dashboard_response.json()
         result["dashboard"] = dashboard_json_response["tag_name"]
@@ -89,7 +98,7 @@ def get_latest_versions():
         ]
         result["juju"] = sorted(juju_versions)
         return result
-    except:
+    except Exception:
         return {}
 
 
