@@ -13,6 +13,8 @@ ops-code-quality/?: /about
 overview/?: /about
 universal-operators/?: /about
 docs/(lma2|cos)(?P<page>.*)/?: https://charmhub.io/topics/canonical-observability-stack{page}
+
+# Redirect tutorials
 tutorials/deploy-nextcloud-and-collabora-on-ubuntu/?: https://charmhub.io/nextcloud/
 tutorials/build-and-deploy-mini-charm/?: /docs/sdk/build-and-deploy-minimal-machine-charm
 tutorials/monitor-elasticsearch-with-elasticsearch-and-kibana/?: /docs/olm/monitor-elasticsearch-with-elasticsearch-and-kibana
@@ -24,4 +26,4 @@ tutorials/publish-on-charmhub/?: /docs/sdk/publishing
 tutorials/how-to-work-with-resources-in-charmcraft/?: /docs/sdk/resources
 tutorials/how-to-work-with-bundles-in-charmcraft/?: /docs/sdk/manage-bundles
 tutorials/deploy-postgres-on-ubuntu-server/?: /docs/olm/how-to
-tutorials/?: /docs/tutorials
+tutorials(.*?): /docs/sdk/tutorials
