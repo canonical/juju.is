@@ -10,6 +10,8 @@ from canonicalwebteam.yaml_responses.flask_helpers import (
     prepare_redirects,
 )
 from flask import render_template
+import requests
+import semver
 
 from webapp.docs.views import init_docs
 from webapp.template_utils import current_url_with_query, static_url
@@ -46,6 +48,58 @@ def careers():
 @app.route("/get-in-touch")
 def get_in_touch():
     return render_template("partials/_get-in-touch.html")
+
+
+@app.route("/latest.json")
+def get_latest_versions():
+    try:
+        result = {}
+
+        # get dashboard verion
+        dashboard_response = requests.get(
+            "/".join(
+                [
+                    "https://api.github.com",
+                    "repos",
+                    "canonical",
+                    "jaas-dashboard",
+                    "releases",
+                    "latest",
+                ]
+            )
+        )
+        dashboard_json_response = dashboard_response.json()
+        result["dashboard"] = dashboard_json_response["tag_name"]
+
+        # Get juju versions
+        juju_response = requests.get(
+            "https://api.github.com/repos/juju/juju/releases"
+        )
+        juju_json_response = juju_response.json()
+        juju_versions = []
+        for release in juju_json_response:
+            # get semver
+            version = semver.VersionInfo.parse(
+                release["tag_name"].replace("juju-", "")
+            )
+            # Reduce to latest for each major.minor
+            if not list(
+                filter(
+                    lambda value: version.major == value.major
+                    and version.minor == value.minor,
+                    juju_versions,
+                )
+            ):
+                juju_versions.append(version)
+
+        # Reformat to a string
+        juju_versions = [
+            str(version.finalize_version()) for version in juju_versions
+        ]
+        result["juju"] = sorted(juju_versions)
+        return result
+    except Exception:
+        return {}
 
 
 template_finder_view = TemplateFinder.as_view("template_finder")
