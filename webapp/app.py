@@ -12,12 +12,15 @@ from canonicalwebteam.yaml_responses.flask_helpers import (
 from flask import render_template
 import requests
 import semver
+from cachetools import cached, TTLCache
 
 from webapp.docs.views import init_docs
 from webapp.template_utils import current_url_with_query, static_url
 from webapp.tutorials.views import init_tutorials
 from webapp.blog.views import init_blog
 from webapp.greenhouse import Greenhouse
+
+CACHE_TTL = 60 * 60  # 1 hour cache
 
 # Rename your project below
 app = FlaskBase(
@@ -51,6 +54,7 @@ def get_in_touch():
 
 
 @app.route("/latest.json")
+@cached(cache=TTLCache(maxsize=128, ttl=CACHE_TTL))
 def get_latest_versions():
     try:
         result = {}
