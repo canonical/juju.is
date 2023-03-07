@@ -20,7 +20,7 @@ from webapp.tutorials.views import init_tutorials
 from webapp.blog.views import init_blog
 from webapp.greenhouse import Greenhouse
 
-CACHE_TTL = 60 * 60 # 1 hour cache
+CACHE_TTL = 60 * 60  # 1 hour cache
 
 # Rename your project below
 app = FlaskBase(
