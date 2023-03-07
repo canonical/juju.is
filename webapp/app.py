@@ -73,6 +73,7 @@ def get_latest_versions():
             version = semver.VersionInfo.parse(
                 release["tag_name"].replace("juju-", "")
             )
+            # Reduce to latest for each major.minor
             if not list(
                 filter(
                     lambda value: version.major == value.major
@@ -82,7 +83,7 @@ def get_latest_versions():
             ):
                 juju_versions.append(version)
 
-        # Reduce
+        # Reformat to a string
         juju_versions = [
             str(version.finalize_version()) for version in juju_versions
         ]
