@@ -10,3 +10,4 @@ flake8==6.0.0
 requests==2.28.2
 semver==2.13.0
 cachetools==5.3.0
+flask-cors==3.0.10
