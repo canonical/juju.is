@@ -19,7 +19,6 @@ from webapp.blog.views import init_blog
 from webapp.docs.views import init_docs
 from webapp.greenhouse import Greenhouse
 from webapp.template_utils import current_url_with_query, static_url
-from webapp.tutorials.views import init_tutorials
 
 CACHE_TTL = 60 * 60  # 1 hour cache
 
@@ -113,7 +112,6 @@ app.add_url_rule("/", view_func=template_finder_view)
 app.add_url_rule("/<path:subpath>", view_func=template_finder_view)
 
 init_docs(app)
-init_tutorials(app, "/tutorials")
 init_blog(app, "/blog")
 
 

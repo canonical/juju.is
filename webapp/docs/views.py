@@ -26,8 +26,6 @@ def init_docs(app):
     main_docs.init_app(app)
 
     discourse_index_id = 1087
-    tutorials_index_topic_id = 2628
-    tutorials_url_prefix = "/tutorials"
 
     discourse_docs = Docs(
         parser=DocParser(
@@ -40,8 +38,6 @@ def init_docs(app):
             ),
             index_topic_id=discourse_index_id,
             url_prefix="/docs/olm",
-            tutorials_index_topic_id=tutorials_index_topic_id,
-            tutorials_url_prefix=tutorials_url_prefix,
         ),
         document_template="docs/document.html",
         url_prefix="/docs/olm",
@@ -61,8 +57,6 @@ def init_docs(app):
             ),
             index_topic_id=sdk_docs_id,
             url_prefix="/docs/sdk",
-            tutorials_index_topic_id=tutorials_index_topic_id,
-            tutorials_url_prefix=tutorials_url_prefix,
         ),
         document_template="docs/document.html",
         url_prefix="/docs/sdk",
@@ -83,8 +77,6 @@ def init_docs(app):
             ),
             index_topic_id=cos_docs_id,
             url_prefix="/docs/cos",
-            tutorials_index_topic_id=tutorials_index_topic_id,
-            tutorials_url_prefix=tutorials_url_prefix,
         ),
         document_template="docs/document.html",
         url_prefix="/docs/cos",
