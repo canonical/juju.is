@@ -68,10 +68,6 @@ $breakpoint-navigation-threshold: 900px;
 
 @include l-juju-fluid-breakout;
 
-@import "patterns_tutorials";
-
-@include p-tutorials;
-
 @import "patterns_p-survey-chart";
 
 @include p-survey-chart;

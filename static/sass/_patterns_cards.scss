@@ -1,28 +1,5 @@
 @mixin juju-cards {
   @include local-blog-card;
-
-  .p-card--tutorial {
-    @extend %vf-has-round-corners;
-    @extend %vf-has-box-shadow;
-
-    display: flex;
-    flex-direction: column;
-    margin-bottom: $spv--x-large;
-    overflow: auto;
-
-    .p-card__header {
-      align-items: center;
-      border-bottom: 1px solid $color-mid-x-light;
-      border-top: 3px solid #00365c;
-      display: flex;
-      padding: 0.5rem 1rem;
-    }
-
-    .p-card__content {
-      height: 100%;
-      padding: 1rem;
-    }
-  }
 }
 
 @mixin local-blog-card {
