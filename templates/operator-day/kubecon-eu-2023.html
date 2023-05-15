@@ -1,0 +1,296 @@
+{% extends 'base.html' %}
+
+{% block meta_title %}Operator Day 6th edition{% endblock %}
+
+{% block meta_description %}Operator Day at KubeCon EU 2023 presented cases of popular open source software covered with operators across the entire stack: on virtual machines, private clouds, public clouds or in a multi-cloud scenario.{% endblock %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1ZFRGkZ4vvvMVOgq4MIsBuebHsA7Y0rTyiZ76qjQpOAg/edit#{% endblock meta_copydoc %}
+
+{% block content %}
+<section class="p-strip--blue is-dark is-shallow">
+  <div class="u-fixed-width">
+    <h1>Operator Day 6th edition</h1>
+    <h3>KubeCon EU 2023 - April 17th</h3>
+  </div>
+</section>
+<section class="p-strip">
+  <div class="u-fixed-width">
+    <p>The 6th Operator Day took place as a virtual event on the first day of KubeCon week, Monday, 17 April 2023. The event presented cases of popular open source software covered with operators across the entire stack: on virtual machines, private clouds, public clouds or in a multi-cloud scenario.</p>
+    <p>Presentations covered MySQL on K8s, operators for the complex machine learning software stack Kubeflow, and a software operator for WordPress. A highlight was the presentation of software operators running workloads on Ubuntu for mainframes.</p>
+    <p>A panel discussion on the outlook to K8s and cloud-native operations with industry experts from Microsoft, Google and Canonical concluded the day. See the details of the agenda further down below.</p>
+    <h2>Agenda</h2>
+    <h3>April 17th</h3>
+    <table>
+      <tbody>
+        <tr>
+          <td width="200px">13:00 - 13:15</td>
+          <td><b>Opening Session</b><br />Mark Shuttleworth, Cedric Gegout and Simon Aronsson</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Applications, Operators, Multi- and Hybrid Clouds, and a massive ecosystem of solutions - Kubernetes is taking the world by storm. So what's next?<br />Mark Shuttleworth (founder of Canonical, the company behind Ubuntu) talks with Cedric Gegout (VP of Product Management) about the updates in the past months and shares a vision for the future.<br />We will also watch a full demo with Simon Aronsson from Canonical. He will give you a little taste of the power of Juju, the operator lifecycle manager, as a cross-substrate, cross-cloud operations management and automation suite.</td>
+        </tr>
+        <tr>
+          <td>13:15 - 13:35</td>
+          <td><b>The beauty of Juju</b><br />Jon Seager</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Dive into progress across the entire Juju and Charmed Operator engineering teams at Canonical and the broader community.</td>
+        </tr>
+        <tr>
+          <td>13:35 - 13:55</td>
+          <td><b>Let’s Encrypt certificates in the Juju operator ecosystem</b><br />Ghislain Bourgeois</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Ghislain Bourgeois demonstrates how we can use the TLS-certificates-interface and different ACME operators to automatically manage certificates from Let's Encrypt. The talk also discussed how to create new software operators to support other DNS service providers quickly.</td>
+        </tr>
+        <tr>
+          <td>13:55 - 14:20</td>
+          <td><b>Data on Kubernetes with MySQL Charmed Operators</b><br />Paulo Machado and Shayan Patel</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Paulo Machado and Shayan Patel present the properties of a robust database operator on Kubernetes and demonstrate these capabilities with the operator for MySQL. It showcases high availability with MySQL group replication and MySQL Router, encryption in transit after integrating with the TLS operator, and Backup and restore leveraging Percona's XtraBackup tool.</td>
+        </tr>
+        <tr>
+          <td>14:20 - 14:40</td>
+          <td><b>Operate WordPress at Scale in the Cloud</b><br />Yang Soo Yoon</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">The WordPress software operator is a tool that simplifies the deployment and management of WordPress websites in cloud environments. This operator uses Juju, a modern, open source application modelling tool, to automate setting up and scaling WordPress deployments on Kubernetes clusters.<br />Using this operator, users can easily deploy WordPress instances to various cloud environments, including public clouds like AWS, GCP, and Azure, as well as on-premises infrastructure. Overall, the WordPress operator allows users to focus on their content and business goals instead of infrastructure management.</td>
+        </tr>
+        <tr>
+          <td>14:40 - 15:10</td>
+          <td><b>Rewriting Charms and publishing Charm Bundles: the Charm for Landscape charm</b><br />Mitch Burton and Rajan Patel</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Landscape is a scalable Linux systems management solution which can be deployed via Juju to physical machines, virtual machines, or containers in public and private clouds.<br />The Landscape team modernised the legacy hook-based operators and published modern Charmed Operators leveraging the Ops framework. This presentation walks participants through the journey of creating Charmed Operators, subordinate charms, and publishing them into appropriate channels on Charmhub.</td>
+        </tr>
+        <tr>
+          <td>15:10 - 15:25</td>
+          <td><b>Problems that MLOps solves and how operators help</b><br />Andreea Munteanu</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Machine learning operations (MLOps) was introduced as a term quite recently, shortly defined as DevOps for machine learning.<br />MLOps is a set of practices for operating ML workloads. Software operators are the very logical concept for implementing these best practices. With many challenges, such as the infrastructure cost, the software operators for MLops improve the performance of ML workloads.</td>
+        </tr>
+        <tr>
+          <td>15:25 - 15:45</td>
+          <td><b>Python Operator Framework and Secrets for K8s Charms</b><br />Ben Hoyt</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Juju recently released a new secrets store for managing keys, passwords, and other sensitive data. This presentation dives into how to use Juju Secrets with our Python Operator Framework (also known as "ops"). We'll then look briefly at some upcoming features in Juju for K8s charms, such as notifications for health checks and custom uses.</td>
+        </tr>
+        <tr>
+          <td>15:45 - 16:20</td>
+          <td><b>Terraforming your Juju World</b><br />Jon Seager and Juan Tirado</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">The focus of Juju has always been on the reliable and secure operation of applications. It does not provide generic abstractions for creating and managing arbitrary cloud resources outside of the scope of the applications it’s driving. Cloud-specific resources can be created by software operators, but often when deploying operator-based solutions into the enterprise, there is existing infrastructure it must “plug into” or sit alongside - like an org-wide Amazon VPC, or a particular Virtual Network on Azure, etc.<br />Hashicorp Terraform is a hugely successful swiss-army knife of infrastructure provisioning. It has a large community and over 2000 providers for different cloud providers in the form of IaaS, PaaS and SaaS vendors, and even for pizza delivery.<br />The Juju Terraform provider allows you to combine these two technologies to supercharge your infrastructure provisioning and applications lifecycle management.<br />In addition to the Terraform provider more choices exist on how to interact with Juju. The presentation covers use cases and development roadmaps about the Juju Python library, the Juju Go client, and the Juju Terraform provider.</td>
+        </tr>
+        <tr>
+          <td>16:20 - 16:55</td>
+          <td><b>Software Operators on Big Iron: Juju, Charms and Microk8s for mainframes</b><br />Lorenzo Cavassa</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Ubuntu, Microk8s, and Juju software operators are a powerful, enterprise-grade combo to automate and run your k8s workloads on zSystem/LinuxONE machines. The session shows how Juju works with Microk8s on LinuxONE.</td>
+        </tr>
+        <tr>
+          <td>16:55 - 17:55</td>
+          <td><b>Experts Panel Discussion: Outlook to Kubernetes and cloud-native operations</b><br />Tim Hockin, Lachlie Evenson, Jon Seager, Mark Shuttleworth and Cedric Gegout</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">Industry thought leaders come together in a panel discussion covering the state of Kubernetes:<br />Mark Shuttleworth, CEO, Canonical<br />Lachlan Evenson, Cloud Native OSS at Azure<br />Tim Hockin, Principal Software Engineer, Google<br />Jon Seager, VP of Enterprise Engineering, Canonical<br />moderated by Cedric Gegout, VP of Product Management. Join and see the conversation about the goals of real users, the challenges they face, and the possible futures of cloud-native technologies.</td>
+        </tr>
+        <tr>
+          <td>17:55 - 18:00</td>
+          <td><b>Closing Remarks</b><br />Cedric Gegout</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Speakers</h2>
+    <ul class="p-matrix">
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/0 - Mark Shuttleworth.jpg" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Mark Shuttleworth</h3>
+              <p class="p-media-object__content">Founder & CEO, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/8-rajan-headshot-cropped.jpg" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Rajan Patel</h3>
+              <p class="p-media-object__content">Product Manager, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/1-jon-seager.jpg" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Jon Seager</h3>
+              <p class="p-media-object__content">VP, Enterprise Solutions, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/image40.jpeg" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Juan M. Tirado</h3>
+              <p class="p-media-object__content">Engineering Manager, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/image41.jpg" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Ben Hoyt</h3>
+              <p class="p-media-object__content">Engineering Manager, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/image42.jpeg" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Yang Soo Yoon</h3>
+              <p class="p-media-object__content">Software Engineer, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/image44.png" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Lorenzo Cavassa</h3>
+              <p class="p-media-object__content">Principal Field Software Engineer, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/image45.jpg" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Ghislain Bourgeois</h3>
+              <p class="p-media-object__content">Senior Engineer, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/image43.png" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Paulo Machado</h3>
+              <p class="p-media-object__content">Senior Engineer, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/image46.jpeg" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Shayan Patel</h3>
+              <p class="p-media-object__content">Software Engineer, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/image47.jpeg" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Cedric Gegout</h3>
+              <p class="p-media-object__content">VP, Product Management, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/image48.jpeg" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Andreea Munteanu</h3>
+              <p class="p-media-object__content">Product Manager, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/image50.jpeg" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Mitch Burton</h3>
+              <p class="p-media-object__content">Software Engineer, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/image15.jpg" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Simon Aronsson</h3>
+              <p class="p-media-object__content">Senior Engineering Manager, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item"></li>
+    </ul>
+
+    <h2>Recordings</h2>
+    <div class="u-embedded-media">
+      <iframe
+        class="u-embedded-media__element"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/videoseries?controls=0&amp;list=PLwFSk464RMxkRa0kbUUllrDY6eZGWwn7j"
+        title="Operator Day Europe 2023 Playlist"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+
+    <h2>Links</h2>
+    <p>Event page: <a href="https://app.myonvent.com/event/operator-day">https://app.myonvent.com/event/operator-day</a></p>
+    <p>Announcement: <a href="https://ubuntu.com/blog/operator-day-kubecon-europe-2023">https://ubuntu.com/blog/operator-day-kubecon-europe-2023</a></p>
+    <p>KubeCon EU 2023 agenda: <a href="https://sched.co/1JJrS">https://sched.co/1JJrS</a></p>
+  </div>
+</section> {% endblock %}
