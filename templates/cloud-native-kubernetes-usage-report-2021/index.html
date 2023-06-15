@@ -2861,7 +2861,7 @@
 
         <div class="p-media-object__details">
           <blockquote class="p-pull-quote">
-            <p class="p-pull-quote__quote">While we&rsquo;re defining terms, it would be interesting for DevOps to define &ldquo;control plane&rdquo;. This tends to be a vendor-defined term, and the challenge we have is that Kubernetes is the control plane for the most part (in K8s-only environments), but now that &ldquo;operators&rdquo; are opening up with &ldquo;Charmed Operators&rdquo; across substrates, charmed operators act as a &ldquo;control plane extension&rdquo; for k8s, containers, VMs, bare metal, etc.</p>
+            <p class="p-pull-quote__quote">While we&rsquo;re defining terms, it would be interesting for DevOps to define &ldquo;control plane&rdquo;. This tends to be a vendor-defined term, and the challenge we have is that Kubernetes is the control plane for the most part (in K8s-only environments), but now &ldquo;operators&rdquo; are opening up - charms act as a &ldquo;control plane extension&rdquo; for k8s, containers, VMs, bare metal, etc.</p>
             <cite class="p-pull-quote__citation">Ken Sipe, Cloud Native Computing Foundation, Edward Jones</cite>
           </blockquote>
         </div>
@@ -4367,7 +4367,7 @@
           <div class="p-survey-chart__bar">
             <div class="p-survey-chart__result" style="width: 10.2%;"></div>
             <div class="p-survey-chart__content">
-              <strong class="u-truncate">Operators: KUDO, K8s Operators, Charmed Operators</strong>
+              <strong class="u-truncate">Operators: KUDO, K8s Operators, charms</strong>
               <span class="p-survey-chart__response-count u-hide--small">116 responses</span>
             </div>
           </div>
@@ -4562,9 +4562,9 @@
 
       <p>If you&rsquo;re interested in learning more about operators and managing operations beyond Day One, here are some resources for you:</p>
       <ul>
-        <li><a href="/docs">The Charmed Operator Lifecycle Manager</a></li>
-        <li><a href="/docs/sdk">The Charmed Operator SDK</a></li>
-        <li><a href="https://www.youtube.com/watch?v=yxeJX2WRYjg&list=PLwFSk464RMxnLF-ulbCpQjZN-DWkZqojf&index=3" class="p-link--external">Step-by-step walkthrough of building a charmed operator from OperatorDay at KubeCon 2021</a></li>
+        <li><a href="/docs">Juju</a></li>
+        <li><a href="/docs/sdk">The Charm SDK</a></li>
+        <li><a href="https://www.youtube.com/watch?v=yxeJX2WRYjg&list=PLwFSk464RMxnLF-ulbCpQjZN-DWkZqojf&index=3" class="p-link--external">Step-by-step walkthrough of building a charm from OperatorDay at KubeCon 2021</a></li>
       </ul>
 
       <h3 class="question-heading" id="do-you-pay-for-support-on-your-ops-tools">25. Do you pay for support on your ops tools?</h3>
@@ -5113,8 +5113,8 @@
 
       <p>To execute on these scenarios, we believe that software should be running your application.</p>
 
-      <p>The Charmed Operator Framework (also called Juju) brings business thinking to the world of application management, making it much easier to have conversations between teams about the estate, and much easier to evolve capacity allocation over time: you can easily manage multiple compute environments and lower your costs of ownership. The separation of technical and commercial concerns means the operator is reusable in very different business settings. And reuse enhances the community value of the operator and increases software quality.</p>
-      <p>Most importantly, the Charmed Operator Framework is not a &ldquo;language for configuration file management&rdquo;. It is not a successor to Puppet, Chef, Ansible, Terraform or Salt. Juju removes the requirement to invest in deep institutional knowledge of configuration details altogether, by encapsulating community knowledge in operators that handle those details automatically, given a context. Moving beyond configuration management puts the focus on application management and resource allocation. It is the stepping stone to Model Driven Operations.</p>
+      <p>Juju brings business thinking to the world of application management, making it much easier to have conversations between teams about the estate, and much easier to evolve capacity allocation over time: you can easily manage multiple compute environments and lower your costs of ownership. The separation of technical and commercial concerns means the operator is reusable in very different business settings. And reuse enhances the community value of the operator and increases software quality.</p>
+      <p>Most importantly, Juju is not a &ldquo;language for configuration file management&rdquo;. It is not a successor to Puppet, Chef, Ansible, Terraform or Salt. Juju removes the requirement to invest in deep institutional knowledge of configuration details altogether, by encapsulating community knowledge in operators that handle those details automatically, given a context. Moving beyond configuration management puts the focus on application management and resource allocation. It is the stepping stone to Model Driven Operations.</p>
 
       <h3 class="question-heading" id="how-many-ops-people-does-it-take-to-screw-in-a-kubernetes">30. How many ops people does it take to screw in a Kubernetes?</h3>
 
@@ -5488,7 +5488,7 @@
         </div>
       </div>
 
-      <p>Can we take a look at this from the exact opposite angle? <em>Let&rsquo;s not focus on the fact that not everyone is a master of particular technologies, but on the fact that there are already masters out there</em>. There are 90 people here who consider themselves masters at chaos engineering. 163 at observability. 176 at ingres / service proxies. How many of them would it take to create charmed operators that cover the use cases of tens of thousands of Devs, DevOps, and SRE&rsquo;s?</p>
+      <p>Can we take a look at this from the exact opposite angle? <em>Let&rsquo;s not focus on the fact that not everyone is a master of particular technologies, but on the fact that there are already masters out there</em>. There are 90 people here who consider themselves masters at chaos engineering. 163 at observability. 176 at ingres / service proxies. How many of them would it take to create charms that cover the use cases of tens of thousands of Devs, DevOps, and SRE&rsquo;s?</p>
       <p>Clearly, based on the question about people using community-provided playbooks/charts/recipes and the interest in operators (described in the upcoming section), there is room in the cloud native space for experts to help the entire community to make significant advances by applying their knowledge.</p>
 
       <h2 class="section-heading" id="kubernetes-operators">Kubernetes operators</h2>
@@ -5818,7 +5818,7 @@
         </div>
       </div>
 
-      <h4>What is your experience with Charmed Operators?</h4>
+      <h4>What is your experience with charms?</h4>
       <p>1135 out of 1166 people answered this question</p>
 
       <div class="p-survey-chart">
