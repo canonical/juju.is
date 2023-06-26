@@ -1,6 +1,6 @@
 domain: juju.is
 
-image: prod-comms.docker-registry.canonical.com/juju.is
+image: prod-comms.ps5.docker-registry.canonical.com/juju.is
 
 extraHosts:
   - domain: conjure-up.io
