@@ -37,10 +37,10 @@ def init_docs(app):
                 get_topics_query_id=2,
             ),
             index_topic_id=discourse_index_id,
-            url_prefix="/docs/olm",
+            url_prefix="/docs/juju",
         ),
         document_template="docs/document.html",
-        url_prefix="/docs/olm",
+        url_prefix="/docs/juju",
     )
 
     discourse_docs.init_app(app)
