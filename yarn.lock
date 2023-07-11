@@ -1590,15 +1590,6 @@ sass@1.58.0:
     immutable "^4.0.0"
     source-map-js ">=0.6.2 <2.0.0"
 
-sass@1.58.3:
-  version "1.58.3"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.58.3.tgz#2348cc052061ba4f00243a208b09c40e031f270d"
-  integrity sha512-Q7RaEtYf6BflYrQ+buPudKR26/lH+10EmO9bBqbmPh/KeLqv8bjpTNqxe71ocONqXq+jYiCbpPUmQMS+JJPk4A==
-  dependencies:
-    chokidar ">=3.0.0 <4.0.0"
-    immutable "^4.0.0"
-    source-map-js ">=0.6.2 <2.0.0"
-
 sass@1.62.1:
   version "1.62.1"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.62.1.tgz#caa8d6bf098935bc92fc73fa169fb3790cacd029"
@@ -1995,19 +1986,10 @@ vanilla-framework@3.11.1:
     sass "1.58.0"
     yaml "1.10.2"
 
-vanilla-framework@3.13.0:
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-3.13.0.tgz#264f6f33e6926e6d1019e7659660f36fa20cd4b4"
-  integrity sha512-L6Z+8q4nbUTl12yCDJ/TqdWRugFeCaPMxUV7o0qrI1/bmuOLGpDaVPhGOcBPIO+uzIxANICVABXvk0qvzAClxA==
-  dependencies:
-    "@canonical/cookie-policy" "3.4.0"
-    "@canonical/latest-news" "1.4.1"
-    autoprefixer "10.4.13"
-    postcss "8.4.21"
-    postcss-cli "9.1.0"
-    postcss-scss "4.0.6"
-    sass "1.58.3"
-    yaml "1.10.2"
+vanilla-framework@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.0.0.tgz#a2fee9bd9763ebd6932b764f9d66484dc177d4cc"
+  integrity sha512-fiPnmaTUe15l5MRNJ6IsiJ8qiunfmgtLETOFltaYiE/bQKL7xTI+riBak2iygBKeF1y0Gi/GxUNt4hyb6xDPKA==
 
 verbalize@^0.1.2:
   version "0.1.2"

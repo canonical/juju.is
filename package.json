@@ -24,16 +24,16 @@
     "autoprefixer": "10.4.14",
     "concurrently": "8.0.1",
     "flickity": "3.0.0",
-    "prettier": "2.8.8",
     "postcss": "8.4.23",
     "postcss-cli": "10.1.0",
+    "prettier": "2.8.8",
     "sass": "1.62.1",
     "stylelint": "15.6.0",
     "stylelint-config-prettier": "9.0.5",
     "stylelint-config-recommended-scss": "11.0.0",
     "stylelint-order": "6.0.3",
     "stylelint-prettier": "3.0.0",
-    "vanilla-framework": "3.13.0",
+    "vanilla-framework": "4.0.0",
     "watch-cli": "0.2.3"
   }
 }
