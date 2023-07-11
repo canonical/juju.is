@@ -6,6 +6,128 @@
 
 {% block content %}
 <main id="main-content">
-  
+  <section class="p-strip--light u-no-padding--bottom">
+    <div class="row">
+      <div class="col-7">
+        <h1>Revolutionise the speed and quality of software operations with Juju</h1>
+        <p>Juju is an open source orchestration engine for software operators that enables the deployment, integration and lifecycle management of applications at any scale, on any infrastructure using charms.</p>
+        <p>A charm is an operator — business logic encapsulated in reusable software packages that automate every aspect of an application’s life.</p>
+        <p>
+          <a href="/docs/juju/get-started-with-juju" class="p-button--positive">Get started with Juju</a>
+        </p>
+      </div>
+      <div class="col-5">
+        {{
+          image(
+            url="https://assets.ubuntu.com/v1/2c7e3fab-juju-header-illustration.svg",
+            alt="",
+            height="453",
+            width="500",
+            hi_def=True,
+            loading="auto",
+          ) | safe
+        }}
+      </div>
+    </div>
+    <div class="u-fixed-width u-no-padding--left u-no-padding--right">
+      <div class="p-suru25light"></div>
+    </div>
+  </section>
+  <section class="p-section">
+    <div class="row">
+      <hr class="p-rule" />
+    </div>
+    <div class="row--50-50">
+      <div class="col">
+        <h2>Shift from application to system lifecycle management</h2>
+      </div>
+      <div class="col">
+        <p>Juju charms consider the integrations between different applications as a first class primitive.</p>
+        <p>This means your observability stack, database, SSO, and more, evolve with your system — and they work on day 1,000 just as well as they did on day one.</p>
+        <p>
+          <a href="https://charmhub.io" class="p-button--positive">Learn about charms</a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="p-section">
+    <div class="row">
+      <hr class="p-rule" />
+    </div>
+    <div class="row--50-50">
+      <div class="col">
+        <h2>Reuse operations code across VMs and Kubernetes</h2>
+      </div>
+      <div class="col">
+        <p>Use a single codebase to automate the lifecycle management of your system across public clouds, Kubernetes, VM and bare metal machines.</p>
+        <p>Learn how to use Juju across supported clouds.</p>
+      </div>
+    </div>
+  </section>
+  <section class="p-section">
+    <div class="row">
+      <hr class="p-rule" />
+    </div>
+    <div class="row--50-50">
+      <div class="col">
+        <h2>Watch: Learn about Juju in 10 minutes</h2>
+      </div>
+      <div class="col">
+        <p>Watch to learn the core concept of Juju and charms, how you can use them to automate operations across different clouds/VM/k8s, and the benefits of integrations.</p>
+      </div>
+    </div>
+  </section>
+  <section class="p-strip--light">
+    <div class="u-fixed-width u-align--center">
+      <a class="p-button--positive u-no-margin--bottom" href="/docs/juju/get-started-with-juju">Get started with Juju</a>
+    </div>
+  </section>
+  <section class="p-section">
+    <div class="row">
+      <hr class="p-rule" />
+    </div>
+    <div class="row--50-50">
+      <div class="col">
+        <h2>Deploy and integrate with enterprise-grade operators</h2>
+      </div>
+      <div class="col">
+        <p>Charmhub is a curated marketplace for charms which can be readily integrated into any infrastructure, and the centre of the charm community.</p>
+        <p>
+          <a href="https://charmhub.io" class="p-button">Explore all charms</a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="p-section">
+    <div class="row">
+      <hr class="p-rule" />
+    </div>
+    <div class="row--50-50">
+      <div class="col">
+        <h2>Add visibility and compliance controls with Jaas</h2>
+      </div>
+      <div class="col">
+        <p>Jaas is the centralised enterprise control plane for Juju deployments.</p>
+        <ul>
+          <li>Manage hundreds of Juju controllers</li>
+          <li>Add fine grained access controls</li>
+          <li>Enable enhanced audit functionalities</li>
+        </ul>
+        <p>
+          <a href="https://jaas.ai" class="p-button--positive">Discover Jaas</a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <div class="p-section">
+    <div class="row">
+      <hr class="p-rule" />
+    </div>
+    <div class="row--50-50">
+      <div class="col">
+        <h2>Trusted by 10,000+ engineers at:</h2>
+      </div>
+    </div>
+  </div>
 </main>
 {% endblock %}
