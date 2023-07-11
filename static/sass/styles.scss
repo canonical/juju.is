@@ -16,7 +16,6 @@ $breakpoint-navigation-threshold: 900px;
 @import "@canonical/cookie-policy/build/css/cookie-policy";
 @import "patterns_docs";
 @import "hljs";
-@import "flickity/dist/flickity";
 
 @include juju-docs;
 // Local patterns
@@ -43,22 +42,6 @@ $breakpoint-navigation-threshold: 900px;
 @import "patterns_icons";
 
 @include juju-icons;
-
-@import "patterns_carousel";
-
-@include juju-carousel;
-
-@import "patterns_what-is-juju";
-
-@include local-what-is-juju;
-
-@import "patterns_heading-highlight";
-
-@include local-heading-highlight;
-
-@import "patterns_scroller";
-
-@include local-scroller;
 
 @import "utility_crop";
 

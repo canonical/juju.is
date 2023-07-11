@@ -23,7 +23,6 @@
     "@canonical/global-nav": "3.2.4",
     "autoprefixer": "10.4.14",
     "concurrently": "8.0.1",
-    "flickity": "3.0.0",
     "postcss": "8.4.23",
     "postcss-cli": "10.1.0",
     "prettier": "2.8.8",
