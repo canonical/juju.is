@@ -238,3 +238,14 @@ html {
 .u-small-logo {
   width: 108px;
 }
+
+.mongo-icon {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: $color-mid-x-light;
+  color: $color-mid-dark;
+  border-radius: 24px;
+  text-align: center;
+  line-height: 48px;
+}
