@@ -88,22 +88,22 @@
         <div class="p-side-navigation" style="margin-top: 6px;">
           <ul class="p-side-navigation__list">
             <li class="p-side-navigation__item">
-              <a href="/" class="p-side-navigation__link is-active">Databases</a>
+              <a href="#databases" class="p-side-navigation__link is-active" data-js="panel-link">Databases</a>
             </li>
             <li class="p-side-navigation__item">
-              <a href="/" class="p-side-navigation__link">Big data and AI</a>
+              <a href="#big-data-and-ai" class="p-side-navigation__link" data-js="panel-link">Big data and AI</a>
             </li>
             <li class="p-side-navigation__item">
-              <a href="/" class="p-side-navigation__link">Observability</a>
+              <a href="#observability" class="p-side-navigation__link" data-js="panel-link">Observability</a>
             </li>
             <li class="p-side-navigation__item">
-              <a href="/" class="p-side-navigation__link">Infrastructure</a>
+              <a href="#infrastructure" class="p-side-navigation__link" data-js="panel-link">Infrastructure</a>
             </li>
           </ul>
         </div>
       </div>
       <div class="col-9">
-        <div class="row">
+        <div class="row" id="databases">
           <div class="col-3">
             <h3 class="p-heading--5">
               <a href="https://charmhub.io/postgresql">Postgres</a>
@@ -123,7 +123,7 @@
             <p>Source-available document-oriented database</p>
           </div>
         </div>
-        <div class="row">
+        <div class="row u-hide" id="big-data-and-ai">
           <div class="col-3">
             <h3 class="p-heading--5">
               <a href="https://charmhub.io/kafka">Kafka</a>
@@ -143,7 +143,7 @@
             <p>Open source unified analytics engine for large-scale data processing</p>
           </div>
         </div>
-        <div class="row">
+        <div class="row u-hide" id="observability">
           <div class="col-3">
             <h3 class="p-heading--5">
               <a href="https://charmhub.io/prometheus-k8s">Prometheus</a>
@@ -163,7 +163,7 @@
             <p>Open source log aggregation system designed to store and query logs from all your applications and infrastructure</p>
           </div>
         </div>
-        <div class="row">
+        <div class="row u-hide" id="infrastructure">
           <div class="col-3">
             <h3 class="p-heading--5">
               <a href="https://charmhub.io/vault">Vault</a>
@@ -346,4 +346,28 @@
     </div>
   </section>
 </main>
+
+<script>
+  const panelLinks = document.querySelectorAll("[data-js='panel-link']");
+
+  panelLinks.forEach((panelLink) => {
+    panelLink.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const activePanelLink = document.querySelector("[data-js='panel-link'].is-active");
+      const activePanel = document.querySelector(activePanelLink.getAttribute("href"));
+
+      if (activePanelLink === panelLink) {
+        return;
+      }
+
+      const targetPanel = document.querySelector(panelLink.getAttribute("href"));
+      
+      activePanelLink.classList.remove("is-active");
+      activePanel.classList.add("u-hide");
+      panelLink.classList.add("is-active");
+      targetPanel.classList.remove("u-hide");
+    });
+  });
+</script>
 {% endblock %}
