@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 
-{% block title %}Operator lifecycle manager for K8s and traditional workloads{% endblock %}
+{% block title %}Automate software operations with Juju and charms{% endblock %}
 {% block meta_copydoc %}https://docs.google.com/document/d/147spDkSVH0YaEGKZ4tDi7i28zzhIcacF1hBOMHvxaC0/edit{% endblock meta_copydoc %}
-{% block page_description %}Juju is an open source orchestration engine for software operators that enables the deployment, integration and lifecycle management of applications at any scale, on any infrastructure.{% endblock %}
+{% block page_description %}Software operations are easier with Juju - the open source orchestration engine for software operators. Deploy, integrate, scale and manage your applications' lifecycle at any scale, on any infrastructure with Juju and charms.{% endblock %}
 
 {% block content %}
 <main id="main-content">
-  <section class="p-strip--light u-no-padding--bottom" style="background-color: #f3f3f3;">
+  <section class="p-strip--light u-no-padding--bottom">
     <div class="row">
       <div class="col-7">
         <h1>Revolutionise the speed and quality of software operations with Juju</h1>
         <p>Juju is an open source orchestration engine for software operators that enables the deployment, integration and lifecycle management of applications at any scale, on any infrastructure using charms.</p>
-        <p>A charm is an operator — business logic encapsulated in reusable software packages that automate every aspect of an application’s life.</p>
-        <p>
-          <a href="/docs/juju/get-started-with-juju" class="p-button--positive">Get started with Juju</a>
+        <p>A charm is an operator - business logic encapsulated in reusable software packages that automate every aspect of an application's life.</p>
+        <p class="u-no-margin--bottom">
+          <a href="/docs/juju/get-started-with-juju" class="p-button--positive u-no-margin--bottom">Get started with Juju</a>
         </p>
       </div>
       <div class="col-5">
@@ -29,409 +29,220 @@
         }}
       </div>
     </div>
-    <div class="u-fixed-width u-no-padding--left u-no-padding--right">
-      <div class="p-suru25light"></div>
-    </div>
   </section>
 
-  <div class="u-fixed-width">
-    <hr class="p-rule">
-  </div>
-
-  <section class="p-strip is-shallow">
-    <div class="row--50-50">
-      <div class="col">
+  <section class="p-strip--light is-shallow">
+    <div class="u-fixed-width"><hr class="p-rule"></div>
+    <div class="row">
+      <div class="col-7">
         <h2>Shift from application to system lifecycle management</h2>
       </div>
-      <div class="col">
-        <p>Juju charms consider the integrations between different applications as a first class primitive.</p>
-        <p>This means your observability stack, database, SSO, and more, evolve with your system — and they work on day 1,000 just as well as they did on day one.</p>
-        <p>
-          <a href="https://charmhub.io" class="p-button--positive">Learn about charms</a>
+    </div>
+    <div class="row">
+      <div class="col-6 col-start-large-4">
+        <p>Juju and charms consider the integrations between different applications as a first class primitive.</p>
+        <p>This means your observability stack, database, SSO, and more, evolve with your system - and they work on day 1,000 just as well as they did on day one.</p>
+        <p class="u-no-margin--bottom">
+          <a href="/docs/sdk" class="p-button u-no-margin--bottom">Learn about Charms</a>
         </p>
       </div>
     </div>
   </section>
 
-  <div class="row">
-    <hr class="p-rule">
-  </div>
-
-  <section class="p-strip is-shallow">
-    <div class="row--50-50">
-      <div class="col">
-        <h2>Reuse operations code across VMs and Kubernetes</h2>
+  <section class="p-strip--light is-shallow">
+    <div class="u-fixed-width"><hr class="p-rule"></div>
+    <div class="row">
+      <div class="col-7">
+        <h2>Reuse operations code across Kubernetes and VMs</h2>
       </div>
-      <div class="col">
-        <p>Use a single codebase to automate the lifecycle management of your system across public clouds, Kubernetes, VM and bare metal machines.</p>
-        <p>Learn how to use Juju across supported clouds.</p>
-        <h3 class="p-heading--5">Public clouds</h3>
-        <div class="row u-align--center">
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/5bc1875f-ibm_cloud.svg",
-                alt="IBM Cloud",
-                height="72",
-                width="150",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/2958abec-aws.svg",
-                alt="AWS",
-                height="72",
-                width="150",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/dbab00f7-Microsoft_Azure.svg",
-                alt="Microsoft Azure",
-                height="72",
-                width="72",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-        </div>
-        <hr>
-        <div class="row u-align--center">
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/79171684-google_cloud.svg",
-                alt="Google Cloud",
-                height="72",
-                width="150",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/83b6b326-oracle.svg",
-                alt="Oracle",
-                height="72",
-                width="150",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/d076b57e-ovh.svg",
-                alt="OVH",
-                height="72",
-                width="150",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-        </div>
-        <h3 class="p-heading--5">Private clouds</h3>
-        <div class="row u-align--center">
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/5bc1875f-ibm_cloud.svg",
-                alt="IBM Cloud",
-                height="72",
-                width="150",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/2958abec-aws.svg",
-                alt="AWS",
-                height="72",
-                width="150",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/dbab00f7-Microsoft_Azure.svg",
-                alt="Microsoft Azure",
-                height="72",
-                width="72",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-        </div>
-        <hr>
-        <div class="row u-align--center">
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/79171684-google_cloud.svg",
-                alt="Google Cloud",
-                height="72",
-                width="150",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/83b6b326-oracle.svg",
-                alt="Oracle",
-                height="72",
-                width="150",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/d076b57e-ovh.svg",
-                alt="OVH",
-                height="72",
-                width="150",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-        </div>
-        <h3 class="p-heading--5">Kubernetes</h3>
-        <div class="row u-align--center">
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/5bc1875f-ibm_cloud.svg",
-                alt="IBM Cloud",
-                height="72",
-                width="150",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/2958abec-aws.svg",
-                alt="AWS",
-                height="72",
-                width="150",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/dbab00f7-Microsoft_Azure.svg",
-                alt="Microsoft Azure",
-                height="72",
-                width="72",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-        </div>
-        <hr>
-        <div class="row u-align--center">
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/79171684-google_cloud.svg",
-                alt="Google Cloud",
-                height="72",
-                width="150",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/83b6b326-oracle.svg",
-                alt="Oracle",
-                height="72",
-                width="150",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-          <div class="col-2">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/d076b57e-ovh.svg",
-                alt="OVH",
-                height="72",
-                width="150",
-                hi_def=True,
-                loading="lazy",
-              ) | safe
-            }}
-          </div>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-start-large-4">
+        <p>Use a single codebase to automate the lifecycle management of your system across public clouds, Kubernetes, virtual (VM) and bare metal machines.</p>
+        <p>Learn how to use Juju across supported clouds and environments.</p>
       </div>
     </div>
   </section>
   
-  <div class="row">
-    <hr class="p-rule">
-  </div>
+  <section class="p-strip--light is-shallow">
+    <div class="u-fixed-width"><hr class="p-rule"></div>
+    <div class="row">
+      <div class="col-7">
+        <h2>Deploy and integrate with enterprise-grade software operators</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-start-large-4">
+        <p>Charmhub is a curated marketplace for charms which can be readily integrated into any infrastructure, and the centre of the charm community.</p>
+        <p class="u-no-margin--bottom">
+          <a href="https://charmhub.io/" class="p-button u-no-margin--bottom">Explore all charms</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
-  <section class="p-strip is-shallow">
-    <div class="row--50-50">
-      <div class="col">
+  <section class="p-strip--light is-shallow">
+    <div class="u-fixed-width"><hr class="p-rule"></div>
+    <div class="row">
+      <div class="col-3">
+        <div class="p-side-navigation" style="margin-top: 6px;">
+          <ul class="p-side-navigation__list">
+            <li class="p-side-navigation__item">
+              <a href="/" class="p-side-navigation__link is-active">Databases</a>
+            </li>
+            <li class="p-side-navigation__item">
+              <a href="/" class="p-side-navigation__link">Big data and AI</a>
+            </li>
+            <li class="p-side-navigation__item">
+              <a href="/" class="p-side-navigation__link">Observability</a>
+            </li>
+            <li class="p-side-navigation__item">
+              <a href="/" class="p-side-navigation__link">Infrastructure</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="row">
+          <div class="col-3">
+            <h3 class="p-heading--5">
+              <a href="https://charmhub.io/postgresql">Postgres</a>
+            </h3>
+            <p>Open-source relational database management system</p>
+          </div>
+          <div class="col-3">
+            <h3 class="p-heading--5">
+              <a href="https://charmhub.io/mysql">MySQL</a>
+            </h3>
+            <p>Open-source relational database management system</p>
+          </div>
+          <div class="col-3">
+            <h3 class="p-heading--5">
+              <a href="https://charmhub.io/mongodb">Charmed MongoDB</a>
+            </h3>
+            <p>Source-available document-oriented database</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <h3 class="p-heading--5">
+              <a href="https://charmhub.io/kafka">Kafka</a>
+            </h3>
+            <p>Open source distributed event store and stream-processing platform</p>
+          </div>
+          <div class="col-3">
+            <h3 class="p-heading--5">
+              <a href="https://charmhub.io/kubeflow">Kubeflow</a>
+            </h3>
+            <p>Open source platform for machine learning and MLOps on Kubernetes</p>
+          </div>
+          <div class="col-3">
+            <h3 class="p-heading--5">
+              <a href="https://discourse.charmhub.io/t/charmed-spark-documentation/8963">Apache Spark</a>
+            </h3>
+            <p>Open source unified analytics engine for large-scale data processing</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <h3 class="p-heading--5">
+              <a href="https://charmhub.io/prometheus-k8s">Prometheus</a>
+            </h3>
+            <p>Open source monitoring system with a dimensional data model and a time series database</p>
+          </div>
+          <div class="col-3">
+            <h3 class="p-heading--5">
+              <a href="https://charmhub.io/grafana-k8s">Grafana</a>
+            </h3>
+            <p>Open source analytics and interactive visualization web application</p>
+          </div>
+          <div class="col-3">
+            <h3 class="p-heading--5">
+              <a href="https://charmhub.io/loki-k8s">Loki</a>
+            </h3>
+            <p>Open source log aggregation system designed to store and query logs from all your applications and infrastructure</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <h3 class="p-heading--5">
+              <a href="https://charmhub.io/vault">Vault</a>
+            </h3>
+            <p>Open source identity-based secrets and encryption management system</p>
+          </div>
+          <div class="col-3">
+            <h3 class="p-heading--5">
+              <a href="https://charmhub.io/traefik-k8s">Traefik</a>
+            </h3>
+            <p>Open-source reverse proxy and load balancer for HTTP and TCP-based applications</p>
+          </div>
+          <div class="col-3">
+            <h3 class="p-heading--5">
+              <a href="https://charmhub.io/landscape-scalable">Landscape</a>
+            </h3>
+            <p>Ubuntu systems management tool developed by Canonical</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-9 col-start-large-4">
+        <div class="u-fixed-width"><hr class="p-rule"></div>
+        <p>Learn more about charms on <a href="http://discourse.charmhub.io">Discourse</a> and <a href="http://chat.charmhub.io">Mattermost</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light is-shallow">
+    <div class="u-fixed-width"><hr class="p-rule"></div>
+    <div class="row">
+      <div class="col-7">
         <h2>Watch: Learn about Juju in 10 minutes</h2>
       </div>
-      <div class="col">
-        <div>VIDEO TO GO HERE</div>
-        <p>Watch to learn the core concept of Juju and charms, how you can use them to automate operations across different clouds/VM/k8s, and the benefits of integrations.</p>
-      </div>
     </div>
-  </section>
-  <section class="p-strip--light">
-    <div class="u-fixed-width u-align--center">
-      <a class="p-button--positive u-no-margin--bottom" href="/docs/juju/get-started-with-juju">Get started with Juju</a>
-    </div>
-  </section>
-
-  <div class="row">
-    <hr class="p-rule">
-  </div>
-  
-  <section class="p-strip is-shallow">
-    <div class="row--50-50">
-      <div class="col">
-        <h2>Deploy and integrate with enterprise-grade operators</h2>
-      </div>
-      <div class="col">
-        <p>Charmhub is a curated marketplace for charms which can be readily integrated into any infrastructure, and the centre of the charm community.</p>
-        <p>
-          <a href="https://charmhub.io" class="p-button">Explore all charms</a>
-        </p>
-      </div>
-    </div>
-    <div class="row u-align--center">
-      <div class="col-2 col-start-large-3">
-        {{
-          image(
-            url="https://assets.ubuntu.com/v1/e1257930-Frame%2089.svg",
-            alt="",
-            height="72",
-            width="150",
-            hi_def=True,
-            loading="lazy",
-          ) | safe
-        }}
-      </div>
-      <div class="col-2">
-        {{
-          image(
-            url="https://assets.ubuntu.com/v1/14eba5c2-Frame%2092.svg",
-            alt="",
-            height="72",
-            width="150",
-            hi_def=True,
-            loading="lazy",
-          ) | safe
-        }}
-      </div>
-      <div class="col-2">
-        {{
-          image(
-            url="https://assets.ubuntu.com/v1/487532c7-Frame%2093.svg",
-            alt="",
-            height="72",
-            width="150",
-            hi_def=True,
-            loading="lazy",
-          ) | safe
-        }}
-      </div>
-      <div class="col-2">
-        {{
-          image(
-            url="https://assets.ubuntu.com/v1/a622b683-Frame%2094.svg",
-            alt="",
-            height="72",
-            width="150",
-            hi_def=True,
-            loading="lazy",
-          ) | safe
-        }}
+    <div class="row">
+      <div class="col-6 col-start-large-4">
+        <iframe class="responsive-video" src="https://www.youtube.com/embed/HhRBNs9ckIk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p>Watch this video to learn the core concept of Juju and charms, how you can use  them to automate operations across different clouds/VM/k8s and the benefits of integrations.</p>
       </div>
     </div>
   </section>
 
-  <div class="row">
-    <hr class="p-rule">
-  </div>
-
-  <section class="p-strip is-shallow">
-    <div class="row--50-50">
-      <div class="col">
-        <h2>Add visibility and compliance controls with Jaas</h2>
-      </div>
-      <div class="col">
-        {{
-          image(
-            url="https://assets.ubuntu.com/v1/73936f8c-image%2010.jpg",
-            alt="",
-            height="377",
-            width="675",
-            hi_def=True,
-            loading="lazy",
-          ) | safe
-        }}
-        <p>Jaas is the centralised enterprise control plane for Juju deployments.</p>
-        <ul>
-          <li>Manage hundreds of Juju controllers</li>
-          <li>Add fine grained access controls</li>
-          <li>Enable enhanced audit functionalities</li>
-        </ul>
-        <p>
-          <a href="https://jaas.ai" class="p-button--positive">Discover Jaas</a>
-        </p>
+  <section class="p-strip--light is-shallow">
+    <div class="u-fixed-width"><hr class="p-rule"></div>
+    <div class="row">
+      <div class="col-7">
+        <h2>
+          <a href="https://juju.is/docs/juju/get-started-with-juju">Get started with Juju&nbsp;&rsaquo;</a>
+        </h2>
       </div>
     </div>
   </section>
 
-  <div class="row">
-    <hr class="p-rule">
-  </div>
-
-  <div class="p-strip is-shallow">
+  <section class="p-strip--light is-shallow">
+    <div class="u-fixed-width"><hr class="p-rule"></div>
     <div class="u-fixed-width">
-      <h2>Trusted by 10,000+ engineers at:</h2>
+      <h2>Add visibility and compliance controls with Jaas</h2>
+    </div>
+    <div class="row">
+      <div class="col-6 col-start-large-4">
+        <p>Jaas (Juju as a service) is your centralised enterprise control plane for Juju deployments.</p>
+        <ul class="p-list--divided">
+          <li class="p-list__item is-ticked">Manage hundreds of Juju controllers.</li>
+          <li class="p-list__item is-ticked">Add fine grained access controls.</li>
+          <li class="p-list__item is-ticked">Enable enhanced audit functionalities.</li>
+        </ul>
+        <p class="u-no-margin--bottom">
+          <a href="http://jaas.ai" class="p-button--positive u-no-margin--bottom">Discover Jaas</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light is-shallow">
+    <div class="u-fixed-width"><hr class="p-rule"></div>
+    <div class="u-fixed-width">
+      <h2>Trusted by 10,000+ engineers at</h2>
     </div>
     <div class="u-fixed-width">
       <div class="p-logo-section">
@@ -493,6 +304,46 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="p-strip--light is-shallow">
+    <div class="u-fixed-width">
+      <h2>Learn more about Juju</h2>
+    </div>
+    <div class="row">
+      <div class="col-6 col-start-large-4">
+        <div class="u-fixed-width"><hr class="p-rule"></div>
+        <div class="row">
+          <div class="col-3">
+            <h3 class="p-heading--5">Read more</h3>
+          </div>
+          <div class="col-3">
+            <p>
+              <a href="/docs/olm">Juju documentation</a>
+            </p>
+            <hr class="p-rule">
+            <p>
+              <a href="/docs/sdk">Charm SDK documentation</a>
+            </p>
+          </div>
+        </div>
+        <div class="u-fixed-width"><hr class="p-rule"></div>
+        <div class="row">
+          <div class="col-3">
+            <h3 class="p-heading--5">Connect with us</h3>
+          </div>
+          <div class="col-3">
+            <p>
+              <a href="http://chat.charmhub.io">Charmhub chat</a>
+            </p>
+            <hr class="p-rule">
+            <p>
+              <a href="https://discourse.charmhub.io/">Discourse forum</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 {% endblock %}
