@@ -1,3 +1,5 @@
+from flask import render_template
+from flask_cors import cross_origin
 import datetime
 import os
 
@@ -12,11 +14,9 @@ from canonicalwebteam.yaml_responses.flask_helpers import (
     prepare_deleted,
     prepare_redirects,
 )
-from flask import render_template
-from flask_cors import cross_origin
 
 from webapp.blog.views import init_blog
-from webapp.docs.views import init_docs
+from webapp.docs.views import init_docs, search_docs, cache
 from webapp.greenhouse import Greenhouse
 from webapp.template_utils import current_url_with_query, static_url
 
@@ -33,6 +33,8 @@ app = FlaskBase(
     favicon_url="https://assets.ubuntu.com/v1/5d4edefd-jaas-favicon.png",
 )
 
+cache.init_app(app)
+app.register_blueprint(search_docs)
 app.before_request(prepare_redirects())
 app.before_request(prepare_deleted())
 
