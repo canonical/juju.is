@@ -240,12 +240,19 @@ html {
 }
 
 .mongo-icon {
-  display: inline-block;
-  width: 48px;
-  height: 48px;
   background-color: $color-mid-x-light;
+  border-radius: 50%;
   color: $color-mid-dark;
-  border-radius: 24px;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 8px;
   text-align: center;
-  line-height: 48px;
+  width: 40px;
+}
+
+.homepage-tabs-logo {
+  height: 48px;
+  width: auto;
+  display: block;
 }
