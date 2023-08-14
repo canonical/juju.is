@@ -59,6 +59,10 @@ $breakpoint-navigation-threshold: 900px;
 
 @include p-radio-card;
 
+@import "patterns_p-suru";
+
+@include p-suru;
+
 .p-navigation__logo {
   margin: 0.1rem 1rem 0 1.5rem;
 }
@@ -108,17 +112,6 @@ $breakpoint-navigation-threshold: 900px;
   height: auto !important;
   opacity: 1 !important;
   transition: opacity 0.5s ease-in;
-}
-
-// Homepage footer overide
-.p-strip--suru-top.is-homepage::before {
-  background: linear-gradient(
-    to bottom right,
-    $color-accent-background 0%,
-    $color-accent-background 49%,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
 }
 
 .p-code-numbered__line {
