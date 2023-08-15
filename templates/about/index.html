@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block meta_title %}About - Charmed Operator Framework for Kubernetes and VMs{% endblock %}
+{% block meta_title %}About - Juju{% endblock %}
 
 {% block meta_copydoc %}https://docs.google.com/document/d/186zQ7bYE-jXqNNTyKEvSzjq-yP-MiMW2zHKbgyrBrm4/edit#{% endblock meta_copydoc %}
 
@@ -11,9 +11,9 @@
   <div class="row">
     <div class="col-12">
       <h1>About Juju</h1>
-      <p>Juju is an  open-source framework that helps you move from configuration management to application management across your hybrid cloud estate through sharable, reusable, tiny applications called Charmed Operators.</p>
+      <p>Juju is an  open-source framework that helps you move from configuration management to application management across your hybrid cloud estate through sharable, reusable, tiny applications called charms.</p>
 
-      <p>A Charmed Operator is Juju's expansion and generalisation of the Kubernetes notion of an operator. In the Kubernetes tradition, an Operator is an application packaged with all the operational knowledge required to (1) install and (2) maintain and upgrade it on a Kubernetes cluster. A Charmed Operator ('charm') is an application packaged with all the operational knowledge required to (1) install, (2) maintain and upgrade, and (3) <em>integrate it with other applications</em>, (4) on a Kubernetes cluster, <em>container</em>,  <em>virtual machine</em>, or <em>bare metal machine</em>, running on public or private cloud.</p>
+      <p>A charm is an operator. In the Kubernetes tradition, an Operator is an application packaged with all the operational knowledge required to (1) install and (2) maintain and upgrade it on a Kubernetes cluster. A charm is an application packaged with all the operational knowledge required to (1) install, (2) maintain and upgrade, and (3) <em>integrate it with other applications</em>, (4) on a Kubernetes cluster, <em>container</em>,  <em>virtual machine</em>, or <em>bare metal machine</em>, running on public or private cloud.</p>
     </div>
   </div>
 </section>
@@ -28,10 +28,10 @@
   <div class="row u-equal-height">
     <div class="col-4 p-card" style="display:flex; flex-direction: column; justify-content: space-between;">
       <div>
-        <h3 class="p-heading--4"><strong>The Charmed Operator Lifecycle Manager (OLM)</strong>, a platform for managing charms.</h4>
-        <p>The OLM consists of the command line tool <a href="https://juju.is/docs/olm/the-juju-client">Juju ('juju')</a>.</p>
+        <h3 class="p-heading--4"><strong>Juju</strong>, a tool for managing charms.</h4>
+        <p>Juju consists of the command line tool <a href="https://juju.is/docs/juju/the-juju-client">Juju ('juju')</a>.</p>
       </div>
-      <p class="u-sv3">Visit <a href="https://juju.is/docs/olm">the OLM docs</a> to start managing charms!</p>
+      <p class="u-sv3">Visit <a href="https://juju.is/docs/juju">the Juju docs</a> to start managing charms!</p>
     </div>
 
     <div class="col-4 p-card" style="display:flex; flex-direction: column; justify-content: space-between;">
@@ -45,10 +45,10 @@
 
     <div class="col-4 p-card" style="display:flex; flex-direction: column; justify-content: space-between;">
       <div>
-        <h4 class="p-heading--4"><strong>The Charmed Operator Software Development Kit (SDK)</strong>, a toolkit for building charms.</h4>
-        <p>The SDK consists of <a href="https://juju.is/docs/sdk/ops">Ops</a> and <a href="https://juju.is/docs/sdk/charmcraft">Charmcraft</a>.</p>
+        <h4 class="p-heading--4"><strong>The Charm SDK</strong>, a toolkit for building charms.</h4>
+        <p>The SDK consists of the <a href="https://juju.is/docs/sdk/ops"><code>ops</code></a> library and <a href="https://juju.is/docs/sdk/charmcraft">Charmcraft</a>.</p>
         <ul>
-          <li>Ops is a Python operator framework for developing charms.</li>
+          <li>The <code>ops</code> library is a Python framework for developing charms.</li>
           <li>Charmcraft is a command line tool used alongside Ops to simplify the creation, building, and publication of a charm.</li>
         </ul>
       </div>

@@ -13,6 +13,9 @@ ops-code-quality/?: /about
 overview/?: /about
 universal-operators/?: /about
 docs/(lma2|cos)(?P<page>.*)/?: https://charmhub.io/topics/canonical-observability-stack{page}
+# Redirect olm docs
+docs/olm/?: /docs/juju
+docs/olm/(?P<page>.*?): /docs/juju/{page}
 
 # Redirect tutorials
 tutorials/charmed-osm-get-started/?: https://charmhub.io/osm/docs/tutorial
