@@ -21,84 +21,45 @@
         <li class="p-navigation__item">
           <a class="p-navigation__link" href="https://charmhub.io">Charmhub</a>
         </li>
-        <li class="p-navigation__item{% if request.path.startswith('/about') %} is-selected{% endif %}">
-          <a class="p-navigation__link" href="/about">About</a>
-        </li>
         <li class="p-navigation__item--dropdown-toggle" id="learn-link">
-          <a class="p-navigation__link" href="#learn-link-menu" aria-controls="learn-link-menu">Learn</a>
-          <ul class="p-navigation__dropdown" id="learn-link-menu" aria-hidden="true">
+          <a class="p-navigation__link" href="#forum-link-menu" aria-controls="forum-link-menu">Forum</a>
+          <ul class="p-navigation__dropdown" id="forum-link-menu" aria-hidden="true">
             <li>
-              <a href="https://juju.is/docs" class="p-navigation__dropdown-item">
-                Documentation
-              </a>
-              <ul class="p-navigation__sub-list u-no-margin--left u-no-padding--left">
-                <li>
-                  <a class="p-navigation__dropdown-item" href="/docs/juju">Juju docs: Manage charms</a>
-                </li>
-                <li>
-                  <a class="p-navigation__dropdown-item" href="/docs/sdk">SDK docs: Build charms</a>
-                </li>
-                <li>
-                  <a class="p-navigation__dropdown-item" href="/docs/dev">Dev docs: Contribute to Juju</a>
-                </li>
-                {#<li>
-                  <a class="p-navigation__dropdown-item" href="https://charmhub.io/interfaces">Interfaces</a>
-                </li>#}
-              </ul>
+              <a href="https://discourse.charmhub.io/" class="p-navigation__dropdown-item">Discourse forum</a>
             </li>
             <li>
-              <a class="p-navigation__dropdown-item" href="/cloud-native-kubernetes-usage-report-2022">Kubernetes &amp; Cloud Native Operations Report</a>
-            </li>
-            <li>
-              <a class="p-navigation__dropdown-item" href="/operator-day">Operator Day</a>
-            </li>
-            <li>
-              <a class="p-navigation__dropdown-item" href="/blog">Blog</a>
-            </li>
-            <li>
-              <a class="p-navigation__dropdown-item" href="https://charmhub.io/topics">Topics</a>
+              <a href="https://chat.charmhub.io" class="p-navigation__dropdown-item">Mattermost chat</a>
             </li>
           </ul>
         </li>
         <li class="p-navigation__item--dropdown-toggle" id="contribute-link">
-          <a class="p-navigation__link" href="#contribute-link-menu" aria-controls="contribute-link-menu">Contribute</a>
-          <ul class="p-navigation__dropdown" id="contribute-link-menu" aria-hidden="true">
+          <a class="p-navigation__link" href="#docs-link-menu" aria-controls="docs-link-menu">Docs</a>
+          <ul class="p-navigation__dropdown" id="docs-link-menu" aria-hidden="true">
             <li>
-              <div class="p-navigation__dropdown-item is-title">
-                <div class="p-muted-heading u-no-margin--bottom">
-                  Create a charm
-                </div>
-              </div>
+              <a href="/docs" class="p-navigation__dropdown-item">Juju</a>
             </li>
             <li>
-              <a class="p-navigation__dropdown-item" href="/docs/sdk/set-up-a-charm-project">Build</a>
+              <a href="/docs/sdk" class="p-navigation__dropdown-item">Charm SDK</a>
             </li>
             <li>
-              <a class="p-navigation__dropdown-item" href="/docs/sdk/publishing">Publish</a>
+              <a href="/docs/dev" class="p-navigation__dropdown-item">Contribute to Juju</a>
             </li>
             <li>
-              <div class="p-navigation__dropdown-item is-title">
-                <div class="p-muted-heading u-no-margin--bottom">
-                  Join the community
-                </div>
-              </div>
-            </li>
-            <li>
-              <a class="p-navigation__dropdown-item" href="https://discourse.charmhub.io/">Forum</a>
-            </li>
-            <li>
-              <a class="p-navigation__dropdown-item" href="https://chat.charmhub.io/charmhub/channels/juju">Chat</a>
-            </li>
-            <li>
-              <a class="p-navigation__dropdown-item" href="https://bugs.launchpad.net/juju">Report a bug</a>
-            </li>
-            <li>
-              <a class="p-navigation__dropdown-item" href="/careers">Careers</a>
+              <a href="/operator-day" class="p-navigation__dropdown-item">Operator Day</a>
             </li>
           </ul>
         </li>
+        <li class="p-navigation__item">
+          <a class="p-navigation__link" href="https://ubuntu.com/blog/tag/juju">Blog</a>
+        </li>
       </ul>
-      <ul class="p-navigation__items global-nav"></ul>
+      <ul class="p-navigation__items global-nav">
+        <li class="p-navigation__item">
+          <a href="https://github.com/juju/juju" class="p-navigation__link">
+            <img src="https://assets.ubuntu.com/v1/a806a568-github.svg" alt="GitHub" style="display: block; height: 1.5rem;">
+          </a>
+        </li>
+      </ul>
     </nav>
   </div>
 </header>
