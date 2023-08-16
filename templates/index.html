@@ -153,7 +153,7 @@
     <div class="u-fixed-width" style="margin-bottom: 1rem;"><hr class="p-rule"></div>
     <div class="row">
       <div class="col-3">
-        <div class="p-side-navigation">
+        <div class="p-side-navigation homepage-tabs">
           <ul class="p-side-navigation__list">
             <li class="p-side-navigation__item">
               <a href="#databases" class="p-side-navigation__link is-active" data-js="panel-link">Databases</a>
@@ -170,228 +170,264 @@
           </ul>
         </div>
       </div>
-      <div class="col-9" style="min-height: 195px;">
+      <div class="col-9" style="min-height: 280px;">
         <div class="row" id="databases">
           <div class="col-3">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/3c1ecfd9-postgres-logo-jujuis.png",
-                alt="",
-                height="288",
-                width="237",
-                hi_def=True,
-                loading="auto",
-                attrs={
-                  "class": "homepage-tabs-logo",
-                },
-              ) | safe
-            }}
-            <h3 class="p-heading--5">
-              <a href="https://charmhub.io/postgresql">Postgres</a>
+            <a href="https://charmhub.io/postgresql">
+              {{
+                image(
+                  url="https://assets.ubuntu.com/v1/3c1ecfd9-postgres-logo-jujuis.png",
+                  alt="",
+                  height="288",
+                  width="237",
+                  hi_def=True,
+                  loading="auto",
+                  attrs={
+                    "class": "homepage-tabs-logo",
+                  },
+                ) | safe
+              }}
+            </a>
+            <h3 class="p-heading--2">
+              <a href="https://charmhub.io/postgresql" class="p-link--soft">Postgres</a>
             </h3>
+            <p class="p-muted-heading">Canonical Data Platform</p>
             <p>Open-source relational database management system</p>
           </div>
           <div class="col-3">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/0da5140e-mysql-logo-jujuis.png",
-                alt="",
-                height="288",
-                width="252",
-                hi_def=True,
-                loading="auto",
-                attrs={
-                  "class": "homepage-tabs-logo",
-                },
-              ) | safe
-            }}
-            <h3 class="p-heading--5">
-              <a href="https://charmhub.io/mysql">MySQL</a>
+            <a href="https://charmhub.io/mysql">
+              {{
+                image(
+                  url="https://assets.ubuntu.com/v1/0da5140e-mysql-logo-jujuis.png",
+                  alt="",
+                  height="288",
+                  width="252",
+                  hi_def=True,
+                  loading="auto",
+                  attrs={
+                    "class": "homepage-tabs-logo",
+                  },
+                ) | safe
+              }}
+            </a>
+            <h3 class="p-heading--2">
+              <a href="https://charmhub.io/mysql" class="p-link--soft">MySQL</a>
             </h3>
+            <p class="p-muted-heading">Canonical Data Platform</p>
             <p>Open-source relational database management system</p>
           </div>
           <div class="col-3">
-            <span class="mongo-icon">M</span>
-            <h3 class="p-heading--5">
-              <a href="https://charmhub.io/mongodb">Charmed MongoDB</a>
+            <a href="https://charmhub.io/mongodb" class="u-no-hover">
+              <span class="mongo-icon">M</span>
+            </a>
+            <h3 class="p-heading--2">
+              <a href="https://charmhub.io/mongodb" class="p-link--soft">Charmed MongoDB</a>
             </h3>
+            <p class="p-muted-heading">Canonical Data Platform</p>
             <p>Source-available document-oriented database</p>
           </div>
         </div>
         <div class="row u-hide" id="big-data-and-ai">
           <div class="col-3">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/f00ede67-kafka-logo-jujuis.png",
-                alt="",
-                height="288",
-                width="154",
-                hi_def=True,
-                loading="auto",
-                attrs={
-                  "class": "homepage-tabs-logo",
-                },
-              ) | safe
-            }}
-            <h3 class="p-heading--5">
-              <a href="https://charmhub.io/kafka">Kafka</a>
+            <a href="https://charmhub.io/kafka">
+              {{
+                image(
+                  url="https://assets.ubuntu.com/v1/f00ede67-kafka-logo-jujuis.png",
+                  alt="",
+                  height="288",
+                  width="154",
+                  hi_def=True,
+                  loading="auto",
+                  attrs={
+                    "class": "homepage-tabs-logo",
+                  },
+                ) | safe
+              }}
+            </a>
+            <h3 class="p-heading--2">
+              <a href="https://charmhub.io/kafka" class="p-link--soft">Kafka</a>
             </h3>
+            <p class="p-muted-heading">Canonical Data Platform</p>
             <p>Open source distributed event store and stream-processing platform</p>
           </div>
           <div class="col-3">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/62a19f47-kubeflow-logo-jujuis.png",
-                alt="",
-                height="288",
-                width="252",
-                hi_def=True,
-                loading="auto",
-                attrs={
-                  "class": "homepage-tabs-logo",
-                },
-              ) | safe
-            }}
-            <h3 class="p-heading--5">
-              <a href="https://charmhub.io/kubeflow">Kubeflow</a>
+            <a href="https://charmhub.io/kubeflow">
+              {{
+                image(
+                  url="https://assets.ubuntu.com/v1/62a19f47-kubeflow-logo-jujuis.png",
+                  alt="",
+                  height="288",
+                  width="252",
+                  hi_def=True,
+                  loading="auto",
+                  attrs={
+                    "class": "homepage-tabs-logo",
+                  },
+                ) | safe
+              }}
+            </a>
+            <h3 class="p-heading--2">
+              <a href="https://charmhub.io/kubeflow" class="p-link--soft">Kubeflow</a>
             </h3>
+            <p class="p-muted-heading">Kubeflow Charmers</p>
             <p>Open source platform for machine learning and MLOps on Kubernetes</p>
           </div>
           <div class="col-3">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/d9906786-apache-spark-logo-jujuis.png",
-                alt="",
-                height="288",
-                width="247",
-                hi_def=True,
-                loading="auto",
-                attrs={
-                  "class": "homepage-tabs-logo",
-                },
-              ) | safe
-            }}
-            <h3 class="p-heading--5">
-              <a href="https://charmhub.io/spark-history-server-k8s">Apache Spark</a>
+            <a href="https://charmhub.io/spark-history-server-k8s">
+              {{
+                image(
+                  url="https://assets.ubuntu.com/v1/d9906786-apache-spark-logo-jujuis.png",
+                  alt="",
+                  height="288",
+                  width="247",
+                  hi_def=True,
+                  loading="auto",
+                  attrs={
+                    "class": "homepage-tabs-logo",
+                  },
+                ) | safe
+              }}
+            </a>
+            <h3 class="p-heading--2">
+              <a href="https://charmhub.io/spark-history-server-k8s" class="p-link--soft">Apache Spark</a>
             </h3>
+            <p class="p-muted-heading">Canonical Data Platform</p>
             <p>Open source unified analytics engine for large-scale data processing</p>
           </div>
         </div>
         <div class="row u-hide" id="observability">
           <div class="col-3">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/74efd28b-prometheus-logo-jujuis.png",
-                alt="",
-                height="288",
-                width="247",
-                hi_def=True,
-                loading="auto",
-                attrs={
-                  "class": "homepage-tabs-logo",
-                },
-              ) | safe
-            }}
-            <h3 class="p-heading--5">
-              <a href="https://charmhub.io/prometheus-k8s">Prometheus</a>
+            <a href="https://charmhub.io/prometheus-k8s">
+              {{
+                image(
+                  url="https://assets.ubuntu.com/v1/74efd28b-prometheus-logo-jujuis.png",
+                  alt="",
+                  height="288",
+                  width="247",
+                  hi_def=True,
+                  loading="auto",
+                  attrs={
+                    "class": "homepage-tabs-logo",
+                  },
+                ) | safe
+              }}
+            </a>
+            <h3 class="p-heading--2">
+              <a href="https://charmhub.io/prometheus-k8s" class="p-link--soft">Prometheus</a>
             </h3>
+            <p class="p-muted-heading">Canonical Observability</p>
             <p>Open source monitoring system with a dimensional data model and a time series database</p>
           </div>
           <div class="col-3">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/1c10fa01-grafana-logo-jujuis.png",
-                alt="",
-                height="288",
-                width="231",
-                hi_def=True,
-                loading="auto",
-                attrs={
-                  "class": "homepage-tabs-logo",
-                },
-              ) | safe
-            }}
-            <h3 class="p-heading--5">
-              <a href="https://charmhub.io/grafana-k8s">Grafana</a>
+            <a href="https://charmhub.io/grafana-k8s">
+              {{
+                image(
+                  url="https://assets.ubuntu.com/v1/1c10fa01-grafana-logo-jujuis.png",
+                  alt="",
+                  height="288",
+                  width="231",
+                  hi_def=True,
+                  loading="auto",
+                  attrs={
+                    "class": "homepage-tabs-logo",
+                  },
+                ) | safe
+              }}
+            </a>
+            <h3 class="p-heading--2">
+              <a href="https://charmhub.io/grafana-k8s" class="p-link--soft">Grafana</a>
             </h3>
+            <p class="p-muted-heading">Canonical Observability</p>
             <p>Open source analytics and interactive visualization web application</p>
           </div>
           <div class="col-3">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/a647636f-loki-logo-jujuis.png",
-                alt="",
-                height="288",
-                width="211",
-                hi_def=True,
-                loading="auto",
-                attrs={
-                  "class": "homepage-tabs-logo",
-                },
-              ) | safe
-            }}
-            <h3 class="p-heading--5">
-              <a href="https://charmhub.io/loki-k8s">Loki</a>
+            <a href="https://charmhub.io/loki-k8s">
+              {{
+                image(
+                  url="https://assets.ubuntu.com/v1/a647636f-loki-logo-jujuis.png",
+                  alt="",
+                  height="288",
+                  width="211",
+                  hi_def=True,
+                  loading="auto",
+                  attrs={
+                    "class": "homepage-tabs-logo",
+                  },
+                ) | safe
+              }}
+            </a>
+            <h3 class="p-heading--2">
+              <a href="https://charmhub.io/loki-k8s" class="p-link--soft">Loki</a>
             </h3>
+            <p class="p-muted-heading">Canonical Observability</p>
             <p>Open source log aggregation system designed to store and query logs from all your applications and infrastructure</p>
           </div>
         </div>
         <div class="row u-hide" id="infrastructure">
           <div class="col-3">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/8f9d47a0-vault-logo-jujuis.png",
-                alt="",
-                height="288",
-                width="262",
-                hi_def=True,
-                loading="auto",
-                attrs={
-                  "class": "homepage-tabs-logo",
-                },
-              ) | safe
-            }}
-            <h3 class="p-heading--5">
-              <a href="https://charmhub.io/vault">Vault</a>
+            <a href="https://charmhub.io/vault">
+              {{
+                image(
+                  url="https://assets.ubuntu.com/v1/8f9d47a0-vault-logo-jujuis.png",
+                  alt="",
+                  height="288",
+                  width="262",
+                  hi_def=True,
+                  loading="auto",
+                  attrs={
+                    "class": "homepage-tabs-logo",
+                  },
+                ) | safe
+              }}
+            </a>
+            <h3 class="p-heading--2">
+              <a href="https://charmhub.io/vault" class="p-link--soft">Vault</a>
             </h3>
+            <p class="p-muted-heading">OpenStack Charmers</p>
             <p>Open source identity-based secrets and encryption management system</p>
           </div>
           <div class="col-3">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/52d0f6ab-traefik-logo-jujuis.png",
-                alt="",
-                height="288",
-                width="216",
-                hi_def=True,
-                loading="auto",
-                attrs={
-                  "class": "homepage-tabs-logo",
-                },
-              ) | safe
-            }}
-            <h3 class="p-heading--5">
-              <a href="https://charmhub.io/traefik-k8s">Traefik</a>
+            <a href="https://charmhub.io/traefik-k8s">
+              {{
+                image(
+                  url="https://assets.ubuntu.com/v1/52d0f6ab-traefik-logo-jujuis.png",
+                  alt="",
+                  height="288",
+                  width="216",
+                  hi_def=True,
+                  loading="auto",
+                  attrs={
+                    "class": "homepage-tabs-logo",
+                  },
+                ) | safe
+              }}
+            </a>
+            <h3 class="p-heading--2">
+              <a href="https://charmhub.io/traefik-k8s" class="p-link--soft">Traefik</a>
             </h3>
+            <p class="p-muted-heading">Canonical Observability</p>
             <p>Open-source reverse proxy and load balancer for HTTP and TCP-based applications</p>
           </div>
           <div class="col-3">
-            {{
-              image(
-                url="https://assets.ubuntu.com/v1/6320c190-landscape-logo-jujuis.png",
-                alt="",
-                height="288",
-                width="154",
-                hi_def=True,
-                loading="auto",
-                attrs={
-                  "class": "homepage-tabs-logo",
-                },
-              ) | safe
-            }}
-            <h3 class="p-heading--5">
-              <a href="https://charmhub.io/landscape-scalable">Landscape</a>
+            <a href="https://charmhub.io/landscape-scalable">
+              {{
+                image(
+                  url="https://assets.ubuntu.com/v1/6320c190-landscape-logo-jujuis.png",
+                  alt="",
+                  height="288",
+                  width="154",
+                  hi_def=True,
+                  loading="auto",
+                  attrs={
+                    "class": "homepage-tabs-logo",
+                  },
+                ) | safe
+              }}
+            </a>
+            <h3 class="p-heading--2">
+              <a href="https://charmhub.io/landscape-scalable" class="p-link--soft">Landscape</a>
             </h3>
+            <p class="p-muted-heading">Landscape</p>
             <p>Ubuntu systems management tool developed by Canonical</p>
           </div>
         </div>
