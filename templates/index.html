@@ -68,63 +68,71 @@
     <div class="fixed-width u-align--center" style="margin-top: 2rem;">
       <ul class="p-inline-list">
         <li class="p-inline-list__item">
-          <img src="https://assets.ubuntu.com/v1/f07eaf0c-Canonical%20OpenStack.svg" alt="OpenStack" style="height: 42px; width: auto; margin-right: 1rem;">
+          <a href="/docs/juju/openstack ">
+            <img src="https://assets.ubuntu.com/v1/f07eaf0c-Canonical%20OpenStack.svg" alt="OpenStack" style="height: 42px; width: auto; margin-right: 1rem;">
+          </a>          
         </li>
         <li class="p-inline-list__item">
-          <img src="https://assets.ubuntu.com/v1/e45b7f3f-Canonical%20MAAS.svg" alt="MAAS" style="height: 42px; width: auto; margin-right: 1rem;">
+          <a href="/docs/juju/maas">
+            <img src="https://assets.ubuntu.com/v1/e45b7f3f-Canonical%20MAAS.svg" alt="MAAS" style="height: 42px; width: auto; margin-right: 1rem;">
+          </a>          
         </li>
         <li class="p-inline-list__item">
-          <img src="https://assets.ubuntu.com/v1/096ad2c0-Canonical%20LXD.svg" alt="LXD" style="height: 42px; width: auto; margin-right: 1rem;">
+          <a href="/docs/juju/lxd">
+            <img src="https://assets.ubuntu.com/v1/096ad2c0-Canonical%20LXD.svg" alt="LXD" style="height: 42px; width: auto; margin-right: 1rem;">
+          </a>          
         </li>
         <li class="p-inline-list__item">
-          <img src="https://assets.ubuntu.com/v1/9f59974d-microk8s.png" alt="" style="height: 42px; width: auto;">
+          <a href="/docs/juju/microk8s">
+            <img src="https://assets.ubuntu.com/v1/9f59974d-microk8s.png" alt="" style="height: 42px; width: auto;">
+          </a>
         </li>
       </ul>
     </div>
     <div class="u-fixed-width u-align--center">
       <ul class="p-inline-list">
         <li class="p-inline-list__item" style="margin-right: 1.5rem;">
-          <a href="/docs/olm/equinix-metal">
+          <a href="/docs/juju/equinix-metal">
             <img src="https://assets.ubuntu.com/v1/1a6ed36e-equinix-logo.png" alt="Equinix Metal" width="108" height="128">
           </a>
         </li>
         <li class="p-inline-list__item" style="margin-right: 1.5rem;">
-          <a href="/docs/kubernetes/azure-aks">
+          <a href="/docs/juju/google-gke">
             <img src="https://assets.ubuntu.com/v1/995e34d4-google-kubernetes-engine-logo.png" width="46" height="128">
           </a>
         </li>
         <li class="p-inline-list__item" style="margin-right: 1.5rem;">
-          <a href="/docs/vsphere-cloud">
+          <a href="/docs/juju/vmware-vsphere">
             <img src="https://assets.ubuntu.com/v1/87b04c6a-vmware-logo.png" alt="VMWare vSphere" width="128" height="128">
           </a>
         </li>
         <li class="p-inline-list__item" style="margin-right: 1.5rem;">
-          <a href="/docs/kubernetes/google-gke">
+          <a href="/docs/juju/google-gke">
             <img src="https://assets.ubuntu.com/v1/d503827d-google-gke-logo.png" alt="Google GKE" width="55" height="128">
           </a>
         </li>
         <li class="p-inline-list__item" style="margin-right: 1.5rem;">
-          <a href="/docs/azure-cloud">
+          <a href="/docs/juju/microsoft-azure">
             <img src="https://assets.ubuntu.com/v1/21c19804-microsoft-azure-logo.png" alt="Microsoft Azure logo" width="112" height="128">
           </a>
         </li>
         <li class="p-inline-list__item" style="margin-right: 1.5rem;">
-          <a href="/docs/gce-cloud">
+          <a href="/docs/juju/google-gce">
             <img src="https://assets.ubuntu.com/v1/80023687-Google-gce-logo.png" alt="Google GCE" width="55" height="128">
           </a>
         </li>
         <li class="p-inline-list__item" style="margin-right: 1.5rem;">
-          <a href="/docs/oci-cloud">
+          <a href="/docs/juju/oracle-oci">
             <img src="https://assets.ubuntu.com/v1/b3e692f4-oracle-new-logo.png" alt="Oracle logo" width="129" height="128">
           </a>
         </li>
         <li class="p-inline-list__item" style="margin-right: 1.5rem;">
-          <a href="/docs/kubernetes/amazon-eks">
+          <a href="/docs/juju/amazon-eks ">
             <img src="https://assets.ubuntu.com/v1/111c6bda-amazon-eks-logo.png" alt="Amazon EKS" width="112" height="128">
           </a>
         </li>
         <li class="p-inline-list__item">
-          <a href="/docs/aws-cloud">
+          <a href="/docs/juju/amazon-ec2">
             <img src="https://assets.ubuntu.com/v1/08874e63-amazon-web-services-logo.png" alt="Amazon AWS logo" width="128" height="128">
           </a>
         </li>
@@ -474,7 +482,7 @@
   <section class="p-section">
     <div class="u-fixed-width"><hr class="p-rule"></div>
     <div class="u-fixed-width">
-      <h2>Add visibility and compliance controls with Jaas</h2>
+      <h2>Add visibility and compliance controls with JAAS</h2>
     </div>
     <div class="row">
       <div class="col-6 col-start-large-4">
@@ -488,7 +496,7 @@
             loading="lazy",
           ) | safe
         }}
-        <p>Jaas (Juju as a service) is your centralised enterprise control plane for Juju deployments.</p>
+        <p>JAAS (Juju as a service) is your centralised enterprise control plane for Juju deployments.</p>
         <ul class="p-list--divided">
           <li class="p-list__item is-ticked">Manage hundreds of Juju controllers.</li>
           <li class="p-list__item is-ticked">Add fine grained access controls.</li>
@@ -588,12 +596,20 @@
             <p>
               <a href="/docs/sdk">Charm SDK documentation</a>
             </p>
+            <hr class="p-rule">
+            <p>
+              <a href="https://ubuntu.com/engage/kubernetes-operators-explained">What is a software operator?</a>
+            </p>
+            <hr class="p-rule">
+            <p>
+              <a href="https://ubuntu.com/engage/kubernetes-operators-explained-whitepaper">Software operators explained</a>
+            </p>
           </div>
         </div>
         <div class="u-fixed-width"><hr class="p-rule"></div>
         <div class="row">
           <div class="col-3">
-            <h3 class="p-heading--5">Connect with us</h3>
+            <h3 class="p-heading--5">Connect with the community</h3>
           </div>
           <div class="col-3">
             <p>
