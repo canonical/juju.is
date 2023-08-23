@@ -5,6 +5,10 @@
 @mixin juju-docs {
   $sidebar-width: 18rem;
 
+  .docs #main-content p {
+    max-width: none;
+  }
+
   .l-docs {
     display: flex;
     flex-wrap: wrap;
