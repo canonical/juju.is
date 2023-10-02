@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block meta_title %}Operator Day - Juju{% endblock %}
+{% block meta_image %}https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_636,h_333/https://assets.ubuntu.com/v1/ee7b97b1-Operator%20Day%20NA%20blog.png{% endblock %}
 
 {% block meta_copydoc %}https://docs.google.com/document/d/1ZFRGkZ4vvvMVOgq4MIsBuebHsA7Y0rTyiZ76qjQpOAg/edit#{% endblock meta_copydoc %}
 
@@ -10,10 +11,10 @@
   <div class="row">
     <div class="col-8">
       <h1 class="p-heading--2">How is the tech industry using software operators?</h1>
-      <h2 class="p-heading--3">Find out at the next Operator Day</h2>
+      <h2 class="p-heading--3">Find out at the next Operator Day, <br />co-located at KubeCon North America 2023</h2>
       <p>A rich agenda with various sessions about the basics behind operators, what they are, how to use them, how to create them and how your team can benefit from them.</p>
-      <p>Speakers share knowledge and insights about their software operator journey, from configuration management to application management.</p>
-      <a class="p-button--positive" href="https://ubuntu.com/contact-us/form?product=generic-contact-us" style="margin-top: 1rem">Contact us</a>
+      <p>Join us for this upcoming edition of Operator Day to learn about an enterprise’s journey with operators from start to finish – and find out how you can build yours today.</p>
+      <a class="p-button--positive" href="https://app.myonvent.com/event/operator-day/lobby" style="margin-top: 1rem">Register now for Operator Day KubeCon NA 2023</a>
     </div>
   </div>
 </section>
@@ -29,20 +30,35 @@
       <p>And what better place to talk about operators than KubeCon? KubeCon is a bi-annual event in Europe and North America, with presentations, sessions, tutorials and hands-on demos for open-source communities building cloud-native applications.</p>
       <p>It is the most significant event for cloud-native computing, receiving more than 15.000 registrations in the past. KubeCon is the flagship conference of the <a href="https://www.cncf.io/">Cloud Native Computing Foundation (CNCF)</a>.
         Canonical has inaugurated the Operator Day event at KubeCon conference in 2020. If you missed them, you could freely access recordings from the sessions <a href="https://www.youtube.com/@UbuntuOS/playlists">on YouTube</a>.</p>
+
+       <h3>Operator Day at KubeCon NA 2023</h3>
+
+       <p>Come and join our new edition of Operator Day colocated at KubeCon NA 2023 a virtual online event, free to attend</p>
+
+      <p>We will take you through the journey of building, deploying, operating and scaling applications with software operators through the lens of a company called “Operator Inc.”</p>
+
+      <p>You will:</p>
+
+      <ul>
+        <li>Discover great examples that illustrate the strengths and benefits of software operators.</li>
+        <li>Witness how to build an operator step-by-step, as if you were a DevOps engineer at Operator Inc.</li>
+        <li>Learn to integrate an operator with certificate management, single-sign-on and observability tools.</li>
+      </ul>
+
+
+      <a class="p-button" href="https://app.myonvent.com/event/operator-day/lobby">Register for Operator Day KubeCon NA 2023</a>
+
     </div>
     <div class="col-6" style="padding-top:0.75rem">
       {{ image (
-      url="https://assets.ubuntu.com/v1/3be13037-Operator%20Day.png",
-      alt="",
+      url="https://assets.ubuntu.com/v1/ee7b97b1-Operator%20Day%20NA%20blog.png",
+      alt="Operator Day - Hosted by Canonical Co-locaged at KubeCon NA. November 6th, 2023",
       width="636",
-      height="358",
+      height="333",
       hi_def=True,
       loading="auto|lazy"
       ) | safe
       }}
-    </div>
-    <div class="u-fixed-width">
-      <a class="p-button--positive" href="https://www.youtube.com/playlist?list=PLwFSk464RMxkRa0kbUUllrDY6eZGWwn7j">Watch the recordings of last Operator Day!</a>
     </div>
 </section>
 
@@ -55,7 +71,7 @@
           <h3 class="p-matrix__title">
             <a class="p-matrix__link" href="/operator-day/kubecon-eu-2023">Operator Day at KubeCon EU 2023</a>
           </h3>
-          <div class="p-matrix__desc">The most recent event demonstrating operators for popular open source applications in VMs and K8s clusters - even running on mainframes.</div>
+          <p class="p-matrix__desc">The most recent event demonstrating operators for popular open source applications in VMs and K8s clusters - even running on mainframes.</p>
         </div>
       </li>
       <li class="p-matrix__item">
@@ -63,47 +79,39 @@
           <h3 class="p-matrix__title">
             <a class="p-matrix__link" href="/operator-day/kubecon-na-2022">Operator Day at KubeCon NA 2022</a>
           </h3>
-          <div class="p-matrix__desc">Operators beyond Kubernetes, the journey from configuration management to application management.</div>
+          <p class="p-matrix__desc">Operators beyond Kubernetes, the journey from configuration management to application management.</p>
         </div>
       </li>
       <li class="p-matrix__item">
         <div class="p-matrix__content">
-          <div class="p-matrix__title">
-            <h3 class="p-matrix__title">
-              <a class="p-matrix__link" href="/operator-day/kubecon-eu-2022">Operator Day at KubeCon EU 2022</a>
-            </h3>
-          </div>
-          <div class="p-matrix__desc">Everything about software operators explained, including how they can help you.</div>
+          <h3 class="p-matrix__title">
+            <a class="p-matrix__link" href="/operator-day/kubecon-eu-2022">Operator Day at KubeCon EU 2022</a>
+          </h3>
+          <p class="p-matrix__desc">Everything about software operators explained, including how they can help you.</p>
         </div>
       </li>
       <li class="p-matrix__item">
         <div class="p-matrix__content">
-          <div class="p-matrix__title">
-            <h3 class="p-matrix__title">
-              <a class="p-matrix__link" href="/operator-day/kubecon-na-2021">Operator Day at KubeCon NA 2021</a>
-            </h3>
-          </div>
-          <div class="p-matrix__desc">From Kubernetes operators to MLOps, Data Ops and observability in the enterprise stack.</div>
+          <h3 class="p-matrix__title">
+            <a class="p-matrix__link" href="/operator-day/kubecon-na-2021">Operator Day at KubeCon NA 2021</a>
+          </h3>
+          <p class="p-matrix__desc">From Kubernetes operators to MLOps, Data Ops and observability in the enterprise stack.</p>
         </div>
       </li>
       <li class="p-matrix__item">
         <div class="p-matrix__content">
-          <div class="p-matrix__title">
-            <h3 class="p-matrix__title">
-              <a class="p-matrix__link" href="/operator-day/kubecon-eu-2021">Operator Day at KubeCon EU 2021</a>
-            </h3>
-          </div>
-          <div class="p-matrix__desc">How to use operators,  create them in Python, and evolve from configuration management to application management.</div>
+          <h3 class="p-matrix__title">
+            <a class="p-matrix__link" href="/operator-day/kubecon-eu-2021">Operator Day at KubeCon EU 2021</a>
+          </h3>
+          <p class="p-matrix__desc">How to use operators,  create them in Python, and evolve from configuration management to application management.</p>
         </div>
       </li>
       <li class="p-matrix__item">
         <div class="p-matrix__content">
-          <div class="p-matrix__title">
-            <h3 class="p-matrix__title">
-              <a class="p-matrix__link" href="/operator-day/kubecon-na-2020">Operator Day at KubeCon NA 2020</a>
-            </h3>
-          </div>
-          <div class="p-matrix__desc">The <a href="https://juju.is/model-driven-operations-manifesto">Open Operator Manifesto</a>, working to create a community-driven collection of operators for everyone.</div>
+          <h3 class="p-matrix__title">
+            <a class="p-matrix__link" href="/operator-day/kubecon-na-2020">Operator Day at KubeCon NA 2020</a>
+          </h3>
+          <p class="p-matrix__desc">The <a href="https://juju.is/model-driven-operations-manifesto">Open Operator Manifesto</a>, working to create a community-driven collection of operators for everyone.</p>
         </div>
       </li>
       <li class="p-matrix__item"></li>
@@ -114,13 +122,13 @@
 <section class="p-strip is-shallow">
   <div class="u-fixed-width">
     <h2>Learn more</h2>
-    <p>Read our introduction to <a href="https://juju.is/">Juju and Charms</a></p>
+    <p>Read our introduction to <a href="https://juju.is/">Juju and Charms</a>, the operators built for Juju.</p>
     <ul>
       <li>Browse our collection of charms on <a href="https://charmhub.io/">Charmhub.io</a></li>
-      <li>Learn about <a href="https://juju.is/docs/juju">Juju</a></li>
+      <li>Learn about <a href="https://juju.is/docs/juju">Juju - our open source orchestration engine</a></li>
       <li>Learn about the <a href="https://juju.is/docs/sdk">Charm SDK</a></li>
       <li>Watch <a href="https://ubuntu.com/blog/juju-and-charmed-operators-videos">videos  to get started with Juju and charms</a></li>
-      <li>Watch the <a href="https://ubuntu.com/engage/developer-guide-to-operators">webinar about charms ready for publication</a></li>
+      <li>Watch the <a href="https://ubuntu.com/engage/developer-guide-to-operators">webinar about preparing charms for publication</a></li>
     </ul>
     <a class="p-button" href="https://ubuntu.com/contact-us/form?product=operator-collection" rel="noreferrer noopener" target="_blank" aria-label="Contact Canonical (opens in a new tab)">Still have questions? Contact us</a>
   </div>
