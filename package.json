@@ -22,7 +22,7 @@
     "@canonical/global-nav": "3.2.4",
     "autoprefixer": "10.4.14",
     "concurrently": "8.0.1",
-    "postcss": "8.4.23",
+    "postcss": "8.4.31",
     "postcss-cli": "10.1.0",
     "prettier": "2.8.8",
     "sass": "1.62.1",
