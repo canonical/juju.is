@@ -79,9 +79,17 @@
         rgba(255, 255, 255, 0) 100%
       ),
       linear-gradient(266deg, #044f66, #022935);
-    background-position: top right, top left, right bottom -1px, left top;
+    background-position:
+      top right,
+      top left,
+      right bottom -1px,
+      left top;
     background-repeat: no-repeat;
-    background-size: 74% 99.83%, 68% 91%, 103.8% 20.26%, 100% 99.8%;
+    background-size:
+      74% 99.83%,
+      68% 91%,
+      103.8% 20.26%,
+      100% 99.8%;
     color: #fff;
     padding-block-end: 3.5rem;
     padding-block-start: 3rem;
@@ -196,9 +204,17 @@
         rgba(255, 255, 255, 0) 100%
       ),
       linear-gradient(266deg, #044f66, #022935);
-    background-position: top right, top right 37.7%, top left 50%, right center;
+    background-position:
+      top right,
+      top right 37.7%,
+      top left 50%,
+      right center;
     background-repeat: no-repeat;
-    background-size: 50% 100%, 20% 100%, 100% 100%, cover;
+    background-size:
+      50% 100%,
+      20% 100%,
+      100% 100%,
+      cover;
 
     @media (max-width: $breakpoint-medium) {
       background: #f0f5f7;
@@ -225,9 +241,15 @@
         rgba(255, 255, 255, 0) 100%
       ),
       linear-gradient(266deg, #e9f3f7, #e9f3f7);
-    background-position: top right, bottom left, top left;
+    background-position:
+      top right,
+      bottom left,
+      top left;
     background-repeat: no-repeat;
-    background-size: 40% 100%, 80% 60%, 100% 100%;
+    background-size:
+      40% 100%,
+      80% 60%,
+      100% 100%;
 
     @media (max-width: $breakpoint-medium) {
       background: rgb(255, 255, 255);
