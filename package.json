@@ -18,20 +18,20 @@
     "test": "yarn run lint-scss && yarn run lint-python && yarn run test-python"
   },
   "dependencies": {
-    "@canonical/cookie-policy": "3.4.0",
-    "@canonical/global-nav": "3.2.4",
-    "autoprefixer": "10.4.14",
-    "concurrently": "8.0.1",
+    "@canonical/cookie-policy": "3.5.0",
+    "@canonical/global-nav": "3.6.1",
+    "autoprefixer": "10.4.16",
+    "concurrently": "8.2.1",
     "postcss": "8.4.31",
     "postcss-cli": "10.1.0",
-    "prettier": "2.8.8",
-    "sass": "1.62.1",
-    "stylelint": "15.10.1",
+    "prettier": "3.0.3",
+    "sass": "1.69.3",
+    "stylelint": "15.10.3",
     "stylelint-config-prettier": "9.0.5",
-    "stylelint-config-recommended-scss": "11.0.0",
+    "stylelint-config-recommended-scss": "13.0.0",
     "stylelint-order": "6.0.3",
-    "stylelint-prettier": "3.0.0",
-    "vanilla-framework": "4.1.0",
+    "stylelint-prettier": "4.0.2",
+    "vanilla-framework": "4.4.0",
     "watch-cli": "0.2.3"
   }
 }
