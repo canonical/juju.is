@@ -14,6 +14,7 @@ $breakpoint-navigation-threshold: 900px;
 
 // import cookie policy
 @import "@canonical/cookie-policy/build/css/cookie-policy";
+@import "@canonical/discourse-rad-parser/build/css/discourse-rad-parser";
 @import "patterns_docs";
 @import "hljs";
 
