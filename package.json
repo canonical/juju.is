@@ -6,9 +6,10 @@
     "watch": "watch -p 'static/sass/**/*.scss' -c 'yarn run build'",
     "build": "yarn run build-css && yarn run build-js",
     "build-css": "sass static/sass/styles.scss:static/css/styles.css  --load-path=node_modules --style=compressed && postcss --use autoprefixer --no-map --replace 'static/css/**/*.css'",
-    "build-js": "yarn run build-global-nav && yarn run build-cookie-policy",
+    "build-js": "yarn run build-global-nav && yarn run build-cookie-policy && yarn run copy-discourse-rad-parser",
     "build-global-nav": "mkdir -p static/js/build/global-nav && cp node_modules/@canonical/global-nav/dist/global-nav.js static/js/build/global-nav",
     "build-cookie-policy": "mkdir -p static/js/build/cookie-policy && cp node_modules/@canonical/cookie-policy/build/js/cookie-policy.js static/js/build/cookie-policy",
+    "copy-discourse-rad-parser": "mkdir -p static/js/build/discourse-rad-parser && cp -a node_modules/@canonical/discourse-rad-parser/build/js/. static/js/build/discourse-rad-parser",
     "format-python": "black --line-length 79 webapp",
     "lint-python": "flake8 webapp tests && black --check --line-length 79 webapp tests",
     "lint-scss": "stylelint static/**/*.scss",
@@ -19,6 +20,7 @@
   },
   "dependencies": {
     "@canonical/cookie-policy": "3.5.0",
+    "@canonical/discourse-rad-parser": "1.0.1",
     "@canonical/global-nav": "3.6.1",
     "autoprefixer": "10.4.16",
     "concurrently": "8.2.1",
@@ -33,5 +35,8 @@
     "stylelint-prettier": "4.0.2",
     "vanilla-framework": "4.4.0",
     "watch-cli": "0.2.3"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
