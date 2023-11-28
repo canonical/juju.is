@@ -273,3 +273,15 @@ html {
 .u-no-hover:hover {
   text-decoration: none;
 }
+
+.hero-actions {
+  @media screen and (min-width: $breakpoint-small) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.github-buttons {
+  margin-bottom: $sp-medium;
+}
