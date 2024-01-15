@@ -6,7 +6,6 @@
 $color-accent-background: #f0f5f7;
 $color-accent: #e95420;
 $breakpoint-medium: 619px;
-$breakpoint-navigation-threshold: 900px;
 
 @import "vanilla-framework/scss/vanilla";
 
@@ -15,10 +14,8 @@ $breakpoint-navigation-threshold: 900px;
 // import cookie policy
 @import "@canonical/cookie-policy/build/css/cookie-policy";
 @import "@canonical/discourse-rad-parser/build/css/discourse-rad-parser";
-@import "patterns_docs";
 @import "hljs";
 
-@include juju-docs;
 // Local patterns
 @import "patterns_cards";
 
@@ -74,6 +71,12 @@ $breakpoint-navigation-threshold: 900px;
     font-weight: 400;
   }
 }
+
+.p-navigation>.row {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 
 .u-hide--x-large {
   @media only screen and (min-width: $grid-max-width) {
@@ -284,4 +287,13 @@ html {
 
 .github-buttons {
   margin-bottom: $sp-medium;
+}
+
+// TODO: to be removed when properly fixed on Vanilla side
+// https://github.com/canonical/vanilla-framework/issues/4898
+@media screen and (min-width: $breakpoint-navigation-threshold) {
+  // align navigation items with grid in docs layout
+  .l-docs__subgrid .p-navigation__row {
+    padding-left: 0.5rem;
+  }
 }

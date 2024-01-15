@@ -65,11 +65,13 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KCMZ" height="0" width="0" style="display: none; visibility: hidden;"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  {% include "partials/_navigation.html" %}
+  {% block body %}
+    {% include "partials/_navigation.html" %}
 
-  {% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 
-  {% include "footer.html" %}
+    {% include "footer.html" %}
+  {% endblock body %}
 
   <div class="u-hide" id="contact-form-container" data-form-location="/get-in-touch" data-form-id="1337" data-lp-id="2313" data-return-url="http://juju.is/thank-you" data-lp-url=""></div>
   <script src="{{ versioned_static('js/dynamic-contact-form.js') }}"></script>
