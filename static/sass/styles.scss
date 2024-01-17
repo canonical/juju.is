@@ -72,9 +72,8 @@ $breakpoint-medium: 619px;
   }
 }
 
-.p-navigation>.row {
+body:not(.docs) .p-navigation__banner {
   padding-left: 0;
-  padding-right: 0;
 }
 
 
