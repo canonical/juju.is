@@ -1,3 +1,4 @@
+{% macro footer_contents() %}
 <footer class="p-strip--dark footer">
   <div class="p-section">
     <div class="row u-vertically-center">
@@ -119,3 +120,14 @@
     </div>
   </div>
 </footer>
+{% endmacro%}
+
+{% if is_docs %}
+<div class="p-strip--dark footer l-docs__subgrid">
+  <div class="l-docs__main">
+    {{ footer_contents() }}
+  </div>
+</div>
+{% else %}
+{{ footer_contents() }}
+{% endif %}
