@@ -72,10 +72,11 @@ $breakpoint-medium: 619px;
   }
 }
 
+// TODO: to be removed when fixed in Vanilla
+// https://github.com/canonical/vanilla-framework/issues/4947
 body:not(.docs) .p-navigation__banner {
   padding-left: 0;
 }
-
 
 .u-hide--x-large {
   @media only screen and (min-width: $grid-max-width) {
@@ -286,13 +287,4 @@ html {
 
 .github-buttons {
   margin-bottom: $sp-medium;
-}
-
-// TODO: to be removed when properly fixed on Vanilla side
-// https://github.com/canonical/vanilla-framework/issues/4898
-@media screen and (min-width: $breakpoint-navigation-threshold) {
-  // align navigation items with grid in docs layout
-  .l-docs__subgrid .p-navigation__row {
-    padding-left: 0.5rem;
-  }
 }
