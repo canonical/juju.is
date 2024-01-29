@@ -6,7 +6,6 @@
 $color-accent-background: #f0f5f7;
 $color-accent: #e95420;
 $breakpoint-medium: 619px;
-$breakpoint-navigation-threshold: 900px;
 
 @import "vanilla-framework/scss/vanilla";
 
@@ -15,10 +14,8 @@ $breakpoint-navigation-threshold: 900px;
 // import cookie policy
 @import "@canonical/cookie-policy/build/css/cookie-policy";
 @import "@canonical/discourse-rad-parser/build/css/discourse-rad-parser";
-@import "patterns_docs";
 @import "hljs";
 
-@include juju-docs;
 // Local patterns
 @import "patterns_cards";
 
@@ -73,6 +70,12 @@ $breakpoint-navigation-threshold: 900px;
   &--close {
     font-weight: 400;
   }
+}
+
+// TODO: to be removed when fixed in Vanilla
+// https://github.com/canonical/vanilla-framework/issues/4947
+body:not(.docs) .p-navigation__banner {
+  padding-left: 0;
 }
 
 .u-hide--x-large {
