@@ -1286,7 +1286,16 @@ postcss-value-parser@^4.2.0:
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz#723c09920836ba6d3e5af019f92bc0971c02e514"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss@8.4.33, postcss@^8.4.32, postcss@^8.4.33:
+postcss@8.4.35:
+  version "8.4.35"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.35.tgz#60997775689ce09011edf083a549cea44aabe2f7"
+  integrity sha512-u5U8qYpBCpN13BsiEB0CbR1Hhh4Gc0zLFuedrHJKMctHCHAGrMdG0PRM/KErzAL3CU6/eckEtmHNB3x6e3c0vA==
+  dependencies:
+    nanoid "^3.3.7"
+    picocolors "^1.0.0"
+    source-map-js "^1.0.2"
+
+postcss@^8.4.32, postcss@^8.4.33:
   version "8.4.33"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.33.tgz#1378e859c9f69bf6f638b990a0212f43e2aaa742"
   integrity sha512-Kkpbhhdjw2qQs2O2DGX+8m5OVqEcbB9HRBvuYM9pgrjEFUg30A9LmXNlTAUj4S9kgtGyrMbTzVjH7E+s5Re2yg==
@@ -1302,10 +1311,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@3.2.4:
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.2.4.tgz#4723cadeac2ce7c9227de758e5ff9b14e075f283"
-  integrity sha512-FWu1oLHKCrtpO1ypU6J0SbK2d9Ckwysq6bHj/uaCP26DxrPpppCLQRGVuqAxSTvhF00AcvDRyYrLNW7ocBhFFQ==
+prettier@3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.2.5.tgz#e52bc3090586e824964a8813b09aba6233b28368"
+  integrity sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==
 
 pretty-hrtime@^1.0.3:
   version "1.0.3"
@@ -1539,10 +1548,10 @@ stylelint-scss@^6.0.0:
     postcss-selector-parser "^6.0.13"
     postcss-value-parser "^4.2.0"
 
-stylelint@16.2.0:
-  version "16.2.0"
-  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-16.2.0.tgz#60678f64d7660350fdd06415fd449f332b4fcbf6"
-  integrity sha512-gwqU5AkIb52wrAzzn+359S3NIJDMl02TXLUaV2tzA/L6jUdpTwNt+MCxHlc8+Hb2bUHlYVo92YeSIryF2gJthA==
+stylelint@16.2.1:
+  version "16.2.1"
+  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-16.2.1.tgz#895d6d42523c5126ec0895f0ca2a58febeb77e89"
+  integrity sha512-SfIMGFK+4n7XVAyv50CpVfcGYWG4v41y6xG7PqOgQSY8M/PgdK0SQbjWFblxjJZlN9jNq879mB4BCZHJRIJ1hA==
   dependencies:
     "@csstools/css-parser-algorithms" "^2.5.0"
     "@csstools/css-tokenizer" "^2.2.3"
@@ -1702,10 +1711,10 @@ vanilla-framework@4.0.0:
   resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.0.0.tgz#a2fee9bd9763ebd6932b764f9d66484dc177d4cc"
   integrity sha512-fiPnmaTUe15l5MRNJ6IsiJ8qiunfmgtLETOFltaYiE/bQKL7xTI+riBak2iygBKeF1y0Gi/GxUNt4hyb6xDPKA==
 
-vanilla-framework@4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.6.0.tgz#61b93a2197eed0d869f85e1014dd9e67bacc355e"
-  integrity sha512-pRjJknqsL4CLA+ovLMlg7MhVh9nIcu7Ev81Z62gh3hAzUDIiZOUI2W9+B16XWv4QFmFxEOgQcfVi2cezLun9SQ==
+vanilla-framework@4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.7.0.tgz#93934d1df3b99b4d58f96d5dbc8f47c32ae660c2"
+  integrity sha512-jhckCsy/e+nZI1qh5ZVH2bj3YZqpYLxnhovo8W/JgzhjQ2LMDI1L1vaw8pjMLt9G4sZqHB/S7KybGQgbIp9phQ==
 
 verbalize@^0.1.2:
   version "0.1.2"
