@@ -1,0 +1,320 @@
+{% extends 'base.html' %}
+
+{% block meta_title %}Operator Day 7th edition{% endblock %}
+
+{% block meta_description %}Operator Day at KubeCon NA 2023 covered the entire journey of an engineering team, exploring software operators with hands-on sessions.{% endblock %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1ZFRGkZ4vvvMVOgq4MIsBuebHsA7Y0rTyiZ76qjQpOAg/edit#{% endblock meta_copydoc %}
+
+{% block content %}
+<section class="p-strip--blue is-dark is-shallow">
+  <div class="u-fixed-width">
+    <h1>Operator Day 7th edition</h1>
+    <h3>KubeCon NA 2023 - November 6th</h3>
+  </div>
+</section>
+<section class="p-strip">
+  <div class="row--50-50">
+    <div class="col">
+      <p>The 7th Operator Day covered the entire journey of an engineering team, exploring software operators with hands-on sessions. Based on feedback from previous attendees, we covered the step-by-step creation of an operator for Juju, called a charm, using the Charm SDK. The programme included:</p>
+      <ul>
+        <li>How to write the first lines of code to create a charm</li>
+        <li>How to extend the charm with certificate management, single sign-on and observability</li>
+        <li>How to deploy and publish the charm to MicroK8s on AWS</li>
+      </ul>
+      <p>The presentations showed the path from zero to a production-grade charm ready for Juju. Because the sessions did not focus on slides but on showing interactions within the terminal, IDEs and web browsers, everyone can follow the steps in their own environments. The code is freely accessible on Github.</p>
+    </div>
+    <div class="col">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/7da8d157-image24.png",
+        alt="Operator Day EU 2024",
+        width="636",
+        height="333",
+        hi_def=True,
+        loading="auto|lazy"
+       ) | safe
+      }}
+    </div>
+  </div>
+  <div class="u-fixed-width">
+    <h2>Agenda</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td colspan="3"><b>Part 1 – Introduction</b></td>
+        </tr>
+        <tr>
+          <td width="200px">09:00 - 09:15</td>
+          <td><b>Level up software operations with Juju</b><br />
+          <i>Cédric Gégout and Mark Shuttleworth</i><hr />
+          Open source adoption is growing. But adopting open source goes far beyond installing packages. Maintaining software built with open source components requires best-in-class operations, especially in enterprise environments with stringent resiliency and availability requirements.<br/>
+Mark Shuttleworth (founder of Canonical, the company behind Ubuntu) and Cedric Gegout (VP of Product Management) will discuss the challenges of operating software at scale, how Juju helps alleviate those challenges and our long-term product vision.</td>
+        </tr>
+        <tr>
+          <td width="200px">09:15 - 09:25</td>
+          <td><b>The charm-ing story of Operator Inc.</b><br />
+          <i>Operator Inc.</i><hr />
+          Get to know Operator Inc, a typical software vendor as it navigates the challenges of operating its solutions on a multi-cloud environment and finds a solution with Juju and charms.</td>
+        </tr>
+        <tr>
+          <td colspan="3"><b>Part 2 – See great examples!</b></td>
+        </tr>
+        <tr>
+          <td width="200px">09:25 - 10:10</td>
+          <td><b>Postgres - better with a charm</b><br />
+          <i>Mohamed Nsiri</i><hr />
+          PostgreSQL is one of the most popular open source databases for use cases like online transaction processing and analytics. Deploying and operating a highly available, resilient PostgreSQL cluster requires integrating several components that must be carefully orchestrated.<br/>
+The PostgreSQL charm built by experts DBAs, reliably automates the deployment, maintenance and upgrades of your databases across private and public clouds. This presentation shows how easy it is actually to carry out complex operations with charms.</td>
+        </tr>
+        <tr>
+          <td width="200px">10:10 - 10:40</td>
+          <td><b>Operate AI pipelines at scale with Canonical MLOps</b><br />
+          <i>Kimonas Sotirchos</i><hr />
+          Running AI at scale requires large applications made of smaller services. They require multiple steps for setup and, consequently, several operational tasks to run at optimal performance.<br />
+Applications such as Kubeflow, benefit from having simplified and automated lifecycle management, as well as integrations with other machine learning tooling such as MLFlow. We will show how charms support  AI solutions at scale.</td>
+        </tr>
+        <tr>
+          <td width="200px">10:40 - 11:10</td>
+          <td><b>Bring your workloads to Kubernetes: the “charming” story of Spark</b><br />
+          <i>Enrico Deusebio</i><hr />
+          Apache Spark is a popular workload that many organisations are finding challenging to transition to Kubernetes.<br />
+Join this session to learn how the Charmed Spark solution can help provide distributed data processing workloads to Kubernetes.</td>
+        </tr>
+        <tr>
+          <td colspan="3"><b>Part 3 – Hands-on charm development for Operator Inc.</b></td>
+        </tr>
+        <tr>
+          <td width="200px">11:10 - 12:10</td>
+          <td><b>Create a Charm in 50 minutes</b><br />
+          <i>Carl Csaposs (they/them)</i><hr />
+          See how Operator Inc creates their first charm. This will be a hands-on workshop. You will gain an understanding of Juj and charms, their structure and deployment.</td>
+        </tr>
+        <tr>
+          <td width="200px">12:10 - 12:40</td>
+          <td><b>Using certificate providers with Charms</b><br />
+          <i>Ghislain Bourgeois</i><hr />
+          Using certificate-based encryption for communications is mandatory in most production deployments. Therefore, the charms covering certificate providers are a fundamental element of the operations ecosystem. This presentation shows hands-on how to integrate a certificate provider with the charm for Operator Inc.</td>
+        </tr>
+        <tr>
+          <td width="200px">12:40 - 13:00</td>
+          <td><b>Enterprise state-of-the-art SSO with Azure AD</b><br />
+          <i>Massimiliano Gori and Natalia Nowakowska</i><hr />
+          Configuring SSO is a critical, yet complicated and error-prone activity that can lead to data breaches if done incorrectly.<br />
+In this session we will show how the Canonical identity platform simplifies and automates the process of adding a centralised identity provider to all applications, irrespective of their security model.</td>
+        </tr>
+        <tr>
+          <td width="200px">13:00 - 13:25</td>
+          <td><b>React before your users experience issues: add observability</b><br />
+          <i>Luca Bello</i><hr />
+          Predicting failures is key to achieving resilient, reliable operations. With the Canonical Observability Stack, this has never been easier.<br />
+In this hands-on session you will see how to integrate Operator Inc. solution with Juju’s best-in-class, open-source observability tools (Prometheus, Grafana, Alert Manager).</td>
+        </tr>
+        <tr>
+          <td width="200px">13:25 - 13:55</td>
+          <td><b>Infrastructure-as-Code: Terraform your applications deployment</b><br />
+          <i>Tom Haddon</i><hr />
+          Terraform is one of the most popular technologies for implementing Infrastructure-as-code (IaaC). The Juju Terraform provider allows you to manage applications in the same way as  infrastructure. Learn  how to create a plan for the charms of Operator Inc.</td>
+        </tr>
+        <tr>
+          <td width="200px">13:55 - 14:15</td>
+          <td><b>Control your distributed workloads – Juju management at scale with JAAS</b><br />
+          <i>Alexander Kilroy</i><hr />
+          In a real production scenario applications are deployed on multiple clouds to meet resiliency requirements. JAAS is the component that enables centralised management to distributed juju controllers, allowing you to easily manage multi/hybrid cloud environments.<br />
+In this session we will demonstrate how Operator Inc can use JAAS to scale its deployments to multiple clouds and operate them with a web dashboard and cli client.</td>
+        </tr>
+        <tr>
+          <td colspan="3"><b>Part 4 – Be part of the charm ecosystem</b></td>
+        </tr>
+        <tr>
+          <td width="200px">14:15 - 14:35</td>
+          <td><b>Be part of it: how to join the ecosystem</b><br />
+          <i>Michael Jaeger</i><hr />
+          How can you publish charms?<br />
+Canonical provides guidelines and a quality framework identifying different stages of maturity. This session explains how you can build a great charm.</td>
+        </tr>
+        <tr>
+          <td colspan="3"><b>Part 5 – Summary and Conclusions</b></td>
+        </tr>
+        <tr>
+          <td width="200px">14:35 - 14:40</td>
+          <td><b>The big picture for Operator Inc.</b><br />
+          <i>Cédric Gégout</i><hr />
+          We’re at the end of our journey: Operator inc has created a charm, integrated and extended it with the necessary elements for use in production.<br />
+The CEO of Operator Inc. reflects on the initial meeting of this day, and how charms helped the company fulfil its business objectives.</td>
+        </tr>
+        <tr>
+          <td width="200px">14:40 - 14:45</td>
+          <td><b>Closing Remarks</b><br />
+          <i>Cédric Gégout</i></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Speakers</h2>
+    <ul class="p-matrix">
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/kubecon-na-2023/Mark_Shuttleworth.jpeg" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Mark Shuttleworth</h3>
+              <p class="p-media-object__content">Founder & CEO, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/kubecon-na-2023/Mohamed_Nsiri.png" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Mohamed Nsiri</h3>
+              <p class="p-media-object__content">Product Manager, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/kubecon-na-2023/Enrico_Deusebio.png" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Enrico Deusebio</h3>
+              <p class="p-media-object__content">Engineering Manager, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/kubecon-na-2023/Kimonas_Sotirchos.png" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Kimonas Sotirchos</h3>
+              <p class="p-media-object__content">Engineering Manager, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/kubecon-na-2023/Carl_Csaposs.jpg" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Carl Csaposs</h3>
+              <p class="p-media-object__content">Software Engineer, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/kubecon-na-2023/Ghislain_Burgeois.jpg" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Ghislain Bourgeois</h3>
+              <p class="p-media-object__content">Senior Engineer, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/kubecon-na-2023/Massimiliano_Gori.png" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Massimiliano Gori</h3>
+              <p class="p-media-object__content">Product Manager, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/kubecon-na-2023/Natalia_Nowakowska.png" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Natalia Nowakowska</h3>
+              <p class="p-media-object__content">Software Engineer, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/kubecon-na-2023/Luca_Bello.png" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Luca Bello</h3>
+              <p class="p-media-object__content">Software Engineer, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/kubecon-na-2023/Tom_Haddon.png" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Tom Haddon</h3>
+              <p class="p-media-object__content">Engineering Manager, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/kubecon-na-2023/Alexander_Kilroy.png" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Alexander Kilroy</h3>
+              <p class="p-media-object__content">Software Engineer, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/kubecon-na-2023/Michael_Jaeger.png" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Michael Jaeger</h3>
+              <p class="p-media-object__content">Product Manager, Canonical</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matrix__content">
+          <div class="p-media-object">
+            <img src="/static/images/operator-day/kubecon-na-2023/Cedric_Gegout.png" class="p-media-object__image is-round" alt="">
+            <div class="p-media-object__details">
+              <h3 class="p-media-object__title">Cédric Gégout</h3>
+              <p class="p-media-object__content">VP of Product Management</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="p-matrix__item"></li>
+      <li class="p-matrix__item"></li>
+    </ul>
+
+    <h2>Recordings</h2>
+    <div class="u-embedded-media">
+      <iframe
+        class="u-embedded-media__element"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/videoseries?si=q24sWl6xVPhyPdU_&amp;list=PLwFSk464RMxmdkj92EtrMXhG0caGtQxc8"
+        title="Operator Day NA 2023 Playlist"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+
+    <h2>Links</h2>
+    <p>Link to presented source code and terraform plans on GitHub: <a href="https://github.com/orgs/operatorinc/repositories">https://github.com/orgs/operatorinc/repositories</a></p>
+    <p>Event page: <a href="https://app.myonvent.com/event/operator-day">https://app.myonvent.com/event/operator-day</a></p>
+    <p>Announcement: <a href="https://ubuntu.com/blog/operator-day-kubecon-na-2023">https://ubuntu.com/blog/operator-day-kubecon-na-2023</a></p>
+    <p>KubeCon NA 2023 agenda: <a href="https://sched.co/1R5Fp">https://sched.co/1R5Fp</a></p>
+  </div>
+</section> {% endblock %}
