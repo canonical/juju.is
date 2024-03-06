@@ -60,7 +60,7 @@ def get_latest_versions():
     try:
         result = {}
 
-        # get dashboard verion
+        # get dashboard version
         dashboard_response = requests.get(
             "/".join(
                 [
