@@ -184,12 +184,12 @@
   resolved "https://registry.yarnpkg.com/@canonical/discourse-rad-parser/-/discourse-rad-parser-1.0.1.tgz#a46bc527bdd07bbab5fc5a44f7620744723222e7"
   integrity sha512-P/q9OYdOF3/sYbsfWfzZrjzhBKnhCQo6ADYDJlMASEXJs1b6U2KxC3ul8RD4DBgzOqEKoALUAB1jutsYVUNP2g==
 
-"@canonical/global-nav@3.6.2":
-  version "3.6.2"
-  resolved "https://registry.yarnpkg.com/@canonical/global-nav/-/global-nav-3.6.2.tgz#ee12cf7ebbf212c724a4652f1f4643ac5c4c461c"
-  integrity sha512-ZIC3OhSpDINAHfuDtX/1adrSiWl7qdYC5mqdYVt/2gyH3C8ffz2QmELpkZamSQ6qxYsGjVVzmddFJVP/W8vxaw==
+"@canonical/global-nav@^3.6.4":
+  version "3.6.4"
+  resolved "https://registry.yarnpkg.com/@canonical/global-nav/-/global-nav-3.6.4.tgz#347401d20a01c51a9d0024f7867ddebd3b407dcf"
+  integrity sha512-CEmFtHOdxAG8kFCOBcTR08u/SbwIVZQ1O0evNa/X+KyS7F9YrI6TXBHO3oLNO8Rv1WZUSMeh1BPhv7ChKfojgQ==
   dependencies:
-    vanilla-framework "4.0.0"
+    vanilla-framework "4.9.0"
 
 "@csstools/css-parser-algorithms@^2.5.0":
   version "2.5.0"
@@ -1706,10 +1706,10 @@ util-deprecate@^1.0.2:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
-vanilla-framework@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.0.0.tgz#a2fee9bd9763ebd6932b764f9d66484dc177d4cc"
-  integrity sha512-fiPnmaTUe15l5MRNJ6IsiJ8qiunfmgtLETOFltaYiE/bQKL7xTI+riBak2iygBKeF1y0Gi/GxUNt4hyb6xDPKA==
+vanilla-framework@4.9.0:
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.9.0.tgz#7566b42a22c2394ea1d7ea843d24ec305446cb3e"
+  integrity sha512-iTmvqWlsX0ic69VZ1sR9NPQtYRR9+iM679HZCl7SDQhMQSsEeJEQ6Ejjen3JN5a7YxiYmeIhxaLlmC4rExRT1w==
 
 vanilla-framework@^4.10.0:
   version "4.10.0"
