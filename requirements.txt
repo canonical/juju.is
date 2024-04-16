@@ -9,5 +9,5 @@ black==24.1.1
 flake8==7.0.0
 requests==2.31.0
 semver==3.0.2
-cachetools==5.3.2
+cachetools==5.3.3
 flask-cors==4.0.0
