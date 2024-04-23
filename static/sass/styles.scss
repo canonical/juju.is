@@ -292,3 +292,9 @@ html {
 .contact-us .p-button--positive, .p-button {
   display: inline-block;
 }
+
+.middle-page-tabs {
+  @media screen and (min-width: $breakpoint-large) {
+    padding-left: 20.3rem;
+  }
+}
