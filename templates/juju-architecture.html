@@ -8,12 +8,12 @@
 {% set selected_tab='juju-architecture' %}
 
 {% block how_juju_works_content %}
-<section class="p-strip u-no-padding--bottom u-no-padding--top">
-  <div class="row">
-    <div class="col-6">
+<section class="p-section">
+  <div class="row--50-50">
+    <div class="col">
       <h1 class="p-heading--2">Juju high-level architecture</h1>
     </div>
-    <div class="col-6">
+    <div class="col">
       <p class="p-heading--5">Juju provides a declarative, model-driven, and interactive way to install, provision, maintain, update, upgrade, and integrate applications on and across Kubernetes, Linux containers, virtual machines, and bare metal machines, on public or private cloud.</p>
       <p>The following diagram provides an overview of the high level architecture of a Juju deployment and it describes the key components of the system. You can find a more detailed explanation of all the components you find in this page in the <a href="/docs/juju/reference">reference section</a> of the Juju documentation.</p>
     </div>
@@ -63,7 +63,7 @@
         </ul>
       </div>
     </div>
-    <div class="col-9 col-start-large-7">
+    <div class="col-6 col-start-large-7">
       <div class="row" id="cloud">
         <p>A cloud (or backing cloud) is a resource that provides machines (instances), and possibly storage, in order for application units to be deployed upon them. This includes public clouds such as Amazon Web Services, Google Compute Engine, Microsoft Azure and Kubernetes as well as private OpenStack-based clouds.</p>
         <p>Juju works on most cloud environments. Juju can also make use of environments which are not clouds per se, by treating them as a cloud. MAAS and LXD fit into this last category. Because of this, in Juju a cloud is sometimes also called a <em>substrate</em>.</p>
@@ -125,15 +125,13 @@
     </div>
   </div>
 </section>
-<section class="p-strip">
-  <div class="u-fixed-width">
-    <hr class="p-rule">
-  </div>
-  <div class="row">
-    <div class="col-6">
+<section class="p-section">
+  <div class="u-fixed-width"><hr class="p-rule"></div>
+  <div class="row--50-50">
+    <div class="col">
       <h1 class="p-heading--2">A single tool to deploy and manage apps across VMs, Kubernetes, bare metal and cloud</h1>
     </div>
-    <div class="col-6">
+    <div class="col">
       <p class="p-heading--5">Flexibility and portability are at the heart of Juju</p>
       <p>Juju and charms support multiple cloud backends, giving you the choice to deploy your applications to the most cost effective, resource-rich or commercially suitable clouds, and then connect them in a way that suits your application model.</p>
       <p>In addition Juju gives you flexibility in how to orchestrate your deployment. You can manage everything from a single, centralised Juju controller, or you can have multiple controllers installed on each layer of the cloud.</p>
@@ -151,13 +149,13 @@
       }}
   </div>
 </section>
-<section class="p-strip u-no-padding--top">
+<section class="p-section">
   <div class="u-fixed-width"><hr class="p-rule"></div>
-  <div class="row">
-    <div class="col-6">
+  <div class="row--50-50">
+    <div class="col">
       <h1 class="p-heading--2">Juju on k8s</h1>
     </div>
-    <div class="col-6">
+    <div class="col">
       <p class="p-heading--5">When applications are deployed on Kubernetes every instance of a workload runs in a pod with its own container and next to the Juju unit agent.</p>
       <p>The model corresponds to a namespace and the applications are generally deployed as StatefulSets.</p>
       <p>The Juju agent talks to a component called Pebble in order to interact with the workload. Pebble is a daemon that allows the management of non-system processes independently from the system services.</p>
@@ -176,16 +174,15 @@
       }}
   </div>
 </section>
-<section class="p-strip u-no-padding--top">
+<section class="p-section">
   <div class="u-fixed-width">
     <hr class="p-rule">
   </div>
-  <div class="row">
-    <div class="col-6">
+  <div class="row--50-50">
+    <div class="col">
       <h1 class="p-heading--2">Juju on VMs and system containers</h1>
     </div>
-    <div class="col-6">
-      <p class="p-heading--5">Flexibility and portability are at the heart of Juju</p>
+    <div class="col">
       <p>In the case of machines the charm runs in a container, alongside the juju agent.</p>
       <p>The workload is deployed alongside the charm code and juju agent and it is directly controlled by the unit workers.</p>
     </div>
@@ -202,33 +199,48 @@
       }}
   </div>
 </section>
-<section class="p-strip u-no-padding--top">
+<section class="p-section">
   <div class="u-fixed-width">
     <hr class="p-rule">
   </div>
-  <div class="row" style="padding-bottom: 2rem;">
-    <div class="col-6">
-      <h1 class="p-heading--2">Read about these next:</h1>
+  <section class="p-section--shallow">
+    <div class="row--50-50">
+      <div class="col">
+        <h1 class="p-heading--2">Read about these next:</h1>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="u-fixed-width col-start-large-4"><hr class="p-rule--muted"></div>
-    <div class="col-3 col-start-large-4">
-      <a href="/charms-architecture" class="p-heading--5">Charm architecture</a>
+    <div class="col"></div>
+  </section>
+  <section class="p-section--shallow">
+    <div class="row">
+      <div class="col-start-large-4">
+        <hr class="p-rule--muted">
+      </div>
     </div>
-    <div class="col-9 col-start-large-7">
-      <p>Charm architecture encapsulates app management, with charms automating lifecycle actions via a controller, responsive to both admin commands and system events.</p>
+    <div class="row">
+      <div class="col-3 col-start-large-4">
+        <a href="/charms-architecture" class="p-heading--5">Charm architecture</a>
+      </div>
+      <div class="col-6 col-start-large-7">
+        <p>Charm architecture encapsulates app management, with charms automating lifecycle actions via a controller, responsive to both admin commands and system events.</p>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="u-fixed-width col-start-large-4" style="padding-top: 2rem;"><hr class="p-rule--muted"></div>
-    <div class="col-3 col-start-large-4">
-      <a href="/integrations" class="p-heading--5">Integrations</a>
+  </section>
+  <section class="p-section--shallow">
+    <div class="row">
+      <div class="col-start-large-4">
+        <hr class="p-rule--muted">
+      </div>
     </div>
-    <div class="col-9 col-start-large-7">
-      <p>Juju integrations are virtual connections between charms to allow the exchange of information.</p>
+    <div class="row">
+      <div class="col-3 col-start-large-4">
+        <a href="/integrations" class="p-heading--5">Integrations</a>
+      </div>
+      <div class="col-6 col-start-large-7">
+        <p>Juju integrations are virtual connections between charms to allow the exchange of information.</p>
+      </div>
     </div>
-  </div>
+  </section>
 </section>
 <script>
   const panelLinks = document.querySelectorAll("[data-js='panel-link']");

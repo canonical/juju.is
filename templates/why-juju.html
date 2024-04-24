@@ -8,9 +8,9 @@
 {% set selected_tab='why-juju' %}
 
 {% block how_juju_works_content %}
-<section class="p-strip u-no-padding--bottom u-no-padding--top">
-  <div class="row">
-    <div class="col-6">
+<section class="p-section u-no-padding--top">
+  <div class="row--50-50">
+    <div class="col">
       <h1 class="p-heading--2">Shift from application management to distributed system management</h1>
       {{ image(
           url="https://assets.ubuntu.com/v1/7e656757-Shift%20from%20application%20management.svg",
@@ -25,20 +25,20 @@
         ) | safe
       }}
     </div>
-    <div class="col-6">
+    <div class="col">
       <p class="p-heading--5">Applications never run in isolation. Adding a workload to production requires adding essential services like observability, patching, identity, secret management, and many more</p>
       <p>But it doesn't stop there. 1000 days from now this complex system needs to work just as well as it does today. This means that lifecycle events like upgrades, migrations or scaling have to work seamlessly without downtime.</p>
       <p>Without a comprehensive understanding of how to deploy, integrate and operate software, there is often too much perceived risk to adopt it in large scale, production settings. This is especially true for open source software, where operational knowledge is concentrated in a small number of hard-to-recruit individuals.</p>
     </div>
   </div>
 </section>
-<section class="p-strip u-no-padding--bottom">
+<section class="p-section">
   <div class="u-fixed-width"><hr class="p-rule"></div>
-  <div class="row">
-    <div class="col-6">
+  <div class="row--50-50">
+    <div class="col">
       <h1 class="p-heading--2">It's time to open source the operations code</h1>
     </div>
-    <div class="col-6">
+    <div class="col">
       <p class="p-heading--5">To unlock the true potential of open source, we must normalise open sourcing not just the application code, but also the operational frameworks required to take the most out of it</p>
       <p>That's where Juju and charms come in.</p>
       <p>Charms take all the domain knowledge required to operate software effectively and distil it into clean, maintainable, testable Python code that can be used across clouds.</p>
@@ -46,7 +46,7 @@
     </div>
   </div>
 </section>
-<section class="p-strip u-no-padding--bottom">
+<section class="p-section">
   <div class="u-fixed-width"><hr class="p-rule"></div>
   <div class="row">
     <div class="col-6">
@@ -54,20 +54,28 @@
     </div>
   </div>
   <div class="row">
-    <div class="u-fixed-width col-start-large-4" style="padding-top: 2rem;"><hr class="p-rule--muted" ></div>
+    <div class="col-start-large-4" style="padding-top: 2rem;">
+      <hr class="p-rule--muted">
+    </div>
+  </div>
+  <div class="row">
     <div class="col-3 col-start-large-4">
       <p class="p-heading--5">Juju, the orchestrator engine</p>
     </div>
-    <div class="col-9 col-start-large-7">
+    <div class="col-6 col-start-large-7">
       <p>Juju is an open source orchestration engine for software operators that enables the deployment, integration and lifecycle management of applications at any scale, on any infrastructure.</p>
     </div>
   </div>
   <div class="row">
-    <div class="u-fixed-width col-start-large-4" style="padding-top: 2rem;"><hr class="p-rule--muted"></div>
+    <div class="col-start-large-4" style="padding-top: 2rem;">
+      <hr class="p-rule--muted">
+    </div>
+  </div>
+  <div class="row">
     <div class="col-3 col-start-large-4">
       <p class="p-heading--5">Charms, the software operators</p>
     </div>
-    <div class="col-9 col-start-large-7">
+    <div class="col-6 col-start-large-7">
       <p>A charm is an operator: business logic encapsulated in reusable software packages that automate every aspect of an application's life.</p>
       <p>Charms are developed with the Charm SDK which comprises the:</p>
       <ul>
@@ -88,16 +96,18 @@
         }}
   </div>
 </section>
-<section class="p-strip u-no-padding--bottom">
+<section class="p-section">
   <div class="u-fixed-width"><hr class="p-rule"></div>
-  <div class="row">
-    <div class="col-8" style="padding-bottom: 2rem;">
-      <h1 class="p-heading--2">What makes juju and charms different?</h1>
+  <section class="p-section--shallow">
+    <div class="row">
+      <div class="col-8">
+        <h1 class="p-heading--2">What makes juju and charms different?</h1>
+      </div>
     </div>
-  </div>
-  <div class="row">
+  </section>
+  <div class="row--50-50">
     <div class="u-fixed-width"><hr class="p-rule--muted"></div>
-    <div class="col-6">
+    <div class="col">
       {{ image(
           url="https://assets.ubuntu.com/v1/e3043619-Automate%20operations%20across%20clouds.png",
           alt="",
@@ -108,14 +118,14 @@
         ) | safe
       }}
     </div>
-    <div class="col-6">
+    <div class="col">
       <p class="p-heading--5">Automate operations across cloud, metal, VMs and Kubernetes</p>
       <p>Charms allow you to use a single codebase to automate the lifecycle management of your system across public clouds, Kubernetes, virtual (VM) and bare metal machines.</p>
     </div>
   </div>
-  <div class="row">
+  <div class="row--50-50">
     <div class="u-fixed-width"><hr class="p-rule--muted"></div>
-    <div class="col-6">
+    <div class="col">
       {{ image(
             url="https://assets.ubuntu.com/v1/cec65d63-Seamless%20integrations%20across%20different%20clouds.png",
             alt="",
@@ -126,14 +136,14 @@
           ) | safe
         }}
     </div>
-    <div class="col-6">
+    <div class="col">
       <p class="p-heading--5">Seamless integrations across different clouds</p>
       <p>Integrations simplify the process of connecting two applications by automatically applying required networking and configuration changes, even if the workloads are deployed across different clouds (e.g. Openstack and AWS).</p>
     </div>
   </div>
-  <div class="row">
+  <div class="row--50-50">
     <div class="u-fixed-width"><hr class="p-rule--muted"></div>
-    <div class="col-6">
+    <div class="col">
       {{ image(
             url="https://assets.ubuntu.com/v1/c62ace02-Lifecycle%20management.png",
             alt="",
@@ -144,19 +154,19 @@
           ) | safe
         }}
     </div>
-    <div class="col-6">
+    <div class="col">
       <p class="p-heading--5">Lifecycle management for your system, not individual applications</p>
       <p>Because applications integrations are a first class citizen in Juju, the system knows how to optimise the lifecycle management of the entire system, rather than individual applications.</p>
     </div>
   </div>
 </section>
-<section class="p-strip u-no-padding--bottom">
+<section class="p-section">
   <div class="u-fixed-width"><hr class="p-rule"></div>
-  <div class="row">
-    <div class="col-6">
+  <div class="row--50-50">
+    <div class="col">
       <h1 class="p-heading--2">How does Juju compare to similar tools</h1>
     </div>
-    <div class="col-6">
+    <div class="col">
       <p class="p-heading--5">Juju's focus is on system lifecycle management</p>
       <p>Most existing tools are focused on solving the problem of deployment or configuration management, while juju's main focus is on Day 2 operations like backup, upgrades, migrations, or scaling.</p>
       <p>Juju integrates well with Terraform, extending its infrastructure as code capabilities to our application modelling framework.</p>
@@ -174,30 +184,45 @@
     }}
   </div>
 </section>
-<section class="p-strip">
+<section class="p-section">
   <div class="u-fixed-width"><hr class="p-rule"></div>
-  <div class="row">
-    <div class="col-6">
-      <h1 class="p-heading--2">Read about these next:</h1>
+  <section class="p-section--shallow">
+    <div class="row--50-50">
+      <div class="col">
+        <h1 class="p-heading--2">Read about these next:</h1>
+      </div>
+      <div class="col"></div>
     </div>
-  </div>
-  <div class="row">
-    <div class="u-fixed-width col-start-large-4" style="padding-top: 2rem;"><hr class="p-rule--muted"></div>
-    <div class="col-3 col-start-large-4">
-      <a href="/juju-architecture" class="p-heading--5">Juju architecture</a>
+  </section>
+  <section class="p-section--shallow">
+    <div class="row">
+      <div class="col-start-large-4">
+        <hr class="p-rule--muted">
+      </div>
     </div>
-    <div class="col-9 col-start-large-7">
-      <p>Juju provides tools to design, deploy and manage large distributed systems across infrastructures at scale with high availability, visibility, access control and cross-cloud functionality.</p>
+    <div class="row">
+      <div class="col-3 col-start-large-4">
+        <a href="/juju-architecture" class="p-heading--5">Juju architecture</a>
+      </div>
+      <div class="col-6 col-start-large-7">
+        <p>Juju provides tools to design, deploy and manage large distributed systems across infrastructures at scale with high availability, visibility, access control and cross-cloud functionality.</p>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="u-fixed-width col-start-large-4" style="padding-top: 2rem;"><hr class="p-rule--muted"></div>
-    <div class="col-3 col-start-large-4">
-      <a href="/charms-architecture" class="p-heading--5">Charm architecture</a>
+  </section>
+  <section class="p-section--shallow">
+    <div class="row">
+      <div class="col-start-large-4">
+        <hr class="p-rule--muted">
+      </div>
     </div>
-    <div class="col-9 col-start-large-7">
-      <p>Charm architecture encapsulates app management, with charms automating lifecycle actions via a controller, responsive to both admin commands and system events.</p>
+    <div class="row">
+      <div class="col-3 col-start-large-4">
+        <a href="/charms-architecture" class="p-heading--5">Charm architecture</a>
+      </div>
+      <div class="col-6 col-start-large-7">
+        <p>Charm architecture encapsulates app management, with charms automating lifecycle actions via a controller, responsive to both admin commands and system events.</p>
+      </div>
     </div>
-  </div>
+  </section>
 </section>
 {% endblock %}

@@ -8,12 +8,12 @@
 {% set selected_tab='integrations' %}
 
 {% block how_juju_works_content %}
-<section class="p-strip u-no-padding--bottom u-no-padding--top">
-  <div class="row">
-    <div class="col-6">
+<section class="p-section">
+  <div class="row--50-50">
+    <div class="col">
       <h1 class="p-heading--2">Integrate applications with a single command</h1>
     </div>
-    <div class="col-6">
+    <div class="col">
       <p class="p-heading--5">Juju and charms greatly simplify the process of connecting applications and managing the lifecycle of your entire system</p>
       <p>Juju Integrations are virtual connections between charms to allow the exchange of information. The Juju controller acts as a mediator for these virtual connections, letting individual applications directly communicate with each other.</p>
       <p>When an integration is created between two applications or across units of the same application, Integration data is persisted to the controller database.</p>
@@ -22,74 +22,84 @@
     </div>
   </div>
 </section>
-<section class="p-strip">
+<section class="p-section">
   <div class="u-fixed-width"><hr class="p-rule"></div>
-  <div class="row">
-    <div class="col-8" style="padding-bottom: 2rem;">
-      <h1 class="p-heading--2">How do integrations work?</h1>
+  <section class="p-section--shallow">
+    <div class="row--50-50">
+      <div class="col">
+        <h1 class="p-heading--2">How do integrations work?</h1>
+      </div>
+      <div class="col"></div>
     </div>
-    <div class="u-fixed-width"><hr class="p-rule--muted"></div>
-  </div>
-  <div class="row">
-    <div class="col-6" style="padding-bottom: 2rem;">
-      {{ image(
-          url="https://assets.ubuntu.com/v1/cc5b7188-Integrations%201.png",
-          alt="",
-          height="173",
-          width="600",
-          hi_def=True,
-          loading="auto",
-        ) | safe
-      }}
+  </section>
+  <section class="p-section--shallow">
+    <div class="row--50-50">
+      <div class="u-fixed-width"><hr class="p-rule--muted"></div>
+      <div class="col">
+        {{ image(
+            url="https://assets.ubuntu.com/v1/cc5b7188-Integrations%201.png",
+            alt="",
+            height="173",
+            width="600",
+            hi_def=True,
+            loading="auto",
+          ) | safe
+        }}
+      </div>
+      <div class="col">
+        <p>All charms contain information about the services they offer or require to operate correctly. You can connect any two applications that:</p>
+        <ul>
+          <li>Have compatible <strong>endpoints</strong> (i.e. requirer with provider, or peer with peer)</li>
+          <li>Implement the same <strong>interface</strong> (i.e. exchange the same set of information)</li>
+        </ul>
+      </div>
     </div>
-    <div class="col-6">
-      <p>All charms contain information about the services they offer or require to operate correctly. You can connect any two applications that:</p>
-      <ul>
-        <li>Have compatible <strong>endpoints</strong> (i.e. requirer with provider, or peer with peer)</li>
-        <li>Implement the same <strong>interface</strong> (i.e. exchange the same set of information)</li>
-      </ul>
+  </section>
+  <section class="p-section--shallow">
+    <div class="row--50-50">
+      <div class="u-fixed-width"><hr class="p-rule--muted"></div>
+      <div class="col">
+        {{ image(
+            url="https://assets.ubuntu.com/v1/a1c6a3fd-Integrations%202.png",
+            alt="",
+            height="340",
+            width="600",
+            hi_def=True,
+            loading="auto",
+          ) | safe
+        }}
+      </div>
+      <div class="col">
+        <p>When your model contains two charms you wish to connect, all you have to do is to run juju integrate from the Juju controller and specify the two charms to be connected.</p>
+      </div>
+      <div class="u-fixed-width"><hr class="p-rule--muted"></div>
     </div>
-    <div class="u-fixed-width"><hr class="p-rule--muted"></div>
-  </div>
-  <div class="row">
-    <div class="col-6" style="padding-bottom: 2rem;">
-      {{ image(
-          url="https://assets.ubuntu.com/v1/a1c6a3fd-Integrations%202.png",
-          alt="",
-          height="340",
-          width="600",
-          hi_def=True,
-          loading="auto",
-        ) | safe
-      }}
+  </section>
+  <section class="p-section--deep">
+    <div class="row--50-50">
+      <div class="col">
+        {{ image(
+            url="https://assets.ubuntu.com/v1/39f6c093-integrations%203.png",
+            alt="",
+            height="173",
+            width="600",
+            hi_def=True,
+            loading="auto",
+          ) | safe
+        }}
+      </div>
+      <div class="col">
+        <p>Juju will automatically create an integration between these two services. You generally do not need to worry about anything else.</p>
+        <p>The integrated applications communicate directly with each other and the communication is not mediated by the juju controller.</p>
+      </div>
     </div>
-    <div class="col-6">
-      <p>When your model contains two charms you wish to connect, all you have to do is to run juju integrate from the Juju controller and specify the two charms to be connected.</p>
-    </div>
-    <div class="u-fixed-width"><hr class="p-rule--muted"></div>
-  </div>
-  <div class="row">
-    <div class="col-6" style="padding-bottom: 2rem;">
-      {{ image(
-          url="https://assets.ubuntu.com/v1/39f6c093-integrations%203.png",
-          alt="",
-          height="173",
-          width="600",
-          hi_def=True,
-          loading="auto",
-        ) | safe
-      }}
-    </div>
-    <div class="col-6">
-      <p>Juju will automatically create an integration between these two services. You generally do not need to worry about anything else.</p>
-      <p>The integrated applications communicate directly with each other and the communication is not mediated by the juju controller.</p>
-    </div>
-    <div class="u-fixed-width"><hr class="p-rule--muted"></div>
-  </div>
-  <div class="row">
-    <div class="col-6">
-      <h1 class="p-heading--2">Creating a working model</h1>
-      <div style="padding: 2rem;">
+  </section>
+  <section class="p-section--shallow">
+    <div class="row--50-50">
+      <div class="u-fixed-width"><hr class="p-rule--muted"></div>
+      <div class="col">
+        <h1 class="p-heading--2">Creating a working model</h1>
+        <div style="padding-left: 2rem; padding-top: 2rem;">
         {{ image(
             url="https://assets.ubuntu.com/v1/0021ecae-Working%20model.png",
             alt="",
@@ -99,27 +109,30 @@
             loading="auto",
           ) | safe
         }}
+        </div>
+      </div>
+      <div class="col">
+        <p>You can relate more and more services until you have a working model.</p>
+        <p>Once the integration is done, Juju will deal with all configurations and monitoring - you do not need to be an expert on each individual service! You can focus on judging if the model is a good representation of your idea or not.</p>
+        <p>The optimal configuration is persisted even if one of the applications is scaled, upgraded or the configuration changed. Juju and the charm code take care of it all.</p>
       </div>
     </div>
-    <div class="col-6">
-      <p>You can relate more and more services until you have a working model.</p>
-      <p>Once the integration is done, Juju will deal with all configurations and monitoring - you do not need to be an expert on each individual service! You can focus on judging if the model is a good representation of your idea or not.</p>
-      <p>The optimal configuration is persisted even if one of the applications is scaled, upgraded or the configuration changed. Juju and the charm code take care of it all.</p>
-    </div>
-  </div>    
+  </section>
 </section>
-<section class="p-strip u-no-padding--top u-no-padding--bottom">
+<section class="p-section">
   <div class="u-fixed-width"><hr class="p-rule"></div>
-  <div class="row" style="padding-bottom: 2rem;">
-    <div class="col-6">
-      <h1 class="p-heading--2">Seamlessly connect applications across clouds with cross model integrations</h1>
+  <section class="p-section--shallow">
+    <div class="row--50-50">
+      <div class="col">
+        <h1 class="p-heading--2">Seamlessly connect applications across clouds with cross model integrations</h1>
+      </div>
+      <div class="col">
+        <p class="p-heading--5">Integrating applications across clouds is an even harder task due to the differences in the way storage, network and compute are represented</p>
+        <p>Cross model relations allow applications in different models to be integrated. Models may be hosted on the same controller, different controllers, and different clouds… or even across virtual machines and Kubernetes!</p>
+        <p>This functionality can enable your databases to be hosted on bare metal, where I/O performance is paramount, and your apps to live within Kubernetes, where scalability and application density are more important.</p>
+      </div>
     </div>
-    <div class="col-6">
-      <p class="p-heading--5">Integrating applications across clouds is an even harder task due to the differences in the way storage, network and compute are represented</p>
-      <p>Cross model relations allow applications in different models to be integrated. Models may be hosted on the same controller, different controllers, and different clouds… or even across virtual machines and Kubernetes!</p>
-      <p>This functionality can enable your databases to be hosted on bare metal, where I/O performance is paramount, and your apps to live within Kubernetes, where scalability and application density are more important.</p>
-    </div>
-  </div>
+  </section>
   <div class="row">
     <div>
       {{ image(
@@ -135,21 +148,30 @@
     </div>
   </div>
 </section>
-<section class="p-strip">
-    <div class="u-fixed-width"><hr class="p-rule"></div>
-    <div class="row">
-      <div class="col-6">
+<section class="p-section">
+  <div class="u-fixed-width"><hr class="p-rule"></div>
+  <section class="p-section--shallow">
+    <div class="row--50-50">
+      <div class="col">
         <h1 class="p-heading--2">Read about these next:</h1>
+      </div>
+      <div class="col"></div>
+    </div>
+  </section>
+  <section class="p-section--shallow">
+    <div class="row">
+      <div class="col-start-large-4">
+        <hr class="p-rule--muted">
       </div>
     </div>
     <div class="row">
-      <div class="u-fixed-width col-start-large-4" style="padding-top: 2rem;"><hr class="p-rule--muted"></div>
       <div class="col-3 col-start-large-4">
         <a href="/charmhub-community" class="p-heading--5">Charmhub & Community</a>
       </div>
-      <div class="col-9 col-start-large-7">
+      <div class="col-6 col-start-large-7">
         <p>Charmhub is a curated marketplace for charms which can be readily integrated into any infrastructure</p>
       </div>
     </div>
   </section>
+</section>
 {% endblock %}
