@@ -65,11 +65,11 @@
     </div>
     <div class="col-6 col-start-large-7">
       <div class="row" id="cloud">
-        <p>A cloud (or backing cloud) is a resource that provides machines (instances), and possibly storage, in order for application units to be deployed upon them. This includes public clouds such as Amazon Web Services, Google Compute Engine, Microsoft Azure and Kubernetes as well as private OpenStack-based clouds.</p>
+        <p>A <a href="https://juju.is/docs/juju/cloud">cloud</a> (or backing cloud) is a resource that provides machines (instances), and possibly storage, in order for application units to be deployed upon them. This includes public clouds such as Amazon Web Services, Google Compute Engine, Microsoft Azure and Kubernetes as well as private OpenStack-based clouds.</p>
         <p>Juju works on most cloud environments. Juju can also make use of environments which are not clouds per se, by treating them as a cloud. MAAS and LXD fit into this last category. Because of this, in Juju a cloud is sometimes also called a <em>substrate</em>.</p>
       </div>
       <div class="row u-hide" id="controller">
-        <p>A controller is the management node of any deployed cloud environment. A controller:</p>
+        <p>A <a href="https://juju.is/docs/juju/controller">controller</a> is the management node of any deployed cloud environment. A controller:</p>
         <ul>
           <li>Talks to the cli as well as all the other juju clients.</li>
           <li>Manages the deployment and keeps track of its state.</li>
@@ -80,12 +80,12 @@
         <p>Controllers must first be installed (bootstrapped).</p>
       </div>
       <div class="row u-hide" id="model">
-        <p>A model is a user-defined collection of applications that wraps all of the components required to support them, such as integrations, storage, and network spaces.</p>
+        <p>A <a href="https://juju.is/docs/juju/model">model</a> is a user-defined collection of applications that wraps all of the components required to support them, such as integrations, storage, and network spaces.</p>
         <p>A model is associated with a single controller. A controller can have an indefinite number of models and each model can have an indefinite number of applications. Models themselves can be shared amongst Juju users.</p>
         <p>Both the model and the controller are associated with a cloud, though they do not both have to be on the same cloud (a controller can manage models across multiple clouds).</p>
       </div>
       <div class="row u-hide" id="charm">
-        <p>A charm is an operator: business logic encapsulated in reusable software packages that automate every aspect of an application's life.</p>
+        <p>A <a href="https://juju.is/docs/juju/charmed-operator">charm</a> is an operator: business logic encapsulated in reusable software packages that automate every aspect of an application's life.</p>
         <p>Charms are publicly available on Charmhub and they are of two kinds, depending on the target deployment substrate:</p>
         <ol>
           <li><strong>Machine charms:</strong> Charms made to deploy on a bare-metal server, virtual machine, or system container.</li>
@@ -93,18 +93,18 @@
         </ol>
       </div>
       <div class="row u-hide" id="application">
-        <p>An application is a running abstraction of a charm in the Juju model. It is the sum of all units of a given charm with the same name.</p>
+        <p>An <a href="https://juju.is/docs/juju/application">application</a> is a running abstraction of a charm in the Juju model. It is the sum of all units of a given charm with the same name.</p>
         <p>Applications could correspond to a traditional software package but they could also provide an interface to apply a certain set of changes to a workload.</p>
         <p>An application is always hosted within a model and consists of one or more units.</p>
         <p>Interaction between applications is handled by integrations.</p>
       </div>
       <div class="row u-hide" id="integration">
-        <p>An integration is a connection between applications, or between different units of the same application.</p>
+        <p>An <a href="https://juju.is/docs/juju/relation">integration</a> is a connection between applications, or between different units of the same application.</p>
         <p>An integration between two applications is formed by connecting their endpoints. Endpoints can only be connected if they support the same interface and are of a compatible role (for example: requires to provides; provides to requires; peers to peers).</p>
         <p>Integrations mediate the configuration exchange between applications. Once an integration has been formed the two applications communicate directly (and not through the controller).</p>
       </div>
       <div class="row u-hide" id="client">
-        <p>A Juju client is any software that implements the Juju client apiserver contract and it is able to talk to the controller.</p>
+        <p>A Juju <a href="https://juju.is/docs/juju/client">client</a> is any software that implements the Juju client apiserver contract and it is able to talk to the controller.</p>
         <p>This currently includes:</p>
         <ul>
           <li>The Juju CLI (juju).</li>
@@ -114,12 +114,12 @@
         </ul>
       </div>
       <div class="row u-hide" id="action">
-        <p>An action is a script that is triggered via the Juju client and applied to a unit.</p>
+        <p>An <a href="https://juju.is/docs/juju/action">action</a> is a script that is triggered via the Juju client and applied to a unit.</p>
         <p>It contains a list of commands defined by a charm to allow a user to interact with the application and streamline the performance of a specific task.</p>
         <p>Actions generally simplify routine or complex tasks (like backup and secret rotation), abstracting away their complexity from the IT manager.</p>
       </div>
       <div class="row u-hide" id="units">
-        <p>In Juju a unit is a deployed charm, a single deployed entity of a deployed application.</p>
+        <p>In Juju a <a href="https://juju.is/docs/juju/unit">unit</a> is a deployed charm, a single deployed entity of a deployed application.</p>
         <p>The number of units can generally be controlled by the IT manager, however the charm might also specify certain requirements in order to enable certain features (e.g. high availability).</p>
       </div>
     </div>
@@ -133,7 +133,7 @@
     </div>
     <div class="col">
       <p class="p-heading--5">Flexibility and portability are at the heart of Juju</p>
-      <p>Juju and charms support multiple cloud backends, giving you the choice to deploy your applications to the most cost effective, resource-rich or commercially suitable clouds, and then connect them in a way that suits your application model.</p>
+      <p>Juju and charms <a href="https://juju.is/docs/juju/juju-supported-clouds">support multiple cloud backends</a>, giving you the choice to deploy your applications to the most cost effective, resource-rich or commercially suitable clouds, and then connect them in a way that suits your application model.</p>
       <p>In addition Juju gives you flexibility in how to orchestrate your deployment. You can manage everything from a single, centralised Juju controller, or you can have multiple controllers installed on each layer of the cloud.</p>
     </div>
   </div>
