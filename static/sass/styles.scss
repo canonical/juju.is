@@ -298,3 +298,14 @@ html {
     padding-left: 20.3rem;
   }
 }
+
+.juju-middle-pages {
+  list-style: none;
+  counter-reset: listItem;
+}
+
+.juju-middle-pages .p-list__item::before {
+  counter-increment: listItem;
+  content: counter(listItem) ". ";
+  font-weight: bold;
+}
