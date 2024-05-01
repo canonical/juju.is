@@ -8,7 +8,7 @@
 {% set selected_tab='why-juju' %}
 
 {% block how_juju_works_content %}
-<section class="p-section u-no-padding--top">
+<section class="p-section">
   <div class="row--50-50">
     <div class="col">
       <h1 class="p-heading--2">Shift from configuration management to distributed system management</h1>
@@ -48,48 +48,54 @@
 </section>
 <section class="p-section">
   <div class="u-fixed-width"><hr class="p-rule"></div>
-  <div class="row">
-    <div class="col-6">
-      <h1 class="p-heading--2">What are Juju and Charms?</h1>
+  <section class="p-section--shallow">
+    <div class="row">
+      <div class="col-6">
+        <h1 class="p-heading--2">What are Juju and Charms?</h1>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-start-large-4" style="padding-top: 2rem;">
-      <hr class="p-rule--muted">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-3 col-start-large-4">
-      <p class="p-heading--5">Juju, the orchestrator engine</p>
-    </div>
-    <div class="col-6 col-start-large-7">
-      <p>Juju is an open source orchestration engine for software operators that enables the deployment, integration and lifecycle management of applications at any scale, on any infrastructure.</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-start-large-4" style="padding-top: 2rem;">
-      <hr class="p-rule--muted">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-3 col-start-large-4">
-      <p class="p-heading--5">Charms, the software operators</p>
-    </div>
-    <div class="col-6 col-start-large-7">
-      <p>A charm is an operator: business logic encapsulated in reusable software packages that automate every aspect of an application's life.</p>
-      <p>Charms are developed with the Charm SDK which comprises the:</p>
-      <div class="col-start-large-7">
+  </section>
+  <section class="p-section--shallow">
+    <div class="row">
+      <div class="col-start-large-4">
         <hr class="p-rule--muted">
       </div>
-      <ul class="p-list--divided">
-        <li class="p-list__item has-bullet"><strong>Ops library:</strong> a Python framework for developing and testing charms</li>
-        <li class="p-list__item has-bullet"><strong>Charmcraft:</strong> a tool for building, packaging and publishing charms.</li>
-      </ul>
     </div>
-  </div>
+    <div class="row">
+      <div class="col-3 col-start-large-4">
+        <p class="p-heading--5">Juju, the orchestrator engine</p>
+      </div>
+      <div class="col-6 col-start-large-7">
+        <p>Juju is an open source orchestration engine for software operators that enables the deployment, integration and lifecycle management of applications at any scale, on any infrastructure.</p>
+      </div>
+    </div>
+  </section>
+  <section class="p-section--shallow">
+    <div class="row">
+      <div class="col-start-large-4">
+        <hr class="p-rule--muted">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-start-large-4">
+        <p class="p-heading--5">Charms, the software operators</p>
+      </div>
+      <div class="col-6 col-start-large-7">
+        <p>A charm is an operator: business logic encapsulated in reusable software packages that automate every aspect of an application's life.</p>
+        <p>Charms are developed with the Charm SDK which comprises the:</p>
+        <div class="col-start-large-7">
+          <hr class="p-rule--muted">
+        </div>
+        <ul class="p-list--divided">
+          <li class="p-list__item has-bullet"><strong>Ops library:</strong> a Python framework for developing and testing charms</li>
+          <li class="p-list__item has-bullet"><strong>Charmcraft:</strong> a tool for building, packaging and publishing charms.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <div class="u-fixed-width">
     {{ image(
-            url="https://assets.ubuntu.com/v1/766e80d3-what%20are%20juju%20and%20charms.svg",
+            url="https://assets.ubuntu.com/v1/c6bd1a05-what%20are%20juju%20and%20charms%20(1).svg",
             alt="",
             width="1500",
             height="556",
@@ -163,7 +169,7 @@
     </div>
   </div>
 </section>
-<section class="p-section">
+<section class="p-section--shallow">
   <div class="u-fixed-width"><hr class="p-rule"></div>
   <div class="row--50-50">
     <div class="col">
@@ -175,7 +181,9 @@
       <p>Juju integrates well with Terraform, extending its infrastructure as code capabilities to our application modelling framework.</p>
     </div>
   </div>
-  <div class="u-fixed-width" style="padding-top: 2rem;">
+</section>
+<section class="p-section--shallow">
+  <div class="u-fixed-width">
     {{ image(
         url="https://assets.ubuntu.com/v1/62922bad-How%20juju%20compares.svg",
         alt="",

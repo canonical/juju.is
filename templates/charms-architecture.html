@@ -127,22 +127,24 @@
       <p>For more detailed information you can read our <a href="/docs/sdk/charm-lifecycle">charm lifecycle documentation article&nbsp;&gt;</a></p>
     </div>
   </div>
-  <div class="row">
-    <div class="col-6 col-start-large-7" style="padding-top: 2rem;">
-      <p>The Juju controller persists a wide ranging set of information about the status of the system and the deployed charms, including:</p>
-      <div class="col-start-large-7">
-        <hr class="p-rule--muted">
+  <section class="p-section--shallow">
+    <div class="row">
+      <div class="col-6 col-start-large-7">
+        <p>The Juju controller persists a wide ranging set of information about the status of the system and the deployed charms, including:</p>
+        <div class="col-start-large-7">
+          <hr class="p-rule--muted">
+        </div>
+        <ul class="p-list--divided u-no-margin--bottom">
+          <li class="p-list__item has-bullet">Integration data</li>
+          <li class="p-list__item has-bullet">Charm configuration</li>
+          <li class="p-list__item has-bullet">Unit/application status</li>
+          <li class="p-list__item has-bullet">Charm state</li>
+          <li class="p-list__item has-bullet">Leadership status</li>
+        </ul>
+        <p>Charms at runtime can read/write some data from the controller database and thereby access some configuration parameters to decide which code path to execute and how to manage its workload.</p>
       </div>
-      <ul class="p-list--divided u-no-margin--bottom">
-        <li class="p-list__item has-bullet">Integration data</li>
-        <li class="p-list__item has-bullet">Charm configuration</li>
-        <li class="p-list__item has-bullet">Unit/application status</li>
-        <li class="p-list__item has-bullet">Charm state</li>
-        <li class="p-list__item has-bullet">Leadership status</li>
-      </ul>
-      <p>Charms at runtime can read/write some data from the controller database and thereby access some configuration parameters to decide which code path to execute and how to manage its workload.</p>
     </div>
-  </div>
+  </section>
 </section>
 <section class="p-section">
   <div class="u-fixed-width"><hr class="p-rule"></div>
