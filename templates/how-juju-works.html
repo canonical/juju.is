@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="u-fixed-width">
+  <nav class="p-tabs">
+    <ul class="p-tabs__list u-no-margin--top middle-page-tabs" role="tablist">
+      <li class="p-tabs__item" role="presentation">
+        <a href="/why-juju" class="p-tabs__link" tabindex="0" role="tab" {% if selected_tab == "why-juju" %}aria-selected="true"{% endif %}>
+          Why Juju?
+        </a>
+      </li>
+      <li class="p-tabs__item" role="presentation">
+        <a href="/juju-architecture" class="p-tabs__link" tabindex="0" role="tab" {% if selected_tab == "juju-architecture" %}aria-selected="true"{% endif %}>
+          Juju architecture
+        </a>
+      </li>
+      <li class="p-tabs__item" role="presentation">
+        <a href="/charms-architecture" class="p-tabs__link" tabindex="0" role="tab" {% if selected_tab == "charms-architecture" %}aria-selected="true"{% endif %}>
+          Charms architecture
+        </a>
+      </li>
+      <li class="p-tabs__item" role="presentation">
+        <a href="/integrations" class="p-tabs__link" tabindex="0" role="tab" {% if selected_tab == "integrations" %}aria-selected="true"{% endif %}>
+          Integrations
+        </a>
+      </li>
+      <li class="p-tabs__item" role="presentation">
+        <a href="/charmhub-community" class="p-tabs__link" tabindex="0" role="tab" {% if selected_tab == "charmhub-community" %}aria-selected="true"{% endif %}>
+          Charmhub & Community
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+{% block how_juju_works_content %}{% endblock how_juju_works_content %}
+
+{% include "partials/_contact-us.html" %}
+
+{% endblock %}
