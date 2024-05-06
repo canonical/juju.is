@@ -299,7 +299,7 @@ html {
   position: relative;
   margin-bottom: 1.5rem;
 
-  .full-width-border {
+  &::before {
     content: '';
     position: absolute;
     left: 0;
