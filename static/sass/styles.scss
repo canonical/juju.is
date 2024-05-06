@@ -294,9 +294,35 @@ html {
   display: inline-block;
 }
 
-.middle-page-tabs {
-  @media screen and (min-width: $breakpoint-large) {
-    padding-left: 20.3rem;
+.p-tabs--25-75 {
+  @extend %vf-row;
+  position: relative;
+  margin-bottom: 1.5rem;
+
+  .full-width-border {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: $colors--theme--border-default;
+  }
+
+  .p-tabs__list {
+    @extend %vf-pseudo-border--bottom;
+    margin-bottom: 0;
+    padding-left: 0.5rem;
+
+    &::after {
+      content: none;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+      grid-column-start: 4;
+      grid-column-end: span 9;
+    }
   }
 }
 
