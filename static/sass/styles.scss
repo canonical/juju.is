@@ -297,7 +297,7 @@ html {
 .p-tabs--25-75 {
   @extend %vf-row;
   position: relative;
-  margin-bottom: 1.5rem;
+  margin: 0 auto $spv--x-large;
 
   &::before {
     content: '';
