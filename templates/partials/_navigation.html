@@ -78,13 +78,9 @@
     </div>
   </div>
   {% else %}
-  <div class="row">
-    <div class="col-3">
-      {{ nav_logo() }}
-    </div>
-    <div class="col-9">
-      {{ nav_items() }}
-    </div>
+  <div class="p-navigation__row--25-75">
+    {{ nav_logo() }}
+    {{ nav_items() }}
   </div>
   {% endif %}
 </header>
