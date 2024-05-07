@@ -313,7 +313,7 @@ html {
   .p-tabs__list {
     @extend %vf-pseudo-border--bottom;
     margin-bottom: 0;
-    padding-left: 0.5rem;
+    margin-left: -1rem;
 
     &::after {
       content: none;
