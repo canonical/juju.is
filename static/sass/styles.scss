@@ -299,16 +299,13 @@ html {
 
     @media screen and (min-width: $breakpoint-large) {
       margin-left: -$sph--large;
+      grid-column-start: 4;
+      grid-column-end: span 9;
     }
 
     // hiding the bottom border from p-tabs__list as it is moved to p-tabs
     &::after {
       content: none;
-    }
-
-    @media screen and (min-width: $breakpoint-large) {
-      grid-column-start: 4;
-      grid-column-end: span 9;
     }
   }
 }
