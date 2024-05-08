@@ -296,25 +296,15 @@ html {
 
 .p-tabs--25-75 {
   @extend %vf-row;
+  @extend %vf-pseudo-border--bottom;
   position: relative;
   margin: 0 auto $spv--x-large;
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    width: 100%;
-    background-color: $colors--theme--border-default;
-  }
-
   .p-tabs__list {
-    @extend %vf-pseudo-border--bottom;
     margin-bottom: 0;
-    margin-left: -1rem;
+    margin-left: -$sph--large;
 
+    // hiding the bottom border from p-tabs__list as it is moved to p-tabs
     &::after {
       content: none;
     }
