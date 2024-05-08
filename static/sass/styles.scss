@@ -296,7 +296,10 @@ html {
 
   .p-tabs__list {
     margin-bottom: 0;
-    margin-left: -$sph--large;
+
+    @media screen and (min-width: $breakpoint-large) {
+      margin-left: -$sph--large;
+    }
 
     // hiding the bottom border from p-tabs__list as it is moved to p-tabs
     &::after {
