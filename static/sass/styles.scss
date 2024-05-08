@@ -73,12 +73,6 @@ $breakpoint-large: 1220px;
   }
 }
 
-// TODO: to be removed when fixed in Vanilla
-// https://github.com/canonical/vanilla-framework/issues/4947
-body:not(.docs) .p-navigation__banner {
-  padding-left: 0;
-}
-
 .u-hide--x-large {
   @media only screen and (min-width: $grid-max-width) {
     display: none;
@@ -294,9 +288,25 @@ html {
   display: inline-block;
 }
 
-.middle-page-tabs {
-  @media screen and (min-width: $breakpoint-large) {
-    padding-left: 20.3rem;
+.p-tabs--25-75 {
+  @extend %vf-row;
+  @extend %vf-pseudo-border--bottom;
+  position: relative;
+  margin: 0 auto $spv--x-large;
+
+  .p-tabs__list {
+    margin-bottom: 0;
+
+    @media screen and (min-width: $breakpoint-large) {
+      margin-left: -$sph--large;
+      grid-column-start: 4;
+      grid-column-end: span 9;
+    }
+
+    // hiding the bottom border from p-tabs__list as it is moved to p-tabs
+    &::after {
+      content: none;
+    }
   }
 }
 
