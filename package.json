@@ -33,7 +33,7 @@
     "stylelint-config-recommended-scss": "14.0.0",
     "stylelint-order": "6.0.4",
     "stylelint-prettier": "5.0.0",
-    "vanilla-framework": "4.10.0",
+    "vanilla-framework": "4.11.0",
     "watch-cli": "0.2.3"
   },
   "devDependencies": {
