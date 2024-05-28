@@ -45,13 +45,11 @@
 
   <section class="p-section">
     <div class="u-fixed-width"><hr class="p-rule"></div>
-    <div class="row">
-      <div class="col-7">
+    <div class="row--50-50">
+      <div class="col">
         <h2>Shift from application to system lifecycle management</h2>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-6 col-start-large-4">
+      <div class="col">
         <p>Juju and charms consider the integrations between different applications as a first class primitive.</p>
         <p>This means your observability stack, database, SSO, and more, evolve with your system - and they work on day 1,000 just as well as they did on day one.</p>
         <p class="u-no-margin--bottom">
@@ -62,20 +60,19 @@
     </div>
   </section>
 
-  <section class="p-section u-no-padding--bottom">
+  <section class="p-section">
     <div class="u-fixed-width"><hr class="p-rule"></div>
-    <div class="row">
-      <div class="col-7">
+    <div class="row--50-50">
+      <div class="col">
         <h2>Reuse operations code across Kubernetes and VMs</h2>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-6 col-start-large-4">
-        <p>Use a single codebase to automate the lifecycle management of your system across public clouds, Kubernetes, virtual (VM) and bare metal machines.</p>
+      <div class="col">
+        <p>Use a single codebase to automate the lifecycle management of your system across public clouds, Kubernetes,
+          virtual (VM) and bare metal machines.</p>
         <p>Learn how to use Juju across supported clouds and environments.</p>
       </div>
     </div>
-    <div class="fixed-width u-align--center" style="margin-top: 2rem;">
+    <div class="row" style="margin-top: 2rem;">
       <ul class="p-inline-list">
         <li class="p-inline-list__item">
           <a href="/docs/juju/openstack ">
@@ -99,7 +96,7 @@
         </li>
       </ul>
     </div>
-    <div class="u-fixed-width u-align--center">
+    <div class="row">
       <ul class="p-inline-list">
         <li class="p-inline-list__item" style="margin-right: 1.5rem;">
           <a href="/docs/juju/equinix-metal">
@@ -152,13 +149,11 @@
   
   <section class="p-section">
     <div class="u-fixed-width"><hr class="p-rule"></div>
-    <div class="row">
-      <div class="col-7">
+    <div class="row--50-50">
+      <div class="col">
         <h2>Deploy and integrate with enterprise-grade software operators</h2>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-6 col-start-large-4">
+      <div class="col">
         <p><a href="https://charmhub.io">Charmhub</a> is a curated marketplace for charms which can be readily integrated into any infrastructure, and the centre of the charm community.</p>
         <p class="u-no-margin--bottom">
           <a href="https://charmhub.io/" class="p-button u-no-margin--bottom">Explore all charms</a>
@@ -475,15 +470,15 @@
 
   <section class="p-section">
     <div class="u-fixed-width"><hr class="p-rule"></div>
-    <div class="row">
-      <div class="col-7">
+    <div class="row--50-50">
+      <div class="col">
         <h2>Watch: Learn about Juju in 10 minutes</h2>
       </div>
+      <div class="col">
+        <div class="u-embedded-media">
+          <iframe class="responsive-video" src="https://www.youtube.com/embed/HhRBNs9ckIk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-    <div class="row">
-      <div class="col-6 col-start-large-4">
-        <iframe class="responsive-video" src="https://www.youtube.com/embed/HhRBNs9ckIk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <p>Watch this video to learn the core concept of Juju and charms, how you can use  them to automate operations across different clouds/VM/k8s and the benefits of integrations.</p>
+        <p>Watch this video to learn the core concept of Juju and charms, how you can use them to automate operations across different clouds/VM/k8s and the benefits of integrations.</p>
       </div>
     </div>
   </section>
@@ -499,11 +494,13 @@
 
   <section class="p-section">
     <div class="u-fixed-width"><hr class="p-rule"></div>
-    <div class="u-fixed-width">
+    <div class="row--50-50">
+      <div class="col">
       <h2>Add visibility and compliance controls with JAAS</h2>
     </div>
-    <div class="row">
-      <div class="col-6 col-start-large-4">
+      <div class="col">
+        <div class="u-embedded-media">
+
         {{
           image(
             url="https://assets.ubuntu.com/v1/ed078d85-juju-dashboard.gif",
@@ -514,6 +511,7 @@
             loading="lazy",
           ) | safe
         }}
+        </div>
         <p>JAAS (Juju as a service) is your centralised enterprise control plane for Juju deployments.</p>
         <ul class="p-list--divided">
           <li class="p-list__item is-ticked">Manage hundreds of Juju controllers.</li>
@@ -596,17 +594,16 @@
 
   <section class="p-section--deep p-suru--bottom-right">
     <div class="u-fixed-width"><hr class="p-rule"></div>
-    <div class="u-fixed-width">
+    <div class="row--50-50">
+      <div class="col">
       <h2>Learn more about Juju</h2>
     </div>
-    <div class="row">
-      <div class="col-6 col-start-large-4">
-        <div class="u-fixed-width"><hr class="p-rule"></div>
+      <div class="col">
         <div class="row">
-          <div class="col-3">
+          <div class="col-2">
             <h3 class="p-heading--5">Read more</h3>
           </div>
-          <div class="col-3">
+          <div class="col-4">
             <p>
               <a href="/why-juju">How juju works</a>
             </p>
@@ -630,10 +627,10 @@
         </div>
         <div class="u-fixed-width"><hr class="p-rule"></div>
         <div class="row">
-          <div class="col-3">
+          <div class="col-2">
             <h3 class="p-heading--5">Connect with the community</h3>
           </div>
-          <div class="col-3">
+          <div class="col-4">
             <p>
               <a href="http://chat.charmhub.io">Charmhub chat</a>
             </p>
@@ -645,10 +642,10 @@
         </div>
         <div class="u-fixed-width"><hr class="p-rule"></div>
         <div class="row">
-          <div class="col-3">
+          <div class="col-2">
             <h3 class="p-heading--5">Contact us</h3>
           </div>
-          <div class="col-3">
+          <div class="col-4">
             <p>
               <button class="p-button--link" data-js="open-modal-control">Talk to a Canonical expert</>
             </p>
