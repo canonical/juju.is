@@ -320,3 +320,7 @@ html {
   content: counter(listItem) ". ";
   font-weight: bold;
 }
+
+strong {
+  font-weight: bold !important;
+}
