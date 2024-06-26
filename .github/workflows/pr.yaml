@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install Dotrun
-        run: sudo pip3 install dotrun requests==2.31.0 # requests version is pinned to avoid breaking changes, can be removed once issue is resolved: https://github.com/docker/docker-py/issues/3256
+        uses: canonical/install-dotrun@main
 
       - name: Install dependencies
         run: |
