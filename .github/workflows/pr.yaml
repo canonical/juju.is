@@ -91,7 +91,7 @@ jobs:
           SECRET_KEY=insecure_secret_key coverage run  --source=. -m unittest discover tests
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
           flags: python
 
