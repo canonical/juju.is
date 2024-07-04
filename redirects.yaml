@@ -13,8 +13,9 @@ ops-code-quality/?: /about
 overview/?: /about
 universal-operators/?: /about
 docs/(lma2|cos)(?P<page>.*)/?: https://charmhub.io/topics/canonical-observability-stack{page}
+docs/juju/install-juju: /docs/juju/install-and-manage-the-client
 # Redirect olm docs
-/docs/olm/install-juju: /docs/juju/install-and-manage-the-client
+docs/olm/install-juju: /docs/juju/install-and-manage-the-client
 docs/olm/?: /docs/juju
 docs/olm/(?P<page>.*?): /docs/juju/{page}
 
