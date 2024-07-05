@@ -19,7 +19,7 @@
     "test": "yarn run lint-scss && yarn run lint-python && yarn run test-python"
   },
   "dependencies": {
-    "@canonical/cookie-policy": "3.6.3",
+    "@canonical/cookie-policy": "3.5.0",
     "@canonical/discourse-rad-parser": "1.0.1",
     "@canonical/global-nav": "3.6.4",
     "autoprefixer": "10.4.19",
