@@ -1,4 +1,5 @@
 import datetime
+from io import BytesIO
 import os
 
 import requests
@@ -12,7 +13,7 @@ from canonicalwebteam.yaml_responses.flask_helpers import (
     prepare_deleted,
     prepare_redirects,
 )
-from flask import render_template
+from flask import render_template, request, abort, send_file
 from flask_cors import cross_origin
 
 from webapp.blog.views import init_blog
@@ -131,3 +132,34 @@ def inject_utilities():
 @app.context_processor
 def inject_today_date():
     return {"current_year": datetime.date.today().year}
+
+
+S3_BUCKET_URL = "https://discourse-charmhub-io.s3.eu-west-2.amazonaws.com"
+
+
+@app.route("/assets")
+def assets():
+    url = request.args.get("url", "")
+    if not url.startswith(S3_BUCKET_URL):
+        abort(404)
+
+    result = requests.get(url)
+    return send_file(
+        BytesIO(result.content),
+        mimetype=result.headers["Content-Type"],
+    )
+
+
+@app.template_filter("proxy_assets")
+def proxy_assets(text):
+    """
+    Due to a false positive in google chrome's lookalike [1]
+    detection, we have to proxy all assets through our domain.
+    This template filter simply replaces all instances of the S3
+    Bucket name with an endpoint that requests assets through our domain.
+    This is a temporary solution until the manual review by google is processed.
+    [1]: https://chromium.googlesource.com/chromium/src/+/main/docs/security/lookalikes/lookalike-domains.md
+    # noqa: E501
+    """
+
+    return text.replace(S3_BUCKET_URL, "/assets?url=" + S3_BUCKET_URL)
