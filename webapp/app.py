@@ -144,6 +144,10 @@ def assets():
         abort(404)
 
     result = requests.get(url)
+
+    if not result.headers["Content-Type"].startswith("image/"):
+        abort(404)
+
     return send_file(
         BytesIO(result.content),
         mimetype=result.headers["Content-Type"],
