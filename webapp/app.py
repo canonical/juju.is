@@ -131,3 +131,20 @@ def inject_utilities():
 @app.context_processor
 def inject_today_date():
     return {"current_year": datetime.date.today().year}
+
+
+S3_BUCKET_URL = "https://discourse-charmhub-io.s3.eu-west-2.amazonaws.com"
+CDN_PREFIX = "https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto/"
+
+
+@app.template_filter("serve_assets")
+def serve_assets(text):
+    """
+    This is a template filter that prefixes assets with the CDN so that they are serves through it.
+    Purpose:
+    This is partially a workaround for the fact that google chrome flags the S3 bucket URL as a lookalike for charmhub.io and prompts the user to visit the latter.
+
+    # noqa: E501
+    """
+
+    return text.replace(S3_BUCKET_URL, CDN_PREFIX + S3_BUCKET_URL)
