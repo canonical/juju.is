@@ -179,10 +179,10 @@
   resolved "https://registry.yarnpkg.com/@canonical/cookie-policy/-/cookie-policy-3.5.0.tgz#1c7e6cc2d5a7218375001b2cff2996a927693e89"
   integrity sha512-XLCIl8+h+3BRfvqADqFsmAfWdaDGDchY/TPCKtpeQdb4r64SR6arsdNftlOb7vX8EuLCK2QRp6evUy0J+qnQTg==
 
-"@canonical/discourse-rad-parser@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@canonical/discourse-rad-parser/-/discourse-rad-parser-1.0.1.tgz#a46bc527bdd07bbab5fc5a44f7620744723222e7"
-  integrity sha512-P/q9OYdOF3/sYbsfWfzZrjzhBKnhCQo6ADYDJlMASEXJs1b6U2KxC3ul8RD4DBgzOqEKoALUAB1jutsYVUNP2g==
+"@canonical/discourse-rad-parser@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@canonical/discourse-rad-parser/-/discourse-rad-parser-1.0.2.tgz#f4e32478dd569facbf22f066115a38e6ef8900ef"
+  integrity sha512-MCeJKcyerLfOVJ90PS2VnVvk2x8ek4Brah1V5UcbnspTBaV4Cju/lWqwAQcCC/jhSz74OcgW0n9wsp15Yy1Acg==
 
 "@canonical/global-nav@3.6.4":
   version "3.6.4"
