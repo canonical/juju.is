@@ -14,7 +14,7 @@
       <h1 class="p-heading--2">Juju high-level architecture</h1>
     </div>
     <div class="col">
-      <p class="p-heading--5">Juju provides a declarative, model-driven, and interactive way to install, provision, maintain, update, upgrade, and integrate applications on and across Kubernetes, Linux containers, virtual machines, and bare metal machines, on public or private cloud.</p>
+      <p class="p-heading--5">Juju provides a declarative, model-driven, and interactive way to install, provision, maintain, update, and integrate applications on and across Kubernetes, Linux containers, virtual machines, and bare metal machines, on public or private cloud.</p>
       <p>The following diagram provides an overview of the high level architecture of a Juju deployment and it describes the key components of the system. You can find a more detailed explanation of all the components you find in this page in the <a href="/docs/juju/reference">reference section</a> of the Juju documentation.</p>
     </div>
   </div>
@@ -66,7 +66,7 @@
     </div>
     <div class="col-6 col-start-large-7">
       <div class="row" id="cloud">
-        <p>A <a href="https://juju.is/docs/juju/cloud">cloud</a> (or backing cloud) is a resource that provides machines (instances), and possibly storage, in order for application units to be deployed upon them. This includes public clouds such as Amazon Web Services, Google Compute Engine, Microsoft Azure and Kubernetes as well as private OpenStack-based clouds.</p>
+        <p>To Juju, a <a href="https://juju.is/docs/juju/cloud">cloud</a> (or backing cloud) is any entity that has an API that can provide compute, networking, and optionally storage resources in order for application units to be deployed on them. This includes public clouds such as Amazon Web Services, Google Compute Engine, Microsoft Azure and Kubernetes as well as private OpenStack-based clouds.</p>
         <p>Juju works on most cloud environments. Juju can also make use of environments which are not clouds per se, by treating them as a cloud. MAAS and LXD fit into this last category. Because of this, in Juju a cloud is sometimes also called a <em>substrate</em>.</p>
       </div>
       <div class="row u-hide" id="controller">
@@ -78,7 +78,7 @@
           <li>Interacts with the underlying cloud to provision necessary resources (compute, storage, networking).</li>
           <li>Facilitates the integration between charms in the same cloud or across clouds.</li>
         </ul>
-        <p>Controllers must first be installed (bootstrapped).</p>
+        <p>Controllers must first be <a href="https://juju.is/docs/juju/manage-controllers#heading--bootstrap-a-controller">bootstrapped</a>.</p>
       </div>
       <div class="row u-hide" id="model">
         <p>A <a href="https://juju.is/docs/juju/model">model</a> is a user-defined collection of applications that wraps all of the components required to support them, such as integrations, storage, and network spaces.</p>
@@ -95,12 +95,12 @@
       </div>
       <div class="row u-hide" id="application">
         <p>An <a href="https://juju.is/docs/juju/application">application</a> is a running abstraction of a charm in the Juju model. It is the sum of all units of a given charm with the same name.</p>
-        <p>Applications could correspond to a traditional software package but they could also provide an interface to apply a certain set of changes to a workload.</p>
+        <p>Applications could correspond to a traditional software package but they could also include instructions to apply a certain set of changes to an existing workload.</p>
         <p>An application is always hosted within a model and consists of one or more units.</p>
         <p>Interaction between applications is handled by integrations.</p>
       </div>
       <div class="row u-hide" id="integration">
-        <p>An <a href="https://juju.is/docs/juju/relation">integration</a> is a connection between applications, or between different units of the same application.</p>
+        <p>An <a href="https://juju.is/docs/juju/relation">integration</a> is a connection between applications.>
         <p>An integration between two applications is formed by connecting their endpoints. Endpoints can only be connected if they support the same interface and are of a compatible role (for example: requires to provides; provides to requires; peers to peers).</p>
         <p>Integrations mediate the configuration exchange between applications. Once an integration has been formed the two applications communicate directly (and not through the controller).</p>
       </div>
@@ -115,7 +115,7 @@
         </ul>
       </div>
       <div class="row u-hide" id="action">
-        <p>An <a href="https://juju.is/docs/juju/action">action</a> is a script that is triggered via the Juju client and applied to a unit.</p>
+        <p>An <a href="https://juju.is/docs/juju/action">action</a> is a custom operation for a specific charm or application delivered by a charm.</p>
         <p>It contains a list of commands defined by a charm to allow a user to interact with the application and streamline the performance of a specific task.</p>
         <p>Actions generally simplify routine or complex tasks (like backup and secret rotation), abstracting away their complexity from the IT manager.</p>
       </div>
@@ -135,7 +135,7 @@
     <div class="col">
       <p class="p-heading--5">Flexibility and portability are at the heart of Juju</p>
       <p>Juju and charms <a href="https://juju.is/docs/juju/juju-supported-clouds">support multiple cloud backends</a>, giving you the choice to deploy your applications to the most cost effective, resource-rich or commercially suitable clouds, and then connect them in a way that suits your application model.</p>
-      <p>In addition Juju gives you flexibility in how to orchestrate your deployment. You can manage everything from a single, centralised Juju controller, or you can have multiple controllers installed on each layer of the cloud.</p>
+      <p>In addition Juju gives you flexibility in how to orchestrate your deployment. You can manage everything from a single, centralised Juju controller, or you can have multiple controllers installed on each layer of the infrastructure.</p>
     </div>
   </div>
   <section class="p-section--shallow">
@@ -244,7 +244,7 @@
         <a href="/integrations" class="p-heading--5">Integrations</a>
       </div>
       <div class="col-6 col-start-large-7">
-        <p>Juju integrations are virtual connections between charms to allow the exchange of information.</p>
+        <p>Juju integrations are virtual connections between applications to allow the exchange of information.</p>
       </div>
     </div>
   </section>
