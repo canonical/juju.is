@@ -39,8 +39,8 @@ CSP = {
     ],
 }
 
-def set_handlers(app):
 
+def set_handlers(app):
     def get_csp_as_str(csp={}):
         csp_str = ""
         for key, values in csp.items():
