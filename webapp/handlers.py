@@ -1,7 +1,3 @@
-import base64
-import hashlib
-import re
-
 CSP = {
     "default-src": ["'self'"],
     "script-src-elem": [
