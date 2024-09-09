@@ -18,6 +18,7 @@ from flask_cors import cross_origin
 from webapp.blog.views import init_blog
 from webapp.docs.views import init_docs
 from webapp.greenhouse import Greenhouse
+from webapp.handlers import set_handlers
 from webapp.template_utils import current_url_with_query, static_url
 
 CACHE_TTL = 60 * 60  # 1 hour cache
@@ -35,6 +36,8 @@ app = FlaskBase(
 
 app.before_request(prepare_redirects())
 app.before_request(prepare_deleted())
+
+set_handlers(app)
 
 session = talisker.requests.get_session()
 greenhouse = Greenhouse(
