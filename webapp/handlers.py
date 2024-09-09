@@ -1,4 +1,3 @@
-
 CSP = {
     "default-src": ["'self'"],
     "script-src-elem": [
@@ -50,9 +49,7 @@ def set_handlers(app):
 
     @app.after_request
     def add_headers(response):
-        response.headers["Content-Security-Policy"] = get_csp_as_str(
-            CSP
-        )
+        response.headers["Content-Security-Policy"] = get_csp_as_str(CSP)
         response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
         response.headers["Cross-Origin-Embedder-Policy"] = "credentialless"
         response.headers["Cross-Origin-Opener-Policy"] = (
