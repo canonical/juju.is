@@ -89,6 +89,7 @@ def init_docs(app):
         "/docs/search",
         "docs-search",
         build_search_view(
+            app=app,
             session=session,
             site="juju.is/docs",
             template_path="docs/search.html",
