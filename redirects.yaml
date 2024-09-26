@@ -19,6 +19,10 @@ docs/olm/install-juju: /docs/juju/install-and-manage-the-client
 docs/olm/?: /docs/juju
 docs/olm/(?P<page>.*?): /docs/juju/{page}
 
+# Redirect dev docs
+docs/dev/?: /docs
+docs/dev/(?P<page>.*?): /docs
+
 # Redirect tutorials
 tutorials/charmed-osm-get-started/?: https://charmhub.io/osm/docs/tutorial
 tutorials/deploy-nextcloud-and-collabora-on-ubuntu/?: https://charmhub.io/nextcloud/
