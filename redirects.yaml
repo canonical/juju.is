@@ -20,8 +20,7 @@ docs/olm/?: /docs/juju
 docs/olm/(?P<page>.*?): /docs/juju/{page}
 
 # Redirect dev docs
-docs/dev/?: /docs
-docs/dev/(?P<page>.*?): /docs
+docs/dev(.*?): /docs
 
 # Redirect tutorials
 tutorials/charmed-osm-get-started/?: https://charmhub.io/osm/docs/tutorial
