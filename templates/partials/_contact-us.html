@@ -67,7 +67,7 @@
 
 <script>
   const modal = document.querySelector("#modal");
-    const openModalControl = document.querySelector("[data-js='open-modal-control']");
+    const openModalControls = document.querySelectorAll("[data-js='open-modal-control']");
     const closeModalControl = document.querySelector("[data-js='close-modal-control']");
 
     modal.addEventListener("click", (e) => {
@@ -76,10 +76,12 @@
       }
     });
 
-    openModalControl.addEventListener("click", (e) => {
-      e.preventDefault();
-      modal.classList.remove("u-hide");
-    });
+    openModalControls.forEach(openModalControl=>{
+      openModalControl.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.classList.remove("u-hide");
+      });
+    })
 
     closeModalControl.addEventListener("click", (e) => {
       e.preventDefault();

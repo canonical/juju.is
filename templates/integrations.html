@@ -15,7 +15,7 @@
     </div>
     <div class="col">
       <p class="p-heading--5">Juju and charms greatly simplify the process of connecting applications and managing the lifecycle of your entire system</p>
-      <p>Juju Integrations are virtual connections between charms to allow the exchange of information. The Juju controller acts as a mediator for these virtual connections, letting individual applications directly communicate with each other.</p>
+      <p>Juju Integrations are virtual connections between applications to allow the exchange of information. The Juju controller acts as a mediator for these virtual connections, letting individual applications directly communicate with each other.</p>
       <p>When an integration is created between two applications or across units of the same application, Integration data is persisted to the controller database.</p>
       <p>Integration data persists across invocations of the charm code and through the various event handlers that may access it.</p>
       <p>Juju is aware of the overall deployment topology, and it uses this information to perform the optimal set of lifecycle management decisions for your entire system, not just individual applications.</p>
@@ -112,8 +112,8 @@
         }}
       </div>
       <div class="col">
-        <p>You can relate more and more services until you have a working model.</p>
-        <p>Once the integration is done, Juju will deal with all configurations and monitoring - you do not need to be an expert on each individual service! You can focus on judging if the model is a good representation of your idea or not.</p>
+        <p>You can relate as many services as you want until you have a working model.</p>
+        <p>Once the integration is done, Juju will deal with the application configurations and monitoring - you do not need to be an expert on each individual service! You can focus on judging if the resulting deployment is a good representation of your idea or not.</p>
         <p>The optimal configuration is persisted even if one of the applications is scaled, upgraded or the configuration changed. Juju and the charm code take care of it all.</p>
       </div>
     </div>
@@ -129,7 +129,7 @@
       <div class="col">
         <p class="p-heading--5">Integrating applications across clouds is an even harder task due to the differences in the way storage, network and compute are represented</p>
         <p>Cross model relations allow applications in different models to be integrated. Models may be hosted on the same controller, different controllers, and different clouds… or even across virtual machines and Kubernetes!</p>
-        <p>This functionality can enable your databases to be hosted on bare metal, where I/O performance is paramount, and your apps to live within Kubernetes, where scalability and application density are more important.</p>
+        <p>That means you can keep your databases, where I/O performance is paramount, on bare metal, and your apps to live within Kubernetes, where scalability and application density are more important.</p>
       </div>
     </div>
   </section>
