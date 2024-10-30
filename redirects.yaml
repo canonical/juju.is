@@ -40,3 +40,5 @@ tutorials(.*?): /docs/sdk/tutorials
 # Redirects to merge docs
 docs/juju/(?P<page>.*?): /docs/{page}
 docs/sdk/(?P<page>.*?): /docs/{page}
+docs/juju: /docs
+docs/sdk: /docs
