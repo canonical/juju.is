@@ -36,3 +36,7 @@ tutorials/how-to-work-with-resources-in-charmcraft/?: /docs/sdk/resources
 tutorials/how-to-work-with-bundles-in-charmcraft/?: /docs/sdk/manage-bundles
 tutorials/deploy-postgres-on-ubuntu-server/?: /docs/olm/how-to
 tutorials(.*?): /docs/sdk/tutorials
+
+# Redirects to merge docs
+docs/juju/(?P<page>.*?): /docs/{page}
+docs/sdk/(?P<page>.*?): /docs/{page}
