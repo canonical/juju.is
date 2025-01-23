@@ -70,7 +70,10 @@
 
     {% block content %}{% endblock %}
 
-    {% include "footer.html" %}
+    {% block footer %}
+      {% include "footer.html" %}
+    {% endblock footer %}
+    
   {% endblock body %}
 
   <div class="u-hide" id="contact-form-container" data-form-location="/get-in-touch" data-form-id="1337" data-lp-id="2313" data-return-url="http://juju.is/thank-you" data-lp-url=""></div>

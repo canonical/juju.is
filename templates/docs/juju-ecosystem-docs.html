@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block body %}
+{% include "partials/_navigation.html" %}
 <header>
   <div class="row--25-75">
     <nav class="p-tabs">
@@ -238,7 +239,9 @@
       </div>
     </div>
   </section>
-  <div class="u-fixed-width"><hr class="is-muted"></div>
+  <div class="u-fixed-width">
+    <hr class="is-muted">
+  </div>
   <section class="p-section">
     <div class="row">
       <div class="col-6 col-medium-3 col-small-1">
@@ -253,21 +256,26 @@
         <div class="row">
           <div class="col-2 col-medium-1 col-small-1" style="display: flex; align-items: center;">
             <a href="https://charmhub.io/postgresql-k8s">
-              <img src="https://assets.ubuntu.com/v1/a854c8a7-postgresql-circle.svg" alt="Postgres logo" width="60" height="60">
+              <img src="https://assets.ubuntu.com/v1/a854c8a7-postgresql-circle.svg" alt="Postgres logo" width="60"
+                height="60">
             </a>
-            <h5 class="u-no-margin--bottom u-no-padding--top" style="margin-left: 15px;"><a href="https://charmhub.io/postgresql-k8s">PostgreSQL</a></h5>
+            <h5 class="u-no-margin--bottom u-no-padding--top" style="margin-left: 15px;"><a
+                href="https://charmhub.io/postgresql-k8s">PostgreSQL</a></h5>
           </div>
           <div class="col-2 col-medium-1 col-small-1" style="display: flex; align-items: center;">
             <a href="https://charmhub.io/mysql-k8s">
               <img src="https://assets.ubuntu.com/v1/ae2e0c53-mysql_logo.svg" alt="MySQL logo" width="70" height="70">
             </a>
-            <h5 class="u-no-margin--bottom u-no-padding--top" style="margin-left: 15px;"><a href="https://charmhub.io/mysql-k8s">MySQL</a></h5>
+            <h5 class="u-no-margin--bottom u-no-padding--top" style="margin-left: 15px;"><a
+                href="https://charmhub.io/mysql-k8s">MySQL</a></h5>
           </div>
           <div class="col-2 col-medium-1 col-small-1" style="display: flex; align-items: center;">
             <a href="https://charmhub.io/mongodb-k8s">
-              <img src="https://assets.ubuntu.com/v1/d53451fc-products-hero-ubuntu-new.svg" alt="Canonical logo" width="50" height="50">
+              <img src="https://assets.ubuntu.com/v1/d53451fc-products-hero-ubuntu-new.svg" alt="Canonical logo"
+                width="50" height="50">
             </a>
-            <h5 class="u-no-margin--bottom u-no-padding--top" style="margin-left: 15px;"><a href="https://charmhub.io/mongodb-k8s">MongoDB</a></h5>
+            <h5 class="u-no-margin--bottom u-no-padding--top" style="margin-left: 15px;"><a
+                href="https://charmhub.io/mongodb-k8s">MongoDB</a></h5>
           </div>
         </div>
         <div class="u-fixed-width">
@@ -276,21 +284,27 @@
         <div class="row">
           <div class="col-2 col-medium-1 col-small-1" style="display: flex; align-items: center;">
             <a href="https://charmhub.io/prometheus-k8s">
-              <img src="https://assets.ubuntu.com/v1/826d5be3-1200px-Prometheus_software_logo.svg.png" alt="Prometheus logo" width="50" height="50">
+              <img src="https://assets.ubuntu.com/v1/826d5be3-1200px-Prometheus_software_logo.svg.png"
+                alt="Prometheus logo" width="50" height="50">
             </a>
-            <h5 class="u-no-margin--bottom u-no-padding--top" style="margin-left: 15px;"><a href="https://charmhub.io/prometheus-k8s">Prometheus</a></h5>
+            <h5 class="u-no-margin--bottom u-no-padding--top" style="margin-left: 15px;"><a
+                href="https://charmhub.io/prometheus-k8s">Prometheus</a></h5>
           </div>
           <div class="col-2 col-medium-1 col-small-1" style="display: flex; align-items: center;">
             <a href="https://charmhub.io/grafana-k8s">
-              <img src="https://assets.ubuntu.com/v1/54ac468e-grafana_logo_swirl-events.svg" alt="Grafana logo" width="50" height="50">
+              <img src="https://assets.ubuntu.com/v1/54ac468e-grafana_logo_swirl-events.svg" alt="Grafana logo"
+                width="50" height="50">
             </a>
-            <h5 class="u-no-margin--bottom u-no-padding--top" style="margin-left: 15px;"><a href="https://charmhub.io/grafana-k8s">Grafana</a></h5>
+            <h5 class="u-no-margin--bottom u-no-padding--top" style="margin-left: 15px;"><a
+                href="https://charmhub.io/grafana-k8s">Grafana</a></h5>
           </div>
           <div class="col-2 col-medium-1 col-small-1" style="display: flex; align-items: center;">
             <a href="https://charmhub.io/loki-k8s">
-              <img src="https://assets.ubuntu.com/v1/a647636f-loki-logo-jujuis.png" alt="Loki logo" width="50" height="50">
+              <img src="https://assets.ubuntu.com/v1/a647636f-loki-logo-jujuis.png" alt="Loki logo" width="50"
+                height="50">
             </a>
-            <h5 class="u-no-margin--bottom u-no-padding--top" style="margin-left: 15px;"><a href="https://charmhub.io/loki-k8s">Loki</a></h5>
+            <h5 class="u-no-margin--bottom u-no-padding--top" style="margin-left: 15px;"><a
+                href="https://charmhub.io/loki-k8s">Loki</a></h5>
           </div>
         </div>
         <div class="u-fixed-width">
@@ -488,4 +502,6 @@
     </div>
   </section>
 </main>
-{% endblock %}
+
+{% include "partials/_juju-ecosystem-docs-footer.html" %}
+{% endblock body %}
