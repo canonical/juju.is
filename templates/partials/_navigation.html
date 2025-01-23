@@ -43,7 +43,7 @@
         </li>
       </ul>
     </li>
-    <li class="p-navigation__item" id="contribute-link">
+    <li class="p-navigation__item {% if request.path == '/docs' %}is-selected{% endif %}" id="contribute-link">
       <a class="p-navigation__link" href="/docs" aria-controls="docs-link">Docs</a>
     </li>
     <li class="p-navigation__item">
