@@ -2,88 +2,19 @@ from os import getenv
 
 import talisker.requests
 
-from canonicalwebteam.discourse import DiscourseAPI, DocParser, Docs
 from canonicalwebteam.search import build_search_view
+from flask import render_template
 
-DISCOURSE_API_KEY = getenv("DISCOURSE_API_KEY")
-DISCOURSE_API_USERNAME = getenv("DISCOURSE_API_USERNAME")
+RTD_DOCS_BASE_URL = "https://canonical-juju.readthedocs.io/en/latest/"
 
 
 def init_docs(app):
     session = talisker.requests.get_session()
-    main_docs = Docs(
-        parser=DocParser(
-            api=DiscourseAPI(
-                base_url="https://discourse.charmhub.io/", session=session
-            ),
-            index_topic_id=4513,
-            url_prefix="/docs",
-        ),
-        document_template="docs/document.html",
-        url_prefix="/docs",
-        blueprint_name="main_docs",
-    )
-    main_docs.init_app(app)
 
-    discourse_index_id = 1087
+    def render_juju_ecosystem_docs_page():
+        return render_template("docs/juju-ecosystem-docs.html")
 
-    discourse_docs = Docs(
-        parser=DocParser(
-            api=DiscourseAPI(
-                base_url="https://discourse.charmhub.io/",
-                session=session,
-                api_key=DISCOURSE_API_KEY,
-                api_username=DISCOURSE_API_USERNAME,
-                get_topics_query_id=2,
-            ),
-            index_topic_id=discourse_index_id,
-            url_prefix="/docs/juju",
-        ),
-        document_template="docs/document.html",
-        url_prefix="/docs/juju",
-    )
-
-    discourse_docs.init_app(app)
-
-    sdk_docs_id = 4449
-    sdk_docs = Docs(
-        parser=DocParser(
-            api=DiscourseAPI(
-                base_url="https://discourse.charmhub.io/",
-                session=session,
-                api_key=DISCOURSE_API_KEY,
-                api_username=DISCOURSE_API_USERNAME,
-                get_topics_query_id=2,
-            ),
-            index_topic_id=sdk_docs_id,
-            url_prefix="/docs/sdk",
-        ),
-        document_template="docs/document.html",
-        url_prefix="/docs/sdk",
-        blueprint_name="sdk_docs",
-    )
-
-    sdk_docs.init_app(app)
-
-    cos_docs_id = 5132
-    cos_docs = Docs(
-        parser=DocParser(
-            api=DiscourseAPI(
-                base_url="https://discourse.charmhub.io/",
-                session=session,
-                api_key=DISCOURSE_API_KEY,
-                api_username=DISCOURSE_API_USERNAME,
-                get_topics_query_id=2,
-            ),
-            index_topic_id=cos_docs_id,
-            url_prefix="/docs/cos",
-        ),
-        document_template="docs/document.html",
-        url_prefix="/docs/cos",
-        blueprint_name="cos_docs",
-    )
-
-    cos_docs.init_app(app)
+    app.add_url_rule("/docs", "juju-ecosystem-docs", render_juju_ecosystem_docs_page)
 
     app.add_url_rule(
         "/docs/search",
@@ -91,27 +22,8 @@ def init_docs(app):
         build_search_view(
             app=app,
             session=session,
-            site="juju.is/docs",
+            site="https://canonical-juju.readthedocs-hosted.com/en/latest",
             template_path="docs/search.html",
         ),
     )
 
-    juju_dev_docs_id = 6669
-    juju_dev_docs = Docs(
-        parser=DocParser(
-            api=DiscourseAPI(
-                base_url="https://discourse.charmhub.io/",
-                session=session,
-                api_key=DISCOURSE_API_KEY,
-                api_username=DISCOURSE_API_USERNAME,
-                get_topics_query_id=2,
-            ),
-            index_topic_id=juju_dev_docs_id,
-            url_prefix="/docs/dev",
-        ),
-        document_template="docs/document.html",
-        url_prefix="/docs/dev",
-        blueprint_name="juju_dev_docs",
-    )
-
-    juju_dev_docs.init_app(app)
