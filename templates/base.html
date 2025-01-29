@@ -25,7 +25,7 @@
   {% endif %}
 
   <meta name="description" content="{% block meta_description %}Juju is an open source orchestration engine for software operators that enables the deployment, integration and lifecycle management of applications at any scale, on any infrastructure{% endblock %}">
-  
+
  {% block meta %}
    <meta property="og:title" content="{{ self.meta_title() }}"/>
    <meta property="og:site_name" content="Juju"/>
@@ -83,7 +83,7 @@
   </script>
   <script src="/static/js/build/global-nav/global-nav.js"></script>
   <script>
-    canonicalGlobalNav.createNav({ breakpoint: 900 });
+    canonicalGlobalNav.createNav();
     initNavDropdowns(".p-navigation__item--dropdown-toggle");
   </script>
 
