@@ -4,7 +4,6 @@ import os
 import requests
 import semver
 import talisker.requests
-import asyncio
 from cachetools import TTLCache, cached
 from canonicalwebteam import image_template
 from canonicalwebteam.flask_base.app import FlaskBase
@@ -78,20 +77,7 @@ def search_docs():
             domain_info=DOMAIN_INFO,
         )
 
-    try:
-        loop = asyncio.get_running_loop()
-    except RuntimeError:
-        loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(loop)
-
-    # schedule the async function and get the result
-    future = asyncio.ensure_future(search_all_docs(query))
-    results = (
-        loop.run_until_complete(future)
-        if not loop.is_running()
-        else future.result()
-    )
-
+    results = search_all_docs(query)
     sorted_results = process_and_sort_results(results, query)
 
     return render_template(

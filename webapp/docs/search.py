@@ -1,6 +1,6 @@
-import asyncio
-import aiohttp
 from urllib.parse import urlparse
+import requests
+import concurrent.futures
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # ReadTheDocs projects and API endpoints
@@ -43,32 +43,40 @@ DOMAIN_INFO = {
 }
 
 
-async def fetch_search_results(session, project, url, query):
-    """Fetch search results asynchronously from ReadTheDocs API."""
+def fetch_search_results(project, url, query):
+    """Fetch search results synchronously from ReadTheDocs API."""
     params = {
         "q": f"project:{project} {query}",
         "page_size": 10,  # fetch the first 10 results from each domain
     }
     try:
-        async with session.get(url, params=params) as response:
-            return (
-                await response.json()
-                if response.status == 200
-                else {"results": []}
-            )
-    except Exception:
+        response = requests.get(url, params=params, timeout=5)
+        return (
+            response.json() if response.status_code == 200 else {"results": []}
+        )
+    except requests.exceptions.RequestException:
         return {"results": []}
 
 
-async def search_all_docs(query):
-    """Run API searches concurrently across multiple domains."""
-    async with aiohttp.ClientSession() as session:
-        tasks = [
-            fetch_search_results(session, project, url, query)
+def search_all_docs(query):
+    """Run API searches concurrently using ThreadPoolExecutor."""
+    results = []
+
+    # use ThreadPoolExecutor to make requests in parallel
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        future_to_project = {
+            executor.submit(fetch_search_results, project, url, query): project
             for project, url in RTD_PROJECTS.items()
-        ]
-        results = await asyncio.gather(*tasks)
-        return [item for sublist in results for item in sublist["results"]]
+        }
+
+        for future in concurrent.futures.as_completed(future_to_project):
+            try:
+                search_results = future.result()
+                results.extend(search_results.get("results", []))
+            except Exception as e:
+                print(f"Error fetching search results: {e}")
+
+    return results
 
 
 def calculate_relevance(result, query):
