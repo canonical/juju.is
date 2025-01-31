@@ -3,7 +3,6 @@ import os
 
 import requests
 import semver
-import asyncio
 import talisker.requests
 from cachetools import TTLCache, cached
 from canonicalwebteam import image_template
