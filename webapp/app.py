@@ -86,7 +86,11 @@ def search_docs():
 
     # schedule the async function and get the result
     future = asyncio.ensure_future(search_all_docs(query))
-    results = loop.run_until_complete(future) if not loop.is_running() else future.result()
+    results = (
+        loop.run_until_complete(future)
+        if not loop.is_running()
+        else future.result()
+    )
 
     sorted_results = process_and_sort_results(results, query)
 
