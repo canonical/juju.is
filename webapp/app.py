@@ -67,7 +67,7 @@ def docs():
 
 
 @app.route("/docs/search", methods=["GET"])
-def search_docs():
+async def search_docs():
     """Main search function that fetches and ranks documentation results."""
     query = request.args.get("q", "").strip()
     if not query:
@@ -78,7 +78,7 @@ def search_docs():
             domain_info=DOMAIN_INFO,
         )
 
-    results = asyncio.run(search_all_docs(query))
+    results = await search_all_docs(query)
     sorted_results = process_and_sort_results(results, query)
 
     return render_template(
