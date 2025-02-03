@@ -2,9 +2,7 @@ from urllib.parse import urlparse
 import requests
 import concurrent.futures
 from sklearn.feature_extraction.text import TfidfVectorizer
-import logging
 
-logging.basicConfig(level=logging.INFO)
 
 # ReadTheDocs projects and API endpoints
 RTD_PROJECTS = {
@@ -56,24 +54,14 @@ def fetch_search_results(project, url, query):
         "page_size": 10,  # fetch the first 10 results from each domain
     }
 
-    logging.info(f"Sending API Request to {url}")
-    logging.info(f"Query Parameters: {params}")
-
     try:
         response = requests.get(url, params=params, timeout=5)
-        logging.info(f"Response Status: {response.status_code}")
-        logging.info(f"Response Body: {response.json()}")
-
         if response.status_code == 200:
             return response.json()
         else:
-            logging.warning(f"API request failed: {response.status_code}")
-            logging.warning(f"Response text: {response.text}")
-
             return {"results": []}
 
-    except requests.exceptions.RequestException as e:
-        logging.error(f"Network error fetching {project}: {e}")
+    except requests.exceptions.RequestException:
         return {"results": []}
 
 
@@ -99,7 +87,13 @@ def search_all_docs(query):
 
 
 def calculate_relevance(result, query):
-    """Calculate relevance using TF-IDF with scaled domain weighting."""
+    """
+        * This calculation is very sensitive
+        and is a V1 for the Juju ecosystem docs.
+        It will need modified in the future.
+
+    Calculate relevance using TF-IDF with scaled domain weighting.
+    """
     title = result.get("title", "").lower()
     content = " ".join(
         block["content"] for block in result.get("blocks", [])
