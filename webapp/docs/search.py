@@ -127,10 +127,10 @@ def calculate_relevance(result, query):
     return (title_score + content_score + how_to_boost) * domain_multiplier
 
 
-def process_and_sort_results(results, query, max_length=200, limit=20):
+def process_and_sort_results(results, query, max_length=200):
     """
     Merge, truncate, and sort search results based on relevance,
-    limiting to top 20 results.
+    returning all results for frontend pagination.
     """
     processed_results = []
 
@@ -166,4 +166,4 @@ def process_and_sort_results(results, query, max_length=200, limit=20):
 
     return sorted(
         processed_results, key=lambda x: x["relevance_score"], reverse=True
-    )[:limit]
+    )

@@ -35,22 +35,23 @@
       We've found these results for your search: <strong>"{{ query }}"</strong>
     </h1>
     <ul class="p-list">
-      {% for result in sorted_results[:20] %}
-      <li class="p-list__item">
-        <h5>
-          <a href="{{ result.url }}" target="_blank">
-            {{ result.title }}
-          </a>&nbsp;
-          {% set search_path = "search.html" if result.domain in ["pythonlibjuju.readthedocs.io", "ops.readthedocs.io"]
-          else "search/" %}
-          <a href="https://{{ result.domain }}/en/latest/{{ search_path }}?q={{ query }}" target="_blank" class="p-chip is-inline">
-            <span class="p-chip__value">{{ domain_info.get(result.domain, {}).get("title", result.domain) }}</span>
-          </a>
-        </h5>
-        <p>{{ result.short_content }}</p>
-      </li>
+      {% for result in sorted_results %}
+        <li class="p-list__item search-result" style="{% if loop.index > 10 %}display: none;{% endif %}">
+          <h5>
+            <a href="{{ result.url }}" target="_blank">
+              {{ result.title }}
+            </a>&nbsp;
+            {% set search_path = "search.html" if result.domain in ["pythonlibjuju.readthedocs.io", "ops.readthedocs.io"]
+            else "search/" %}
+            <a href="https://{{ result.domain }}/en/latest/{{ search_path }}?q={{ query }}" target="_blank" class="p-chip is-inline">
+              <span class="p-chip__value">{{ domain_info.get(result.domain, {}).get("title", result.domain) }}</span>
+            </a>
+          </h5>
+          <p>{{ result.short_content }}</p>
+        </li>
       {% endfor %}
     </ul>
+    <button id="load-more-button" class="p-button" onclick="loadMoreResults()">Load more results</button>
   </div>
 </section>
 {% else %}
@@ -80,5 +81,37 @@
   </div>
 </section>
 {% endif %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let visibleResults = 10;
+    const loadMoreButton = document.getElementById("load-more-button");
+
+    window.loadMoreResults = function () {
+      if (!loadMoreButton) return;
+      
+      loadMoreButton.innerText = "Loading...";
+      loadMoreButton.disabled = true;
+
+      setTimeout(() => {
+        const results = document.querySelectorAll('.search-result');
+        let count = 0;
+
+        for (let i = visibleResults; i < results.length && count < 10; i++) {
+          results[i].style.display = "block";
+          count++;
+        }
+        visibleResults += count;
+
+        if (visibleResults >= results.length) {
+          loadMoreButton.style.display = "none";
+        } else {
+          loadMoreButton.innerText = "Load more";
+          loadMoreButton.disabled = false;
+        }
+      }, 500);
+    };
+  });
+</script>
 {% endblock content %}
 
