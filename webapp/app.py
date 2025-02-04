@@ -12,7 +12,7 @@ from canonicalwebteam.yaml_responses.flask_helpers import (
     prepare_deleted,
     prepare_redirects,
 )
-from flask import render_template, request
+from flask import redirect, render_template, request, url_for
 from flask_cors import cross_origin
 
 from webapp.blog.views import init_blog
@@ -70,12 +70,7 @@ def search_docs():
     """Main search function that fetches and ranks documentation results."""
     query = request.args.get("q", "").strip()
     if not query:
-        return render_template(
-            "docs/search.html",
-            query=query,
-            sorted_results=[],
-            domain_info=DOMAIN_INFO,
-        )
+        return redirect(url_for("docs"))
 
     results = search_all_docs(query)
     sorted_results = process_and_sort_results(results, query)
