@@ -4,23 +4,17 @@ import concurrent.futures
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 
-# ReadTheDocs projects and API endpoints
-RTD_PROJECTS = {
-    "canonical-juju": (
-        "https://canonical-juju.readthedocs-hosted.com/_/api/v3/search/"
-    ),
-    "canonical-terraform-provider-juju": (
-        "https://canonical-terraform-provider-juju.readthedocs-hosted.com"
-        "/_/api/v3/search/"
-    ),
-    "pythonlibjuju": ("https://pythonlibjuju.readthedocs.io/_/api/v3/search/"),
-    "canonical-jaas-documentation": (
-        "https://canonical-jaas-documentation.readthedocs-hosted.com"
-        "/_/api/v3/search/"
-    ),
-    "canonical-charmcraft": (
-        "https://canonical-charmcraft.readthedocs-hosted.com/_/api/v3/search/"
-    ),
+# RTD API Endpoints
+RTD_HOSTED_API = "https://readthedocs.com/api/v3/search/"
+RTD_PROJECTS_HOSTED = [
+    "canonical-juju",
+    "canonical-terraform-provider-juju",
+    "canonical-charmcraft",
+    "canonical-jaas-documentation",
+]
+
+RTD_PROJECTS_IO = {
+    "pythonlibjuju": "https://pythonlibjuju.readthedocs.io/_/api/v3/search/",
     "ops": "https://ops.readthedocs.io/_/api/v3/search/",
 }
 
@@ -44,44 +38,63 @@ DOMAIN_INFO = {
 }
 
 
-def fetch_search_results(project, url, query):
+def fetch_search_results(api_url, query, projects=None):
     """
-    Fetch search results synchronously from ReadTheDocs API
-    and log responses.
+    Fetch search results from ReadTheDocs API.
+    - If `projects` is provided, constructs a query filtering
+      by multiple projects.
+    - Otherwise, assumes the API requires an explicit
+      `project:project-name` prefix.
     """
-    params = {
-        "q": f"project:{project} {query}",
-        "page_size": 10,  # fetch the first 10 results from each domain
-    }
+    if projects:
+        # Query multiple projects in one request
+        project_filters = " ".join(
+            [f"project:{project}" for project in projects]
+        )
+        full_query = f"{project_filters} {query}"
+    else:
+        full_query = f"project:{query}"
+
+    params = {"q": full_query, "page_size": 50}
 
     try:
-        response = requests.get(url, params=params, timeout=5)
+        response = requests.get(api_url, params=params, timeout=5)
         if response.status_code == 200:
-            return response.json()
-        else:
-            return {"results": []}
+            return response.json().get("results", [])
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching search results from {api_url}: {e}")
 
-    except requests.exceptions.RequestException:
-        return {"results": []}
+    return []
 
 
 def search_all_docs(query):
-    """Run API searches concurrently using ThreadPoolExecutor."""
+    """
+    Fetch documentation search results:
+    - One request for all hosted projects (`readthedocs.com`).
+    - Two separate requests for `pythonlibjuju` and `ops`.
+    """
     results = []
 
-    # use ThreadPoolExecutor to make requests in parallel
-    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        future_to_project = {
-            executor.submit(fetch_search_results, project, url, query): project
-            for project, url in RTD_PROJECTS.items()
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
+        # Hosted docs (single request)
+        future_hosted = executor.submit(
+            fetch_search_results, RTD_HOSTED_API, query, RTD_PROJECTS_HOSTED
+        )
+
+        # Separate requests for pythonlibjuju and ops
+        future_io = {
+            project: executor.submit(
+                fetch_search_results, url, f"{project} {query}"
+            )
+            for project, url in RTD_PROJECTS_IO.items()
         }
 
-        for future in concurrent.futures.as_completed(future_to_project):
+        results.extend(future_hosted.result())
+        for project, future in future_io.items():
             try:
-                search_results = future.result()
-                results.extend(search_results.get("results", []))
+                results.extend(future.result())
             except Exception as e:
-                print(f"Error fetching search results: {e}")
+                print(f"Error processing search results for {project}: {e}")
 
     return results
 
