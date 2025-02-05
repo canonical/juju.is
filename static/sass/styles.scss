@@ -330,3 +330,30 @@ html {
 strong {
   font-weight: bold !important;
 }
+
+.p-image-container, [class^=p-image-container--] {
+  aspect-ratio: auto !important;
+  height: auto !important;
+}
+
+.p-image-container__image {
+  display: block;
+}
+
+@media (620px <= width < 1036px) {
+  .any-application-container img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 230px;
+  }
+}
+
+@media (width < 620px) {
+  .any-application-container img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 200px;
+  }
+}

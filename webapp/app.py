@@ -12,14 +12,18 @@ from canonicalwebteam.yaml_responses.flask_helpers import (
     prepare_deleted,
     prepare_redirects,
 )
-from flask import render_template
+from flask import redirect, render_template, request, url_for
 from flask_cors import cross_origin
 
 from webapp.blog.views import init_blog
-from webapp.docs.views import init_docs
 from webapp.greenhouse import Greenhouse
 from webapp.handlers import set_handlers
 from webapp.template_utils import current_url_with_query, static_url
+from webapp.docs.search import (
+    search_all_docs,
+    process_and_sort_results,
+    DOMAIN_INFO,
+)
 
 CACHE_TTL = 60 * 60  # 1 hour cache
 
@@ -54,6 +58,29 @@ def careers():
 @app.route("/get-in-touch")
 def get_in_touch():
     return render_template("partials/_get-in-touch.html")
+
+
+@app.route("/docs")
+def docs():
+    return render_template("docs/juju-ecosystem-docs.html")
+
+
+@app.route("/docs/search", methods=["GET"])
+def search_docs():
+    """Main search function that fetches and ranks documentation results."""
+    query = request.args.get("q", "").strip()
+    if not query:
+        return redirect(url_for("docs"))
+
+    results = search_all_docs(query)
+    sorted_results = process_and_sort_results(results, query)
+
+    return render_template(
+        "docs/search.html",
+        query=query,
+        sorted_results=sorted_results,
+        domain_info=DOMAIN_INFO,
+    )
 
 
 @app.route("/latest.json")
@@ -114,7 +141,6 @@ template_finder_view = TemplateFinder.as_view("template_finder")
 app.add_url_rule("/", view_func=template_finder_view)
 app.add_url_rule("/<path:subpath>", view_func=template_finder_view)
 
-init_docs(app)
 init_blog(app, "/blog")
 
 
