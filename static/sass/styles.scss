@@ -341,7 +341,7 @@ strong {
 }
 
 @media (620px <= width < 1036px) {
-  .any-application-container img {
+  .from-scratch-container img {
       object-fit: cover;
       object-position: center;
       width: 100%;
@@ -350,7 +350,7 @@ strong {
 }
 
 @media (width < 620px) {
-  .any-application-container img {
+  .from-scratch-container img {
       object-fit: cover;
       object-position: center;
       width: 100%;
