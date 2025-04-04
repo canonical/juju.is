@@ -380,7 +380,7 @@ docs/juju/upgrade-your-juju-deployment/?: https://documentation.ubuntu.com/juju/
 docs/juju/upgrading/?: https://documentation.ubuntu.com/juju/latest/user/reference/upgrading-things/
 docs/juju/user/?: https://documentation.ubuntu.com/juju/latest/user/reference/user/
 docs/juju/user-permissions/?: https://documentation.ubuntu.com/juju/latest/user/reference/user/#user-access-levels
-docs/juju/vmware-vsphere/?: https://documentation.ubuntu.com/juju/latest/user/reference/cloud/list-of-supported-clouds/the-vmware-vsphere-cloud-and-juju/
+docs/juju/vmware-vsphere/?: https://documentation.ubuntu.com/juju/latest/reference/cloud/list-of-supported-clouds/the-vmware-vsphere-cloud-and-juju/#cloud-vsphere
 docs/juju/worker/?: https://documentation.ubuntu.com/juju/latest/user/reference/worker/
 docs/sdk/?: https://documentation.ubuntu.com/juju/latest/user/howto/manage-charms/#build-a-charm
 docs/sdk/12-factor-app-charm/?: https://documentation.ubuntu.com/juju/latest/user/reference/charm/charm-taxonomy/#factor-app-charm
