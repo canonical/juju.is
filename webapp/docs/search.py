@@ -20,7 +20,7 @@ RTD_PROJECTS_IO = {
 
 # Domain information mapping, title for chips, weight for relevance
 DOMAIN_INFO = {
-    "canonical-juju.readthedocs-hosted.com": {"title": "Juju", "weight": 0.6},
+    "documentation.ubuntu.com": {"title": "Juju", "weight": 0.6},
     "canonical-terraform-provider-juju.readthedocs-hosted.com": {
         "title": "Terraform Juju",
         "weight": 0.5,
