@@ -43,7 +43,7 @@
             </a>&nbsp;
             {% set search_path = "search.html" if result.domain in ["pythonlibjuju.readthedocs.io", "ops.readthedocs.io"]
             else "search/" %}
-            <a href="https://{{ result.domain }}/en/latest/{{ search_path }}?q={{ query }}" target="_blank" class="p-chip is-inline">
+            <a href="https://{{ result.domain }}/3.6/{{ search_path }}?q={{ query }}" target="_blank" class="p-chip is-inline">
               <span class="p-chip__value">{{ domain_info.get(result.domain, {}).get("title", result.domain) }}</span>
             </a>
           </h5>
@@ -89,7 +89,7 @@
 
     window.loadMoreResults = function () {
       if (!loadMoreButton) return;
-      
+
       loadMoreButton.innerText = "Loading...";
       loadMoreButton.disabled = true;
 
