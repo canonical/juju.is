@@ -313,6 +313,7 @@ docs/juju/machine/?: https://documentation.ubuntu.com/juju/3.6/reference/machine
 docs/juju/manage-actions/?: https://documentation.ubuntu.com/juju/3.6/howto/manage-actions/
 docs/juju/manage-applications/?: https://documentation.ubuntu.com/juju/3.6/howto/manage-applications/
 docs/juju/manage-charm-resources/?: https://documentation.ubuntu.com/juju/3.6/howto/manage-charm-resources/
+docs/juju/manage-charms/?: https://documentation.ubuntu.com/juju/3.6/howto/manage-charms/
 docs/juju/manage-charms-or-bundles/?: https://documentation.ubuntu.com/juju/3.6/howto/manage-charms/
 docs/juju/manage-clouds/?: https://documentation.ubuntu.com/juju/3.6/howto/manage-clouds/
 docs/juju/manage-controllers/?: https://documentation.ubuntu.com/juju/3.6/howto/manage-controllers/
