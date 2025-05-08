@@ -43,8 +43,8 @@
             </a>&nbsp;
             {% set search_path = "search.html" if result.domain in ["pythonlibjuju.readthedocs.io", "ops.readthedocs.io"]
             else "search/" %}
-            <a href="https://{{ result.domain }}/3.6/{{ search_path }}?q={{ query }}" target="_blank" class="p-chip is-inline">
-              <span class="p-chip__value">{{ domain_info.get(result.domain, {}).get("title", result.domain) }}</span>
+            <a href="{{ result.search_url }}" target="_blank" class="p-chip is-inline">
+              <span class="p-chip__value">{{ result.project_name }}</span>
             </a>
           </h5>
           <p>{{ result.short_content }}</p>

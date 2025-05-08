@@ -20,21 +20,52 @@ RTD_PROJECTS_IO = {
 
 # Domain information mapping, title for chips, weight for relevance
 DOMAIN_INFO = {
-    "documentation.ubuntu.com": {"title": "Juju", "weight": 0.6},
+    "documentation.ubuntu.com": {
+        "title": "Juju",
+        "weight": 0.6,
+        "search_url": (
+            "https://documentation.ubuntu.com/juju/3.6/search/?q={query}"
+        ),
+    },
     "canonical-terraform-provider-juju.readthedocs-hosted.com": {
         "title": "Terraform Juju",
         "weight": 0.5,
+        "search_url": (
+            "https://canonical-terraform-provider-juju.readthedocs-hosted.com/"
+            "en/latest/search/?q={query}"
+        ),
     },
-    "pythonlibjuju.readthedocs.io": {"title": "Python Libjuju", "weight": 0.4},
+    "pythonlibjuju.readthedocs.io": {
+        "title": "Python Libjuju",
+        "weight": 0.4,
+        "search_url": (
+            "https://pythonlibjuju.readthedocs.io/en/latest/search.html"
+            "?q={query}"
+        ),
+    },
     "canonical-jaas-documentation.readthedocs-hosted.com": {
         "title": "JAAS",
         "weight": 0.3,
+        "search_url": (
+            "https://canonical-jaas-documentation.readthedocs-hosted.com/"
+            "v3/search/?q={query}"
+        ),
     },
     "canonical-charmcraft.readthedocs-hosted.com": {
         "title": "Charmcraft",
         "weight": 0.2,
+        "search_url": (
+            "https://canonical-charmcraft.readthedocs-hosted.com/en/stable/"
+            "search/?q={query}"
+        ),
     },
-    "ops.readthedocs.io": {"title": "Ops", "weight": 0.1},
+    "ops.readthedocs.io": {
+        "title": "Ops",
+        "weight": 0.1,
+        "search_url": (
+            "https://ops.readthedocs.io/en/stable/search.html?q={query}"
+        ),
+    },
 }
 
 
@@ -151,9 +182,9 @@ def process_and_sort_results(results, query, max_length=200):
         parsed_domain = urlparse(
             result.get("domain", "")
         ).hostname or result.get("domain", "")
-        project_name = DOMAIN_INFO.get(parsed_domain, {}).get(
-            "title", parsed_domain
-        )
+        domain_details = DOMAIN_INFO.get(parsed_domain, {})
+        project_name = domain_details.get("title", parsed_domain)
+        search_url = domain_details.get("search_url", "").format(query=query)
 
         full_content = " ".join(
             block["content"] for block in result.get("blocks", [])
@@ -174,6 +205,7 @@ def process_and_sort_results(results, query, max_length=200):
                 "project_name": project_name,
                 "short_content": short_content,
                 "relevance_score": relevance_score,
+                "search_url": search_url,
             }
         )
 
