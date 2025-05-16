@@ -67,7 +67,7 @@ jobs:
         run: yarn lint-python
 
   test-python:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
       - uses: actions/checkout@v4
@@ -91,7 +91,7 @@ jobs:
           SECRET_KEY=insecure_secret_key coverage run  --source=. -m unittest discover tests
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v5
         with:
           flags: python
 
