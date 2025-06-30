@@ -1,0 +1,24 @@
+name: juju-is
+
+type: charm
+
+bases:
+  - build-on:
+    - name: ubuntu
+      channel: "22.04"
+    run-on:
+    - name: ubuntu
+      channel: "22.04"
+
+summary: The charm for the juju.is website
+
+description: The charm for the juju.is website, built with the PaaS app charmer
+
+extensions:
+  - flask-framework
+
+config:
+  options:
+    greenhouse-api:
+      type: secret
+      description: The API key for the Greenhouse job board
