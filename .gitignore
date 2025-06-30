@@ -67,3 +67,5 @@ dist/
 .dotrun.json
 .venv/
 .webcache/
+*.rock
+*.charm

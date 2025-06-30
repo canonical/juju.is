@@ -1,0 +1,37 @@
+name: juju-is
+base: bare
+build-base: ubuntu@22.04 
+version: "0.1"
+summary: The Rock for the juju.is website.
+description: |
+  This is the OCI image (rock) for the juju.is website, built using Flask.
+platforms:
+  amd64:
+extensions:
+  - flask-framework
+
+parts:
+  build-ui:
+    plugin: nil
+    source: .
+    source-type: local
+    build-snaps:
+      - node/22/stable
+    override-build: |
+      set -eux
+      # install dependencies
+      npm install -g yarn
+      yarn install
+      # build the UI
+      yarn run build
+      mkdir -p "$CRAFT_PART_INSTALL/flask/app"
+      cp -r static "$CRAFT_PART_INSTALL/flask/app/"
+  flask-framework/install-app:
+    after:
+      - build-ui
+    prime:
+      - flask/app/app.py
+      - flask/app/static
+      - flask/app/templates
+      - flask/app/webapp
+      - flask/app/redirects.yaml
