@@ -18,6 +18,8 @@ docs/juju/install-juju: /docs/juju/install-and-manage-the-client
 docs/olm/install-juju: /docs/juju/install-and-manage-the-client
 docs/olm/?: /docs/juju
 docs/olm/(?P<page>.*?): /docs/juju/{page}
+blog/?: https://ubuntu.com/blog
+blog/(?P<blog_title>.*?): https://ubuntu.com/blog/{blog_title}
 
 # Redirect dev docs
 docs/dev(.*?): /docs
