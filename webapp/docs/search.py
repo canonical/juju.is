@@ -20,19 +20,19 @@ RTD_PROJECTS_IO = {
 
 # Domain information mapping, title for chips, weight for relevance
 DOMAIN_INFO = {
-    "documentation.ubuntu.com": {
+    "documentation.ubuntu.com/juju": {
         "title": "Juju",
         "weight": 0.6,
         "search_url": (
             "https://documentation.ubuntu.com/juju/3.6/search/?q={query}"
         ),
     },
-    "canonical-terraform-provider-juju.readthedocs-hosted.com": {
+    "documentation.ubuntu.com/terraform-provider-juju": {
         "title": "Terraform Juju",
         "weight": 0.5,
         "search_url": (
-            "https://canonical-terraform-provider-juju.readthedocs-hosted.com/"
-            "en/latest/search/?q={query}"
+            "https://documentation.ubuntu.com/"
+            "terraform-provider-juju/latest/search/?q={query}"
         ),
     },
     "pythonlibjuju.readthedocs.io": {
@@ -43,12 +43,11 @@ DOMAIN_INFO = {
             "?q={query}"
         ),
     },
-    "canonical-jaas-documentation.readthedocs-hosted.com": {
+    "documentation.ubuntu.com/jaas": {
         "title": "JAAS",
         "weight": 0.3,
         "search_url": (
-            "https://canonical-jaas-documentation.readthedocs-hosted.com/"
-            "v3/search/?q={query}"
+            "https://documentation.ubuntu.com/jaas/v3/search/?q={query}"
         ),
     },
     "canonical-charmcraft.readthedocs-hosted.com": {
@@ -67,6 +66,23 @@ DOMAIN_INFO = {
         ),
     },
 }
+
+
+def extract_full_domain(result):
+    parsed_url = urlparse(result.get("domain", ""))
+    hostname = parsed_url.hostname or ""
+
+    # Skip path prefix for non-Canonical hosted RTD projects
+    if hostname in ("ops.readthedocs.io", "pythonlibjuju.readthedocs.io"):
+        return hostname
+
+    # For Canonical docs (e.g. documentation.ubuntu.com/juju)
+    path_prefix = (
+        result.get("path", "").split("/")[1]
+        if "/" in result.get("path", "")
+        else ""
+    )
+    return f"{hostname}/{path_prefix}"
 
 
 def fetch_search_results(api_url, query, projects=None):
@@ -143,9 +159,7 @@ def calculate_relevance(result, query):
         block["content"] for block in result.get("blocks", [])
     ).lower()
 
-    parsed_domain = urlparse(result.get("domain", "")).hostname or result.get(
-        "domain", ""
-    )
+    full_domain = extract_full_domain(result)
 
     search_results = [query, title, content]
     vectorizer = TfidfVectorizer()
@@ -162,10 +176,10 @@ def calculate_relevance(result, query):
     how_to_boost = 0.5 if title.startswith("how to") else 0
 
     # Normalize domain weight
-    domain_weight = DOMAIN_INFO.get(parsed_domain, {}).get("weight", 1)
-    domain_multiplier = 1 + (
-        domain_weight / 5
-    )  # Convert weight into a multiplier
+    domain_weight = DOMAIN_INFO.get(full_domain, {}).get("weight", 1)
+
+    # Convert weight into a multiplier
+    domain_multiplier = 1 + (domain_weight / 5)
 
     # Final score with domain multiplier
     return (title_score + content_score + how_to_boost) * domain_multiplier
@@ -179,12 +193,12 @@ def process_and_sort_results(results, query, max_length=200):
     processed_results = []
 
     for result in results:
-        parsed_domain = urlparse(
-            result.get("domain", "")
-        ).hostname or result.get("domain", "")
-        domain_details = DOMAIN_INFO.get(parsed_domain, {})
-        project_name = domain_details.get("title", parsed_domain)
-        search_url = domain_details.get("search_url", "").format(query=query)
+        full_domain = extract_full_domain(result)
+        domain_details = DOMAIN_INFO.get(full_domain, {})
+        project_name = domain_details.get("title", full_domain)
+        search_url = domain_details.get(
+            "search_url", f"https://{full_domain}/search/?q={query}"
+        ).format(query=query)
 
         full_content = " ".join(
             block["content"] for block in result.get("blocks", [])
@@ -196,12 +210,17 @@ def process_and_sort_results(results, query, max_length=200):
         )
 
         relevance_score = calculate_relevance(result, query)
+        parsed_url = urlparse(result.get("domain", ""))
+        url = (
+            f"{parsed_url.scheme}://{parsed_url.hostname}"
+            f"{result.get('path', '')}"
+        )
 
         processed_results.append(
             {
                 "title": result.get("title", "Untitled"),
-                "url": f"https://{parsed_domain}{result.get('path', '')}",
-                "domain": parsed_domain,
+                "url": url,
+                "domain": full_domain,
                 "project_name": project_name,
                 "short_content": short_content,
                 "relevance_score": relevance_score,
