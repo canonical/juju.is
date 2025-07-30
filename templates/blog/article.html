@@ -12,9 +12,9 @@
 <script type="application/ld+json">
     {
       "@context": "http://schema.org",
-      "@id": "https://juju.is/#article",
+      "@id": "https://juju.is{{ self.meta_path() }}",
       "@type": "Article",
-      "name": "{{ article.title.renderered|safe }}",
+      "name": "{{ article.title.rendered|safe }}",
       "author": {
          "@type": "Person",
          "name": "{{ article.author.name }}"
