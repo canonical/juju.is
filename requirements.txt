@@ -10,7 +10,7 @@ flake8==7.0.0
 requests==2.31.0
 semver==3.0.2
 cachetools==5.3.3
-flask-cors==4.0.0
+flask-cors==6.0.0
 scikit-learn==1.6.1
 requests==2.31.0
 responses==0.25.3
