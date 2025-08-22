@@ -11,6 +11,7 @@ RTD_PROJECTS_HOSTED = [
     "canonical-terraform-provider-juju",
     "canonical-charmcraft",
     "canonical-jaas-documentation",
+    "canonical-jubilant",
 ]
 
 RTD_PROJECTS_IO = {
@@ -27,6 +28,13 @@ DOMAIN_INFO = {
             "https://documentation.ubuntu.com/juju/3.6/search/?q={query}"
         ),
     },
+    "documentation.ubuntu.com/jubilant": {
+        "title": "Jubilant",
+        "weight": 0.5,
+        "search_url": (
+            "https://documentation.ubuntu.com/jubilant/search/?q={query}"
+        ),
+    },
     "documentation.ubuntu.com/terraform-provider-juju": {
         "title": "Terraform Juju",
         "weight": 0.5,
@@ -37,7 +45,7 @@ DOMAIN_INFO = {
     },
     "pythonlibjuju.readthedocs.io": {
         "title": "Python Libjuju",
-        "weight": 0.4,
+        "weight": 0.3,
         "search_url": (
             "https://pythonlibjuju.readthedocs.io/en/latest/search.html"
             "?q={query}"
@@ -50,12 +58,11 @@ DOMAIN_INFO = {
             "https://documentation.ubuntu.com/jaas/v3/search/?q={query}"
         ),
     },
-    "canonical-charmcraft.readthedocs-hosted.com": {
+    "documentation.ubuntu.com/charmcraft": {
         "title": "Charmcraft",
         "weight": 0.2,
         "search_url": (
-            "https://canonical-charmcraft.readthedocs-hosted.com/en/stable/"
-            "search/?q={query}"
+            "https://documentation.ubuntu.com/charmcraft/stable/search/?q={query}"
         ),
     },
     "ops.readthedocs.io": {
