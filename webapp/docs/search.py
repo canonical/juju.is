@@ -62,7 +62,8 @@ DOMAIN_INFO = {
         "title": "Charmcraft",
         "weight": 0.2,
         "search_url": (
-            "https://documentation.ubuntu.com/charmcraft/stable/search/?q={query}"
+            "https://documentation.ubuntu.com/charmcraft/stable/search/"
+            "?q={query}"
         ),
     },
     "ops.readthedocs.io": {
