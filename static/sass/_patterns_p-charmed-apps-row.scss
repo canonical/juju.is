@@ -1,0 +1,16 @@
+@mixin p-charmed-apps-row {
+  .p-equal-height-row--wrap {
+    /* Force the last column to take more width */
+    #span-col {
+      grid-column: span 6;
+    }
+
+    .highlighted-image {
+      background-color: var(--vf-color-background-alt);
+
+      /* Full-width images */
+      height: auto;
+      width: 100%;
+    }
+  }
+}

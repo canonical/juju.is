@@ -62,6 +62,10 @@ $breakpoint-navigation-threshold: 1220px; // keep in sync with charmhub.io and c
 
 @include p-suru;
 
+@import "patterns_p-charmed-apps-row";
+
+@include p-charmed-apps-row;
+
 .p-navigation__logo {
   margin: 0.1rem 1rem 0 1.5rem;
 }
