@@ -15,7 +15,6 @@ RTD_PROJECTS_HOSTED = [
 ]
 
 RTD_PROJECTS_IO = {
-    "pythonlibjuju": "https://pythonlibjuju.readthedocs.io/_/api/v3/search/",
     "ops": "https://ops.readthedocs.io/_/api/v3/search/",
 }
 
@@ -41,14 +40,6 @@ DOMAIN_INFO = {
         "search_url": (
             "https://documentation.ubuntu.com/"
             "terraform-provider-juju/latest/search/?q={query}"
-        ),
-    },
-    "pythonlibjuju.readthedocs.io": {
-        "title": "Python Libjuju",
-        "weight": 0.3,
-        "search_url": (
-            "https://pythonlibjuju.readthedocs.io/en/latest/search.html"
-            "?q={query}"
         ),
     },
     "documentation.ubuntu.com/jaas": {
@@ -81,7 +72,7 @@ def extract_full_domain(result):
     hostname = parsed_url.hostname or ""
 
     # Skip path prefix for non-Canonical hosted RTD projects
-    if hostname in ("ops.readthedocs.io", "pythonlibjuju.readthedocs.io"):
+    if hostname == "ops.readthedocs.io":
         return hostname
 
     # For Canonical docs (e.g. documentation.ubuntu.com/juju)
@@ -136,7 +127,7 @@ def search_all_docs(query):
             fetch_search_results, RTD_HOSTED_API, query, RTD_PROJECTS_HOSTED
         )
 
-        # Separate requests for pythonlibjuju and ops
+        # Separate requests for ops
         future_io = {
             project: executor.submit(
                 fetch_search_results, url, f"{project} {query}"
